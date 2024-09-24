@@ -1,0 +1,309 @@
+<style>
+/*====================
+Navigation style 
+=====================*/
+.brand-nav {
+			margin-bottom: 0px;
+		}
+		.brand-pg-nav {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  overflow: hidden;
+		  float: right;
+	}
+		.brand-nav li {
+		  display: inline-block;
+		}
+		.brand-nav li a {
+		  display: block;
+		  color: #7c7e7f;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		  font-family: Lato;
+		  font-size: 1.5rem;
+		}
+		/* Change the link color on hover */
+		.brand-nav li a:hover {
+		  color: #4499e3;
+		}
+	/* Change the link color on click */
+		.brand-nav.active {
+		  color: #4499e3;
+		}
+    /*=================================
+	FORMATTING
+	===================================*/
+    .white-text {
+        color: white;
+        position: relative;
+    }
+
+     .white-header {
+        color: white;
+        font-size: 2.8rem;
+        position: relative;
+    }
+
+	.right-grey-overlay {
+        height: 400px;
+        width: 50%;
+        margin-left: 512px;
+        position: relative;
+        padding: 60px 127px 60px 60px;
+    }
+
+    .right-grey-overlay::before {
+        content: '';
+        background-color: black;
+        opacity: 0.6;
+        position: absolute;
+        inset: 0;
+    }
+
+    .left-grey-overlay {
+        height: 400px;
+        width: 50%;
+        margin-right: 512px;
+        position: relative;
+        padding: 60px 154px 60px 59px;
+    }
+
+    .left-grey-overlay::before {
+        content: '';
+        background-color: black;
+        opacity: 0.6;
+        position: absolute;
+        inset: 0;
+    }
+
+    .home-theater .btn-1, .ht-arch-sb .btn-1, .ht-mega-sub .btn-1, .ht-arch-subs .btn-1  {
+        position: relative;
+    }
+
+    /*=================================
+	IMAGES
+	===================================*/
+    .episode-ht-header{
+		background-image: url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Home-theater-header-image.png');
+		background-size: cover;
+		background-position:center;
+		width: 100%;
+		height: 400px;
+		position:relative;
+		padding: 100px 217px;
+	}
+
+	.episode-ht-header .dynamic-image img {
+		max-width: 50%
+	}
+
+    .home-theater{
+		background-image: url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/HT-Section-update.png');
+		background-size: cover;
+		background-position:center;
+		width: 100%;
+		height: 400px;
+		position:relative;
+	}
+
+    .ht-arch-sb{
+		background-image: url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/architectural-speakers.png');
+		background-size: cover;
+		background-position:center;
+		width: 100%;
+		height: 400px;
+		position:relative;
+	}
+
+    .ht-mega-sub{
+		background-image: url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Mega.jpg');
+		background-size: cover;
+		background-position:center;
+		width: 100%;
+		height: 400px;
+		position:relative;
+	}
+
+    .ht-arch-subs {
+		background-image: url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ESS-SUB-SNGL-8-Install.png');
+		background-size: cover;
+		background-position:center;
+		width: 100%;
+		height: 400px;
+		position:relative;
+    }
+
+    .home-theater .dynamic-image, .ht-arch-sb .dynamic-image, .ht-mega-sub .dynamic-image, .ht-arch-subs .dynamic-image{
+            display: none;
+        }
+
+        
+    /*===================================
+	MEDIA
+	=====================================*/ 
+    @media (max-width: 800) {
+        .left-grey-overlay {
+            margin-left: 355px;
+        }
+        .right-grey-overlay {
+            margin-left: 355px;
+        }
+}
+
+    @media (max-width: 600px) {
+        .home-theater .dynamic-image, .ht-arch-sb .dynamic-image, .ht-mega-sub .dynamic-image, .ht-arch-subs .dynamic-image {
+            display: block;
+        }
+
+        .home-theater, .ht-arch-sb, .ht-mega-sub, .ht-arch-subs {
+            background-image: none;
+        }
+        .white-text {
+        color: black;
+    }
+
+     .white-header {
+        color: black;
+        font-size: 2.8rem;
+    }
+
+    .right-grey-overlay {
+        width: 100%;
+        margin-left: 0;
+        padding: 20px 10px;
+    }
+    .left-grey-overlay {
+        width: 100%;
+        margin-left: 0;
+        padding: 20px 10px;
+    }
+    .right-grey-overlay::before,  .left-grey-overlay::before {
+        background-color: white;
+    }
+    }
+</style>
+
+    <!-- START BREADCRUMBS !-->
+	<div id="productsGlobalBreadCrumbs">
+		<div id="breadcrumb" class="breadcrumb">
+			<div id="WC_BreadCrumbTrailDisplay_div_1" class="breadcrumb_links"> 
+				<a id="WC_BreadCrumbTrailDisplay_link_2" href="/shop/en/snapav/home">Home</a> 
+				<span class="breadcrumb-divider">|</span> 
+				<a id="WC_BreadCrumbTrailDisplay_link_5a" href="/shop/en/snapav/brands">Brands</a> 
+				<span class="breadcrumb-divider">|</span> Episode
+			</div>
+		</div>
+	</div>
+	<!-- END BREADCRUMBS !-->
+	
+	<!-- NAV START -->
+	 
+	<div class="row-fluid brand-nav">
+		<div class="span12">
+			<h1 style="color:#7c7e7f; float:left;">Episode</h1>
+				<ul class="brand-pg-nav">
+				  <li><a href="/shop/en/snapav/episode">Overview</a></li>
+				  <li><a class="active" href="/shop/en/snapav/episode-home-theater" style="color:#4499e3;">Home Theater</a></li>
+				  <li><a href="/shop/en/snapav/episode-architectural">Architectural</a></li>
+				  <li><a href="/shop/en/snapav/episode-subwoofers">Subwoofers</a></li>
+				  <li><a href="/shop/en/snapav/episode-soundbars">Soundbars</a></li>
+				  <li><a href="/shop/en/snapav/episode-outdoor">Outdoor</a></li>
+				  <li><a href="/shop/en/snapav/episode-commercial">Commercial</a></li>
+				  <li><a href="/shop/en/snapav/episode-amps">Amplifiers</a></li>
+				</ul>
+		</div>
+	</div>
+	<hr style="margin:0 0 10px 0;">
+
+<!-- START SECTION 1 Mobile-ready -->
+	<div class="episode-ht-header">
+		<div class="row-fluid">
+			<div class="span12 center">
+				<div class="dynamic-image" id="episode-logo">
+					<img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Episode-White-logo.png" alt="Episode Logo">
+				</div>
+				<br>
+				<div class="thumbnail-block">
+					<p class="white-text">Elevate the home theater experience with high-performance, high-value speakers from Episode® Home Theater. These world-class speakers provide support for the latest surround sound formats, feature a unified visual design, updated driver topology, harmonious acoustic voicing, and are available in three beautiful in-room finishes.  </p>
+					<br>
+				</div>
+				   <a href="/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10010&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=detailed&pageGroup=Search&beginIndex=0&pageSize=20&searchTerm=episode+home+theater&authToken=479255%252CaoRu5Jl1pKVS6njq5aa844MaaScdTlNoeUlAFfsXgvI%253D"><div class="btn-1">Shop Now</div></a>
+			</div>
+		</div>
+	</div>
+	<!-- END SECTION 1 !-->
+
+    <!-- START SECTION 2 Mobile-ready -->
+	<div class="home-theater">
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="dynamic-image">
+					<img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/HT-Section-update.png" alt="Episode Logo"></div>
+				<div class="thumbnail-block right-grey-overlay">
+                    <h3 class="white-header">In-Room Speakers </h3>
+					<p class="white-text">Both the reference-level and non-reference speakers deliver rich, in-room sound. These flexible audio solutions will suit the aesthetics of any space with three beautiful finishes – Gloss White, Gloss Black, or Walnut Veneer.  </p>
+                    <a href="/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10010&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=detailed&pageGroup=Search&beginIndex=0&pageSize=20&searchTerm=episode+in+room&authToken=76002%252CBVtHsR5ZkNBTb5XHDNJ3dGVVZIJ%252FeKjDCx1QbO2hcvM%253D"><div class="btn-1">Shop Now</div></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END SECTION 2 !-->
+
+    <!-- START SECTION 3 Mobile-ready -->
+	<div class="ht-arch-sb">
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="dynamic-image">
+					<img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/architectural-speakers.png" alt="Episode Reference Speakers flanking a projector screen"></div>
+                   <div class="thumbnail-block left-grey-overlay"> 
+                    <h3 class="white-header">Architectural Speakers </h3>
+					<p class="white-text">Designed to deliver performance audio for home theater and multi-media spaces, Home Theater Reference speakers seamlessly blend in while creating immersive sound. </p>
+                    <a href="/shop/SearchDisplay?langId=-1&storeId=10151&catalogId=10010&pageView=detailed&beginIndex=0&pageSize=20&searchTerm=Episode+arch&filterTerm=&manufacturer=&minPrice=&maxPrice=&searchTermScope=&searchType=&sType=%5bLjava.lang.String%3b%407d702a12&contentfacet=&metaData=&categoryId=30555&resultCatEntryType=2&showResultsPage=true&urlLangId=-1"><div class="btn-1">Shop Now</div></a>
+                </div>
+			</div>
+		</div>
+	</div>
+	<!-- END SECTION 3 !-->
+    
+<!-- START SECTION 4 Mobile-ready -->
+	<div class="ht-mega-sub">
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="dynamic-image">
+					<img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Mega.jpg" alt="Episode Reference Speakers flanking a projector screen"></div>
+                   <div class="thumbnail-block right-grey-overlay"> 
+                    <h3 class="white-header">MEGA Subwoofers</h3>
+					<p class="white-text">MEGA is an extremely powerful line of advanced subs that deliver extremely low bass at loud volumes with negligible distortion.  </p>
+
+                        <p class="white-text">Size: 8”, 10”, 12”, 15” <br>
+                        Power: 120W–1000W Continuous <br>
+                        Frequency: 30–250 Hz to 17–250 Hz <br>
+                        Best for: High-End Home Theaters </p>
+                    <a href="/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10010&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=detailed&pageGroup=Search&beginIndex=0&pageSize=20&searchTerm=episode+mega&authToken=479255%252CNATfkvpo167YMbjxuYWLjtMWMkBSHAwGkLJA7YoAawY%253D"><div class="btn-1">Shop Now</div></a>
+                </div>
+			</div>
+		</div>
+	</div>
+	<!-- END SECTION 4 !-->
+
+        <!-- START SECTION 5 Mobile-ready -->
+	<div class="ht-arch-subs">
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="dynamic-image">
+					<img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ESS-SUB-SNGL-8-Install.png" alt="Episode Reference Speakers flanking a projector screen"></div>
+                   <div class="thumbnail-block left-grey-overlay"> 
+                    <h3 class="white-header">Architectural Subwoofers </h3>
+					<p class="white-text">Deliver room-shaking bass that hides discreetly out of sight with this lineup of architectural subwoofers and enclosures. </p> 
+
+                    <p class="white-text">Size: 8" <br>
+                    Enclosure Options: None (Free Air),<br> 
+                    Preconstruction, Retrofit, Single and Dual Configuration </p>
+                    <a href="/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10010&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=detailed&pageGroup=Search&beginIndex=0&pageSize=20&searchTerm=Episode+arch&authToken=76002%252CBVtHsR5ZkNBTb5XHDNJ3dGVVZIJ%252FeKjDCx1QbO2hcvM%253D"><div class="btn-1">Shop Now</div></a>
+                </div>
+			</div>
+		</div>
+	</div>
+	<!-- END SECTION 5 !-->

@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*====================
+Navigation style 
+=====================*/
+	.brand-nav {
+		margin-bottom: 0px;
+	}
+	.brand-pg-nav {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  overflow: hidden;
+	  float: right;
+}
+	.brand-nav li {
+	  display: inline-block;
+	}
+	.brand-nav li a {
+	  display: block;
+	  color: #7c7e7f;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	  font-family: Lato;
+	  font-size: 1.5rem;
+	}
+
+/* Change the link color on hover */
+	.brand-nav li a:hover {
+	  color: #4499e3;
+	}
+/* Change the link color on click */
+	.brand-nav.active {
+	  color: #4499e3;
+	}
+

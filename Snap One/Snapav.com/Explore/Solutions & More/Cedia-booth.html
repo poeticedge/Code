@@ -1,0 +1,586 @@
+<style>
+/*====================
+Navigation style 
+=====================*/
+.brand-nav {
+		margin-bottom: 0px;
+	}
+	.brand-pg-nav {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  overflow: hidden;
+	  float: right;
+}
+	.brand-nav li {
+	  display: inline-block;
+	}
+	.brand-nav li a {
+	  display: block;
+	  color: #7c7e7f;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	  font-family: Lato;
+	  font-size: 1.5rem;
+	}
+
+/* Change the link color on hover */
+	.brand-nav li a:hover {
+	  color: #4499e3;
+	}
+/* Change the link color on click */
+	.brand-nav.active {
+	  color: #4499e3;
+	}
+    .accordion {
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+    }
+
+
+    .toggle-content {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    }
+/*==================================
+	Toggle Button
+==================================*/
+    .icon-down:before{
+        content:none;
+    }
+    .icon-up:before{
+        content:none;
+    }
+
+    .toggle-control .icon-up, .toggle-control .icon-down{
+        float:left;
+    }
+
+    .toggle-control .icon-up{
+        display:none;
+    }
+
+    .toggle-control.toggled .icon-up{
+        display:inline;
+    }
+
+    .toggle-control.toggled .icon-down{
+        display:none;
+    } 
+
+    .icon-down img, .icon-up img{
+        width: 50%;
+    }
+    .cedia-booth-header .dynamic-image {
+        max-width: 88%
+    }
+    .cedia-booth-header ul {
+        padding: 40px 20px;
+    }
+
+    .cedia-booth-header li {
+        line-height: 4rem;
+        font-size: 2.8rem;
+    }
+
+    .cedia-booth-header li a {
+        color: #E86140;
+    }
+
+    .entertainment-room h2, .control-room h2, .lounge-area h2, .outdoor-area h2{
+        font-size: 2.5rem;
+        margin: 20px 0;
+    }
+
+    .entertainment-room, .control-room, .lounge-area, .outdoor-area {
+        margin: 50px 0;
+    }
+
+    .blue-line {
+        border-bottom: 3px solid #66D7D1;
+        width: 50%;
+        margin: 0 0 10px 0;
+    }
+/*==================================
+	MOBILE
+==================================*/
+@media (max-width: 600px) {
+    .cedia-booth-header .dynamic-image {
+        max-width: 100%
+    }
+}
+
+
+
+</style>
+
+<!-- START BREADCRUMBS !-->
+<div id="productsGlobalBreadCrumbs">
+    <div id="breadcrumb" class="breadcrumb">
+    <div id="WC_BreadCrumbTrailDisplay_div_1" class="breadcrumb_links"> 
+    <a id="WC_BreadCrumbTrailDisplay_link_2" href="/shop/en/snapav/home">Home</a> 
+    <span class="breadcrumb-divider">|</span> 
+    <a id="WC_BreadCrumbTrailDisplay_link_5a" href="/shop/en/snapav/brands">Explore</a> 
+    </div>
+    </div>
+</div>
+
+    <!-- END BREADCRUMBS !-->
+    
+    <!-- NAV START -->
+    
+    <div class="row-fluid brand-nav">
+        <div class="span12">
+            <h1 style="color:#7c7e7f; float:left;">Cedia Booth 2023</h1>
+        </div>
+    </div>
+    <div class="blue-line"></div>
+    
+    <!--<hr style="margin:0 0 10px 0;">-->
+    
+    <!-- NAV END -->
+
+
+<div class="cedia-booth-header">
+    <div class="span12">
+        <div class="dynamic-image">
+            <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Cedia-booth-header.png" alt="Ring video doorbell on wall">
+        </div>
+        <div class="thumbnail-block">
+            <ul>
+                <li><a href="#entertainment-room" id="cedia-booth-entertainment">The Entertainment Room</a></li>
+                <li><a href="#control-room" id="cedia-booth-control">The Control Room</a></li>
+                <li><a href="#lounge-area" id="cedia-booth-lounge">The Lounge & Bar Area</a></li>
+                <li><a href="#outdoor-area" id="cedia-booth-outdoor">The Outdoor Area</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="thumbnail-block">
+                <h1>Solutions designed for you, and your clients.</h1>
+                <p>We offer products and solutions that focus on what customers value most—a simple, reliable, and exceptional experience. From whole-home entertainment to commercial-grade infrastructure, Snap One offers countless solutions for connected homes and businesses.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a id="entertainment-room"></a>
+
+<div class="entertainment-room">
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="dynamic-image">
+                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Entertainment-room.png" alt="Ring video doorbell on wall">
+            </div>
+            <div class="thumbnail-block">
+                <h2 id="entertainment-room">The Entertainment Room</h2>
+                <p>Looking for a seamless, simple, interconnectivity solution? You’re in the right place. Shop the space to enjoy the ease of installing premier control, audio, security, and lighting products that delight your customers.  </p>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <a href="#" class="toggle-control" data-toggle-target-id="episode-toggle">
+                <button class="accordion">Episode
+                    <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                    <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                </button>      
+            </a>
+            <div id="episode-toggle" class="toggle-content"> 
+                <p>Episode Home Theater Line (Coming Soon)</p>
+                <p>Episode MoIP Amplifier (Coming Soon)</p>
+                <p><a href="/shop/en/snapav/es-sub-mega-d10-blk" target="_blank">Episode MEGA Sub</a></p>
+                <p><a href="/shop/en/snapav/episode-architectural" target="_blank">Signature Speakers by Episode</a></p>
+                <!--<p><a href="/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10010&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=detailed&pageGroup=Search&beginIndex=0&pageSize=20&searchTerm=episode+signature&authToken=2198000%252CCqgjA8fzAerjK0BDlXCtdM9fYSoMYODRLk1t%252FOjri2c%253D" target="_blank">Signature Speakers by Episode</a></p>-->
+                <p><a href="/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10010&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=detailed&pageGroup=Search&beginIndex=0&pageSize=20&searchTerm=episode+core&authToken=2198000%252CCqgjA8fzAerjK0BDlXCtdM9fYSoMYODRLk1t%252FOjri2c%253D" target="_blank">Episode Core Speakers</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <a href="#" class="toggle-control" data-toggle-target-id="triad-toggle">
+                <button class="accordion">Triad
+                    <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                    <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                </button>      
+            </a>
+            <div id="triad-toggle" class="toggle-content"> 
+                <p><a href="/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10010&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=detailed&pageGroup=Search&beginIndex=0&pageSize=20&searchTerm=triad+passive+soundbars&authToken=76002%252CRHdnMSMfg6aIn0rqlQGOXeQYTxDOy9G3ESs%252FXmoDpy8%253D" target="_blank">Triad Passive Soundbars</a></p>
+                <p>Triad Subwoofers (NEW/Coming Soon)</p>
+                <p>Triad Passive Cinema Subwoofers (NEW/Coming Soon)</p>
+                <p>Triad Passive Slim Subs(NEW/Coming Soon)</p>
+                <p>Triad SA1 (NEW/Coming Soon)</p>
+                <p><a href="/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10010&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=detailed&pageGroup=Search&beginIndex=0&pageSize=20&searchTerm=triad+pdx&authToken=479255%252C%252BkTqzGcoFKRpMfYLeLUxY0y3K1nEXnTEbpo3ELkacgU%253D" target="_blank">Triad PDX Speakers</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <a href="#" class="toggle-control" data-toggle-target-id="c4-toggle">
+                <button class="accordion">Control4
+                    <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                    <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                </button>      
+            </a>
+            <div id="c4-toggle" class="toggle-content"> 
+                <p><a href="/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10010&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=detailed&pageGroup=Search&beginIndex=0&pageSize=20&searchTerm=control4+core&authToken=76002%252CbCyalwA2I0bleGKwORVhhM7KvpHsy%252FW5oCxFBzZiv%252Bw%253D" target="_blank">Control4 CORE Controllers</a></p>
+                <p><a href="/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10010&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=detailed&pageGroup=Search&beginIndex=0&pageSize=20&searchTerm=control4+core+lite&authToken=76002%252CRHdnMSMfg6aIn0rqlQGOXeQYTxDOy9G3ESs%252FXmoDpy8%253D" target="_blank">Control4 CORE lite</a></p>
+                <p><a href="/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10010&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=detailed&pageGroup=Search&beginIndex=0&pageSize=20&searchTerm=control4+ds2&authToken=76002%252CRHdnMSMfg6aIn0rqlQGOXeQYTxDOy9G3ESs%252FXmoDpy8%253D" target="_blank">Control4 DS2</a></p>
+                <p><a href="/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10010&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=detailed&pageGroup=Search&beginIndex=0&pageSize=20&searchTerm=c4+chime+video+doorbell&authToken=76002%252CRHdnMSMfg6aIn0rqlQGOXeQYTxDOy9G3ESs%252FXmoDpy8%253D" target="_blank">Control4 Chime</a></p>
+                <p><a href="/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10010&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=detailed&pageGroup=Search&beginIndex=0&pageSize=20&searchTerm=halo&authToken=76002%252CRHdnMSMfg6aIn0rqlQGOXeQYTxDOy9G3ESs%252FXmoDpy8%253D" target="_blank">Control4 Halo Remotes</a></p>
+                <p><a href="/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10010&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=detailed&pageGroup=Search&beginIndex=0&pageSize=20&searchTerm=t4+touch&authToken=76002%252CRHdnMSMfg6aIn0rqlQGOXeQYTxDOy9G3ESs%252FXmoDpy8%253D" target="_blank">Control4 T4 touch panel</a></p>
+                <p>Ryff (NEW/Coming Soon)</p>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <a href="#" class="toggle-control" data-toggle-target-id="clareone-toggle">
+                <button class="accordion">ClareOne
+                    <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                    <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                </button>      
+            </a>
+            <div id="clareone-toggle" class="toggle-content"> 
+                <p><a href="/shop/en/snapav/SearchDisplay?storeId=10151&catalogId=10010&langId=-1&pageSize=20&beginIndex=0&searchSource=Q&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&pageView=detailed&searchTerm=clare" target="_blank">ClareOne touch panel + Clare sensors</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <a href="#" class="toggle-control" data-toggle-target-id="lighting-toggle">
+                <button class="accordion">Lighting
+                    <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                    <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                </button>      
+            </a>
+            <div id="lighting-toggle" class="toggle-content"> 
+                <p><a href="/shop/en/snapav/search/C4-vibrant-lighting" target="_blank">Vibrant Lighting</a></p>
+                <p><a href="/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10010&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=detailed&pageGroup=Search&beginIndex=0&pageSize=20&searchTerm=control4®+contemporary&authToken=76002%252CRHdnMSMfg6aIn0rqlQGOXeQYTxDOy9G3ESs%252FXmoDpy8%253D" target="_blank">Control4 Contemporary Lighting line (faceplates/keypads)</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<a id="control-room"></a>
+
+<div class="control-room">
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="dynamic-image">
+                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Control-room.png" alt="Ring video doorbell on wall">
+            </div>
+            <div class="thumbnail-block">
+                <h2 id="entertainment-room">The Control Room</h2>
+                <p>Find the products, systems, and ecosystems designed to help you install, update, and maintain your project. Explore the versatility and range of solutions to fit your job’s demands. </p>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <a href="#" class="toggle-control" data-toggle-target-id="strong-toggle">
+                <button class="accordion">Strong
+                    <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                    <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                </button>      
+            </a>
+            <div id="strong-toggle" class="toggle-content"> 
+                <p><a href="/shop/en/snapav/search/fs-series" target="_blank">Strong FS Series rack</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <a href="#" class="toggle-control" data-toggle-target-id="wattbox-toggle">
+                <button class="accordion">Wattbox
+                    <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                    <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                </button>      
+            </a>
+            <div id="wattbox-toggle" class="toggle-content"> 
+                <p>WattBox Multi-function 800 series trigger (NEW/Coming Soon)</p>
+                <p><a href="/shop/en/snapav/search/ip-power" target="_blank">WattBox IP power line (250, 800 IPVM-12, 800 IPVM-6, 800-IPVM-18, 800CH1U-IPVM-8, 800-Faceplate)</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <a href="#" class="toggle-control" data-toggle-target-id="network-toggle">
+                <button class="accordion">Networking
+                    <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                    <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                </button>      
+            </a>
+            <div id="network-toggle" class="toggle-content"> 
+                <p><a href="/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10010&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=detailed&pageGroup=Search&beginIndex=0&pageSize=20&searchTerm=AN-220-RT+AN-520-RT&authToken=701039%252C0QyOozmXZbNR4zeMGn73HqHjK3Ehx4DJ1Z5QYtgQvzY%253D" target="_blank">Araknis X20 Routers (220,520)</a></p>
+                <p><a href="/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10010&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=detailed&pageGroup=Search&beginIndex=0&pageSize=20&searchTerm=AN-920+AN-620&authToken=-1002%252CJdh5JVzqovGDGuZIS9A0yAc11LCiDPi1CWNOoTX%252B9xo%253D" target="_blank">Araknis X20 2.5 and 10 gig Switches (620/920)</a></p>
+                <p><a href="/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10010&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=detailed&pageGroup=Search&beginIndex=0&pageSize=20&searchTerm=access+networks&authToken=-1002%252CJdh5JVzqovGDGuZIS9A0yAc11LCiDPi1CWNOoTX%252B9xo%253D" target="_blank">Access Networks Unleashed Access Points (A650/A350/A750)</a></p>
+                <p>MoIP V3 (960 series)(NEW/Coming Soon)</p>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <a href="#" class="toggle-control" data-toggle-target-id="vibrant-toggle">
+                <button class="accordion">Vibrant Lighting
+                    <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                    <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                </button>      
+            </a>
+            <div id="vibrant-toggle" class="toggle-content"> 
+                <p><a href="/shop/en/snapav/search/C4-vibrant-lighting" target="_blank">Vibrant Lighting</a></p>
+
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <a href="#" class="toggle-control" data-toggle-target-id="ovrc-toggle">
+                <button class="accordion">OvrC
+                    <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                    <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                </button>      
+            </a>
+            <div id="ovrc-toggle" class="toggle-content"> 
+                <p><a href="/shop/en/snapav/ovrc-hub/ovrc-300-pro" target="_blank">OvrC</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <a href="#" class="toggle-control" data-toggle-target-id="control-toggle">
+                <button class="accordion">Control4
+                    <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                    <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                </button>      
+            </a>
+            <div id="control-toggle" class="toggle-content"> 
+                <p><a href="/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10010&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=detailed&pageGroup=Search&beginIndex=0&pageSize=20&searchTerm=control4+core+lite&authToken=76002%252CRHdnMSMfg6aIn0rqlQGOXeQYTxDOy9G3ESs%252FXmoDpy8%253D" target="_blank">CORE lite</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <a href="#" class="toggle-control" data-toggle-target-id="surveillance-toggle">
+                <button class="accordion">Surveillance
+                    <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                    <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                </button>      
+            </a>
+            <div id="surveillance-toggle" class="toggle-content"> 
+                <p><a href="/shop/en/snapav/clr-v200-16pnvr4" target="_blank">ClareVision NVR</a></p>
+                <p>Luma 16CH and 32CH NVRs (Coming Soon)</p>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <a href="#" class="toggle-control" data-toggle-target-id="audio-toggle">
+                <button class="accordion">Audio
+                    <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                    <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                </button>      
+            </a>
+            <div id="audio-toggle" class="toggle-content"> 
+                <p><a href="/shop/en/snapav/ea-300-lynk" target="_blank">Episode Lynk</a></p>
+                <p>Triad Rackmount Subwoofer Amplifiers (NEW/Coming Soon)</p>
+                <p>Episode MoIP Amplifiers (Coming Soon)</p>
+                <p><a href="/shop/en/snapav/ts-pamp4-125-v2" target="_blank">Triad PAMP V2 (Coming Soon)</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a id="lounge-area"></a>
+
+<div class="lounge-area">
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="dynamic-image">
+                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/bar-and-lounge.png" alt="Outdoor lounge area">
+            </div>
+            <div class="thumbnail-block">
+                <h2 id="lounge-area">Bar & Lounge Experience</h2>
+                <p>Sometimes you just have a larger project that requires low-stress scalability options. 	Here you’ll find products that stand alone or stack up high. Explore these solutions.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <a href="#" class="toggle-control" data-toggle-target-id="surv2-toggle">
+                <button class="accordion">Surveillance
+                    <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                    <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                </button>      
+            </a>
+            <div id="surv2-toggle" class="toggle-content"> 
+                <p>>Luma X20 cameras + 520-IP-DFT New Compact Dome camera (NEW/Coming Soon)</p>
+                <p><a href="/shop/en/snapav/SearchDisplay?storeId=10151&catalogId=10010&langId=-1&pageSize=20&beginIndex=0&searchSource=Q&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&pageView=detailed&searchTerm=clarevision" target="_blank">ClareVision</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <a href="#" class="toggle-control" data-toggle-target-id="tv-toggle">
+                <button class="accordion">Sunbrite
+                    <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                    <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                </button>      
+            </a>
+            <div id="tv-toggle" class="toggle-content"> 
+                <p><a href="/shop/en/snapav/search/televisions-veranda-series" target="_blank">SunBrite Veranda (multiple sizes) + 75” (NEW/Coming Soon)</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <a href="#" class="toggle-control" data-toggle-target-id="speakers-toggle">
+                <button class="accordion">Episode
+                    <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                    <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                </button>      
+            </a>
+            <div id="speakers-toggle" class="toggle-content"> 
+                <p><a href="/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10010&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=detailed&pageGroup=Search&beginIndex=0&pageSize=20&searchTerm=radiance&authToken=76002%252CRHdnMSMfg6aIn0rqlQGOXeQYTxDOy9G3ESs%252FXmoDpy8%253D" target="_blank">Radiance</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <a href="#" class="toggle-control" data-toggle-target-id="mounts-toggle">
+                <button class="accordion">Strong
+                    <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                    <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                </button>      
+            </a>
+            <div id="mounts-toggle" class="toggle-content"> 
+                <p><a href="/shop/en/snapav/search/ceiling" target="_blank">Strong Ceiling Mounts</a></p>
+                <p><a href="/shop/en/snapav/sr-cab-slide-10u" target="_blank">Strong Slide Out Rack</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <a href="#" class="toggle-control" data-toggle-target-id="accessnw-toggle">
+                <button class="accordion">Access Networks
+                    <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                    <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                </button>      
+            </a>
+            <div id="accessnw-toggle" class="toggle-content"> 
+                <p><a href="/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10010&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=detailed&pageGroup=Search&beginIndex=0&pageSize=20&searchTerm=Araknis+and+Access&authToken=-1002%252CJdh5JVzqovGDGuZIS9A0yAc11LCiDPi1CWNOoTX%252B9xo%253D" target="_blank">Access Networks + Araknis outdoor access points</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <a href="#" class="toggle-control" data-toggle-target-id="vib-toggle">
+                <button class="accordion">Vibrant Lighting
+                    <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                    <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                </button>      
+            </a>
+            <div id="vib-toggle" class="toggle-content"> 
+                <p><a href="/shop/en/snapav/search/C4-vibrant-lighting" target="_blank">Vibrant Lighting</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a id="outdoor-area"></a>
+
+<div class="outdoor-area">
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="dynamic-image">
+                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Outdoor-experience.png" alt="Ring video doorbell on wall">
+            </div>
+            <div class="thumbnail-block">
+                <h2 id="entertainment-room">The Outdoor Experience </h2>
+                <p>Bring smarter audio, lighting, and TV experiences to your customers’ outdoor spaces. Optimized for the outdoors, these products are built to withstand the elements while being made for easy installation. </p>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <a href="#" class="toggle-control" data-toggle-target-id="surv3-toggle">
+                <button class="accordion">Surveillance
+                    <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                    <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                </button>      
+            </a>
+            <div id="surv3-toggle" class="toggle-content"> 
+                <p><a href="/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10010&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=detailed&pageGroup=Search&beginIndex=0&pageSize=20&searchTerm=luma+x20&authToken=76002%252CbCyalwA2I0bleGKwORVhhM7KvpHsy%252FW5oCxFBzZiv%252Bw%253D" target="_blank">Luma X20 cameras</a></p>
+                <p>Dome camera (NEW/Coming Soon)</p>
+                <p><a href="/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10010&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=detailed&pageGroup=Search&beginIndex=0&pageSize=20&searchTerm=clarevision&authToken=76002%252CbCyalwA2I0bleGKwORVhhM7KvpHsy%252FW5oCxFBzZiv%252Bw%253D" target="_blank">ClareVision</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <a href="#" class="toggle-control" data-toggle-target-id="sunbrite-toggle">
+                <button class="accordion">Television
+                    <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                    <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                </button>      
+            </a>
+            <div id="sunbrite-toggle" class="toggle-content"> 
+                <p><a href="/shop/en/snapav/search/televisions-veranda-series" target="_blank">SunBrite Veranda (multiple sizes) + 75” (NEW/Coming Soon)</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <a href="#" class="toggle-control" data-toggle-target-id="audio3-toggle">
+                <button class="accordion">Lighting & Audio
+                    <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                    <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                </button>      
+            </a>
+            <div id="audio3-toggle" class="toggle-content"> 
+                <p><a href="/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10010&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=detailed&pageGroup=Search&beginIndex=0&pageSize=20&searchTerm=radiance&authToken=76002%252CRHdnMSMfg6aIn0rqlQGOXeQYTxDOy9G3ESs%252FXmoDpy8%253D" target="_blank">Radiance</a></p>
+                <p>Episode Landscape V2 (NEW/Coming Soon)</p>
+                <p><a href="/shop/en/snapav/search/C4-vibrant-lighting" target="_blank">Vibrant Lighting</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <a href="#" class="toggle-control" data-toggle-target-id="mounts2-toggle">
+                <button class="accordion">Mounts & Racks
+                    <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                    <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                </button>      
+            </a>
+            <div id="mounts2-toggle" class="toggle-content"> 
+                <p><a href="/shop/en/snapav/search/ceiling" target="_blank">Strong Ceiling Mounts</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <a href="#" class="toggle-control" data-toggle-target-id="acnw-toggle">
+                <button class="accordion">Networking
+                    <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                    <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                </button>      
+            </a>
+            <div id="acnw-toggle" class="toggle-content"> 
+                <p><a href="/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10010&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=detailed&pageGroup=Search&beginIndex=0&pageSize=20&searchTerm=Araknis+and+Access&authToken=-1002%252CJdh5JVzqovGDGuZIS9A0yAc11LCiDPi1CWNOoTX%252B9xo%253D" target="_blank">Access Networks + Araknis outdoor access points</a></p>
+            </div>
+        </div>
+    </div>
+</div>

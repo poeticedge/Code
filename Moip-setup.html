@@ -1,0 +1,72 @@
+<style>
+    @media (max-width: 768px) {
+    }
+	
+    @media (max-width: 541px){
+    }
+</style>
+
+
+<!-- START BREADCRUMBS !-->
+<!--<div id="productsGlobalBreadCrumbs">
+    <div id="breadcrumb" class="breadcrumb">
+        <div id="WC_BreadCrumbTrailDisplay_div_1" class="breadcrumb_links"> 
+            <a id="WC_BreadCrumbTrailDisplay_link_2" href="/shop/en/snapav/home">Home</a> 
+            <span class="breadcrumb-divider">|</span> 
+            <a id="WC_BreadCrumbTrailDisplay_link_5a" href="/shop/en/snapav/about">About SnapAV</a> 
+            <span class="breadcrumb-divider">|</span> 
+            <a id="WC_BreadCrumbTrailDisplay_link_5a" href="/shop/en/snapav/brands">Brands</a> 
+            <span class="breadcrumb-divider">|</span> SunBrite™
+        </div>
+        <div id="WC_BreadCrumbTrailDisplay_div_3" class="breadcrumb_dropdowns">
+            <div id="WC_BreadCrumbTrailDisplay_div_4" class="breadcrumb_item"> </div>
+        </div>
+    </div>
+</div>-->
+<!-- END BREADCRUMBS !-->
+
+<!-- NAV START -->
+<div class="row-fluid">
+	<div class="dynamic-image" style="padding-bottom:10px; padding-top:20px;">
+                        <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/NPC/landingpages/B6_Binary_Color.png">
+                    </div>
+</div>
+<hr style="margin:0 0 10px 0;">
+ 
+ <!-- NAV END -->
+
+
+
+<div class="row-fluid">
+<strong><h1>Media over IP (MoIP) Switch Setup</h1></strong>
+<h3 style="color:black;">Thank you for purchasing Binary’s B-900 Series Media over IP System. These network switch setup instructions apply to Araknis 210 PoE &amp; 310 PoE switches.  Refer to the <a href="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/documents/MediaDistribution/ManualsAndGuides/B-900-MOIP-Network%20Guide_180710-1445.pdf" style="font-size:1.6rem; text-decoration:underline" target="_blank">MoIP Network Guide</a> for minimum switch requirements for deployment on other network switches. </h3>
+<h3 style="color:#FF4B41; font-weight: bold; text-transform: uppercase;">Apply the following settings to all managed swithces on the network.</h3>
+<h3 style="color:black; font-weight: bold;">Prior to connecting and powering on any MoIP devices, follow the steps below to properly configure an Araknis 210 POE / 310 POE Series switch.</h3>
+<ol style="font-size:1.6rem; color:black; font-family: Lato, Helvetica Neue, Roboto, Arial, sans-serif; line-height:28px;">
+<li><strong style="color:#2d72ae">Factory default the Araknis switch</strong>. Press and hold the reset button for 10—15 seconds until the Status LED flashes once. This will reboot the switch and reset to factory settings.</li>
+<li><strong style="color:#2d72ae">Access the local UI of the switch</strong> via Remote Access in OvrC or connect locally by directing a web browser to the IP address of the switch
+    <ul>
+    <li>a)	Default IP Address: 192.168.20.254</li>
+    <li>b)	Default login/password: araknis/araknis</li>
+    </ul>
+</li>
+<li>Choose <strong style="color:#2d72ae">ADVANCED &gt; MULTICAST &gt; IGMP SNOOPING</strong> and make the follow changes:
+	<ul>
+    <li>a)	Version: <strong style="color:#2d72ae">V2</strong></li>
+    <li>b)	Report Suppression: <strong style="color:#2d72ae">Enabled</strong></li>
+    <li>c)	Unregistered IPMC Forward Action: <strong style="color:#2d72ae">Flood</strong></li>
+    <li>d)	IGMP Snooping Status: <strong style="color:#2d72ae">Enabled</strong></li>
+    <li>e)	Fast Leave:  	<strong style="color:#2d72ae">Enabled</strong></li>
+    <li>f)	Querier State: <strong style="color:#2d72ae">Enabled</strong></li>
+    <li>g)	Querier Version: <strong style="color:#2d72ae"> V2</strong></li>
+    <li>h)	Router Settings &gt; Router Ports Auto-Learned: <strong style="color:#2d72ae">Enabled</strong></li>
+    </ul>
+    Click <strong style="color:#2d72ae">Apply</strong> to save these settings
+</li>
+<li>Choose <strong style="color:#2d72ae">SETTINGS > PORTS</strong>, then verify <strong>Jumbo Frame</strong> is set to greater than 8,000 Bytes.  </li>
+
+</ol>
+<h3 style="color:black;">To complete the setup of the MoIP system, please refer to the <a href="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/documents/MediaDistribution/ManualsAndGuides/B-900-MOIP-Install%20Guide_180710-1447.pdf" style="font-size:1.6rem; text-decoration:underline;" target="_blank">MoIP Installation &amp; Setup Guide</a> </h3>
+</div>
+
+

@@ -1,0 +1,952 @@
+<style>
+  .aspect-70::before {
+    padding-top: 70%;
+  }
+  .aspect-64::before {
+    padding-top: 64%;
+  }
+  @media (max-width: 992px) {
+    .masonry-item::before {
+      padding-top: 33% !important;
+    }
+  }
+  @media (max-width: 768px) {
+    .masonry-item::before {
+      padding-top: 50% !important;
+    }
+  }
+  .masonry-desc {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-height: 75px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+    padding: 15px;
+  }
+  .short-height {
+    font-size: 14px;
+    line-height: 22px;
+  }
+</style>
+
+<div id="video" class="black block" style="margin-top: 50px"></div>
+
+<div
+  id="hero"
+  class="full-screen background black"
+  style="
+    background-image: url('https://res.cloudinary.com/control4/image/upload/q_auto,f_auto,dpr_auto/C4_WWW_MltRmAd_Hdr2.jpg');
+  "
+>
+  <div class="vertically-center">
+    <div class="container fade-top text-center">
+      <h1 class="uppercase text-white half-padding-top">
+        MULTI-ROOM AUDIO <br />
+        <strong>YOUR MUSIC THROUGHOUT <no-br>YOUR HOME</no-br></strong>
+      </h1>
+      <!--	        <a href="javascript:;" class="c4btn outline" data-wistia="tifx4nk9ez" data-target="#video" data-hide="#hero" data-track-category="Navigation" data-track="Builders" data-track-label="Play Video"><i class="fal fa-play" style="padding-right: 10px;"></i>Watch Now</a>-->
+    </div>
+  </div>
+</div>
+
+<!-- c4yourself -->
+{{ if {settings:get_setting name="c4yourself" } == 1 }} {{ pages:display
+slug="cta-white" }} {{ else }}
+
+<!-- Blockquote -->
+<div class="white">
+  <div
+    class="container fade-top fade-bottom half-padding-top half-padding-bottom"
+  >
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 padding-top padding-bottom">
+        <blockquote>
+          Our house always has music playing and we love it. The system is so
+          easy to use that even my five-year-old can select in which rooms she
+          would like to hear music. <br />
+          <cite class="text-red">CHRIS B., CONTROL4 HOMEOWNER</cite>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ endif }}
+<!-- end c4yourself -->
+
+<!-- Accordion -->
+<style>
+  /* Accordion CSS */
+  .accordion {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    transition-duration: 800ms;
+  }
+  .accordion-item {
+    flex-grow: 1;
+    transition-duration: 800ms;
+    z-index: 1;
+  }
+  .accordion-item:not(:last-child) {
+    border-right: 1px solid #fff;
+  }
+  .accordion-item:hover {
+    background-color: rgba(195, 32, 50, 0.8);
+    cursor: pointer;
+  }
+  .accordion-item:hover h3.hidden {
+    display: inline-block;
+  }
+  .accordion .absolute.bottom i.fa-plus,
+  #exit-accordion i.fa-times {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    padding: 16px 17px;
+    margin-right: 12.5px;
+    z-index: 2;
+  }
+  .accordion-item:hover i.fa-plus,
+  div#exit-accordion:hover i.fa-times {
+    border: none;
+    background-color: #fff;
+  }
+  .accordion-item:hover i.fa.fa-plus:before,
+  div#exit-accordion:hover i.fa.fa-times:before {
+    color: #8a878a;
+  }
+  .accordion-item span {
+    opacity: 0;
+  }
+  .accordion-item:hover span {
+    opacity: 1;
+  }
+  .accordion-item.active {
+    flex-grow: 5;
+  }
+  .accordion-item.active:hover {
+    background-color: transparent;
+  }
+  .accordion-item.active .hidden
+    /*
+        .accordion-item.active p.hidden,
+        .accordion-item.active a.hidden,
+        .accordion.active .accordion-item:hover.active h3.hidden
+    */ {
+    display: block;
+  }
+  .accordion.active .accordion-item i.fa.fa-plus,
+  .accordion.active .accordion-item span,
+  .accordion.active .accordion-item:hover h3.hidden {
+    display: none;
+  }
+  .accordion.active #exit-accordion.hidden {
+    display: block;
+    top: 100px;
+    left: 50%;
+  }
+  @media (min-width: 801px) {
+    .accordion-item {
+      min-height: 100vh;
+    }
+    .accordion-item .padding {
+      height: 350px;
+    }
+    .accordion.active .accordion-item .padding {
+      height: 500px;
+    }
+    .accordion.active .accordion-item.active .padding {
+      height: 300px;
+    }
+    .accordion.active .accordion-item.active h2 {
+      transform: rotate(0deg);
+      float: none;
+      width: 100%;
+      left: 0px;
+    }
+    .accordion.active .accordion-item h2 {
+      transform: rotate(90deg);
+      float: left;
+      width: 100vh;
+      transform-origin: left;
+      left: 50%;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .accordion,
+    .accordion.full-screen {
+      flex-direction: column;
+      min-height: calc(100vh + 100px) !important;
+    }
+    .accordion-item.active {
+      background-color: rgba(0, 0, 0, 0.5) !important;
+    }
+    .accordion-item:not(:last-child) {
+      border-bottom: 1px solid #fff;
+    }
+    .accordion-item:hover {
+      background-color: none;
+    }
+    .accordion-item h2,
+    .accordion-item h3 {
+      margin-bottom: 12.5px;
+    }
+    .accordion-item p {
+      line-height: 21px;
+    }
+    .accordion.active .accordion-item.active h3.hidden {
+      display: inline-block;
+      font-size: 1.1em;
+    }
+    .accordion-item div.absolute {
+      position: relative;
+    }
+    .accordion .accordion-item h3.hidden {
+      display: none;
+    }
+    .accordion-item.active {
+      flex-grow: 10;
+    }
+    .accordion.active .accordion-item.active h2,
+    .accordion.active .accordion-item h2 {
+      transform: rotate(0deg);
+    }
+    .accordion.active #exit-accordion.hidden {
+      display: none;
+    }
+    i.fa.fa-plus {
+      padding: 14px;
+    }
+  }
+</style>
+<div
+  class="accordion full-screen background flawed-z-correct black"
+  data-background="//res.cloudinary.com/control4/image/upload/v1722609367/www/245_24_Apple_Music-for_C4_wwwAccordian-bkgnd.png"
+>
+  <div id="exit-accordion" class="absolute hidden hidden-xs">
+    <i class="fal fa-times"></i>
+  </div>
+  <div
+    class="accordion-item"
+    data-background="https://res.cloudinary.com/control4/image/upload/q_auto,f_auto,dpr_auto/C4_WWW_MltRmAd_Accrdn2.jpg"
+    data-track-category="Intercom Anywhere"
+    data-track="Accordion"
+    data-track-label="See Talk Do"
+  >
+    <div class="padding vertically-center text-white">
+      <h2>ANY ROOM, EVERY ROOM</h2>
+      <p class="hidden">
+        Stream your favorite playlist on full blast through the entire house or
+        enjoy it softly in the kitchen. With high-resolution, multi-room audio
+        from Control4, you can play all of your favorite music everywhere or in
+        just one room—with the touch of a button.
+      </p>
+      <div class="absolute bottom">
+        <i class="fal fa-plus"></i><span>Read More</span>
+      </div>
+    </div>
+  </div>
+  <div
+    class="accordion-item"
+    data-background="https://res.cloudinary.com/control4/image/upload/q_auto,f_auto,dpr_auto/C4_WWW_MltRmAd_Accrdn3.jpg"
+    data-track-category="Intercom Anywhere"
+    data-track="Accordion"
+    data-track-label="Control At Home"
+  >
+    <div class="padding text-white vertically-center">
+      <h2>STREAMING MUSIC SERVICES</h2>
+      <p class="hidden">
+        Control4 provides broad choice and on-demand entertainment with the most
+        popular music streaming services, including apps standard on every
+        Control4 system. From Mozart to Metallica, everyone in the family can
+        stream their favorite artists, stations, and playlists in their own
+        spaces, without needing additional devices. These music streaming
+        services may require that the end user have an account with the service,
+        and all streaming services are subject to the restrictions and
+        limitations, included geographical limitations, of the particular
+        service.
+      </p>
+      <p class="hidden">
+        <small style="color: #cecccc"
+          >Many music services require the end user to have an account or
+          subscription. All streaming services are subject to the restrictions
+          and limitations, included geographical limitations, of the particular
+          service.</small
+        >
+      </p>
+      <div class="row hidden">
+        <div class="col-12 sr-only">
+          Streaming Services supported by Control4 (not an all-inclusive list)
+          <ul>
+            <li>Deezer</li>
+            <li>iHeart Radio</li>
+            <li>Pandora</li>
+            <li>Napster</li>
+            <li>Soundmachine</li>
+            <li>Sirius XM</li>
+            <li>Spotify</li>
+            <li>Tunein</li>
+            <li>Tidal</li>
+            <li>Amazon Music</li>
+          </ul>
+        </div>
+        <div class="col-sm-2 col-xs-6">
+          <img
+            src="https://res.cloudinary.com/control4/image/upload/v1718829395/www/control4/logo_Deezer.svg"
+            alt="Deezer logo"
+            style="width: 125px"
+          />
+        </div>
+        <div class="col-sm-2 col-xs-6">
+          <img
+            src="https://res.cloudinary.com/control4/image/upload/v1718829396/www/control4/logo_iheartradio.svg"
+            alt="iHeart Radio logo"
+            style="width: 125px"
+          />
+        </div>
+        <div class="col-sm-2 col-xs-6">
+          <img
+            src="https://res.cloudinary.com/control4/image/upload/v1718829386/www/control4/logo_pandora.svg"
+            alt="Pandora logo"
+            style="width: 125px"
+          />
+        </div>
+        <div class="col-sm-2 col-xs-6">
+          <img
+            src="https://res.cloudinary.com/control4/image/upload/v1718829397/www/control4/logo_Napster.svg"
+            alt="Napster logo"
+            style="width: 125px"
+          />
+        </div>
+        <div class="col-sm-2 col-xs-6">
+          <img
+            src="https://res.cloudinary.com/control4/image/upload/v1718829387/www/control4/logo_soundmachine.svg"
+            alt="Soundmachine logo"
+            style="width: 125px"
+          />
+        </div>
+        <div class="col-sm-2 col-xs-6">
+          <img
+            src="https://res.cloudinary.com/control4/image/upload/v1718829387/www/control4/logo_SiriusXM.svg"
+            alt="SiriusXM logo"
+            style="width: 125px"
+          />
+        </div>
+      </div>
+      <div class="row hidden">
+        <div class="col-sm-2 col-xs-6">
+          <img
+            src="https://res.cloudinary.com/control4/image/upload/v1718829390/www/control4/logo_spotify.svg"
+            alt="Spotify logo"
+            style="width: 125px"
+          />
+        </div>
+        <div class="col-sm-2 col-xs-6">
+          <img
+            src="https://res.cloudinary.com/control4/image/upload/v1718829391/www/control4/logo_TuneIn.svg"
+            alt="TuneIn logo"
+            style="width: 125px"
+          />
+        </div>
+        <div class="col-sm-2 col-xs-6">
+          <img
+            src="https://res.cloudinary.com/control4/image/upload/v1718829390/www/control4/logo_tidal.svg"
+            alt="Tidal logo"
+            style="width: 125px"
+          />
+        </div>
+        <div class="col-sm-2 col-xs-6">
+          <img
+            src="https://res.cloudinary.com/control4/image/upload/v1718829392/www/control4/logo_amazon_music.svg"
+            alt="Amazon Music logo"
+            style="width: 125px"
+          />
+        </div>
+        <div class="col-sm-2 col-xs-6">
+          <img
+            src="https://res.cloudinary.com/control4/image/upload/v1718829394/www/control4/logo_Audacy.svg"
+            alt="Audacy Music logo"
+            style="width: 125px"
+          />
+        </div>
+      </div>
+      <div class="absolute bottom">
+        <i class="fal fa-plus"></i><span>Read More</span>
+      </div>
+    </div>
+  </div>
+  <div
+    class="accordion-item"
+    data-background="https://res.cloudinary.com/control4/image/upload/q_auto,f_auto,dpr_auto/C4_WWW_MltRmAd_Accrdn4.jpg"
+    data-track-category="Intercom Anywhere"
+    data-track="Accordion"
+    data-track-label="Always Connected"
+  >
+    <div class="padding vertically-center text-white">
+      <h2>HIGH-RESOLUTION DIFFERENCE</h2>
+      <p class="hidden">
+        Enjoy audio that is powerful, emotional, and memorable. It’s easy to
+        accept a lower quality of sound when you’re on the go—like in the car or
+        at work—but at home you shouldn’t sacrifice quality. Enjoy an emotional
+        experience that a true audiophile would appreciate—with all the detail,
+        timbre, and texture the artist intended.
+      </p>
+      <div class="absolute bottom">
+        <i class="fal fa-plus"></i><span>Read More</span>
+      </div>
+    </div>
+  </div>
+  <div
+    class="accordion-item"
+    data-background="https://res.cloudinary.com/control4/image/upload/q_auto,f_auto,dpr_auto/C4_WWW_MltRmAd_Accrdn5.jpg"
+    data-track-category="Intercom Anywhere"
+    data-track="Accordion"
+    data-track-label="House Calls"
+  >
+    <div class="padding vertically-center text-white">
+      <h2>SMART HOME MAGIC</h2>
+      <div class="row">
+        <div class="col-sm-11">
+          <p class="hidden">
+            Set the perfect scene to relax and really enjoy your music. With one
+            touch or by using a simple voice command, the lights dim, the shades
+            lower, the music starts to play, and the front door locks so you can
+            enjoy the magic. When your music plays nicely with other devices at
+            home, life just got much more enjoyable.
+          </p>
+        </div>
+      </div>
+      <div class="absolute bottom">
+        <i class="fal fa-plus"></i><span>Read More</span>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  docReady(function () {
+    var originalimage = "url(" + $(".accordion").data("background") + ")";
+    $(".accordion").css("background-image", originalimage);
+    $(".accordion-item").each(function () {
+      $("<img/>")[0].src = $(this).data("background");
+    });
+    $(".accordion .accordion-item").on("click", function () {
+      var $clicked = $(this);
+      var bg = "url(" + $(this).data("background") + ")";
+      $clicked
+        .parent(".accordion")
+        .css("background-image", bg)
+        .find(".accordion-item")
+        .not($clicked)
+        .removeClass("active");
+      $clicked.addClass("active");
+      $(".accordion").addClass("active");
+    });
+    $("#exit-accordion").on("click", function () {
+      $(".accordion, .accordion .accordion-item").removeClass("active");
+      $(".accordion").css("background-image", originalimage);
+    });
+  });
+</script>
+<!-- End Accordion -->
+
+{{ products }}
+
+<!-- interactive slider -->
+<style>
+  .full-screen,
+  html:not(.mobile-browser) .full-screen-desktop {
+    min-height: 100vh !important;
+    width: 100vw !important;
+    overflow: hidden;
+  }
+  .slider-controls {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+  }
+  .slider-controls a[data-slick-slide] > div {
+    opacity: 0.7;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 50%;
+    transition: 400ms;
+  }
+  .slider-controls a[data-slick-slide]:hover > div,
+  .slider-controls a[data-slick-slide].active > div {
+    opacity: 1;
+    background-color: rgba(195, 32, 50, 0.8);
+    border: 1px solid transparent;
+  }
+  .slider-controls a div {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    max-height: 100px;
+    max-width: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .black p {
+    color: #fff;
+  }
+  div.slider {
+    min-height: 450px;
+  }
+  div.slider .slide {
+    min-height: 450px !important;
+    height: 100vh !important;
+    width: 100vw;
+  }
+  div.slider .slick-list {
+    height: 100vh !important;
+  }
+  @media (max-width: 1300px) {
+    .slide .vertically-center {
+      width: calc(100vw - 70px);
+      top: 40%;
+    }
+  }
+  @media (max-width: 480px) {
+    .full-screen.black {
+      border: none !important;
+    }
+    .slider .slide {
+      height: calc(100vh + 100px) !important;
+    }
+    .slide .vertically-center {
+      width: 100vw;
+    }
+    .slider-controls a div {
+      height: 80px;
+      width: 80px;
+    }
+    div.slider .slide,
+    div.slider .slick-list {
+      min-height: 600px !important;
+    }
+  }
+</style>
+<div class="full-screen black" style="border: 35px solid #fff">
+  <div id="slider-vid">
+    <div class="slider">
+      <div
+        class="slide full-screen background"
+        style="
+          background-image: url('https://res.cloudinary.com/control4/image/upload/q_auto,f_auto,dpr_auto/C4_WWW_MltRmAd_Sldr_Sndbrs2.jpg');
+        "
+      >
+        <div class="vertically-center">
+          <div class="padding">
+            <div class="row">
+              <div class="col-lg-offset-1 col-lg-6 text-white fade-bottom">
+                <h2>SOUNDBARS</h2>
+                <p>
+                  Handcrafted soundbars pair beautifully with any TV, providing
+                  superior sound quality over the television’s anemic speakers.
+                  They are built-to-order—up to 82” long—with custom paint
+                  matching and real-wood veneers that perfectly blend with
+                  walls, custom millwork, and other room decor.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="slide full-screen background"
+        style="
+          background-image: url('https://res.cloudinary.com/control4/image/upload/q_auto,f_auto,dpr_auto/C4_WWW_MltRmAd_Sldr_Sprior_Spkrs.jpg');
+        "
+      >
+        <div class="vertically-center">
+          <div class="padding">
+            <div class="row">
+              <div class="col-lg-offset-1 col-lg-6 text-white fade-bottom">
+                <h2>SUPERIOR SPEAKERS</h2>
+                <p>
+                  Every Triad speaker is custom-ordered and hand-crafted with
+                  only the highest-quality materials. Exquisite designs, custom
+                  paint-matching, and the ability to blend in with any décor
+                  make them the only speakers you’ll ever need. And, once you
+                  hear this sound quality, they’ll be the only speakers you’ll
+                  ever want!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="slide full-screen background"
+        style="
+          background-image: url('https://res.cloudinary.com/control4/image/upload/q_auto,f_auto,dpr_auto/C4_WWW_MltRmAd_Sldr_Dsgnrs_Srs.jpg');
+        "
+      >
+        <div class="vertically-center">
+          <div class="padding">
+            <div class="row">
+              <div class="col-lg-offset-1 col-lg-6 text-white fade-bottom">
+                <h2>DESIGNER SERIES SPEAKERS</h2>
+                <p>
+                  Sounds too good to be true? Not this time. These in-ceiling
+                  speakers deliver rich, full sound from a tiny four-inch,
+                  flush-mount speaker grill. They are ideal for filling the
+                  house with beautiful music without ever compromising design
+                  aesthetics.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="slide full-screen background"
+        style="
+          background-image: url('https://res.cloudinary.com/control4/image/upload/q_auto,f_auto,dpr_auto/C4_WWW_MltRmAd_Sldr_Otdr_Spkrs.jpg');
+        "
+      >
+        <div class="vertically-center">
+          <div class="padding">
+            <div class="row">
+              <div class="col-lg-offset-1 col-lg-6 text-white fade-bottom">
+                <h2>OUTDOOR SPEAKERS</h2>
+                <p>
+                  Premium, all-weather landscape speakers are designed to
+                  deliver great sound in every outdoor space, from a cozy patio
+                  to a large estate. Ultra-wide dispersion allows for fewer
+                  speakers to be used and ensures even sound coverage without
+                  loud hot-spots.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slider-controls">
+      <div class="col-sm-offset-4 col-sm-1 col-xs-6">
+        <a
+          data-slick-slide="0"
+          id="slick-slide00"
+          class="active"
+          data-track-category="Smart Lighting"
+          data-track="Slide"
+          data-track-label="FitFinish"
+        >
+          <div
+            class="aspect one-to-one background-contain"
+            style="
+              background-image: url('https://res.cloudinary.com/control4/image/upload/C4_WWW_MltRmAd_Icons-Sndbrs.svg');
+            "
+          ></div>
+        </a>
+      </div>
+      <div class="col-sm-1 col-xs-6">
+        <a
+          data-slick-slide="1"
+          id="slick-slide01"
+          data-track-category="Smart Lighting"
+          data-track="Slide"
+          data-track-label="PeaceMind"
+        >
+          <div
+            class="aspect one-to-one background-contain"
+            style="
+              background-image: url('https://res.cloudinary.com/control4/image/upload/C4_WWW_MltRmAd_Icons_Sprior_Spkrs.svg');
+            "
+          ></div>
+        </a>
+      </div>
+      <div class="col-sm-1 col-xs-6">
+        <a
+          data-slick-slide="2"
+          id="slick-slide02"
+          data-track-category="Smart Lighting"
+          data-track="Slide"
+          data-track-label="UnderStars"
+        >
+          <div
+            class="aspect one-to-one background-contain"
+            style="
+              background-image: url('https://res.cloudinary.com/control4/image/upload/C4_WWW_MltRmAd_Icons_Dsgnrs_Srs.svg');
+            "
+          ></div>
+        </a>
+      </div>
+      <div class="col-sm-1 col-xs-6">
+        <a
+          data-slick-slide="3"
+          id="slick-slide03"
+          data-track-category="Smart Lighting"
+          data-track="Slide"
+          data-track-label="UnderStars"
+        >
+          <div
+            class="aspect one-to-one background-contain"
+            style="
+              background-image: url('https://res.cloudinary.com/control4/image/upload/C4_WWW_MltRmAd_Icons_Otdr_Spkrs.svg');
+            "
+          ></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"
+  defer
+></script>
+<script type="text/javascript">
+  docReady(function () {
+    // slick slider
+    var $slider = $(".slider").slick({
+      adaptiveHeight: true,
+      autoplay: true,
+      autoplaySpeed: 7000,
+      arrows: false,
+      //	prevArrow: '<a href="javascript:;" class="slick-prev"><i class="fal fa-arrow-left"></i></a>', // uncomment if arrows set to true
+      //	nextArrow: '<a href="javascript:;" class="slick-next"><i class="fal fa-arrow-right"></i></a>', // uncomment if arrows set to true
+      dots: false,
+      draggable: false,
+      fade: true,
+      //	initialSlide: Math.floor(Math.random() * $('div.slider div.slide').length), // randomize
+      variableWidth: true,
+      customPaging: function (slider, i) {
+        return (
+          '<button class="tab">' +
+          $(".slick-thumbs li:nth-child(" + (i + 1) + ")").html() +
+          "</button>"
+        );
+      },
+    });
+
+    // highligh selected slide's icon
+    $(".slider").on(
+      "beforeChange",
+      function (event, slick, currentSlide, nextSlide) {
+        var $slidericon = $("[data-slick-slide=" + nextSlide + "]");
+        $("[data-slick-slide]").removeClass("active");
+        $slidericon.addClass("active");
+      }
+    );
+
+    // go to slide
+    $("[data-slick-slide]").click(function () {
+      var $this = $(this);
+      // accounted for in above function
+      // $('[data-slick-slide]').not($this).removeClass('active');
+      // $this.addClass('active');
+      var clicked = $this.data("slick-slide");
+      $slider.slick("slickGoTo", clicked);
+    });
+  });
+</script>
+<!-- End interactive slider -->
+
+<!--
+    <div id="inglineform" class="white hidden">
+        <div class="container padding-top padding-bottom">
+            <div class="form-wrapper">
+                <h4 class="uppercase">Sign up below to receive more information</h4>
+                <form id="solutionsForm" name="Solutions Form" class="ajax validate" method="post" action="/assets/scripts/post-forwarder.php" 
+                    data-track-category="Lead Form Submit" 
+                    data-next="#confirmation">
+                    <input name="postUrl" type="hidden" value="https://go.pardot.com/l/63762/2016-03-03/7fs4nz">
+                    <input type="hidden" name="campaign" value="Solutions - Multi-Room Audio">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="firstName" class="sr-only">First name</label>
+                            <input id="firstName" required="" type="text" name="firstName" placeholder="First name*">
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="lastName" class="sr-only">Last name</label>
+                            <input id="lastName" required="" type="text" name="lastName" placeholder="Last name*">
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="phoneNumber" class="sr-only">Phone</label>
+                            <input id="phoneNumber" required="" type="tel" name="phoneNumber" placeholder="Phone*">
+                        </div>
+                        <div class="col-sm-4">
+                            <select name="country" required="">
+                                {{theme:partial name="form/options-country" placeholder="true" }}
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="email" class="sr-only">Email</label>
+                            <input id="email" required="" type="email" name="email" placeholder="EMAIL*">
+                        </div>
+                        <div class="col-sm-4">
+                            <div>
+                                <div class="grecaptcha-badge" data-style="inline" style="width: 256px; height: 60px; box-shadow: gray 0px 0px 5px; transform: translateX(400vw); position: absolute; display: none;">
+                                    <div class="grecaptcha-logo">
+                                        <iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LelnFwUAAAAAAfwgM5wW6VW9W4ddfjgCVPQN003&amp;co=aHR0cHM6Ly93d3cuY29udHJvbDQuY29tOjQ0Mw..&amp;hl=en&amp;v=v1558333958099&amp;size=invisible&amp;badge=inline&amp;cb=gzhia3ecw284" width="256" height="60" role="presentation" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" id="a-6zl963uzbqnt"></iframe>
+                                    </div>
+        
+                                    <div class="grecaptcha-error"></div>
+                                    <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" name="submit" class="block g-recaptcha" id="recaptcha-button-0" disabled>SUBMIT</button>
+                        </div>
+                    </div>
+                    <p class="no-margin" style="padding-bottom: 12.5px;"><small>We take your privacy seriously and we promise we won’t spam you; please see our <a target="_blank" href="/legal/privacy-policy" class="bold" data-track-category="Homepage" data-track="Click" data-track-label="Form Privacy Policy">privacy policy</a> for details. By submitting your information, you are confirming that you are 18 years of age or older.</small></p>
+                    <p><small>This form uses invisible reCAPTCHA by <a href="https://policies.google.com/privacy?hl=en" target="_blank" class="bold" data-track-category="Homepage" data-track="Click" data-track-label="ReCAPTCHA Google Privacy Policy">Google Privacy Policy</a> and <a href="https://policies.google.com/terms?hl=en" target="_blank" class="bold" data-track-category="Homepage" data-track="Click" data-track-label="ReCAPTCHA Terms of Use">Terms of Use</a>.</small></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    -->
+
+<div class="light-grey">
+  <div
+    class="padding-top padding-bottom"
+    style="padding-left: 10%; padding-right: 10%"
+  >
+    <h2 class="bold no-margin" style="padding-left: 6px">
+      STARTING YOUR MUSIC
+    </h2>
+    <p class="half-padding-bottom" style="padding-left: 6px">
+      Is fast and simple for the entire family
+    </p>
+    <div class="row">
+      <div class="col-md-8" style="padding-left: 20px; padding-right: 20px">
+        <img
+          src="https://res.cloudinary.com/control4/image/upload/v1722609868/www/245_24_Apple_Music_for_Control4_www_update_2.png"
+          alt="Tabletop touch screen displaying Tidal streaming music service"
+        />
+      </div>
+      <div class="col-md-4" style="padding-left: 20px; padding-right: 20px">
+        <h2 style="font-size: 24px">IN-WALL & TABLETOP TOUCH SCREENS</h2>
+        <p>
+          The boldest and most beautiful way to fill the entire house with
+          music. Browse and select your playlists with a simple swipe or pass
+          the touch screen around so your friends and family can choose the
+          tunes. Streaming content from the world’s most popular services is
+          right at your fingertips, with stunning cover art on display.
+        </p>
+        <h2 style="font-size: 24px">VOICE CONTROL</h2>
+        <p>
+          Don’t even lift a finger. Simply tell Alexa what you want to hear and
+          where, and—voila!—instantly fill the house with high-quality sound.
+          Control4’s integration with the Amazon Alexa family of devices makes
+          it simple to play music anywhere with natural, verbal commands.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div
+        class="col-md-4 half-padding-top"
+        style="padding-left: 20px; padding-right: 20px"
+      >
+        <img
+          src="https://res.cloudinary.com/control4/image/upload/f_auto,q_auto,dpr_auto/C4_WWW_MltRmAd_Sqr_SmrtPhn-Tblt.jpg"
+          alt="man interacting with his smartphone"
+        />
+        <h2 class="half-padding-top" style="font-size: 24px">
+          SMARTPHONES & TABLETS
+        </h2>
+        <p>
+          Never stop a conversation to change the music. Simply pull out your
+          smart device, fire up the Control4 App, and enjoy instant access to
+          your streaming services. Visual feedback displays artist and track
+          information in a clear, elegant way.
+        </p>
+      </div>
+      <div
+        class="col-md-4 half-padding-top"
+        style="padding-left: 20px; padding-right: 20px"
+      >
+        <img
+          src="https://res.cloudinary.com/control4/image/upload/f_auto,q_auto,dpr_auto/C4_WWW_MltRmAd_Sqr_Kypds.jpg"
+          alt="Custom Music Keypad 6 buttons with different genres for each button"
+        />
+        <h2 class="half-padding-top" style="font-size: 24px">
+          WIRED & WIRELESS KEYPADS
+        </h2>
+        <p>
+          They’re not just for the lights! In fact, the keypad is one of the
+          most ideal ways to control your music. With one tap, your favorite
+          station starts in one room, or throughout the house. With another tap,
+          skip, pause, or change the volume instantly.
+        </p>
+      </div>
+      <div
+        class="col-md-4 half-padding-top"
+        style="padding-left: 20px; padding-right: 20px"
+      >
+        <img
+          src="https://res.cloudinary.com/control4/image/upload/v1695226749/Digital_Ops/Halo_WWW_ImageUpdates_MultiRoomAudioSolutions_LizzoListen.png"
+          alt="Control4 Universal Remote"
+        />
+        <h2 class="half-padding-top" style="font-size: 24px">
+          HANDHELD REMOTE
+        </h2>
+        <p>
+          The same remote that controls your TV also gives you access to your
+          favorite music. Quickly fire up a playlist or station in the family
+          room with just a few, fast button presses.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--<div class="white" style="border: 35px solid #fff;">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="background half-margin-bottom" style="background-image: url('https://res.cloudinary.com/control4/image/upload/f_auto,q_auto,dpr_auto/WWW_Smrt_Lghtng_4Sght.jpg'); background-position: center bottom; height: 650px">
+                    <div class="masonry-desc half-padding-left half-padding-right">
+                        <div class="col-md-11 col-sm-12">
+                            <h2 class="text-white" style="font-size: 20px; margin-bottom: 20px"><strong>4SIGHT</strong> <br> ENHANCING YOUR CONTROL</h2>
+                            <p class="short-height">Want to take your Control4 experience to the next level? With a 4Sight subscription, you can use the Control4 App to access and control your system from anywhere in the world (with an internet connection). 4Sight also enables features like Intercom Anywhere, voice control, and When>>Then Scene Personalization.</p>
+                            <p class="short-height">Control4 Customers can now subscribe themselves and manage their subscription from the Control4 App.</p>
+                            <a href="/o/4sight-services" class="c4btn outline">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="background half-margin-bottom" style="background-image: url('https://res.cloudinary.com/control4/image/upload/f_auto,q_auto,dpr_auto/WWW_Smrt_Lghtng_WhnThen2.jpg'); background-position: center bottom; height: 650px">
+                    <div class="masonry-desc half-padding-left half-padding-right">
+                        <div class="col-md-11 col-sm-12">
+                            <h2 class="text-white" style="font-size: 20px; margin-bottom: 20px"><strong>REALIZE THE FULL POTENTIAL</strong> <br>OF YOUR CONTROL4 SYSTEM</h2>
+                            <p class="short-height">A 4Sight subscription enables additional features and cloud services that will allow you to get the most out of your Control4 system. Features like:</p>
+                            <div class="row">
+                                <ul class="short-height">
+                                    <div class="col-lg-4 col-md-6">
+                                        <li>Remote System Access</li>
+                                        <li>Push Notifications</li>
+                                        <li>Intercom Anywhere</li>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <li>Voice Control</li>
+                                        <li>Scene Personalization</li>
+                                    </div>
+                                </ul>					
+                            </div>
+                            <div class="row half-padding-top">
+                                <a href="/o/4sight-services" class="c4btn outline">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+<!--
+    <div class="white">
+        <div class="padding container">
+            <small><sup>1</sup> Each of these participating showrooms will be selecting a #C4Yourself winner at the end of September. To be eligible, you must find a participating Control4 Certified Showroom in your area and contact them to RSVP. Exclusive offers available to #C4Yourself attendees with eligible purchases. Contact a participating location near you for further details. Control4 Smart Home Pros are independently-owned, local businesses.</small>
+        </div>
+    </div>
+    -->

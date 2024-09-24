@@ -1,0 +1,218 @@
+<style>
+	.icon-line {
+		padding-top: 5px;
+	}
+	.pr-level-icon {
+		width: 5%;
+	}
+	.rewards-icon {
+		display: inline-block;
+		color: #057ab9;
+	}
+	.boosted-h3 {
+		display: inline-block;
+	}
+	.boosted-icon {
+		display: none;
+	}
+    
+.boosted-icon.bosted-yes{	
+	display: block;
+}
+
+
+    .hs-points {
+        color: #74C7A9;
+        font-size: 3rem;
+        line-height: .5;
+        margin-top: 20px;
+    }
+
+    .re-progress{
+        background: #ccc;;
+        padding:3px;
+        border-radius: 10px;
+    }
+    .re-progress-in{
+        background: #0F94E0;
+        background: linear-gradient(-90deg, #0F94E0, #42B6F4);
+        height: 15px;
+        border-radius: 17px;
+    }
+	.dashboard-table {
+		margin: 20px -8px;
+	}
+	.dashboard-table td {
+		padding-top: 8px;
+	}
+	.td-padding{
+		padding-left: 127px;
+	}
+    
+    .mobile-table {
+        padding-left:14px
+    }
+
+    .span4.mod-4 {
+        padding-top: 40px;
+    }
+    .span4.mod-8 {
+        padding-top: 10px;
+    }
+        .ds-hs p{
+        margin: 5px 0px;
+    }
+    .ds-hs .btn-7{
+        border: 1px solid teal;
+        color:teal;
+    }
+    .ds-hs .btn-7:hover{
+        background: teal;
+        color: #fff;
+    }
+
+    .ln-pr-holder{
+        position: relative;
+       padding-top: 30px;
+		width: 94%
+    }
+
+    .ar-icn{
+        position: absolute;
+        right: -6px;
+        top: -21px;
+    }
+    .ar-icn p{
+        margin: 0;
+        white-space: nowrap;
+        position: absolute;
+        top: -15px;
+        left: 0;
+        margin-left:-4px;
+    }
+
+    .ar-icn p.rgt{
+        right:0;
+        left: unset;
+    }
+
+    .ar-icn span{
+        margin-left: -5px;
+    }
+	.benefits-block {
+		margin-top: -25px;
+	}
+	.benefits-block p{
+		line-height: 25px;
+	}
+
+	@media (max-width: 768px) and (max-width: 1024px) {
+	
+	.td-padding {
+		padding-left: 25px;
+	}
+		
+	}
+
+    @media (max-width: 541px) {
+        .span4.mod-4 {
+            padding-top: 20px;
+        }
+        .span4.mod-8 {
+            padding-top: 15px;
+        }
+        
+        .mobile-table {
+            padding-left:0px;
+        }
+        .ln-pr-holder{
+       padding-bottom: 20px;
+        }
+    }
+
+    @media (min-width: 541px) {
+        .ds-border-left{
+            border-left: 1px solid #e0e0e0;
+        }
+    }
+
+    @media (max-width: 540px) {
+        .ds-hs .ds-lc{
+            width: 45%;
+            float: left;
+        }
+
+        .ds-hs .ds-rc{
+            width: 45%;
+            float: right;
+        }
+    }
+</style>
+
+<div id="homepage-widget-01">
+	<div class="row-fluid icon-line">
+		<div class="span9">
+			<img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Platinum.png" alt="Big Install icon" style="width: 24px;">
+			<h2 class="rewards-icon">Platinum</h2>
+		</div>
+		<div class="span3">
+			<div class="boosted-icon-[Boosted]">
+				<img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/boost.png" alt="Boosted icon" style="width: 24px;">
+				<h3 class="boosted-h3"><strong>Boosted</strong></h3>
+			</div>
+		</div>
+	</div>
+	
+    <div class="row-fluid">
+        <!-- START PROGRESS BAR -->
+        <div class="span6">
+            <div class="ln-pr-holder" data-total-val="[AnnualPointsEarned]">
+                <div class="re-progress">
+                    <div class="re-progress-in" style="width:[PercentPointGoalAchieved]%; position:relative;">
+                        <span class="ar-icn">
+                            <p>[AnnualPointsEarned]</p>
+                            <span style="color:#ffaf32">&#9660;</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <p style="float:left; font-weight: bold">Annual Points Goal:</p> <p style="float:right; font-weight: bold">[AnnualPointsGoal]</p>
+                </div>
+            </div>
+			<!-- END PROGRESS BAR -->
+			<!-- Start TABLE -->
+			<div class="span12">
+				<table class="dashboard-table">
+					<tr>
+						<td>YTD Points to Go:</td>
+						<td class="td-padding"><strong>[PointsRemainingForAnnualGoal]</strong></td>
+					</tr>
+					<tr>
+						<td>Program Year Ends:</td>
+						<td class="td-padding"><strong>06/25/21</strong></td>
+					</tr>	
+				</table>
+				
+            <!-- END TABLE -->
+			<div class="row-fluid" style="margin: 25px 0px 0px -7px;"><a href="/shop/UserAccountView?currentSelection=rewardsStatusSlct&catalogId=10010&langId=-1&storeId=10151">My Rewards Details</a></div>
+        </div>
+       </div>
+
+        
+
+        <!-- START TABLE -->
+        <div class="span6">
+            <div class="benefits-block">
+				<p><strong>Benefits</strong><br>
+				<span style="color:#42B6F4; font-size: 20px;">&#10003;</span> Free Shipping<br>
+				<span style="color:#42B6F4; font-size: 20px;">&#10003;</span> 8% Reward Pricing<br>
+				<span style="color:#42B6F4; font-size: 20px;">&#10003;</span> No restocking fee prior to 60 days<br>
+				<span style="color:#42B6F4; font-size: 20px;">&#10003;</span> Expedited advanced replacement (on request)<br>
+				<span style="color:#42B6F4; font-size: 20px;">&#10003;</span> Quarterly product feedback calls<br>
+				<span style="color:#42B6F4; font-size: 20px;">&#10003;</span> Premium Tech Support 7 days	a week<br>
+				<span style="color:#42B6F4; font-size: 20px;">&#10003;</span> System design assistance	
+				</p>
+            </div>
+        </div>
+    </div>
+</div>

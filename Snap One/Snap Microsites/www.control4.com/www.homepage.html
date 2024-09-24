@@ -1,0 +1,954 @@
+<style>
+	html.mobile-browser .hidden-mobile {
+		display: none !important;
+	}
+	html.mobile-browser .visible-mobile {
+		display: block !important;
+	}
+	header {
+		z-index: 9999;
+	}
+	
+	/* form */
+	form.outline input,
+	form.outline select {
+        background-color: transparent !important; 
+        color: #000 !important; 
+        border: 1px solid #000 !important;
+    }
+    form.outline button:hover {
+        background-color: #ddddde !important;
+    }
+    form input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: black !important;        
+    }
+    form input::-moz-placeholder { /* Firefox 19+ */
+        color: black !important;
+    }
+    form input:-ms-input-placeholder { /* IE 10+ */
+        color: black !important;
+    }
+    form input:-moz-placeholder { /* Firefox 18- */
+        color: black !important;
+    }
+	
+	/* elements */
+	hr {
+		margin: 25px 0;
+		height: 0;
+		border: 0 none;
+		border-bottom: 1px solid #aaa7a9;
+	}
+	.container-lg {
+		margin: auto;
+		max-width: 1700px;
+	}
+	#skrollr-body .dangle-bomber {
+		padding: 25px 0;
+	}
+	.dangle-bomber .dangle-bomber-text {
+		position: fixed;
+		top: 125px;
+		right: 0px;
+		height: calc(100vh - 400px);
+		min-height: 600px;
+		width: 33%;
+		min-width: 480px; 
+		max-width: 100vw; 
+		z-index: 1;
+	}
+	.dangle-bomber .dangle-bomber-image {
+		height: calc(100vh - 100px);
+		width: 80%;
+		margin: 0 auto 25px 0;
+		background-size: cover;
+	}
+	@media screen and (max-width: 768px) {
+		.dangle-bomber .dangle-bomber-image {
+			height: 500px;
+			width: 100%;
+		}
+	}
+	.dangle-bomber.-flip .dangle-bomber-text {
+		right: auto;
+		left: 0;
+	}
+	.dangle-bomber.-flip .dangle-bomber-image {
+		margin: 0 0 25px auto;
+	}
+	.padding-50 {
+		padding: 50px;
+	}
+	.padding-75 {
+		padding: 75px;
+	}
+	@media screen and (max-width: 768px) {
+		.padding-75,
+		.padding-50 {
+			padding: 25px;
+		}
+	}
+
+	/* c4down	 */
+	a.c4down::before{
+        color: #fff;
+        font-size: 60px;
+        -webkit-animation-name: strobe; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+        animation-name: strobe;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+    a.c4down:hover::before{
+        color: #fff;
+        animation: none;
+    }
+        
+    /* Safari 4.0 - 8.0 */
+    @-webkit-keyframes strobe {
+        0%   {color: rgba(255,255,255,0.2);transform: translateY(-10px);}
+        50%  {color: rgba(255,255,255,0.8);transform: translateY(0px);}
+        100% {color: rgba(255,255,255,0.2);transform: translateY(-10px);}
+    }
+        
+    /* Standard syntax */
+    @keyframes strobe {
+        0%   {color: rgba(255,255,255,0.2);transform: translateY(-10px);}
+        50%  {color: rgba(255,255,255,0.8);transform: translateY(0px);}
+        100% {color: rgba(255,255,255,0.2);transform: translateY(-10px);}
+    }
+    
+	/* solutions */
+	circle {
+		display: block;
+		padding: 0;
+		margin: 0;
+		background: transparent !important;
+	}
+	circle div.icon {
+		display: inline-block;
+		height: 75px;
+		width: 75px;
+		text-align: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-color: #939598;
+		border-radius: 50%;
+		transition: 0.1s;
+	}
+	circle:hover div.icon {
+		background-color: #c32032;
+	}
+	.icon-name {
+		text-transform: uppercase;
+		font-size: 10px;
+	}
+</style>
+	 	
+<!-- hero -->
+<section class="dark-grey full-screen parallax" style="z-index: 10;">
+	<div class="background" style="background-image: url(https://res.cloudinary.com/control4/image/upload/www/control4/homepage/Main-Header_011723.jpg);" role="img" aria-label="the all new chime video doorbell"></div>
+	<div class="vertically-center container text-center text-white fade-top">
+		<div id="video"></div>
+		<div id="hero">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h1 class="uppercase bold">Live Life Brilliantly</h1>
+                    <h2 class="lowercase">We connect smart devices to work in unison, delivering a truly intelligent smart home experience that makes life more convenient, safe, and enjoyable.</h2>
+                    <a href="/os3" class="c4btn outline" data-track-category="Homepage Lighting" data-track="Home" data-track-label="Lighting">Check It Out</a>
+                </div>
+            </div>
+		</div>
+    </div>
+	<a href="javascript:void(0);" class="c4down" data-scroll-to="#readmore" style="font-weight: 300;"><span class="sr-only">Scroll to read more</span></a>
+</section>
+<!--  end hero -->
+
+<!-- c4yourself -->
+{{ if {settings:get_setting name="c4yourself" } == 1 }}
+	{{ pages:display slug="cta-white" }}
+{{ else }}
+
+<!-- Form -->
+<section id="readmore" class="white">
+	<div class="container padding-top padding-bottom">
+		<div class="form-wrapper">
+			<div class="form-wrapper">
+			    <h2>Learn More About <span class="bold">Control4 Smart Homes</span></h2>
+				<p>Control4 homeowners enjoy personalized smart living experiences perfect for any home—no matter the size or budget, new construction or decades old. Interested in learning more about Control4 Smart Homes or Chime? Simply fill out this form.</p>
+<!--
+			    <form class="ajax validate outline" method="post" action="/assets/scripts/post-forwarder.php" name="Homepage" data-track-category="Lead Form Submit" data-next="/partial/thank-you">
+			        <input name="postUrl" type="hidden" value="https://go.pardot.com/l/63762/2016-03-03/7fs4nz">
+			        <input type="hidden" name="campaign" value="Homepage">
+-->
+					
+				<form name="Homepage" class="ajax validate outline" method="post" action="/assets/scripts/post-forwarder-sf.php" data-next="/partial/thank-you" data-track-category="Lead Form Submit">
+<!--					<input type="hidden" name="postUrl" value="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8">-->
+					<input type="hidden" name="postUrl" value="https://login.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8">
+					<input type="hidden" name="orgid" value="00D5000000078mu">
+					<input type="hidden" name="recordType" value="012500000005eVd">
+					<input type="hidden" name="retURL" value="//www.control4.com/">
+					<input type="hidden" name="priority" value="Standard">
+					<input type="hidden" name="Ad_Campaign__c" id="Ad_Campaign__c" value="Homepage">
+					<input type="hidden" name="Page_Source__c" id="Page_Source__c" value="/{{ url:uri_string }}">
+					<input type="hidden" name="company" id="company" value="Control4">
+					<input type="hidden" name="Status" id="Status" value="New">
+					<input type="hidden" name="Form_Name__c" id="Form_Name__c" value="Homepage">
+					<input type="hidden" id="origin" name="origin" value="Control4 Leads" />
+
+			        <div class="row">
+			            <div class="col-md-3 col-sm-6">
+			                <label aria-label="first_name" class="sr-only">First Name</label>
+			                <!--<input required type="text" name="first_name" placeholder="First name*" id="cf1-fname" />-->
+			                <input type="text" name="first_name" placeholder="First name*" id="first_name" required />
+			            </div>
+			            <div class="col-md-3 col-sm-6">
+			                <label aria-label="last_name" class="sr-only">Last Name</label>
+			                <input type="text" name="last_name" placeholder="Last name*" id="last_name" required />
+			            </div>
+			            <div class="col-md-3 col-sm-6">
+			                <label for="phone" class="sr-only">Phone Number</label>
+			                <input type="tel" name="phone" placeholder="Phone*" id="phone" required />
+			            </div>
+			            <div class="col-md-3 col-sm-6">
+			                <label aria-label="country" class="sr-only">Select Country</label>
+			                <select name="country"  id="country" class="outline dark" required >
+			                    {{theme:partial name="form/options-country" placeholder="true" }}
+			                </select>
+			            </div>
+			            <div class="col-md-10">
+			                <label aria-label="email" class="sr-only">Email Address</label> 
+			                <input type="email" name="email" placeholder="Email*" id="email" required />
+			            </div>
+			            <div class="col-md-2">
+			                <button type="submit" name="submit" class="block"><i class="fal fa-check"></i>Submit</button>
+							<label for="g-recaptcha-response-2" class="sr-only">This form uses Invisible reCAPTCHA by Google</label>
+			            </div>
+			        </div>
+					
+			        <p><small>We take your privacy seriously and we promise we won’t spam you; please see our <a target="_blank" href="/legal/privacy-policy" class="bold" data-track-category="Homepage" data-track="Click" data-track-label="Form Privacy Policy">privacy policy</a> for details. By submitting your information, you are confirming that you are 18 years of age <no-br>or older.</no-br></small></p>
+			        <p><small>This form uses invisible reCAPTCHA by <a href="https://policies.google.com/privacy?hl=en" target="_blank" class="bold" data-track-category="Homepage" data-track="Click" data-track-label="ReCAPTCHA Google Privacy Policy">Google Privacy Policy</a> and <a href="https://policies.google.com/terms?hl=en" target="_blank" class="bold" data-track-category="Homepage" data-track="Click"data-track-label="ReCAPTCHA Terms of Use">Terms of Use</a>.</small></p>
+			    </form>
+				
+			</div>
+		</div>
+	</div>
+</section>
+
+{{ endif }}
+<!-- end c4yourself -->
+
+<!-- c4yourself
+<section class="white">
+	<div class="container-lg padding padding-top padding-bottom">
+		<div class="row">
+			<div class="col-sm-3 col-sm-offset-2 text-center half-padding-bottom">
+				<img src="https://res.cloudinary.com/control4/image/upload/v1626987277/C4Y-Flag-Summer21.png" alt="C4Yourself Summer 2021 badge" width="300px">
+			</div>
+			<div class="col-sm-6">
+				<h2><strong>#C4YOURSELF</strong> <br>NOW THROUGH SEPTEMBER</h2>
+				<p>See all our latest smart home products at a Control4 Certified Showroom near you! Now through September, experienced Control4 smart home professionals will be hosting online and in-person #C4Yourself events to show you how you can make your dream home <no-br>a reality.</no-br></p>
+				<p>RSVP and you will be entered to win a <strong>FREE</strong> Control4 Smart Home starter kit and be eligible for <no-br>special offers.<sup>1</sup></no-br></p>
+				<a href="/dealer_locator" class="c4btn" style="min-width: 192px;"  data-track-category="C4Y CTA" data-track="C4Yourself" data-track-label="Find a Showroom to RSVP">Find a Showroom to RSVP</a>
+			</div>
+		</div>
+	</div>
+</section>
+end c4yourself -->
+
+<!--
+<section id="readmore" class="white">
+	<div class="container padding-top padding-bottom">
+		<div class="form-wrapper">
+			<div class="form-wrapper">
+			    <h2>Learn More About <span class="bold">Control4 Smart Homes</span></h2>
+				<p>Control4 homeowners enjoy personalized smart living experiences perfect for any home—no matter the size or budget, new construction or decades old. Interested in learning more about Control4 Smart Homes or Chime? Simply fill out this form.</p>
+			    <form class="ajax validate outline" method="post" action="/assets/scripts/post-forwarder.php" name="Homepage" data-track-category="Lead Form Submit" data-next="/partial/thank-you">
+			        <input name="postUrl" type="hidden" value="https://go.pardot.com/l/63762/2016-03-03/7fs4nz">
+			        <input type="hidden" name="campaign" value="Homepage">
+					
+				<form name="Homepage" class="ajax validate outline" method="post" action="/assets/scripts/post-forwarder-sf.php" data-next="/partial/thank-you" data-track-category="Lead Form Submit">
+					<input type="hidden" name="postUrl" value="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8">
+					<input type="hidden" name="oid" value="00D5000000078mu">
+					<input type="hidden" name="recordType" value="012500000005dac">
+					<input type="hidden" name="retURL" value="//www.control4.com/">
+					<input type="hidden" name="priority" value="Standard">
+					<input type="hidden" name="Ad_Campaign__c" id="Ad_Campaign__c" value="Homepage">
+					<input type="hidden" name="Page_Source__c" id="Page_Source__c" value="/{{ url:uri_string }}">
+					<input type="hidden" name="company" id="company" value="Control4">
+					<input type="hidden" name="Status" id="Status" value="New">
+					<input type="hidden" name="Form_Name__c" id="Form_Name__c" value="Homepage">
+					<input type="hidden" name="lead_source" id="lead_source" value="Web">
+
+			        <div class="row">
+			            <div class="col-md-3 col-sm-6">
+			                <label for="first_name" class="sr-only">First Name</label>
+			                <input required type="text" name="first_name" placeholder="First name*" id="cf1-fname" />
+			                <input type="text" name="first_name" placeholder="First name*" id="first_name" required />
+			            </div>
+			            <div class="col-md-3 col-sm-6">
+			                <label for="last_name" class="sr-only">Last Name</label>                                
+			                <input type="text" name="last_name" placeholder="Last name*" id="last_name" required />
+			            </div>
+			            <div class="col-md-3 col-sm-6">
+			                <label for="phone" class="sr-only">Phone Number</label>
+			                <input type="phone" name="phone" placeholder="Phone*" id="phone" required />
+			            </div>
+			            <div class="col-md-3 col-sm-6">
+			                <label for="country" class="sr-only">Select Country</label>
+			                <select name="country"  id="country" class="outline dark" required />
+			                    {{theme:partial name="form/options-country" placeholder="true" }}
+			                </select>
+			            </div>
+			            <div class="col-md-10">
+			                <label for="email" class="sr-only">Email Address</label> 
+			                <input type="email" name="email" placeholder="Email*" id="email" required />
+			            </div>
+			            <div class="col-md-2">
+			                <button type="submit" name="submit" class="block"><i class="fal fa-check"></i>Submit</button>
+			            </div>
+			        </div>
+			        <p><small>We take your privacy seriously and we promise we won’t spam you; please see our <a target="_blank" href="/legal/privacy-policy" class="bold" data-track-category="Homepage" data-track="Click" data-track-label="Form Privacy Policy">privacy policy</a> for details. By submitting your information, you are confirming that you are 18 years of age <no-br>or older.</no-br></small></p>
+			        <p><small>This form uses invisible reCAPTCHA by <a href="https://policies.google.com/privacy?hl=en" target="_blank" class="bold" data-track-category="Homepage" data-track="Click" data-track-label="ReCAPTCHA Google Privacy Policy">Google Privacy Policy</a> and <a href="https://policies.google.com/terms?hl=en" target="_blank" class="bold" data-track-category="Homepage" data-track="Click"data-track-label="ReCAPTCHA Terms of Use">Terms of Use</a>.</small></p>
+			    </form>
+			</div>
+		</div>
+	</div>
+</section>
+-->
+
+<!--mobile -->
+<section class="light-grey visible-xs visible-mobile">
+    <img src="https://res.cloudinary.com/control4/image/upload/f_auto,q_auto,dpr_auto/OS_3_WWW_Home_1a.jpg" alt="Mother and daughter dancing to connected whole-home distributed audio speakers">
+    <div class="padding">
+        <p class="uppercase text-red">Smart Home | Operating System</p>
+		<h2><span class="bold">Your Home.</span><br>Simplified.</h2>
+		<p>Life gets busy—but when your home technology is connected into one simple-to-use system, it helps take away some of those daily little stresses. A true smart home makes your life more convenient and your home safer, more comfortable, and <no-br>easy to enjoy.</no-br></p>
+		<p>A smart home operating system (OS) connects virtually all of the technology in your home. With Control4 Smart Home OS 3, you and your family can control nearly every device and system in the house in ways that are easy and <no-br>fun to use.</no-br></p>
+		<a href="/os3/" class="c4btn outline dark"  data-track-category="OS 3" data-track="Home" data-track-label="Learn More About OS 3">Learn More About OS 3</a>
+    </div>
+    <img src="https://res.cloudinary.com/control4/image/upload/f_auto,q_auto,dpr_auto/www/control4/homepage/OS_3_WWW_Home_1b.jpg" alt="Woman interacting with Control4 smart home OS 3 on in-wall touch screen">
+</section>
+<!-- end mobile -->
+
+<!-- dangle-bomber -->
+<section id="dangle-bomber-1" class="dangle-bomber white hidden-xs hidden-mobile">
+	<!-- dangle-bomber images -->
+	<div id="dangle-bomber-image-1a" class="dangle-bomber-image fade-bottom fade-top" role="img" aria-label="Mother and daughter dancing to connected whole-home distributed audio speakers" style="background-image: url(https://res.cloudinary.com/control4/image/upload/f_auto,q_auto,dpr_auto/OS_3_WWW_Home_1a.jpg);"></div>
+	<div id="dangle-bomber-image-1b" class="dangle-bomber-image fade-bottom fade-top" role="img" aria-label="Woman interacting with Control4 smart home OS 3 on in-wall touch screen" style="background-image: url(https://res.cloudinary.com/control4/image/upload/f_auto,q_auto,dpr_auto/www/control4/homepage/OS_3_WWW_Home_1b.jpg);"></div>
+	<div class="dangle-bomber-text light-grey hidden-xs"
+		data-anchor-target="#dangle-bomber-1"
+		data-start="		display: none;"
+		data-center-top="	display: block; transform[sqrt]: translateY(20%); 		opacity: 0;"
+		data-100-top="		display: block; transform[sqrt]: translateY(0%); 		opacity: 1;"
+		data--100-bottom="	display: block;	transform[quadratic]: translateY(0%); 	opacity: 1;"
+		data-center-bottom="display: none; 	transform[quadratic]: translateY(-20%); 	opacity: 0;"
+	>
+		<div class="vertically-center padding">
+			<p class="uppercase text-red">Smart Home | Operating System</p>
+			<h2><span class="bold">Your Home.</span><br>Simplified.</h2>
+			<div style="height: 100px;">
+				<div class="absolute fill"
+					data-anchor-target="#dangle-bomber-image-1a"
+					data-center-top="		opacity: 0; z-index: !0;"
+					data--300-center-top="	opacity: 1; z-index: !1;"
+					data-300-center-bottom="opacity: 1; z-index: !1;"
+					data-center-bottom="	opacity: 0; z-index: !0;"
+				>
+					<p>Life gets busy—but when your home technology is connected into one simple-to-use system, it helps take away some of those daily little stresses. A true smart home makes your life more convenient and your home safer, more comfortable, and <no-br>easy to enjoy.</no-br></p>
+					<a href="/os3/" class="c4btn outline dark" data-track-category="OS 3" data-track="Home" data-track-label="Learn More About OS 3">Learn More About OS 3</a>
+				</div>
+				<div class="absolute fill"
+					data-anchor-target="#dangle-bomber-image-1b"
+					data-center-top="		opacity: 0; z-index: !0;"
+					data--300-center-top="	opacity: 1; z-index: !1;"
+					data-300-center-bottom="opacity: 1; z-index: !1;"
+					data-center-bottom="	opacity: 0; z-index: !0;"
+				>
+					<p>A smart home operating system (OS) connects virtually all of the technology in your home. With Control4 Smart Home OS 3, you and your family can control nearly every device and system in the house in ways that are easy and <no-br>fun to use.</no-br></p>
+					<a href="/os3/" class="c4btn outline dark" data-track-category="OS 3" data-track="Home" data-track-label="Learn More About OS 3">Learn More About OS 3</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- end dangle-bomber -->
+
+<!-- blockquote -->
+<section class="white">
+	<div class="container padding-top padding-bottom fade-bottom">
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+				<blockquote>
+					<p>Finally, an interface that you can depend on and operate with ease! Way beyond my wildest expectations. Simple, user-friendly, <no-br>and reliable.</no-br></p>
+					<cite>Vincent F. | Control4 Homeowner</cite>
+				</blockquote>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- end blockquote -->
+
+<!-- slider -->
+<style>
+	.slider.slick-slider .slick-list,
+	.slider.slick-slider .slick-list .slick-track,
+	.slider.slick-slider .slick-list .slick-track .slide {
+		height: 100% !important;
+	}
+	.slider-controls {
+		z-index: 1001;
+	}
+	.slider-controls a[data-slick-slide] > div {
+        opacity: 0.7;
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 50%;
+        transition: 400ms;
+    }
+    .slider-controls a[data-slick-slide]:hover > div,
+    .slider-controls a[data-slick-slide].active > div {
+        opacity: 1;
+        background-color: rgba(195, 32, 50, 0.8);
+        border: 1px solid transparent;
+    }
+    .slider-controls a div {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        max-height: 100px;
+        max-width: 100px;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+</style>
+<section class="dark-grey">
+	<div style="height: calc(100vh - 150px); min-height: 800px;">
+		<div class="absolute top left padding-75 text-white" style="z-index: 1000;">
+		    <p class="uppercase text-light-grey no-marign">Smart home | Personalization</p>
+            <h1 class="uppercase">You're In Control</h1>
+            <p style="max-width: 700px;">Control4 OS 3 puts more capabilities, features, and benefits at your fingertips. With touchscreen, keypad, voice, and app access, you can create a smart home that’s uniquely yours.</p>
+	    </div>
+	    <div class="slider" style="height: calc(100vh - 150px); min-height: 800px;">
+	        <div class="slide padding-75 background" style="background-image: url(https://res.cloudinary.com/control4/image/upload/f_auto,q_auto,dpr_auto/www/control4/homepage/OS_3_WWW_Home_2c.jpg);">
+		        <span id="slick-slide00" class="sr-only" role="img" aria-label="table top touch screen with Control4 Smart Home OS 3 lighting screen"></span>
+                <p class="text-white" style="position: absolute; left: 75px; bottom: 150px; max-width: 700px;">Create and edit your own smart home actions. You make the decisions when it comes to the technology in your home.</p>
+	        </div>
+	        <div class="slide padding-75 background" style="background-image: url(https://res.cloudinary.com/control4/image/upload/f_auto,q_auto,dpr_auto/OS_3_WWW_Home_2d.jpg);">
+		        <span id="slick-slide01" class="sr-only" role="img" aria-label="table top touch screen with Control4 Smart Home OS 3 family room screen"></span>
+                <p class="text-white" style="position: absolute; left: 75px; bottom: 150px; max-width: 700px;">Add your favorites to your home screen for every room in the house—such as a lighting scene, garage door, smart door locks, or <no-br>a playlist.</no-br></p>
+	        </div>
+	        <div class="slide padding-75 background" style="background-image: url(https://res.cloudinary.com/control4/image/upload/f_auto,q_auto,dpr_auto/OS_3_WWW_Home_2e.jpg);">
+		        <span id="slick-slide02" class="sr-only" role="img" aria-label="table top touch screen with Control4 Smart Home OS 3 family room screen with custom wallpaper"></span>
+	            <p class="text-white" style="position: absolute; left: 75px; bottom: 150px; max-width: 700px;">Customize your wallpapers for every space with family photos or designer-influenced wallpapers that blend with the decor of your home.</p>
+	        </div>
+	    </div>
+	    <div class="slider-controls absolute left right bottom padding-75">
+			<div class="row hidden-xs">
+		        <div class="col-md-1 col-xs-4 text-center">
+		            <a data-slick-slide="0" class="active" data-track-category="Homepage" data-track="Slide" data-track-label="Slider 1">
+		                <div class="aspect one-to-one background-contain" style="background-image: url('https://res.cloudinary.com/control4/image/upload/f_auto,q_auto,dpr_auto/OS_3_WWW_Home_Icon_3.svg');"></div>
+		            </a>
+		        </div>
+		        <div class="col-md-1 col-xs-4 text-center">
+		            <a data-slick-slide="1" data-track-category="Homepage" data-track="Slide" data-track-label="Slider 2">
+		                <div class="aspect one-to-one background-contain" style="background-image: url('https://res.cloudinary.com/control4/image/upload/f_auto,q_auto,dpr_auto/OS_3_WWW_Home_Icon_4.svg');"></div>
+		            </a>
+		        </div>
+		        <div class="col-md-1 col-xs-4 text-center">
+		            <a data-slick-slide="2" data-track-category="Homepage" data-track="Slide" data-track-label="Slider 3">
+		                <div class="aspect one-to-one background-contain" style="background-image: url('https://res.cloudinary.com/control4/image/upload/f_auto,q_auto,dpr_auto/OS_3_WWW_Home_Icon_5.svg');"></div>
+		            </a>
+		        </div>
+			</div>
+			<div style="height: 100px;"></div>
+			<a href="/os3/" class="c4btn outline" data-track-category="Homepage" data-track="Accordion" data-track-label="Learn More About Smart Home OS 3"><span class="hidden-xs">Learn More About&nbsp; </span>Smart Home OS 3</a>
+		</div>
+	</div>
+</section>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js" defer></script>
+<script type="text/javascript">
+    docReady(function () {
+
+        // slick slider
+        var $slider = $('.slider').slick({
+            adaptiveHeight: true,
+            autoplay: true,
+            autoplaySpeed: 7000,
+            arrows: false,
+            //	prevArrow: '<a href="javascript:;" class="slick-prev"><i class="fal fa-arrow-left"></i></a>', // uncomment if arrows set to true
+            //	nextArrow: '<a href="javascript:;" class="slick-next"><i class="fal fa-arrow-right"></i></a>', // uncomment if arrows set to true
+            dots: false,
+            draggable: false,
+            fade: true,
+            //	initialSlide: Math.floor(Math.random() * $('div.slider div.slide').length), // randomize
+            variableWidth: true,
+            customPaging: function (slider, i) {
+                return '<button class="tab">' + $('.slick-thumbs li:nth-child(' + (i + 1) + ')').html() + '</button>';
+            }
+        });
+
+        // highlight selected slide's icon
+        $('.slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+            var $slidericon = $('[data-slick-slide=' + nextSlide + ']');
+            $('[data-slick-slide]').removeClass('active');
+            $slidericon.addClass('active');
+        });
+
+        // go to slide
+        $('[data-slick-slide]').click(function () {
+            var $this = $(this);
+            // accounted for in above function
+            // $('[data-slick-slide]').not($this).removeClass('active');
+            // $this.addClass('active');
+            var clicked = $this.data('slick-slide');
+            $slider.slick('slickGoTo', clicked);
+        });
+
+    });	    
+</script>
+<!-- end slider -->
+
+<!-- form -->
+<!--
+<section class="light-grey">
+	<div class="container padding-top padding-bottom">
+		<div class="form-wrapper">
+		    <h2>Learn More About <span class="bold">Control4 Smart Homes</span></h2>
+			<p>Control4 homeowners enjoy personalized smart living experiences perfect for any home—no matter the size or budget, new construction or decades old. Interested in learning more? Simply fill out this form and we’ll send you more information.</p>
+		    <form class="ajax validate dark" method="post" action="/assets/scripts/post-forwarder.php"
+			    name="Homepage"
+		        data-track-category="Lead Form Submit"
+			    data-next="/partial/thank-you"
+			>
+		        <input name="postUrl" type="hidden" value="https://go.pardot.com/l/63762/2016-03-03/7fs4nz">
+		        <input type="hidden" name="campaign" value="Homepage">
+		        <div class="row">
+		            <div class="col-md-3 col-sm-6">
+		                <label for="cf1-fname" class="sr-only">First Name</label>
+		                <input required type="text" name="firstName" placeholder="First name*" id="cf1-fname" />
+		            </div>
+		            <div class="col-md-3 col-sm-6">
+		                <label for="cf1-lname" class="sr-only">Last Name</label>                                
+		                <input required type="text" name="lastName" placeholder="Last name*" id="cf1-lname" />
+		            </div>
+		            <div class="col-md-3 col-sm-6">
+		                <label for="cf1-phone" class="sr-only">Phone Number</label>
+		                <input required type="tel" name="phoneNumber" placeholder="Phone*" id="cf1-phone" />
+		            </div>
+		            <div class="col-md-3 col-sm-6">
+		                <label for="cf1-selectcountry" class="sr-only">Select Country</label>
+		                <select name="country" required id="cf1-selectcountry" class="outline dark">
+		                    {{theme:partial name="form/options-country" placeholder="true" }}
+		                </select>
+		            </div>
+		            <div class="col-md-10">
+		                <label for="cf1-email" class="sr-only">Email Address</label> 
+		                <input required type="email" name="email" placeholder="Email*" id="cf1-email"/>
+		            </div>
+		            <div class="col-md-2">
+		                <button type="submit" name="submit" class="block"><i class="fal fa-check"></i>Submit</button>
+		            </div>
+		        </div>
+		        <p><small>We take your privacy seriously and we promise we won’t spam you; please see our <a target="_blank" href="/legal/privacy-policy" class="bold" data-track-category="Homepage" data-track="Click" data-track-label="Form Privacy Policy">privacy policy</a> for details. By submitting your information, you are confirming that you are 18 years of age <no-br>or older.</no-br></small></p>
+		        <p><small>This form uses invisible reCAPTCHA by <a href="https://policies.google.com/privacy?hl=en" target="_blank" class="bold" data-track-category="Homepage" data-track="Click" data-track-label="ReCAPTCHA Google Privacy Policy">Google Privacy Policy</a> and <a href="https://policies.google.com/terms?hl=en" target="_blank" class="bold" data-track-category="Homepage" data-track="Click"data-track-label="ReCAPTCHA Terms of Use">Terms of Use</a>.</small></p>
+		    </form>
+		</div>
+	</div>
+</section>
+-->
+<!-- end form -->
+
+<!-- blockquote -->
+<section class="white">
+	<div class="container padding-top padding-bottom fade-bottom">
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+				<blockquote>
+					<p>For someone not very tech savvy, I have had no problems and I find it was easy to use and navigate...<no-br>I love it!</no-br></p>
+					<cite>Carol P. | Control4 Homeowner</cite>
+				</blockquote>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- end blockquote -->
+
+
+<!--mobile -->
+<section class="light-grey visible-xs visible-mobile">
+
+    <img src="https://res.cloudinary.com/control4/image/upload/v1629316538/688888760_C4_WWW_Home_Page_2021_Updates_Lighting_Bckt_v2.jpg" alt="Configurable keypad with 'good morning' and 'good night' scene buttons">
+    <div class="padding">
+        <p class="uppercase text-red">Smart Home | Empowering You</p>
+		<h2>Sometimes the Little Things<br><span class="bold">Are the Big Things</span></h2>
+		<p>Control4’s Smart Lighting allows you to turn on/off the entire house when leaving or arriving, start a playlist instantly in every room, receive feedback if unlocked doors require your attention, and enjoy lights that manage themselves so you never come home to a dark <no-br>house again.</no-br></p>
+		<a href="/solutions/smart-lighting" class="c4btn outline dark" data-track-category="Smart Lighting" data-track="Home" data-track-label="Learn More About Smart Lighting">Learn More About Smart Lighting</a>
+    </div>
+    
+    <img src="https://res.cloudinary.com/control4/image/upload/v1627688932/688888760_C4_WWW_Home_Page_2021_Updates_P-of-M_Bckt.jpg" alt="Control4 Smart Home OS 3 on iPhone with My Home home screen">
+    <div class="padding">
+        <p class="uppercase text-red">Smart Home | Empowering You</p>
+		<h2>Sometimes the Little Things<br><span class="bold">Are the Big Things</span></h2>
+		<p>Chime does much more than your typical video doorbell. By integrating with your Control4 smart home, Chime allows you to view and greet guests, turn on the lights, and unlock the door. Even accept deliveries when you are away. Chime helps keep your home safer and more secure than <no-br>never before.</no-br></p>
+		<a href="/o/chime" class="c4btn outline dark" data-track-category="OS 3" data-track="Home" data-track-label="Learn More About Chime">Learn More About Chime</a>
+    </div>
+
+    <img src="https://res.cloudinary.com/control4/image/upload/v1627689009/688888760_C4_WWW_Home_Page_2021_Updates_4Sight_Bckt.jpg" alt="Child caring soccer ball entering home using connected smart door locks">    
+    <div class="padding">
+        <p class="uppercase text-red">Smart Home | Empowering You</p>
+		<h2>Sometimes the Little Things<br><span class="bold">Are the Big Things</span></h2>
+		<p>Control4 Connect allows you to be alerted of things at home while you’re away, including the kids arriving home safely. Enjoy remote access to cameras, door locks, lights, and more. Plus get access to voice control and get the tools to further personalize your smart home after installation.</no-br></p>
+		<a href="/o/connect" class="c4btn outline dark" data-track-category="Connect" data-track="Home" data-track-label="Learn More About Connect">Learn More About Connect</a>
+    </div>  
+    
+<!--
+    <img src="https://res.cloudinary.com/control4/image/upload/f_auto,q_auto,dpr_auto/OS_3_WWW_Home_3d.jpg" alt="Control4 Smart Home OS 3 on iPhone with back porch camera view">
+    <div class="padding">
+	    <p class="uppercase text-red">Smart Home | Empowering You</p>
+		<h2>Sometimes the Little Things<br><span class="bold">Are the Big Things</span></h2>
+	    <p>Not home to accept your important delivery? Your video doorbell lets you unlock the door for the package to be placed <no-br>safely inside.</no-br></p>
+		<a href="/o/intercom-anywhere" class="c4btn outline dark" data-track-category="OS 3" data-track="Home" data-track-label="Learn More About Intercom Anywhere">Learn More About Intercom Anywhere</a>
+    </div>
+    
+    <img src="https://res.cloudinary.com/control4/image/upload/f_auto,q_auto,dpr_auto/OS_3_WWW_Home_3e.jpg" alt="Man holding smart phone outside">
+    <div class="padding">
+	    <p class="uppercase text-red">Smart Home | Empowering You</p>
+		<h2>Sometimes the Little Things<br><span class="bold">Are the Big Things</span></h2>
+		<p>Be alerted when people come and go, a water leak is detected, or if the garage door has been left open. Whether it’s urgent and needs immediate attention or you simply want a status update, your home has <no-br>you covered.</no-br></p>
+    </div>    
+-->
+    
+</section>
+<!-- end mobile -->
+
+<!-- dangle-bomber -->
+<section id="dangle-bomber-2" class="dangle-bomber -flip white hidden-xs hidden-mobile">
+	<!-- dangle-bomber images -->
+	<div id="dangle-bomber-image-2c" class="dangle-bomber-image fade-bottom fade-top" role="img" aria-label="Configurable keypad with 'good morning' and 'good night' scene buttons" style="background-image: url(https://res.cloudinary.com/control4/image/upload/v1629316538/688888760_C4_WWW_Home_Page_2021_Updates_Lighting_Bckt_v2.jpg);"></div>
+	<div id="dangle-bomber-image-2a" class="dangle-bomber-image fade-bottom fade-top" role="img" aria-label="Chime video doorbell" style="background-image: url(https://res.cloudinary.com/control4/image/upload/688888760_C4_WWW_Home_Page_2021_Updates_P-of-M_Bckt.jpg);"></div>
+	<div id="dangle-bomber-image-2b" class="dangle-bomber-image fade-bottom fade-top" role="img" aria-label="Person watching through their phone" style="background-image: url(https://res.cloudinary.com/control4/image/upload/688888760_C4_WWW_Home_Page_2021_Updates_4Sight_Bckt.jpg);"></div>
+<!--	<div id="dangle-bomber-image-2d" class="dangle-bomber-image fade-bottom fade-top" role="img" aria-label="Control4 Smart Home OS 3 on iPhone with back porch camera view" style="background-image: url(https://res.cloudinary.com/control4/image/upload/f_auto,q_auto,dpr_auto/OS_3_WWW_Home_3d.jpg);"></div>-->
+<!--	<div id="dangle-bomber-image-2e" class="dangle-bomber-image fade-bottom fade-top" role="img" aria-label="Man holding smart phone outside" style="background-image: url(https://res.cloudinary.com/control4/image/upload/f_auto,q_auto,dpr_auto/OS_3_WWW_Home_3e.jpg);"></div>-->
+	<div class="dangle-bomber-text light-grey hidden-xs"
+		data-anchor-target="#dangle-bomber-2"
+		data-start="		display: none;"
+		data-center-top="	display: block; transform[sqrt]: translateY(20%); 		opacity: 0;"
+		data-100-top="		display: block; transform[sqrt]: translateY(0%); 		opacity: 1;"
+		data--100-bottom="	display: block;	transform[quadratic]: translateY(0%); 	opacity: 1;"
+		data-center-bottom="display: none; 	transform[quadratic]: translateY(-20%); 	opacity: 0;"
+	>
+		<div class="vertically-center padding hidden-xs">
+			<p class="uppercase text-red">Smart Home | Empowering You</p>
+			<h2>Sometimes the Little Things<br><span class="bold">Are the Big Things</span></h2>
+			<div style="height: 100px;">
+				<!-- 2c -->
+				<div class="absolute fill"
+					data-anchor-target="#dangle-bomber-image-2c"
+					data-center-top="		opacity: 0; z-index: !0;"
+					data--300-center-top="	opacity: 1; z-index: !1;"
+					data-300-center-bottom="opacity: 1; z-index: !1;"
+					data-center-bottom="	opacity: 0; z-index: !0;"
+				>
+					<p>Control4’s Smart Lighting allows you to turn on/off the entire house when leaving or arriving, start a playlist instantly in every room, receive feedback if unlocked doors require your attention, and enjoy lights that manage themselves so you never come home to a dark house again.</p>
+					<a href="/solutions/smart-lighting" class="c4btn outline dark" data-track-category="Smart Lighting" data-track="Home" data-track-label="Learn More About Smart Lighting">Learn More About Smart Lighting</a>
+				</div>
+				<!-- 2a -->
+				<div class="absolute fill"
+					data-anchor-target="#dangle-bomber-image-2a"
+					data-center-top="		opacity: 0; z-index: !0;"
+					data--300-center-top="	opacity: 1; z-index: !1;"
+					data-300-center-bottom="opacity: 1; z-index: !1;"
+					data-center-bottom="	opacity: 0; z-index: !0;"
+				>
+					<p>Chime does much more than your typical video doorbell. By integrating with your Control4 smart home, Chime allows you to view and greet guests, turn on the lights, and unlock the door. Even accept deliveries when you are away. Chime helps keep your home safer and more secure than <no-br>never before.</no-br></p>
+					<a href="/o/chime" class="c4btn outline dark" data-track-category="Chime" data-track="Home" data-track-label="Learn More About Chime">Learn More About Chime</a>
+				</div>
+				<!-- 2b -->
+				<div class="absolute fill"
+					data-anchor-target="#dangle-bomber-image-2b"
+					data-center-top="		opacity: 0; z-index: !0;"
+					data--300-center-top="	opacity: 1; z-index: !1;"
+					data-300-center-bottom="opacity: 1; z-index: !1;"
+					data-center-bottom="	opacity: 0; z-index: !0;"
+				>
+					<p>Control4 Connect allows you to be alerted of things at home while you’re away, including the kids arriving home safely. Enjoy remote access to cameras, door locks, lights, and more. Plus get access to voice control and get the tools to further personalize your smart home after installation.</no-br></p>
+					<a href="o/connect" class="c4btn outline dark" data-track-category="Connect" data-track="Home" data-track-label="Learn More About Connect">Learn More About Connect</a>
+				</div>
+				<!-- 2d 
+				<div class="absolute fill"
+					data-anchor-target="#dangle-bomber-image-2d"
+					data-center-top="		opacity: 0; z-index: !0;"
+					data--300-center-top="	opacity: 1; z-index: !1;"
+					data-300-center-bottom="opacity: 1; z-index: !1;"
+					data-center-bottom="	opacity: 0; z-index: !0;"
+				>
+					<p>Not home to accept your important delivery? Your video doorbell lets you unlock the door for the package to be placed <no-br>safely inside.</no-br></p>
+					<a href="/o/intercom-anywhere" class="c4btn outline dark" data-track-category="OS 3" data-track="Home" data-track-label="Learn More About Intercom Anywhere">Learn More About Intercom Anywhere</a>
+				</div> -->
+				<!-- 2e
+				<div class="absolute fill"
+					data-anchor-target="#dangle-bomber-image-2e"
+					data-center-top="		opacity: 0; z-index: !0;"
+					data--300-center-top="	opacity: 1; z-index: !1;"
+					data-300-center-bottom="opacity: 1; z-index: !1;"
+					data-center-bottom="	opacity: 0; z-index: !0;"
+				>
+					<p>Be alerted when people come and go, a water leak is detected, or if the garage door has been left open. Whether it’s urgent and needs immediate attention or you simply want a status update, your home has <no-br>you covered.</no-br></p>
+				</div> -->
+			</div>
+		</div>
+	</div>
+</section>
+<!-- end dangle-bomber -->
+
+<!-- jumbotron -->
+<section id="jumbotron" class="full-screen"></section>
+<div class="full-screen white fixed" style="z-index: -1;"
+	data-anchor-target="#jumbotron"
+	data-center-top="opacity: 0; transform: scale(0.98);"
+	data-200-top="opacity: 1; transform: scale(0.99);"
+	data--200-bottom="opacity: 1; transform: scale(1.01);"
+	data-center-bottom="opacity: 0; transform: scale(1.02);"
+>
+	<div class="vertically-center">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center">
+					<h1 class="bold">An intelligent home</h1>
+					<h2 class="lowercase">always keeps you in the know.<br>Stay informed and in control of everything happening in and around your home—whether you're in the kitchen or across the world.</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end jumbotron -->
+
+<!-- solutions -->
+<section class="light-grey">
+	<div class="container padding-top padding-bottom">
+		<h2>What's most important<br>To <span class="bold">you</span>?</h2>
+		<p>We have the products that give you full control of nearly everything at home—no matter where <no-br>you may be.</no-br></p>
+		<div class="row half-padding-bottom">
+			<div class="col-md-1 col-xs-4 text-center half-padding-bottom">
+				<a href="/os3">
+				<circle>
+					<div class="icon">
+						<img src="https://res.cloudinary.com/control4/image/upload/C4_WWW_Icons_White-Smart-Home-OS.svg" alt="Icon - Smart Home OS">
+					</div>
+					<h4 class="icon-name">Smart Home OS</h4>
+				</circle>
+				</a>
+			</div>
+			<div class="col-md-1 col-xs-4 text-center half-padding-bottom">
+				<a href="/solutions/whole-home">
+				<circle>
+					<div class="icon">
+						<img src="https://res.cloudinary.com/control4/image/upload/C4_WWW_Icons_White-Whole-Home.svg" alt="Icon - Home Climate Control">
+					</div>
+					<h4 class="icon-name">Whole Home</h4>
+				</circle>
+				</a>
+			</div>
+			<div class="col-md-1 col-xs-4 text-center half-padding-bottom">
+				<a href="/solutions/smart-lighting">
+				<circle>
+					<div class="icon">
+						<img src="https://res.cloudinary.com/control4/image/upload/C4_WWW_Icons_White-Smart-Lighting.svg" alt="Icon - Lightbulb for Smart Lighting">
+					</div>
+					<h4 class="icon-name">Smart Lighting</h4>
+				</circle>
+				</a>
+			</div>
+			<div class="col-md-1 col-xs-4 text-center half-padding-bottom">
+				<a href="/solutions/peace-of-mind">
+				<circle>
+					<div class="icon">
+						<img src="https://res.cloudinary.com/control4/image/upload/C4_WWW_Icons_White-Home-Security.svg" alt="Icon - Security camera">
+					</div>
+					<h4 class="icon-name">Home Security</h4>
+				</circle>
+				</a>
+			</div>
+			<div class="col-md-1 col-xs-4 text-center half-padding-bottom">
+				<a href="/o/intercom-anywhere">
+				<circle>
+					<div class="icon">
+						<img src="https://res.cloudinary.com/control4/image/upload/C4_WWW_Icons_White-Intercom-Anywhere.svg" alt="Icon - Intercom for communicating in any/all rooms of residence-business">
+					</div>
+					<h4 class="icon-name">Intercom Anywhere</h4>
+				</circle>
+				</a>
+			</div>
+			<div class="col-md-1 col-xs-4 text-center half-padding-bottom">
+				<a href="/solutions/home-theater">
+				<circle>
+					<div class="icon">
+						<img src="https://res.cloudinary.com/control4/image/upload/C4_WWW_Icons_White-Home-Theater.svg" alt="Icon - TV and Speakers portraying a home theater.">
+					</div>
+					<h4 class="icon-name">Home Theater</h4>
+				</circle>
+				</a>
+			</div>
+			<div class="col-md-1 col-xs-4 text-center half-padding-bottom">
+				<a href="/solutions/multi-room-audio">
+				<circle>
+					<div class="icon">
+						<img src="https://res.cloudinary.com/control4/image/upload/C4_WWW_Icons_White-Multiroom-Audio.svg" alt="Icon - Speaker to portray multi-room audio">
+					</div>
+					<h4 class="icon-name">Multi-room Audio</h4>
+				</circle>
+				</a>
+			</div>
+			<div class="col-md-1 col-xs-4 text-center half-padding-bottom">
+				<a href="/solutions/universal-remote">
+				<circle>
+					<div class="icon">
+						<img src="https://res.cloudinary.com/control4/image/upload/v1601510275/C4_WWW_Icons_White_No_Circle_Un_Rmt.svg" alt="Icon - Remote">
+					</div>
+					<h4 class="icon-name">Universal Remote</h4>
+				</circle>
+				</a>
+			</div>
+			<div class="col-md-1 col-xs-4 text-center half-padding-bottom">
+				<a href="/solutions/voice-control">
+				<circle>
+					<div class="icon">
+						<img src="https://res.cloudinary.com/control4/image/upload/C4_WWW_Icons_White-Voice-Control.svg" alt="Icon - Voice control station for total control of home-business with your voice">
+					</div>
+					<h4 class="icon-name">Voice Control</h4>
+				</circle>
+				</a>
+			</div>
+			<div class="col-md-1 col-xs-4 text-center half-padding-bottom">
+				<a href="/o/4sight-services">
+                <circle>
+                    <div class="icon">
+                        <img src="https://res.cloudinary.com/control4/image/upload/www/control4/solutions/4sight-white.svg" alt="Icon - 4Sight Services">
+                    </div>
+                    <h4 class="icon-name">4Sight Services</h4>
+                </circle>
+				</a>
+			</div>
+			<div class="col-md-1 col-xs-4 text-center half-padding-bottom">
+				<a href="/o/assist">
+                <circle>
+                    <div class="icon">
+                        <img src="https://res.cloudinary.com/control4/image/upload/www/control4/solutions/assist-white.svg" alt="Icon - Assist">
+                    </div>
+                    <h4 class="icon-name">Assist</h4>
+                </circle>
+				</a>
+			</div>
+			<div class="col-md-1 col-xs-4 text-center half-padding-bottom">
+				<a href="/o/connect">
+                <circle>
+                    <div class="icon">
+                        <img src="https://res.cloudinary.com/control4/image/upload/www/control4/solutions/connect-white.svg" alt="Icon - Connect">
+                    </div>
+                    <h4 class="icon-name">Connect</h4>
+                </circle>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- end solutions -->
+
+<!-- blockquote -->
+<section class="white">
+	<div class="container padding-top padding-bottom fade-bottom">
+		<div class="row padding-top">
+			<div class="col-sm-8 col-sm-offset-2">
+				<blockquote>
+					<p>It's the go-to control system to integrate just about everything in my house and for automating repetitive tasks. Coupled with amazing media control, <no-br>it's a no-brainer.</no-br></p>
+					<cite>Chris A. | Control4 Homeowner</cite>
+				</blockquote>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- end blockquote -->
+
+<!-- mason blocks -->
+<section id="mason-blocks" class="white" style="z-index: 1;">
+	<div class="container-lg padding-75">
+		<div class="row">
+			<div class="col-sm-6 col-sm-push-6">
+				<div class="padding fade-bottom" style="padding-bottom: 300px;">
+					<p class="uppercase text-red">Smart home | Choice</p>
+					<h2>Playing nicely with<br><span class="bold">your beloved brands</span></h2>
+					<p style="max-width: 465px;">Don’t ditch your favorite products; let’s join them all together! Your Control4 Smart Home OS has the ability to operate with <no-br>tens-of-thousands of third-party products.</no-br></p>
+				</div>
+				<div class="aspect magazine background" style="background-image: url(https://res.cloudinary.com/control4/image/upload/v1722608652/www/245_24_Apple_Music_for_Control4_www_update_1.png);" role="img" aria-label="Yale smart deadbolt door lock"
+					data-anchor-target="#mason-blocks"
+					data-bottom-top="transform: translateY(-300px);"
+					data-top-bottom="transform: translateY(100px);"
+				></div>
+			</div>
+			<div class="col-sm-6 col-sm-pull-6">
+				<div class="aspect magazine background" style="background-image: url(https://res.cloudinary.com/control4/image/upload/413349251-Home-Page-YALE-Lock-v1a-pg.jpg);" role="img" aria-label="Table top touch screen with Control4 Smart Home OS 3 with bedrom screen showing favorites and connected devices"
+					data-anchor-target="#mason-blocks"
+					data-bottom-top="transform: translateY(100px);"
+					data-top-bottom="transform: translateY(-300px);"
+				></div>
+				<div class="padding fade-bottom">
+					<p style="max-width: 465px;">Manage them all with a simple tap, a single voice command, or even allow things to happen automatically with no <no-br>interaction at all.</no-br></p>
+					<img class="block" src="https://res.cloudinary.com/control4/image/upload/v1585698191/OS_3_WWW_Home_Partner_Logos_V2b.jpg" alt="Apple TV, Roku, Amazon, Lutron, LG, Samsung, Dish, Sony, Bose, Denon, Yale, Kwikset, Sonos, QMotion, Harman, Honeywell, Somfy, Sharp">
+				</div>
+			</div>
+		</div>	
+	</div>
+</section>
+<!-- end mason blocks -->
+
+<!-- blockquote -->
+<section class="white">
+	<div class="container padding-top padding-bottom fade-bottom">
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+				<blockquote>
+					<p>It is so easy to run everything from one control unit. I particularly like the smartphone app whether I'm inside the house or sitting by the fire pit; I can control the music and never have to get up from my chair. I only wish I had done this <no-br>years earlier.</no-br></p>
+					<cite>William P. | Control4 Homeowner</cite>
+				</blockquote>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- end blockquote -->
+
+<!-- two column -->
+<section class="white">
+	<div class="padding">
+		<div class="row fade-bottom">
+			<div class="col-sm-6 half-margin-bottom">
+				<div class="aspect four-to-three background" style="background-image: url(https://res.cloudinary.com/control4/image/upload/f_auto,q_auto,dpr_auto/OS_3_WWW_Home_6.jpg);" role="img" aria-label="Control4 Smart Home Pro at door">
+					<div class="padding absolute left right bottom">
+						<p class="uppercase">Smart Home | Professionals</p>
+						<h2>Kick Back.<br>They've Got You Covered.</h2>
+						<p>Your Control4 Smart Home Professionals are extensively trained to deliver stronger, safer, and easier-to-manage smarts for any <no-br>type of home.</no-br></p>
+						<a href="/dealer_locator" class="c4btn outline no-margin" data-track-category="OS 3" data-track="Home" data-track-label="Why Go Pro">Why a Pro is the Way to Go</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 half-margin-bottom">
+				<div class="aspect four-to-three background" style="background-image: url(https://res.cloudinary.com/control4/image/upload/f_auto,q_auto,dpr_auto/OS_3_WWW_Home_7.jpg);" role="img" aria-label="Mother and daughter holding iPad on couch">
+					<div class="padding absolute left right bottom">
+						<p class="uppercase">Smart Home | Operating System</p>
+						<h2>What is a<br>Smart Home OS?</h2>
+						<p>With an operating system at the helm of your smart home, every interaction is simply...better.</p>
+						<a href="/os3/what-is-a-smart-home-os" class="c4btn outline no-margin" data-track-category="OS 3" data-track="Home" data-track-label="What is Smart Home OS">What is a Smart Home OS?</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- end two column -->
+
+<div class="white">
+    <div class="padding container">
+        <small><sup>1</sup> Each of these participating showrooms will be selecting a #C4Yourself winner at the end of September. To be eligible, you must find a participating Control4 Certified Showroom in your area and contact them to RSVP. Exclusive offers available to #C4Yourself attendees with eligible purchases. Contact a participating location near you for further details. Control4 Smart Home Pros are independently-owned, local businesses.</small>
+    </div>
+</div>
+<label for="g-recaptcha-response-1" class="sr-only">This form uses Invisible reCAPTCHA by Google</label>

@@ -1,0 +1,193 @@
+<style>
+	.partner-rw-dash {
+		max-width: 700px;
+		padding: 10px 15px;
+		height: 300px;	
+	}
+	.rewards-dash-icon{
+		margin: 0px 10px 13px 0px;
+  }
+	.days-remaining {
+		padding: 15px 0px 4px;
+	}
+	.days-remaining h2, .quarter-end h2 {
+		 color: #3F576E;
+    	font-size: 2.0rem;
+	}
+	.days-remaining p, .quarter-end p {
+		margin-top: -10px;
+	}
+	.orange-qtd {
+		background: #E86140 0% 0% no-repeat padding-box;
+		box-shadow: 0px 16px 24px #60617029;
+		border-radius: 30px 2px;
+		opacity: 1;
+		width: 95%;
+		height: 100px;
+		text-align: center;
+		line-height: 13px;
+		padding: 3px 10px;
+		margin: 10px 0px;
+	}
+		.teal-qtd {
+		background: #66D7D1 0% 0% no-repeat padding-box;
+		box-shadow: 0px 16px 24px #60617029;
+		border-radius: 30px 2px;
+		opacity: 1;
+		width: 95%;
+		height: 100px;
+		text-align: center;
+		line-height: 15px;
+		padding: 3px 6px;
+		margin: 10px 0px;
+	}
+	.blue-ytd {
+		background: #2D4052 0% 0% no-repeat padding-box;
+		box-shadow: 0px 16px 24px #60617029;
+		border-radius: 30px 2px;
+		opacity: 1;
+		width: 95%;
+		height: 100px;
+		text-align: center;
+		line-height: 15px;
+		padding: 3px 10px;
+	}
+	.purple-ytd {
+		background: #756999 0% 0% no-repeat padding-box;
+		box-shadow: 0px 16px 24px #60617029;
+		border-radius: 30px 2px;
+		opacity: 1;
+		width: 95%;
+		height: 100px;
+		text-align: center;
+		line-height: 15px;
+		padding: 3px 10px;
+	}
+	
+	.orange-qtd h2, .teal-qtd h2, .blue-ytd h2, .purple-ytd h2 {
+		color: white;
+	}
+	 .orange-qtd p, .teal-qtd p, .blue-ytd p, .purple-ytd p {
+		color: white;
+	}
+	.orange-qtd a, .blue-ytd a {
+		text-decoration: underline;
+		color: white;
+	}
+	.pr-explore {
+		color: #E86140;
+		text-align: center;
+		text-decoration: underline;
+	}
+	.rew-check-li li:before {
+		content:"\e801";
+		font-family: 'fontello';
+		margin-right: 14px;
+		font-size: 1.2rem;
+		color: #FF7B59;
+		font-weight: bold;
+	}
+  .rew-check-li li {
+    line-height: 2.3rem;
+  }
+
+.rew-check-li.blue-check li:before{
+      color: #FF7B59;
+  font-size: 1.2rem;
+}
+
+
+@media (max-width: 768px) and (max-width: 1024px)	{
+		  .rew-check-li li {
+    		line-height: 1.8rem;
+			  text-indent: -1rem;
+  }
+		.rew-details {
+			margin-top: 10px;
+	}
+		.rewards-header {
+			font-size: 1.5rem;
+		}
+	}
+	@media only screen and (min-width: 320px) and (max-width: 541px){
+		.partner-rw-dash {
+			width: auto;
+			height: auto;
+		}
+		.days-remaining, .quarter-end {
+			text-align: center;
+		}
+		.orange-qtd, .teal-qtd. .blue-ytd, .purple-ytd {
+			width: 100%;
+		}
+		 .rew-check-li li {
+    		font-size: 1.6rem;
+    		line-height: 3rem;
+  }
+
+	}
+</style>
+
+
+<div class="partner-rw-dash">
+	<div class="row-fluid">
+		 <div class="span4">
+			<div class="rewards-dash-icon">
+				<a href="/shop/AjaxLogonForm?catalogId=10010&myAcctMain=1&langId=-1&storeId=10151#https%3A%2F%2Fstage.snapav.com%2Fshop%2FAjaxRewardsStatusView%3FcurrentSelection%3DrewardsStatusSlct%26catalogId%3D10010%26langId%3D-1%26storeId%3D10151%26identifier%3D1650646576677">
+				<img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/PR_Dashboard_Icon_GoldC4.svg" alt="" style="width: 100%;"> 
+				</a>
+			</div>
+                       <ul class="rew-check-li">
+                          <li>Free Shipping</li>
+                          <li>Rebate Eligible </li>
+						   <li>8% Rewards Pricing</li>
+                        </ul>
+                        <div class="days-remaining">
+							<h2>[DaysRemaingInYear] Days</h2>
+							<p>Left in Program Year</p>
+						</div>
+			            <div class="quarter-end">
+							<h2>[QuarterEndDate]</h2>
+							<p>Quarter End</p>
+						</div>
+                  </div>
+	<!--Squares-->	
+		          <div class="span8">
+					  <div class="row-fluid">
+					  	<div class="span6">
+							<div class="orange-qtd">
+								<p>QTD Points</p>
+								<h2>[QuarterlyPoints]</h2>
+								<a href="/shop/AjaxLogonForm?catalogId=10010&myAcctMain=1&langId=-1&storeId=10151#https%3A%2F%2Fqa.snapav.com%2Fshop%2FAjaxRewardsStatusView%3FcurrentSelection%3DrewardsStatusSlct%26catalogId%3D10010%26langId%3D-1%26storeId%3D10151%26identifier%3D1626959044558"><p>Learn More</p></a>
+						  	</div>
+						</div>	
+					 	<div class="span6">
+							<div class="teal-qtd">
+								<p>QTD Spend</p>
+								<h2>Need Value</h2>
+						  	</div>
+						</div>
+					  </div>
+					  <div class="row-fluid">
+					  	<div class="span6">
+							<div class="blue-ytd">
+								<p>YTD Points</p>
+								<h2>[AnnualPointsEarned]</h2>
+								<!--<p>[]pts til next level</p>-->
+							</div>
+						</div>	
+					 	<div class="span6">
+							<div class="purple-ytd">
+								<p>YTD Spend</p>
+								<h2>[AnnualAmountSpent]</h2>
+							</div>
+						</div>
+					  </div>
+					  <div class="row-fluid">
+						  <div class="span12">
+						     <a href="/shop/en/snapav/partner-rewards-program"><p class="pr-explore"><u>Explore Partner Rewards</u></p></a>
+						  </div>
+					  </div>
+                  </div>
+	</div>
+</div>

@@ -1,0 +1,438 @@
+<style>
+    form input, form select, form button{
+        background-color: transparent !important; 
+        color: #fff !important; 
+        border: 1px solid #fff !important;
+    }
+    #top-banner {
+        min-height: 900px !important;
+        height: 100vh !important;
+        width: 100vw;
+    }
+     form input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: white !important;        
+    }
+    form input::-moz-placeholder { /* Firefox 19+ */
+        color: white !important;
+    }
+        form input:-ms-input-placeholder { /* IE 10+ */
+        color: white !important;
+    }
+    form input:-moz-placeholder { /* Firefox 18- */
+        color: white !important;
+    }
+</style>
+<div id="video-container" style="margin-top: 50px"></div>
+	<div id="top-banner" class="full-screen flawed-z-correct" >
+		<div id="page-backgrounds" class="flawed-z-correct">
+			<div id="herobg" class="full-screen fixed background black" style="background-image: url('//res.cloudinary.com/control4/image/upload/www/cedia-2017/4Sight/4Sight-Remote-Accss.jpg');"></div>
+		</div>
+		<div id="page-backgrounds" class="vertically-center"> 
+			<div class="container">
+				<div class="row fade-in fade-bottom">
+					<div class="col-sm-10 col-md-10" style="padding-top: 30%">
+						<h1 class="text-white uppercase"><strong>Remote Access</strong></h1>
+						<h3 class="text-white">From across the town to the across the globe, you’re always connected to <no-br>your home.</no-br></h3>					
+						<p class="text-white">View cameras, open or close the garage, unlock the front door, even turn the lights on or off. With 4Sight, you can connect to your system while you’re away and control and manage all of your system’s features. It’s peace of mind at <no-br>its finest.</no-br></p>
+						<!--<a href="//customer.control4.com/4sight" class="c4btn outline" target="_blank" data-track-category="Navigation" data-track="4Sight Remote Access" data-track-label="Buy 4Sight">Buy 4Sight™ Subscription</a>-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> 
+
+<style>
+/* Accordion CSS */
+    .accordion {        
+        display: flex;        
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        transition-duration: 800ms;
+    }
+    .accordion-item {
+        flex-grow: 1;
+        transition-duration: 800ms;
+        z-index: 1;
+    }
+    .accordion-item:not(:last-child) {
+        border-right: 1px solid #fff;
+    }
+    .accordion-item:hover {
+        background-color: rgba(195, 32, 50, 0.8);
+        cursor: pointer;
+    }
+    .accordion-item:hover h3.hidden {
+        display: inline-block;
+    }        
+    i.fa.fa-plus,
+    #exit-accordion i.fa.fa-times {
+        border: 1px solid #FFF;
+        border-radius: 28px;
+        padding: 18px;
+        margin-right: 12.5px;
+        z-index: 2;
+    }
+    .accordion-item:hover i.fa.fa-plus,
+    div#exit-accordion:hover i.fa.fa-times {
+        border: none;
+        background-color: #fff;
+    }
+    .accordion-item:hover i.fa.fa-plus:before,
+    div#exit-accordion:hover i.fa.fa-times:before {
+        color: #8a878a;
+    }
+    .accordion-item span {
+        opacity: 0;
+    }
+    .accordion-item:hover span {
+        opacity: 1;
+    }
+    .accordion-item.active {
+        flex-grow: 5;
+    }    
+    .accordion-item.active:hover {
+        background-color: transparent;
+    }
+    .accordion-item.active h3.hidden,
+    .accordion-item.active p.hidden,
+    .accordion-item.active a.hidden,
+    .accordion.active .accordion-item:hover.active h3.hidden {
+        display: block;
+    }
+    .accordion.active .accordion-item i.fa.fa-plus,
+    .accordion.active .accordion-item span,
+    .accordion.active .accordion-item:hover h3.hidden {
+        display: none;
+    }    
+    .accordion.active #exit-accordion.hidden {
+        display: block;
+        top: 100px;
+        left: 50%;
+    }
+    @media (min-width: 801px) {
+        .accordion-item {
+            min-height: 100vh;
+        }
+        .accordion-item .padding {
+            height: 350px;
+        }
+        .accordion.active .accordion-item .padding {
+            height: 500px;
+        }
+        .accordion.active .accordion-item.active .padding {
+            height: 300px;
+        }
+        .accordion.active .accordion-item.active h2 {
+            transform: rotate(0deg);
+            float: none;
+            width: 100%;
+            left: 0px;
+        }
+        .accordion.active .accordion-item h2 {
+            transform: rotate(90deg);
+            float: left;
+            width: 100vh;
+            transform-origin: left;
+            left: 50%;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .accordion,
+        .accordion.full-screen {
+            flex-direction: column;
+            min-height: calc(100vh + 100px) !important;
+        }
+        .accordion-item.active {
+            background-color: rgba(0,0,0,0.5) !important;
+        }
+        .accordion-item:not(:last-child) {
+            border-bottom: 1px solid #fff;
+        }
+        .accordion-item:hover {
+            background-color: none;
+        }
+        .accordion-item h2,
+        .accordion-item h3 {
+            margin-bottom: 12.5px;
+        }
+        .accordion-item p {
+            line-height: 21px;
+        }
+        .accordion.active .accordion-item.active h3.hidden {
+            display: inline-block;
+            font-size: 1.1em;
+        }
+        .accordion-item div.absolute {
+            position: relative;
+        }
+        .accordion .accordion-item h3.hidden {
+            display: none;
+        }
+        .accordion-item.active {
+            flex-grow: 10;
+        }
+        .accordion.active .accordion-item.active h2,
+        .accordion.active .accordion-item h2 {
+            transform: rotate(0deg);
+        }
+        .accordion.active #exit-accordion.hidden {
+            display: none;
+        }
+        i.fa.fa-plus {
+            padding: 14px;
+        }
+    }
+/* End of Accordion CSS */
+</style>
+
+<!-- Accordion -->
+<div id="video" class="black"></div>
+<div id="accordion-vid">    
+	<div class="accordion full-screen background flawed-z-correct" style="background-image: url('//res.cloudinary.com/control4/image/upload/www/cedia-2017/4Sight/4Sight-Feature-Background.jpg');">
+		<div id="exit-accordion" class="absolute hidden hidden-xs"><i class="fal fa-times"></i></div>
+		<div class="accordion-item" data-background="//res.cloudinary.com/control4/image/upload/www/cedia-2017/4Sight/4Sight-Personalization-gradient.jpg">
+			<div class="padding text-white vertically-center">
+				<h2>When ><strong>> Then</strong> Personalization</h2>
+				<h3 class="hidden text-white">Your smart home, fine-tuned for you, <no-br>by you.</no-br></h3>
+				<p class="hidden">From changing schedules, evolving tastes in music, or along with the seasons or holidays, 4Sight gives you access to When >> Then personalization, that allows you to adjust and experiment with many features of your automation after you’ve lived with it for a while, fine-tuning it until it’s just right. And the interface is a breeze to use. You may come up with automation ideas you’ve never dreamed <no-br>of before!</no-br><br><br>
+				<a href="javascript:;" class="c4btn outline" data-wistia="7r3yu2ag73" data-target="#video" data-hide="#slider-vid" data-track-category="Navigation" data-track="4Sight When>>Then" data-track-label="See it in Action">Watch the Video</a>
+				<!--<a href="//customer.control4.com/4sight" class="c4btn outline" target="_blank" data-track-category="Navigation" data-track="4Sight When>>Then" data-track-label="Buy 4Sight">Buy 4Sight™ Subscription</a>-->
+				</p>
+				<div class="absolute bottom"><i class="fal fa-plus"></i><span>Read More</span></div>
+			</div>
+		</div>
+		<div class="accordion-item" data-background="//res.cloudinary.com/control4/image/upload/www/cedia-2017/4Sight/4Sight-Voice-Cntrl.jpg">
+			<div class="padding vertically-center text-white">
+				<h2>Voice Control</h2>
+				<h3 class="hidden text-white">Speak up! Your house <no-br>is listening.</no-br></h3>
+				<p class="hidden">With Control4 and Amazon Alexa, now you can tell your house what to do&mdash;whether it’s turning off all lights when it’s bed time, setting the perfect mood for dinner, or asking for a helping hand when yours <no-br>are full.</no-br><br><br>
+				<!--<a href="//customer.control4.com/4sight" class="c4btn outline" target="_blank" data-track-category="Navigation" data-track="4Sight When>>Then" data-track-label="Buy 4Sight">Buy 4Sight™ Subscription</a>-->
+				</p>
+				<div class="absolute bottom"><i class="fal fa-plus"></i><span>Read More</span></div>
+			</div>
+		</div>
+		<div class="accordion-item" data-background="//res.cloudinary.com/control4/image/upload/www/cedia-2017/4Sight/4Sight-Notifications.jpg">
+			<div class="padding vertically-center text-white">
+				<h2>Notifications & Alerts</h2>
+				<h3 class="hidden text-white">Be alerted of any event that happens <no-br>at home.</no-br></h3>
+				<p class="hidden">Create your own personalized push notifications to alert you when people come and go, a water leak is detected, even if the garage door has been left ajar. Whether it’s urgent and needs immediate attention, or you simply want a status update, your home will let <no-br>you know.</no-br><br><br>
+				<!--<a href="//customer.control4.com/4sight" class="c4btn outline" target="_blank" data-track-category="Navigation" data-track="4Sight When>>Then" data-track-label="Buy 4Sight">Buy 4Sight™ Subscription</a>-->
+				</p>
+				<div class="absolute bottom"><i class="fal fa-plus"></i><span>Read More</span></div>
+			</div>
+		</div>
+	</div>
+</div>
+		
+<script>
+    docReady(function() {
+    $('.accordion-item').each(function(){
+        $('<img/>')[0].src = $(this).data('background');
+    });
+    $('.accordion .accordion-item').on('click', function() {        
+        var $clicked = $(this);
+        var bg = "url(" + $(this).data('background') + ")";
+        $clicked.parent('.accordion').css('background-image', bg).find('.accordion-item').not($clicked).removeClass('active');
+        $clicked.addClass('active');
+        $('.accordion').addClass('active');            
+    });
+    $('#exit-accordion').on('click', function() {            
+        $('.accordion, .accordion .accordion-item').removeClass('active');
+        $('.accordion').css('background-image', 'url(//res.cloudinary.com/control4/image/upload/www/cedia-2017/4Sight/4Sight-Feature-Background.jpg)');
+    });
+});
+</script>
+<!-- End Accordion -->
+
+<!-- interactive slider -->
+<style>
+    .full-screen,
+    html:not(.mobile-browser) .full-screen-desktop {
+        min-height: 100vh !important;
+        width: 100vw !important;
+        overflow: hidden;
+    }
+    .slider-controls {
+        position: absolute;
+        bottom: 25px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 1000;
+    }
+    .slider-controls a[data-slick-slide] > div {
+        opacity: 0.7;
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 50%;
+        transition: 400ms;
+    }
+    .slider-controls a[data-slick-slide]:hover > div,
+    .slider-controls a[data-slick-slide].active > div {
+        opacity: 1;
+        background-color: rgba(195, 32, 50, 0.8);
+        border: 1px solid transparent;
+    }
+    .slider-controls a div {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        max-height: 100px;
+        max-width: 100px;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .black p {
+        color: #fff;
+    }
+    div.slider {
+        min-height: 450px;
+    }
+    div.slider .slide {
+        min-height: 450px !important;
+        height: 100vh !important;
+        width: 100vw;
+    }
+	div.slider .slick-list {
+		height: 100vh !important;
+	}
+    @media (max-width: 1300px) {
+        .slide .vertically-center {
+            width: calc(100vw - 70px);
+            top: 40%;
+        }        
+    }
+    @media (max-width: 480px) {
+        .full-screen.black {
+            border: none !important;
+        }
+        .slider .slide {
+            height: calc(100vh + 100px) !important;
+        }
+        .slide .vertically-center {
+            width: 100vw;
+        }
+        .slider-controls a div {
+            height: 80px;
+            width: 80px;
+        }
+        div.slider .slide,
+        div.slider .slick-list {
+            min-height: 600px !important;
+        }
+    }
+</style>
+
+<div class="full-screen black">
+    <div id="video2" class="black"></div>
+    <div id="slider-vid">    
+        <div class="slider">     
+            <div class="slide full-screen background" style="background-image: url('//res.cloudinary.com/control4/image/upload/v1/www/cedia-2017/4Sight/4Sight-Whn-Thn.jpg');">
+                <div class="vertically-center">
+                    <div class="padding">
+                        <div class="row">
+                            <div class="col-lg-offset-1 col-lg-6 text-white fade-bottom">	
+                                <h2>Homeowner Personalization</h2>
+                                <p>At Control4, we’ve crafted a perfect balance between providing smart home systems that are professionally-installed and reliable with the flexibility for homeowners to customize and fine-tune their automation to evolve with their <no-br>changing lifestyles.</no-br></p>
+                                <p>This intuitive, web-based personalization tool, called When >> Then, is unlocked with a 4Sight subscription, and it’s incredibly easy <no-br>to use.</no-br></p>
+                                <a href="javascript:;" class="c4btn outline" data-wistia="7r3yu2ag73" data-target="#video2" data-hide="#slider-vid" data-track-label="See it in Action">See It In Action</a>
+								<!--<a href="//customer.control4.com/4sight" class="c4btn outline" target="_blank" data-track-category="Navigation" data-track="4Sight When>>Then" data-track-label="Buy 4Sight">Buy 4Sight™ Subscription</a>-->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide full-screen background" style="background-image: url('//res.cloudinary.com/control4/image/upload/v1/www/cedia-2017/4Sight/4Sight-Alexa.jpg');">
+                <div class="vertically-center">
+                    <div class="padding">
+                        <div class="row">
+                            <div class="col-lg-offset-1 col-lg-6 text-white fade-bottom">	
+                                <h2>Hands-Free Automation</h2>
+                                <p>We've all been there—walking through the door into a dark house, arms full. Wouldn't it be nice to tell your house to offer a helping hand? Now you can. As a Control4 homeowner with a 4Sight subscription, you can enjoy hands-free control with simple voice commands—such as "Alexa, turn on Welcome"—that lights up the hallway and kitchen, fires up your favorite Pandora station, while the door locks itself <no-br>behind you.</no-br></p>
+                                <a id="sight" href="javascript:;" class="c4btn outline" data-wistia="mobzxkviat" data-target="#video2" data-hide="#slider-vid">Check It Out</a>
+								<!--<a href="//customer.control4.com/4sight" class="c4btn outline" target="_blank" data-track-category="Navigation" data-track="4Sight When>>Then" data-track-label="Buy 4Sight">Buy 4Sight™ Subscription</a>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide full-screen background" style="background-image: url('//res.cloudinary.com/control4/image/upload/www/cedia-2017/4Sight/4Sight-Advanced-Cntrl.jpg');">
+                <div class="vertically-center">
+                    <div class="padding">
+                        <div class="row">
+                            <div class="col-lg-offset-1 col-lg-6 text-white">	
+                                <h2>Advanced Control</h2>
+                                <h3>We’re giving you more ways to control and manage <noo-br>your home.</no-br></h3>
+                                <p>From the watch on your wrist to the devices in your hand&mdash;or simply by using your voice and never touching anything at all&mdash;4Sight gives you control over your home in a multitude of ways that is convenient for you at that <no-br>exact moment.</no-br></p>
+								<!--<a href="//customer.control4.com/4sight" class="c4btn outline" target="_blank" data-track-category="Navigation" data-track="4Sight When>>Then" data-track-label="Buy 4Sight">Buy 4Sight™ Subscription</a>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>	   
+        </div>
+        <div class="slider-controls">
+            <div class="col-sm-offset-3 col-sm-2 col-xs-4">
+                <a data-slick-slide="0" class="active">
+                    <div class="aspect one-to-one background-contain" style="background-image: url('//res.cloudinary.com/control4/image/upload/v1/www/cedia-2017/4Sight/4Sight-Icons-Whn-Thn.svg');"></div>
+                </a>
+            </div>
+            <div class="col-sm-2 col-xs-4">
+                <a data-slick-slide="1">
+                    <div class="aspect one-to-one background-contain" style="background-image: url('//res.cloudinary.com/control4/image/upload/v1/www/cedia-2017/every-room/ERA-Chart-Alexa.svg');"></div>
+                </a>
+            </div>
+            <div class="col-sm-2 col-xs-4">
+                <a data-slick-slide="2">
+                    <div class="aspect one-to-one background-contain" style="background-image: url('//res.cloudinary.com/control4/image/upload/v1/www/cedia-2017/every-room/ERA-Chart-Watch.svg');"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End interactive slider -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js" defer></script>
+<script type="text/javascript">
+docReady(function() {
+		
+    // slick slider
+    var $slider = $('.slider').slick({
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 7000,
+        arrows: false,
+        //	prevArrow: '<a href="javascript:;" class="slick-prev"><i class="fal fa-arrow-left"></i></a>', // uncomment if arrows set to true
+        //	nextArrow: '<a href="javascript:;" class="slick-next"><i class="fal fa-arrow-right"></i></a>', // uncomment if arrows set to true
+        dots: false,
+        draggable: false,
+        fade: true,
+        //	initialSlide: Math.floor(Math.random() * $('div.slider div.slide').length), // randomize
+        variableWidth: true,
+        customPaging: function (slider, i) {
+            return '<button class="tab">' + $('.slick-thumbs li:nth-child(' + (i + 1) + ')').html() + '</button>';
+        }
+    });
+
+    // highligh selected slide's icon
+    $('.slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        var $slidericon = $('[data-slick-slide=' + nextSlide + ']');
+        $('[data-slick-slide]').removeClass('active');
+        $slidericon.addClass('active');
+    });
+
+	// go to slide
+	$('[data-slick-slide]').click(function() {
+        var $this = $(this);
+        // accounted for in above function
+		// $('[data-slick-slide]').not($this).removeClass('active');
+		// $this.addClass('active');
+		var clicked = $this.data('slick-slide');
+		$slider.slick('slickGoTo', clicked);
+	});
+    
+});	    
+</script>

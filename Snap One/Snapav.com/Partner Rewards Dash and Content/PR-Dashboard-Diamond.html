@@ -1,0 +1,231 @@
+<style>
+
+    .hs-points {
+        color: #74C7A9;
+        font-size: 3rem;
+        line-height: .5;
+        margin-top: 20px;
+    }
+
+    .re-progress{
+        background: #ccc;;
+        padding:3px;
+        border-radius: 10px;
+    }
+    .re-progress-in{
+        background: #0F94E0;
+        background: linear-gradient(-90deg, #0F94E0, #42B6F4);
+        height: 15px;
+        border-radius: 10px;
+    }
+
+    .in-table.justified .in-t-cell:last-child{
+        text-align: right;
+    }
+
+    .in-table.r-table p{
+        margin:0 0 5px;
+        font-weight: bold;
+    }
+    
+    .mobile-table {
+        padding-left:14px
+    }
+
+    .span4.mod-4 {
+        padding-top: 40px;
+    }
+    .span4.mod-8 {
+        padding-top: 10px;
+    }
+        .ds-hs p{
+        margin: 5px 0px;
+    }
+    .ds-hs .btn-7{
+        border: 1px solid teal;
+        color:teal;
+    }
+    .ds-hs .btn-7:hover{
+        background: teal;
+        color: #fff;
+    }
+
+    .ln-pr-holder{
+        position: relative;
+       padding-top: 30px;
+    }
+
+    .ar-icn{
+        position: absolute;
+        right: -6px;
+        top: -21px;
+    }
+    .ar-icn p{
+        margin: 0;
+        white-space: nowrap;
+        position: absolute;
+        top: -15px;
+        left: 0;
+        margin-left:-4px;
+    }
+
+    .ar-icn p.rgt{
+        right:0;
+        left: unset;
+    }
+
+    .ar-icn span{
+        margin-left: -5px;
+    }
+
+    @media (min-width: 541px) and (max-width: 1024px) {
+        .span4.mod-4 {
+            width: 45% !important;
+            padding-top: 10px;
+            padding-right: 8px;
+        }
+        .span4.mod-8 {
+            width: 45% !important;
+            margin-left: 30px;
+            padding-top: 10px;
+        }
+    }
+
+    @media (max-width: 541px) {
+        .span4.mod-4 {
+            padding-top: 20px;
+        }
+        .span4.mod-8 {
+            padding-top: 15px;
+        }
+        
+        .mobile-table {
+            padding-left:0px;
+        }
+        .ln-pr-holder{
+       padding-bottom: 20px;
+        }
+    }
+
+    @media (min-width: 541px) {
+        .ds-border-left{
+            border-left: 1px solid #e0e0e0;
+        }
+    }
+
+    @media (max-width: 540px) {
+        .ds-hs .ds-lc{
+            width: 45%;
+            float: left;
+        }
+
+        .ds-hs .ds-rc{
+            width: 45%;
+            float: right;
+        }
+    }
+</style>
+
+<div id="homepage-widget-01">
+    <h2 style="color: #057ab9;">Diamond Plus</h2>
+    <div class="row-fluid">
+
+        <!-- START PROGRESS BAR -->
+        <div class="span6">
+            <div class="ln-pr-holder" data-total-val="[YTDSpentPercentage]">
+                <div class="re-progress">
+                    <div class="re-progress-in" style="width:[YTDSpentPercentage]%; position:relative;">
+                        <span class="ar-icn">
+                            <p>[AmountYetToSpendForYTDGoal] to go</p>
+                            <span style="color:#ffaf32">&#9660;</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <p style="float:left; font-weight: bold">Annual Spend Goal:</p> <p style="float:right; font-weight: bold">[MinYTDSpend]</p>
+                </div>
+            </div>
+            <div class="ln-pr-holder" data-total-val="[QTDSpentPercentage]">
+                <div class="re-progress">
+                    <div class="re-progress-in" style="width:[QTDSpentPercentage]%; position:relative;">
+                        <span class="ar-icn">
+                            <p>[AmountYetToSpendForQTDGoal] to go</p>
+                            <span style="color:#ffaf32">&#9660;</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <p style="float:left; font-weight: bold">Quarterly Spend Goal:</p> <p style="float:right; font-weight: bold">[MinQTDSpend]</p>
+                </div>
+            </div>
+            <!--<div class="hide-small"><p style="font-size: 1.1rem; margin-top: 5px;">This data reflects the 2019-2020 program year and will be updated soon. For questions, email <a style="font-size: 1.1rem;" href="mailto:partnerrewards@snapav.com">partnerrewards@snapav.com.</a></p></div>-->
+            <div class="hide-small"><a href="/shop/UserAccountView?currentSelection=rewardsStatusSlct&catalogId=10010&langId=-1&storeId=10151">My Rewards Details</a></div>
+        </div>
+        <!-- END PROGRESS BAR -->
+
+        <!-- START TABLE -->
+        <div class="span6 mobile-table">
+            <div class="in-table justified r-table" style="color: #4a4a4a">
+                <div class="in-t-row">
+                    <div class="in-t-cell" style="width:60%; padding: 3px 0px 3px 0px">
+                        <p>Program Year Ends:</p>
+                    </div>
+                    <div class="in-t-cell" style="width:40%; padding: 3px 0px 3px 0px">
+                        <p>06/25/21</p>
+                    </div>
+                </div>
+                <div class="in-t-row">
+                    <div class="in-t-cell" style="width:60%; padding: 3px 0px 3px 0px">
+                        <p>YTD Spend:</p>
+                    </div>
+                    <div class="in-t-cell" style="width:40%; padding: 3px 0px 3px 0px">
+                        <p>[AnnualAmountSpent]</p>
+                    </div>
+                </div>
+                <div class="in-t-row">
+                   <div class="in-t-cell" style="width:60%; padding: 3px 0px 3px 0px">
+                        <p>YTD Saving:</p>
+                    </div>
+                    <div class="in-t-cell" style="width:40%; padding: 3px 0px 3px 0px">
+                        <p>[TotalSavedYR]</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="in-table justified r-table" style="color: #4a4a4a; margin-top: 14px;">
+                <div class="in-t-row">
+                    <div class="in-t-cell" style="width:60%; padding: 3px 0px 3px 0px">
+                        <p>Quarter Ends:</p>
+                    </div>
+                    <div class="in-t-cell" style="width:40%; padding: 3px 0px 3px 0px">
+                        <p>12/31/20</p>
+                    </div>
+                </div>
+                <div class="in-t-row">
+                    <div class="in-t-cell" style="width:60%; padding: 3px 0px 3px 0px">
+                        <p>QTD Spend:</p>
+                    </div>
+                    <div class="in-t-cell" style="width:40%; padding: 3px 0px 3px 0px">
+                        <p>[QTAmountSpent]</p>
+                    </div>
+                </div>
+                <div class="in-t-row">
+                    <div class="in-t-cell" style="width:60%; padding: 3px 0px 3px 0px">
+                        <p>Quarterly Rebate:</p>
+                    </div>
+                    <div class="in-t-cell" style="width:40%; padding: 3px 0px 3px 0px; color: #0F94E0">
+                        <p style="color:#057ab9;">Up to [QTDRebatePercentage]%</p>
+                    </div>
+                </div>
+                <div class="hide-large hide-medium">
+                    <div class="in-t-cell" style="width:80%; padding: 3px 0px 3px 0px">
+                        <a href="/shop/UserAccountView?currentSelection=rewardsStatusSlct&catalogId=10010&langId=-1&storeId=10151">My Rewards Details</a>
+                    </div>
+                    <div class="in-t-cell" style="width:20%; padding: 3px 0px 3px 0px;">
+                    </div>
+                </div>
+            </div>
+            <!-- END TABLE -->
+        </div>
+    </div>
+</div>

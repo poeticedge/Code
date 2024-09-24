@@ -1,0 +1,936 @@
+<style>
+  /*====================
+    Navigation style 
+    =====================*/
+  .brand-nav {
+    margin-bottom: 0px;
+  }
+  .brand-pg-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: right;
+  }
+  .brand-nav li {
+    display: inline-block;
+  }
+
+  .welcome {
+    text-align: center;
+  }
+  .orange-line {
+    border-bottom: 3px solid #d8694a;
+    width: 114px;
+    margin: 14px 0px 0px 245px;
+  }
+  .yellow {
+    border: 1.5px solid #d8694a;
+    background-color: #d8694a;
+    width: 114px;
+    margin: 14px 0px 0px 317px;
+  }
+  .yellow2 {
+    margin: 14px 0px 0px 453px;
+    border: 1.5px solid #d8694a;
+    background-color: #d8694a;
+    width: 114px;
+  }
+  .becomedealer {
+    background-image: url("/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Become%20A%20Dealer%20Today.png");
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+    height: 434px;
+  }
+  .clint-header {
+    padding: 50px 30px;
+  }
+  .partner-products-section {
+    background-image: url("/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/SecurityLandingPage_Banner_PartnerwithUs.png");
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+    padding: 45px 210px;
+  }
+
+  .we-know-products-section,
+  .who-is-snap .thumbnail-block {
+    padding: 45px 210px;
+  }
+  #grey-pad {
+    padding: 104px 124px 0px 120px;
+  }
+
+  .help-pad {
+    text-align: center;
+    padding-bottom: 42px;
+  }
+  #grey-box {
+    background-color: #e8e8e8;
+    height: 575px;
+    color: #25282a;
+  }
+  .three-content {
+    text-align: center;
+    padding: 10px 21px 10px 21px;
+    color: #25282a;
+  }
+
+  .ovrc-bkgd {
+    background-image: url("/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/SecurityLandingPage_Banner_OvrC.png");
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+    height: 456px;
+  }
+  #prod-pad {
+    padding: 60px 0px;
+  }
+  #ovrc-pad {
+    padding: 24px 50px 0px 50px;
+  }
+
+  .araknis {
+    background-image: url("/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/SecurityLandingPage_Banner_AraknisAccessNetworks.png");
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+    height: auto;
+    padding: 44px 0;
+  }
+  .wattbox {
+    background-image: url("/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/SecurityLandingPage_Banner_WattBox.png");
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0px;
+    padding: 44px 0;
+  }
+  .episode {
+    background-image: url("/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/SecurityLandingPage_Banner_Episode-update.png");
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+    height: auto;
+    padding: 22px 0;
+  }
+
+  .luma {
+    background-image: url("/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/SecurityLandingPage_Banner_Luma.png");
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: -10px;
+    padding: 44px 0;
+  }
+
+  .clare {
+    background-image: url("/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/SecurityLandingPage_Banner_Clare-update.png");
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: -10px;
+    padding: 22px 0;
+  }
+  .clarevision {
+    background-image: url("/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/SecurityLandingPage_Banner_ClareVision.png");
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: -29px;
+    padding: 32px 0;
+  }
+
+  .strong {
+    background-image: url("/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/SecurityLandingPage_Banner_Strong-update.png");
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+    height: auto;
+    padding: 44px 0;
+  }
+
+  .atlona {
+    background-image: url("/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/SecurityLandingPage_Banner_Atlona.png");
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+    height: auto;
+    padding: 44px 0;
+  }
+
+  .binary {
+    background-image: url("/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/SecurityLandingPage_Banner_Binary.png");
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+    height: auto;
+    padding: 44px 0;
+  }
+
+  .brands {
+    padding: 65px 511px 0px 51px;
+  }
+  .title-pad {
+    padding: 20px 0px 10px 2px;
+  }
+  .enroll {
+    background-color: #e8e8e8;
+    width: auto;
+    height: 360px;
+  }
+  #number-pad {
+    padding: 50px 70px 0px;
+  }
+  .snapone-locations,
+  .partner-pledge {
+    margin: 30px 0;
+  }
+  .snapone-locations .thumbnail-block,
+  .partner-pledge .thumbnail-block {
+    padding: 30px 37px;
+  }
+
+  @media (max-width: 800px) {
+    .orange-line,
+    .yellow2 .partner-products-section {
+      padding: 14px 0px 0px 80px;
+    }
+    .orange-line,
+    .yellow2 {
+      width: 100%;
+      margin: 0;
+    }
+
+    #grey-pad {
+      padding: 125px 35px 0px 53px;
+    }
+    .partner-products-section,
+    .we-know-products-section,
+    .who-is-snap .thumbnail-block {
+      padding: 45px;
+    }
+    #grey-box img {
+      width: 100%;
+    }
+    .help-pad {
+      padding: 10px 0px;
+    }
+    #prod-pad {
+      padding: 22px 0px;
+    }
+    .brands {
+      padding: 50px 324px 0px 13px;
+    }
+    .enroll {
+      height: 360px;
+    }
+    #number-pad {
+      padding: 40px 20px 0px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .clint-header {
+      padding: 20px 10px;
+      text-align: center;
+    }
+    .partner-products-section,
+    .we-know-products-section,
+    .who-is-snap .thumbnail-block {
+      padding: 20px 10px;
+    }
+    .orange-line,
+    .yellow2 {
+      width: 100%;
+      margin: 0;
+    }
+
+    #grey-pad {
+      padding: 40px 10px 0px 10px;
+    }
+    #grey-box img {
+      width: 100%;
+    }
+    .help-pad {
+      padding: 10px 0px;
+    }
+    .ovrc-bkgd,
+    .araknis,
+    .wattbox,
+    .visualint,
+    .clare,
+    .episode,
+    .clarevision,
+    .luma,
+    .strong,
+    .atlona,
+    .binary {
+      background-image: none;
+      height: auto;
+      padding: 20px 10px;
+    }
+    .partner-pledge,
+    .snapone-locations {
+      margin: 0;
+      padding: 20px 10px;
+      text-align: center;
+    }
+    #ovrc-pad {
+      padding: 10px 10px 0px 10px;
+    }
+    .brands {
+      padding: inherit;
+      text-align: center;
+    }
+
+    #number-pad {
+      padding: 20px 10px;
+    }
+    .call-img {
+      display: none;
+    }
+    .enroll {
+      height: auto;
+    }
+  }
+
+  /* #left-margin {
+        margin-left: 0;
+    } */
+</style>
+
+<!-- ==================================
+	Header
+==================================*/ -->
+<!-- START BREADCRUMBS !-->
+<div id="productsGlobalBreadCrumbs">
+  <div id="breadcrumb" class="breadcrumb">
+    <div id="WC_BreadCrumbTrailDisplay_div_1" class="breadcrumb_links">
+      <a id="WC_BreadCrumbTrailDisplay_link_2" href="/shop/en/snapav/home"
+        >Home</a
+      >
+      <span class="breadcrumb-divider">|</span>
+      <a id="WC_BreadCrumbTrailDisplay_link_5a" href="/shop/en/snapav/brands"
+        >Solutions</a
+      >
+      <span class="breadcrumb-divider">|</span> Security
+    </div>
+  </div>
+</div>
+<!-- END BREADCRUMBS !-->
+
+<!-- NAV START -->
+
+<div class="row-fluid brand-nav">
+  <div class="span12">
+    <h1 style="color: #7c7e7f; float: left">Security</h1>
+    <ul class="brand-pg-nav">
+      <!--<li><a class="active" href="/shop/en/snapav/lutron">Overview</a></li>-->
+    </ul>
+  </div>
+</div>
+<hr style="margin: 0 0 10px 0" />
+
+<!-- NAV END -->
+
+<div class="row-fluid">
+  <div class="span12">
+    <div class="dynamic-image">
+      <img
+        src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/SecurityLandingPage_Banner_Header-032524.png"
+        alt="Header image of a doorbell camera, switch, camera install, security panel and security app."
+      />
+    </div>
+  </div>
+</div>
+<div class="clint-header">
+  <div class="row-fluid">
+    <div class="span2 center">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/SecurityLandingPage_Image_Clint.png"
+          alt="portrait of Clint Choate"
+        />
+      </div>
+    </div>
+    <div class="span10">
+      <div class="thumbnail-block">
+        <h1>Welcome to Snap One</h1>
+        <h3>
+          I'm Clint Choate, the Security Market Director at Snap One. Working in
+          the security industry for over 30 years, I recognize what security
+          professionals will appreciate. I know that Snap One's top-notch
+          products and world-class support will help grow your business.
+        </h3>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="partner-products-section">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="thumbnail-block center">
+        <h2>Partner with Us</h2>
+        <p>
+          We’ve made it easy to join Snap One! Simply complete your application
+          and we will send over your new account details. As a new partner,
+          you’ll get $500 towards your first purchase! <br />Click on the link
+          below and reference promo code SEC24.*
+        </p>
+        <br />
+        <a
+          href="https://control4.my.site.com/SnapOne/s/newpartnerapplication?promoCode=SEC24"
+          target="_blank"
+          ><div class="btn-5">Create Account</div></a
+        >
+        <br />
+      </div>
+    </div>
+  </div>
+</div>
+<div class="we-know-products-section">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="thumbnail-block center">
+        <h2>We Know Products</h2>
+        <div class="orange-line"></div>
+        <p>
+          We deliver 10,000+ innovative, high-quality products across 28
+          categories exclusively to professional installers. Not only do we
+          manufacture our own in-house brands, we also partner with select
+          brands to help you consolidate your purchasing and earn greater
+          rewards.
+        </p>
+        <br />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================================
+	products section
+==================================*/ -->
+<div class="ovrc-bkgd">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="thumbnail-block brands">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/OvrC logo.png"
+          alt="OvrC logo"
+        />
+        <h2>Easy Remote Management from Setup to Support</h2>
+        <p class="title-pad">
+          OvrC is our free remote system monitoring and management platform
+          designed exclusively for technology integrators. This platform
+          empowers you to setup, monitor, and troubleshoot connected devices
+          remotely, helping to minimize truck rolls and deliver world-class
+          support to your clients.
+        </p>
+        <a href="/shop/en/snapav/ovrc" target="_blank" id="security-landing-cta"
+          ><div class="btn-2">Learn More</div></a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row-fluid wattbox">
+  <div class="span12">
+    <div class="thumbnail-block brands">
+      <img
+        src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Wattbox Logo.png"
+        class="dynamic-image"
+        alt="Wattbox logo"
+      />
+      <h2 class="title-pad">Reliable, Flexible – Power for Pros</h2>
+      <p>
+        Our power lineup was designed to support all of your installation and
+        power requirement needs from UPS backups, power strips, and clean power
+        filtering to surge suppression and power supplies. Empower techs with
+        remote control and configuration through the OvrC cloud management
+        platform, and eliminate service calls through the self-healing and
+        auto-reboot power cycling capabilities. WattBox is backed by a lifetime
+        warranty and equipment surge protection guarantees.
+      </p>
+      <a
+        href="/shop/en/snapav/wattbox"
+        target="_blank"
+        id="security-landing-cta"
+        ><div class="btn-2">Learn More</div></a
+      >
+    </div>
+  </div>
+</div>
+
+<div class="araknis">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="thumbnail-block brands">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/SecurityLandingPage_Logo_AraknisAccessNetworks.png"
+          class="dynamic-image"
+          alt="Araknis logo"
+        />
+        <h2 class="title-pad">Modern, Seamless Connectivity</h2>
+        <p>
+          Our networking brands offer a robust lineup of switches, access
+          points, and routers to make high-performance connectivity seamless.
+          Each product undergoes 15,000+ hours of lab testing for optimum
+          performance and is cloud-controlled with our OvrC platform for easy
+          remote configuration and maintenance. Our in-house technicians are
+          trained on every product we offer and ready to help you with installs,
+          setup or troubleshoot any issues.
+        </p>
+        <a
+          href="/shop/en/snapav/araknis"
+          target="_blank"
+          id="security-landing-cta"
+          ><div class="btn-2">Learn More</div></a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="luma">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="thumbnail-block brands">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/SecurityLandingPage_Logo_Luma.png"
+          class="dynamic-image"
+          alt="Luma logo"
+        />
+        <h2 class="title-pad">Surveillance Streamlined</h2>
+        <p>
+          Luma’s robust product line offers easy-to-install, high-quality
+          solutions with attractive end-user features. Your clients will enjoy
+          the benefits of AI-filtered events, accurate notifications, additional
+          privacy measures, and advanced recording playback; all through the new
+          Luma View app. Installation is simple thanks to Luma's discreet form
+          factors including bullet, dome, PTZ, and varifocal turret cameras.
+          Installation is further simplified with OvrC integration, saving up to
+          50% of your configuration time. Plus, Luma’s product line is
+          NDAA-compliant and integrates with control systems, pairing best with
+          Control4.
+        </p>
+        <a
+          href="/shop/en/snapav/luma-overview"
+          target="_blank"
+          id="security-landing-cta"
+          ><div class="btn-2">Learn More</div></a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row-fluid clare">
+  <div class="span12">
+    <div class="thumbnail-block brands">
+      <img
+        src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Clare_Logo.png"
+        class="dynamic-image"
+        alt="Clare logo"
+      />
+      <h2 class="title-pad">Conquer Smart Home Security</h2>
+      <p>
+        Traditional security systems are a thing of the past. The ClareOne Panel
+        gives you an easy-to-use, 128-zone open platform smart home security
+        system that will help you grow RMR and revolutionize the way you do
+        business. This smart panel seamlessly integrates with the brands your
+        customers know and trust, including Sonos, Genie, Yale, Google Nest and
+        many more. Plus, it pairs well with Control4 for added security. Clare
+        products are sold exclusively at Snap One and are backed by our
+        award-winning service and support.
+      </p>
+      <a href="/shop/en/snapav/clare" target="_blank" id="security-landing-cta"
+        ><div class="btn-2">Learn More</div></a
+      >
+    </div>
+  </div>
+</div>
+
+<div class="clarevision">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="thumbnail-block brands">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/SecurityLandingPage_Logo_Clarevision.png"
+          class="dynamic-image"
+          alt="Clarevision logo"
+        />
+        <h2 class="title-pad">Pro Surveillance at Pro Margins</h2>
+        <p>
+          ClareVision offers professional-grade security solutions designed to
+          fit any install. All ClareVision cameras and network video recorders
+          (NVRs) are competitively priced, NDAA-Compliant and ETL Listed, giving
+          pros the security features they need at a price that can’t be beat.
+          Install ClareVision cameras as a standalone system or combine with
+          ClareOne or Control4 for a single platform smart home experience. With
+          an easy-to-use app, seamless integration with popular brands for
+          install flexibility, and edge-based features, ClareVision is the right
+          choice for pros and clients alike.
+        </p>
+        <a
+          href="/shop/en/snapav/clarevision"
+          target="_blank"
+          id="security-landing-cta"
+          ><div class="btn-2">Learn More</div></a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="episode">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="brands">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Episode Logo Color.png"
+          class="dynamic-image"
+          alt="episode logo"
+        />
+        <h2 class="title-pad">Premium Audio Built Better</h2>
+        <p>
+          Episode delivers premium audio to any install. From indoor to outdoor;
+          in-wall, in-ceiling, or pendant; 8 Ohm to 70 Volt, Episode is perfect
+          for every professional's audio needs. There’s more to Episode than
+          great audio. Our wide range of products were designed with
+          Dealer-inspired features like toothless installs, built in speaker
+          handles, and more to make installer life easier. Episode speakers
+          feature a price point that makes them easy to sell, while still giving
+          you generous margins to grow your business.
+        </p>
+        <a
+          href="/shop/en/snapav/episode"
+          target="_blank"
+          id="security-landing-cta"
+          ><div class="btn-2">Learn More</div></a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="strong">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="brands">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/SecurityLandingPage_Logo_Strong.png"
+          class="dynamic-image"
+          alt="strong logo"
+        />
+        <h2 class="title-pad">Stronger Than the Rest</h2>
+        <p>
+          Professional A/V products deserve a professional racking solution. At
+          Strong, our integrator-inspired racks, TV mounts, unique backbox
+          solutions, and accessories make gear faster to install and easier to
+          service.
+        </p>
+        <a
+          href="/shop/en/snapav/strong"
+          target="_blank"
+          id="security-landing-cta"
+          ><div class="btn-2">Learn More</div></a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="atlona">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="brands">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/SecurityLandingPage_Logo_Atlona.png"
+          class="dynamic-image"
+          alt="Atlona logo"
+        />
+        <h2 class="title-pad">Cutting Edge AV Distribution and Control</h2>
+        <p>
+          Atlona’s OmniStream solution provides a scalable AVoIP solution for
+          large installs, while the Velocity control system makes system control
+          easy and scalable at a compelling price. The HDVS, Omega, and CLSO
+          lineups are the perfect solutions for scaling, switching, and routing
+          signals in conference rooms, retail, and hospitality projects.
+        </p>
+        <a
+          href="/shop/en/snapav/atlona"
+          target="_blank"
+          id="security-landing-cta"
+          ><div class="btn-2">Learn More</div></a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="binary">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="brands">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/SecurityLandingPage_Logo_Binary.png"
+          class="dynamic-image"
+          alt="Binary logo"
+        />
+        <h2 class="title-pad">The Future of Media Distribution is Here</h2>
+        <p>
+          Binary Media over IP (MoIP) is the modern way to do AV distribution.
+          Using the network as the backbone, 4K HDR content can be sent from any
+          number of sources to any number of displays to create a completely
+          scalable solution. Thanks to OvrC, the system is easy to set up,
+          control, and manage remotely.
+        </p>
+        <a
+          href="/shop/en/snapav/binary"
+          target="_blank"
+          id="security-landing-cta"
+          ><div class="btn-2">Learn More</div></a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<hr />
+
+<!-- ==================================
+	Who is Snap
+==================================*/ -->
+
+<div class="span12">
+  <style>
+    .embed-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+    }
+    .embed-container iframe,
+    .embed-container object,
+    .embed-container embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <div class="embed-container">
+    <iframe
+      src="https://player.vimeo.com/video/344665607?"
+      width="640"
+      height="360"
+      frameborder="0"
+      webkitallowfullscreen=""
+      mozallowfullscreen=""
+      allowfullscreen=""
+    ></iframe>
+  </div>
+</div>
+
+<div class="who-is-snap">
+  <div class="row-fluid">
+    <div class="span12 center">
+      <div class="thumbnail-block">
+        <h2>Who is Snap One?</h2>
+        <div class="orange-line"></div>
+        <p>
+          Snap One was founded in 2005 “for integrators, by integrators” – so
+          like you, we understand what it takes to get the job done.
+        </p>
+        <p>
+          Our goal is simple: to make your business more profitable and your
+          life easier.
+        </p>
+        <p>
+          No matter what you do, we offer the technical know-how and proactive
+          service you can’t get anywhere else – and we’re ready to work with
+          you.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row-fluid">
+  <div class="span12">
+    <div class="help-pad">
+      <h2>How do we help your business?</h2>
+      <hr class="yellow2" />
+    </div>
+  </div>
+</div>
+
+<div class="three-columns">
+  <div class="row-fluid">
+    <div class="span4" id="grey-box">
+      <img
+        src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/U.S. BASED TECH SUPPORT.png"
+        alt="Techinition working on a rack"
+      />
+      <div class="three-content">
+        <h2>U.S. BASED TECH SUPPORT</h2>
+        <p>
+          Available 8 a.m. to 8 p.m. EST Monday through Friday, our
+          <a href="/shop/en/snapav/contact">in-house technicians </a>are trained
+          up on every product we offer. They’re ready to help you with install
+          and setup or troubleshoot any issues—even on products we don’t make.
+        </p>
+      </div>
+    </div>
+    <div class="span4" id="grey-box">
+      <img
+        src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Shipping.png"
+        alt="Snap One boxes sitting on a conveyer belt"
+      />
+      <div class="three-content">
+        <h2>FREE SAME-DAY SHIPPING</h2>
+        <p>
+          Enjoy free same-day shipping when you complete an order of $1,000 or
+          more. Additionally, partners who reach Bronze status in our
+          <a href="/shop/en/snapav/partner-rewards-program">Partner Rewards</a>
+          loyalty program get free shipping on every order.
+        </p>
+      </div>
+    </div>
+    <div class="span4" id="grey-box">
+      <img
+        src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/MANUFACTURER DIRECT.png"
+        alt="Person holding a mother board"
+      />
+      <div class="three-content">
+        <h2>MANUFACTURER DIRECT</h2>
+        <p>
+          Since we’re a manufacturer, we offer competitive prices, while our
+          protected product line keeps you from getting shopped. Plus, we know
+          product ins and outs in detail—and
+          <a href="/shop/en/snapav/training">we can help you </a>narrow down the
+          best piece of gear you need for the job.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="snapone-locations">
+  <div class="row-fluid">
+    <div class="span6">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/SecurityLandingPage_Image_SnapOnePartnerStore-update.png"
+          alt="Map of United States with pin points of all the Snap One Locations"
+        />
+      </div>
+    </div>
+    <div class="span6">
+      <div class="thumbnail-block">
+        <div class="dynamic-image">
+          <img
+            src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/SecurityLandingPage_Logo_SnapOnePartnerStore.png"
+            alt="Snap One Pro stores logo"
+          />
+        </div>
+        <p>
+          We are constantly expanding our
+          <a href="/shop/en/snapav/local">Snap One Stores</a> across the U.S. to
+          offer support when and where you need it most. Enjoy same-day
+          products, expanded product lines, hands-on training, and design
+          assistance at any of our locations.
+          <a
+            href="https://www.snapone.com/contact-us#partner-stores"
+            target="_blank"
+            >Find your closest store.</a
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="partner-pledge">
+  <div class="row-fluid">
+    <div class="span6">
+      <div class="thumbnail-block">
+        <h2>Partner Pledge</h2>
+        <p>
+          Giving you an unmatched support experience is what we do. Through our
+          <a href="/shop/en/snapav/partner-pledge">Partner Pledge </a>we will
+          continuously make improvements to our services to better assist Snap
+          One Partners. We are always striving to improve our Partner support
+          efforts, because when your business succeeds, so does ours.
+        </p>
+      </div>
+    </div>
+    <div class="span6 center">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Partner-Pledge-icon.png"
+          alt="Snap One Partner Pledge logo"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ==================================
+	Call us
+==================================*/ -->
+
+<div class="call">
+  <div class="row-fluid">
+    <div class="span6" id="left-margin">
+      <img
+        src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Call us.png"
+        class="call-img"
+        alt="2 people with headsets in a call center"
+      />
+    </div>
+    <div class="span6">
+      <div class="enroll" id="number-pad">
+        <h1>
+          Call us at
+          <a href="tel:866-424-4489" style="font-size: 2.8rem">866.424.4489</a>
+          or create an account now.
+        </h1>
+        <p>
+          Simply complete your application and we will send over your new
+          account details. As a new partner, you’ll get $500 towards your first
+          purchase! Click on the link below and reference promo code SEC24.*
+        </p>
+        <a
+          href="https://control4.my.site.com/SnapOne/s/newpartnerapplication?promoCode=SEC24"
+          target="_blank"
+        >
+          <div class="btn-5" id="security-enroll">Create account</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="disclaimer">
+  <div class="row-fluid">
+    <div class="span12">
+      <p>
+        <em
+          >*Offer expires 1/5/25. Offer is for new approved US partners and can
+          only be applied to first purchase. Any remaining discount cannot be
+          applied to future purchases. Discount not to exceed $500. Discount
+          can't be combined with other offers. Discount not applicable on
+          SunBrite TVs, Wirepath Bulk Wire, or any third-party products not
+          owned by Snap One. Limit one [1] use per account or business entity.
+          Must be redeemed at SnapAV.com. Void where prohibited.
+        </em>
+      </p>
+    </div>
+  </div>
+</div>

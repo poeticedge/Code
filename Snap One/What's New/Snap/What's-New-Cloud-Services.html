@@ -1,0 +1,911 @@
+<style>
+	.videoWrapper {
+		padding-bottom: 56.25%;
+		height: 0;
+	}
+	.videoWrapper iframe,
+	.videoWrapper .wistia_embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+    .align-items-center {
+        padding: 15px;
+    }
+    .span12-block {
+        padding: 0%;
+    }
+    .half-padding-bottom {
+        padding-bottom: 25px;
+    }
+    .half-padding-top {
+        padding-top: 25px;
+    }
+    .no-margin {
+        margin: 0;
+    }
+    .margin-right {
+        margin: 0 15px;
+    }
+    .text-white {
+        font-size: 2.5rem;
+        font-weight: 200;
+        color: #fff;
+        margin: 30px 30px;
+    }
+    .text-white-normal {
+        font-size: 1.4rem;
+        font-weight: normal;
+        color: #fff;
+        /* margin: 30px 30px; */
+    }
+    .text-white-wn-banner {
+        font-size: 2.5rem;
+        font-weight: 200;
+        color: #fff;
+        margin: 50px 30px;
+    }
+    .text-dark {
+        font-size: 2.5rem;
+        font-weight: 200;
+        color: #000;
+        margin: 30px 30px;
+    }
+    .text-dark-wn-banner {
+        font-size: 2.5rem;
+        font-weight: 200;
+        color: #000;
+        margin: 50px 30px;
+    }
+.sight-disclaimer {
+    text-align: center;
+    padding: 10px 50px;
+}
+
+    .wn-banner {
+        height: 228px;
+        background-position: center center;
+        background-size: cover;
+        color: #fff;
+    }
+    .sub-banner {
+        height: 114px;
+        background-position: center center;
+        background-size: cover;
+        color: #fff;
+    }
+    .header-vertically-center {
+        padding: 30px 20px;
+    }
+    .vertically-center {
+        padding: 5px;
+        padding-left: 20px;
+    }
+    .btn {
+        padding-top: 20px;;
+    }
+    .bullet-style {
+        list-style-type: disc; margin-left:25px;
+    }
+    .ol-bullet-style {
+        list-style-type: decimal;
+    }
+    .rollover-list {
+        margin: 0px;
+        margin-bottom: 12.5px;
+    }
+    /* Create 2 equal columns that floats next to each other */
+    .column2 {
+        float: left;
+        width: 50%;
+        padding: 10px;
+    }
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+    .column {
+        width: 25%;
+        }
+    }
+    /* Create 3 equal columns that floats next to each other */
+    .column3 {
+        float: left;
+        width: 33.33%;
+        padding: 0px;
+    }
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+    .column {
+        width: 25%;
+        }
+    }
+    /* Create 4 equal columns that floats next to each other */
+    .column4 {
+        float: left;
+        width: 25%;
+        padding: 0px;
+    }
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+    .column {
+        width: 25%;
+        }
+    }
+    .when-background {
+		background-color: #414245;
+	}
+
+	.if-background {
+		background-color: #8A878A;
+	}
+
+	.wait-background {
+		background-color: #6E6B6F;
+	}
+
+	.section-border {
+		border-bottom: 1px solid #e2e0e0;
+	}
+
+	.when-background::after,
+	.if-background::after,
+	.wait-background::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		margin-top: -20px;
+		right: -20px;
+		width: 0;
+		height: 0;
+		border-top: 20px solid transparent;
+		border-bottom: 20px solid transparent;
+		z-index: 1;
+	}
+	.wait-background::after {
+		border-left: 20px solid #6E6B6F;
+	}
+	.when-background::after {
+		border-left: 20px solid #414245;
+	}
+	.if-background::after {
+		border-left: 20px solid #8A878A;
+	}
+	.then {
+		background-color: #AAA7A9;
+	}
+	@media only screen and (max-width: 767px) {
+		.when-background::after,
+		.if-background::after,
+		.wait-background {
+			top: auto;
+			margin-top: 0;
+			margin-left: -20px;
+			left: 50%;
+			bottom: -20px;
+			right: auto;
+			border-bottom: none;
+			border-right: 20px solid transparent;
+			border-left: 20px solid transparent;
+			z-index: 1;
+		}
+		.when-background::after {
+			border-top: 20px solid #414245;
+		}
+		.if-background::after {
+			border-top: 20px solid #8A878A;
+		}
+		.wait-background::after {
+			border-top: 20px solid #6E6B6F;
+		}
+		.when-background,
+		.if-background,
+		.then {
+			padding-left: 0px !important;
+			text-align: center;
+		}
+		.then {
+			background-color: #AAA7A9;
+		}
+	}
+    /*=== MEDIA ===*/ 
+     @media (max-width: 800px) {
+    }
+    @media (max-width: 600px) {
+    }
+</style>
+
+<!-- START BREADCRUMBS -->
+<div id="productsGlobalBreadCrumbs">
+    <div id="breadcrumb" class="breadcrumb">
+        <div id="WC_BreadCrumbTrailDisplay_div_1" class="breadcrumb_links"> 
+            <a id="WC_BreadCrumbTrailDisplay_link_2" href="/shop/en/snapav/home">Home</a> 
+            <span class="breadcrumb-divider">|</span> 
+            <a id="WC_BreadCrumbTrailDisplay_link_5a" href="/shop/en/snapav/control4-announcements">Control4 Announcements</a> 
+            <span class="breadcrumb-divider">|</span>
+            <span style="font-size:1.4rem;">Control4<sup>&reg;</sup> Cloud Services</span>
+        </div>
+    </div>
+</div>
+<!-- END BREADCRUMBS -->
+
+<!-- TITLE START -->
+<div class="row-fluid brand-nav">
+	<div class="span12">
+		<h1 style="color:#7c7e7f; float:left;">Cloud Services</h1>
+	</div>
+</div>
+<hr style="margin:0 0 10px 0;">
+<!-- TITLE END -->
+
+<!-- Cloud Services What's New Header -->
+<div class="wn-banner" style="background-image: url(//res.cloudinary.com/control4/image/upload/v1595945990/What%27s%20New%204Sight%20Refresh%2007.30.20/538658399_4Sight_Portal_Prtl_Bnnr.jpg);">
+    <div class="header-vertically-center">
+        <h1 class="text-dark-wn-banner"><strong>HAPPIER CUSTOMERS</strong> <br> WITH 4SIGHT</h1>
+    </div>
+</div>
+
+<!-- 4SIGHT -->
+<a id="4sight"></a>
+<div class="widget">
+    <div class="padding">
+        <div class="row-fluid align-items-center">
+            <div class="span12">
+                <div class="thumbnail-block">
+                    <h2>EDUCATING CUSTOMERS ABOUT 4SIGHT</h2>
+                    <p>As Control4 experts, you know that 4Sight enables the best Control4 experience, but did you 	know that many customers report that they have never heard of 4Sight? Customers can learn about it and subscribe to 4Sight in the Control4 Mobile App. They will see notifications and will be given the option to watch educational videos about how 4Sight can further enhance their smart living experience. Videos highlight services such as:</p>
+                    <ul class="bullet-style">
+                        <li><a href="#remote-access">Remote Access</a></li>
+                        <li><a href="#when-then">When >> Then</a></li> 
+                        <li><a href="#intercom-anywhere">Intercom Anywhere</a></li> 
+                        <li><a href="#voice-control">Voice Control</a></li>
+                    </ul>
+                    <p class="half-margin-top">In the U.S. and Canada, customers can purchase and manage their 4Sight subscription through their Control4 mobile app. Customers who live outside of the US and Canada will be instructed to make their purchases by logging into the Customer Portal on <a href="http://customer.control4.com/" target="_blank">customer.control4.com</a> or by contacting their dealer to subscribe or renew their 4Sight plan. <a href="#faq">See FAQs here</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="sight-disclaimer">
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="thumbnail-block">
+                <p><em>4Sight is available for customers with systems installed prior to April 23, 2024. For any systems installed after that date, Connect is the required software service that replaces 4Sight.</em></p>
+                <a href="/shop/en/snapav/control4-connect" target="_blank" class="btn-2">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- REMOTE ACCESS -->
+<a id="remote-access"></a>
+<div class="sub-banner" style="background-image: url(//res.cloudinary.com/control4/image/upload/v1595946104/What%27s%20New%204Sight%20Refresh%2007.30.20/538658399_4Sight_Portal_Sknny_Bnnr_C4_UI_Mble.jpg);">
+    <div class="vertically-center">
+        <h1 class="text-dark"><strong>REMOTE ACCESS WITH 4SIGHT</strong></h1>
+    </div>
+</div>
+<div class="widget">
+    <div class="padding">
+        <div class="row-fluid align-items-center">
+            <div class="span12">
+                <div class="thumbnail-block">
+                    <h3 class="no-margin"><strong>CONTROL AND PEACE-OF-MIND FROM ANYWHERE</strong></h3>
+                    <p class="no-margin">Your customers need peace-of-mind.  Whether it’s remembering to shut the garage before going on a road trip with the family or arming their security system as they head out the door to work.  Or they might just want to make sure that everything is OK with a quick peek at each of their surveillance cameras while they are on vacation or are away on business. They can do all of that from around the block or on the other side of the world using the Control4 App and Remote Access into their system, which is provided with an active subscription to 4Sight.</p>
+                    <br>
+                    <h3 class="no-margin"><strong>KNOW WHAT'S HAPPENING IN REAL-TIME</strong></h3>
+                    <p class="no-margin">With so much going on in their daily lives, your customers rely on real-time notifications to alert them of important events and to keep them updated for additional peace-of-mind. Whether it’s a simple notification to let them know the kids got home from school safely, or a useful alert to remind them to replace the batteries in the door lock, or as important as an alarm that smoke or a leak has been detected, a 4Sight subscription enables real-time push notifications from their Control4 system to their mobile devices to keep them informed. And they expect nothing less.</p>
+                    <p>Let them stay up to date with what matters to them. They can even create and edit their own notifications for status updates, device states, or system events with When >> Then for personalized communication. Empower your customers to control their smart living experience.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- VOICE CONTROL -->
+<a id="voice-control"></a>
+<div class="sub-banner" style="background-image: url(//res.cloudinary.com/control4/image/upload/v1595946104/What%27s%20New%204Sight%20Refresh%2007.30.20/538658399_4Sight_Portal_Sknny_Bnnr_Vce_Cntrl.jpg);">
+    <div class="vertically-center">
+        <h1 class="text-dark"><strong>VOICE CONTROL WITH 4SIGHT</strong></h1>
+    </div>
+</div>
+<div class="widget">
+    <div class="padding">
+        <div class="row-fluid align-items-center">
+            <div class="span12">
+                <div class="thumbnail-block">
+                    <p>Voice assistants have quickly become part of everyday family life and are becoming more important to the way we live. These assistants can also provide a convenient new way for consumers to interact with their Control4 Smart Home. With 4Sight your customers can now tell their house what to do—whether it’s turning off all lights when it’s bedtime, setting the perfect mood for dinner, or asking for a helping hand when their hands are full.</p>
+                    <h3 class="no-margin"><strong>ALL THE SMART HOME GOODNESS WITHOUT LIFTING A FINGER</strong></h3>
+                    <p class="no-margin">Using Josh, Amazon Alexa, or Google Assistant, you can control a specific device, a few devices simultaneously, or your entire Control4 Smart Home with just your voice. Voice interaction with your smart home is natural and straightforward, for example:</p>
+                    <br>
+                    <ul class="bullet-style">
+                        <li>“OK Josh, turn on the lights, open the shades, and lock the doors.”</li>
+                        <li>“Alexa, turn on Dinner Time.”</li>
+                        <li>“Hey Google, dim the theater lights to 40%.”</li>
+                    </ul>
+                    <p>House guests can effortlessly activate music, turn on or off a single light or multiple fixtures at once, lock doors, or adjust the temperature, all without lifting a finger.</p>
+                    <a href="https://www.snapav.com/shop/en/snapav/whats-new-voice" target="_blank" class="btn-2">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- INTERCOM ANYWHERE -->
+<a id="intercom-anywhere"></a>
+<div class="wn-banner" style="background-image: url(//res.cloudinary.com/control4/image/upload/v1635193279/www-intercom-anywhere/768669584_C4_iOS_Edits_Homepage_Banner_fnl_2.jpg); background-position: right;">
+    <div class="header-vertically-center">
+        <h1 class="text-white-wn-banner"><strong>SEE. TALK. DO.</strong> <br> WITH INTERCOM ANYWHERE</h1>
+    </div>
+</div>
+<br>
+<div class="sub-banner" style="background-image: url(//res.cloudinary.com/control4/image/upload/v1595946096/What%27s%20New%204Sight%20Refresh%2007.30.20/00799_Portal_Intercom_Anywhere_1b_pg_skinny-banner.jpg);">
+    <div class="vertically-center">
+        <h1 class="text-dark"><strong>INTERCOM ANYWHERE WITH 4SIGHT</strong></h1>
+    </div>
+</div>
+<div class="widget">
+    <div class="padding">
+        <div class="row-fluid align-items-center">
+            <div class="span12">
+                <div class="thumbnail-block">
+                    <p>Whether it's an expected guest or a delivery, Intercom Anywhere lets customers see who is at their front door and remotely control door locks, lighting, or anything else you can think to program. It also enables them to make video calls between touch screens throughout the house or from their mobile phone to a touch screen.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="widget">
+    <div class="padding">
+        <div class="row-fluid align-items-center">
+            <div class="span6">
+                <div class="thumbnail-block">
+                    <h2>INTERCOM WITH ADDITIONAL <br> DOOR STATION VENDORS</h2>
+                    <p>With the latest updates to Smart Home OS 3, third-party door stations can be integrated into Control4 Intercom. Door stations that support standards-based SIP and certified driver include 2N, Comelit, DoorBird, DNake, and Akuvox.</p>
+                    <p>Third-party driver developers can now create drivers for other door stations using our template driver available in the DriveWorks SDK release 3.1.</p>
+                    <div class="inline">
+                        <div class="span4">
+							<img src="https://res.cloudinary.com/control4/image/upload/comelit_logo.jpg" width="150px" height="40px">
+						</div>
+						<div class="span4" style="align-items:center">
+							<img src="https://res.cloudinary.com/control4/image/upload/2n.png" width="75px">
+						</div>
+						<div class="span4" style="align-items:center">
+							<img src="https://res.cloudinary.com/control4/image/upload/akuvox.jpg" width="150px">
+						</div>
+                    </div>
+                </div>
+            </div>
+            <div class="span6">
+                <div class="dynamic-image">
+                    <img class="block" src="//res.cloudinary.com/control4/image/upload/f_auto/comelit-3one6-main.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="widget">
+    <div class="padding">
+        <div class="row-fluid align-items-center">
+            <div class="span6">
+                <div class="dynamic-image">
+                    <img class="block" src="//res.cloudinary.com/control4/image/upload/f_auto/mdu-intercom-anywhere.jpg">
+                </div>
+            </div>
+            <div class="span6">
+                <div class="thumbnail-block">
+                    <h2>GREAT FOR MDUS <br> APARTMENTS, CONDOS, MORE</h2>
+                    <p>The Control4 Intercom solution is now even better for multi-dwelling units.</p>
+                    <ul class="bullet-style">
+                        <li>The EA-5 or CA-10 controllers can now be used as the communication server, so there is no need for dedicated communications server hardware.</li>
+						<li>The communication server right from Composer Pro.</li>
+						<li>Intercom Anywhere can be used in MDU residences, offices, concierge desk, etc.</li>
+						<li>Custom buttons within Intercom Anywhere on the Control4 App can be configured to control automation in residences and common areas.</li>
+                    </ul>
+                    <div class="btn">
+                        <a href="https://www.control4.com/docs/product/control4-software/dealer-release-notes/english/latest" target="_blank" class="btn-2">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="widget">
+    <div class="row-fluid align-items-center">
+        <div class="span12">
+            <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><iframe src="https://fast.wistia.net/embed/iframe/mf46z5peuo?seo=false&videoFoam=true" title="Intercom Anywhere Video" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="100%" height="100%"></iframe></div></div>
+        </div>
+    </div>
+</div>
+
+<div class="widget">
+    <div class="padding">
+        <div class="row-fluid align-items-center">
+            <div class="span6">
+                <div class="thumbnail-block">
+                    <h2>INTERCOM ANYWHERE <br> ALWAYS KNOW WHO'S THERE</h2>
+                    <p>Intercom Anywhere makes mobile phones part of your Control4 Intercom experience with the Control4 OS 3 apps for iOS and Android. Homeowners can always see who is at the front door—and also have a new way to stay connected with their family and control their home.</p>
+                    <p>Built into the Control4 OS 3 app, Intercom Anywhere is fast and quickly notifies homeowners when someone rings their Control4 Chime Video Doorbell, the DS2 Door Station, or any other supported door station. And, best of all, Intercom Anywhere works virtually anywhere in the world.</p>
+                </div>
+            </div>
+            <div class="span6">
+                <div class="dynamic-image">
+                    <img class="block" src="//res.cloudinary.com/control4/image/upload/c_fit,h_800,w_800/f_auto/00799_Portal_Intercom_Anywhere_Launch_1a_pg_Whats_New_Side_Banner.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="widget">
+    <div class="padding">
+        <div class="row-fluid align-items-center">
+            <div class="span6">
+                <div class="dynamic-image">
+                    <img class="block" src="//res.cloudinary.com/control4/image/upload/c_fit,h_800,w_800/f_auto/Intrcm_NEWhr_Accrdn_See-Talk-Do_LIGHT-cropped.jpg">
+                </div>
+            </div>
+            <div class="span6">
+                <div class="thumbnail-block">
+                    <h2>MORE THAN A DOORBELL <br> COMMUNICATE & CONTROL</h2>
+                    <p>Any video doorbell should allow you to use a smartphone to see and talk to visitors at the door, but Control4 Intercom Anywhere also allows homeowners to control their smart home during an intercom call. Two custom-programmed buttons are available to turn on lights, unlock the door, open the gate or garage, disarm the alarm, or anything else you would want to do when a visitor comes to the door.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="widget">
+    <div class="padding">
+        <div class="row-fluid align-items-center">
+            <div class="span6">
+                <div class="thumbnail-block">
+                    <h2>MOBILE TO TOUCHSCREEN <br> VIDEO CALLS TO YOUR HOME</h2>
+                    <p>More than just a connection to the front door, Intercom Anywhere lets the family stay connected throughout the house.</p>
+                    <p>Family members not answering their phones? While at the store, simply use Intercom Anywhere built into the Control4 OS 3 app to call from your mobile device into any of the touchscreens at home. Need to check in on the kids with the new sitter? Get video-connected to the playroom or any other room to be quickly assured that all is safe and sound.</p>
+                </div>
+            </div>
+            <div class="span6">
+                <div class="dynamic-image">
+                    <img class="block" src="//res.cloudinary.com/control4/image/upload/f_auto,q_auto,dpr_auto/00799_Portal_Intercom_Anywhere_Launch_1c_pg_Mobile_To_Touch_Screen_1.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="widget">
+    <div class="padding">
+        <div class="row-fluid align-items-center">
+            <div class="span6">
+                <div class="dynamic-image">
+                    <img class="block" src="//res.cloudinary.com/control4/image/upload/v1635193279/www-intercom-anywhere/Portal_Intercom_Anywhere_Complete_Solution_3_copy.jpg">
+                </div>
+            </div>
+            <div class="span6">
+                <div class="thumbnail-block">
+                    <h2>COMPLETE SOLUTION <br> VIDEO DOORBELLS, TOUCHSCREENS, CAMERAS</h2>
+                    <p>Offer your customers a complete, premium solution that delivers both convenience and security while matching their home and lifestyle.</p>
+                    <p>The <a href="https://www.snapav.com/shop/en/snapav/SearchDisplay?langId=-1&storeId=10151&catalogId=10010&pageView=detailed&beginIndex=0&pageSize=20&searchTerm=control4&filterTerm=&manufacturer=&minPrice=&maxPrice=&searchTermScope=&searchType=&sType=%5bLjava.lang.String%3b%40f7fe9a4&contentfacet=&metaData=&categoryId=3074457345616670670&resultCatEntryType=2&showResultsPage=true&urlLangId=-1" target="_blank">Control4 Chime Video Doorbell</a> and the <a href="https://www.snapav.com/shop/en/snapav/SearchDisplay?langId=-1&storeId=10151&catalogId=10010&pageView=detailed&beginIndex=0&pageSize=20&searchTerm=control4&filterTerm=&manufacturer=&minPrice=&maxPrice=&searchTermScope=&searchType=&sType=%5bLjava.lang.String%3b%4076d2fe93&contentfacet=&metaData=&categoryId=3074457345616670669&resultCatEntryType=2&showResultsPage=true&urlLangId=-1" target="_blank">Control4 DS2 Door Station</a> feature upscale, metal finishes and offers an exceptional audio and video intercom experience—enabling customers to monitor and communicate with the front door or their security gate while complementing their home, not detracting from it.</p>
+                    <p>The <a href="https://www.snapav.com/shop/en/snapav/SearchDisplay?langId=-1&storeId=10151&catalogId=10010&pageView=detailed&beginIndex=0&pageSize=20&searchTerm=control4&filterTerm=&manufacturer=&minPrice=&maxPrice=&searchTermScope=&searchType=&sType=%5bLjava.lang.String%3b%40538f1948&contentfacet=&metaData=&categoryId=87051&resultCatEntryType=2&showResultsPage=true&urlLangId=-1" target="_blank">Control4 T3 and T4 Series Touchscreens</a> deliver always-on, dedicated control over all the technology in a home and include HD video intercom and crystal-clear audio intercom for convenient communications from room to room or with visitors at the door.</p>
+                    <p>With our portfolio of Luma, Visualint, and <a href="https://www.snapav.com/shop/en/snapav/SearchDisplay?langId=-1&storeId=10151&catalogId=10010&pageView=detailed&beginIndex=0&pageSize=20&searchTerm=pakedge&filterTerm=&manufacturer=&minPrice=&maxPrice=&searchTermScope=&searchType=&sType=%5bLjava.lang.String%3b%40c8d71966&contentfacet=&metaData=&categoryId=53552&resultCatEntryType=2&showResultsPage=true&urlLangId=-1" target="_blank">Pakedge IP Cameras</a>, high-definition video surveillance solutions, homeowners can monitor their home and property at any time, from anywhere. Visible cameras deter criminal behavior and mischief, giving homeowners peace of mind that their home and family are safe and secure.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sub-banner" style="background-image: url(//res.cloudinary.com/control4/image/upload/c_fit,w_1200,h_400/f_auto,q_auto,dpr_auto/00799_Portal_Intercom_Anywhere_Launch_1b_pg_Getting_Started_Banner.jpg);">
+    <div class="vertically-center">
+        <h1 class="text-white"><strong>USING INTERCOM ANYWHERE IN THE CONTROL4 APP IS EASY</strong></h1>
+    </div>
+</div>
+<div class="widget">
+    <div class="padding">
+        <div class="row-fluid align-items-center">
+            <div class="span12">
+                <div class="thumbnail-block">
+                    <h2>GETTING STARTED</h2>
+                    <p>Check out the benefits of Intercom Anywhere for your own home or showroom by <a href="https://www.snapav.com/shop/en/snapav/software-downloads" target="_blank">downloading Control4® Operating System 3.0</a> (or greater) and the Control4 OS 3 app today, then start showing Intercom Anywhere to your customers. Here is how you get started:</p>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span4">
+                    <div class="thumbnail-block">
+                        <h3><strong>If customer has Intercom installed at home:</strong></h3>
+                        <ol class="ol-bullet-style">
+                            <li><a href="https://www.snapav.com/shop/en/snapav/software-downloads" target="_blank">Update the system to OS 3.0</a> (or greater) and ensure that they have a Control4 4Sight subscription.</li>
+                            <li>Download the latest version of the Control4 OS 3 app onto their phone from the <a href="https://apps.apple.com/us/app/control4-for-os-3/id1320153814" target="_blank">Apple App store</a> or <a href="https://play.google.com/store/apps/details?id=com.control4.phoenix&hl=en_US" target="_blank">Google Play</a>.</li>
+                            <li>Open the Control4 OS 3 app, and approve the requests to access the phone's camera, microphone, and to send push notifications.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="span4">
+                    <div class="thumbnail-block">
+                        <h3><strong>If Intercom is not installed, but customer has Chime Video Doorbell, DS2 Door Station, or T3/T4 Touchscreens:</strong></h3>
+                        <ol class="ol-bullet-style">
+                            <li><a href="https://www.snapav.com/shop/en/snapav/software-downloads" target="_blank">Update the system to OS 3.0</a> (or greater) and ensure that they have a Control4 4Sight subscription.</li>
+                            <li>Follow the instructions in the <a href="https://ctrl4.co/cpro-ug" target="_blank">Composer Pro User Guide</a> to add and configure the Communication agent.</li>
+                            <li>Download the latest version of the Control4 OS 3 app onto their phone from the <a href="https://apps.apple.com/us/app/control4-for-os-3/id1320153814" target="_blank">Apple App store</a> or <a href="https://play.google.com/store/apps/details?id=com.control4.phoenix&hl=en_US" target="_blank">Google Play</a>.</li>
+                            <li>Open the Control4 OS 3 app, and approve the requests to access the phone's camera, microphone, and to send push notifications.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="span4">
+                    <div class="thumbnail-block">
+                        <h3><strong>If customer does not have a video doorbell, door station, or touchscreens:</strong></h3>
+                        <ol class="ol-bullet-style">
+                            <li>Make Intercom Anywhere part of your next discussion with each customer. It can help you demonstrate the value of including a video doorbell, door station, touchscreens, and 4Sight in their system so that they get even more out of their Control4 Smart Home.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span12-block">
+                    <p>*OS 2.10.3 was the first OS release to support the Intercom Anywhere experience. Any customer running OS 2.10.3 – 2.10.6 will have to download a separate Intercom Anywhere app from the Apple App Store, or Google Play. See the <a href="https://www.control4.com/docs/product/control4-software/dealer-release-notes/english/latest" target="_blank">OS 2.10.3 release notes</a> for more information. Any customers running OS 3.x will have the Intercom experience built directly into the latest version Control4 OS 3 app.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<!-- RESOURCES -->
+<a id="resources"></a>
+<div class="widget">
+    <h2>RESOURCES</h2>
+    <div class="half-padding-bottom">
+        <h3><strong>SMART SKILLS</strong></h3>
+        <ul class="no-style">
+            <li><a href="https://control4.learnupon.com/catalog/courses/481612" target="_blank">Setting Up the Communication Agent for Intercom and Intercom Anywhere</a></li>
+            <li><a href="https://control4.learnupon.com/catalog/courses/480886" target="_blank">Creating a Custom Call Group for the DS2 Door Station</a></li>
+            <li><a href="https://control4.learnupon.com/catalog/courses/481668" target="_blank">Updating the DS2 Door Station to Work with Intercom Anywhere</a></li>
+        </ul>
+        <h3><strong>DOCUMENTS</strong></h3>
+        <ul class="no-style">
+            <li><a href="https://www.control4.com/docs/product/intercom-anywhere/quick-reference/english/latest" target="_blank">Intercom Anywhere Quick Start</a></li>
+            <li><a href="https://www.control4.com/docs/product/intercom/solutions-guide/english/latest" target="_blank">Smart Home Intercom Guide</a></li>
+            <li><a href="https://www.control4.com/docs/product/composer-pro/dealer-user-guide/english/latest" target="_blank">Composer Pro User Guide</a></li>
+            <li><a href="https://www.control4.com/docs/product/intercom-anywhere/frequently-asked-questions/english/latest" target="_blank">Intercom Anywhere FAQ</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- WHEN >> THEN -->
+<a id="when-then"></a>
+<div class="wn-banner" style="background-image: url(//res.cloudinary.com/control4/image/upload/f_auto,q_auto,dpr_auto/static-pages/whats-new/cedia2017/4Sight-Banner-NoTxt.jpg);">
+    <div class="header-vertically-center">
+        <h1 class="text-white-wn-banner"><strong>WHEN >> THEN</strong> <br> HELPS YOU SELL MORE</h1>
+    </div>
+</div>
+<br>
+<div class="sub-banner" style="background-image: url(//res.cloudinary.com/control4/image/upload/v1595946104/What%27s%20New%204Sight%20Refresh%2007.30.20/538658399_4Sight_Portal_Sknny_Bnnr_Whn_Thn.jpg);">
+    <div class="vertically-center">
+        <h1 class="text-dark"><strong>WHEN >> THEN WITH 4SIGHT</strong></h1>
+    </div>
+</div>
+<div class="widget">
+    <div class="padding">
+        <div class="row-fluid align-items-center">
+            <p class="no-margin">From changing schedules, evolving tastes in music, or along with the seasons or holidays, 4Sight gives customers access to When >> Then personalization. This hands-on customization allows them to modify minor things like lighting schedules, or change which playlist comes on when they press the Cooking button on the kitsch keypad. When >> Then lets customers adjust and experiment with many features without impacting the core programming allowing them to fine-tune their homes in little ways so you can focus on more critical programming needs. And When >> Then lets them test their programming before they make it active, so they know that it will do exactly what they want.</p>
+            <!-- <a href="https://dealer.control4.com/new/when-then" target="_blank" class="btn-2">Learn More</a> -->
+        </div>
+    </div>
+</div>
+<hr>
+<div class="widget">
+    <div class="padding">
+        <div class="row-fluid align-items-center">
+            <div class="span6">
+                <div class="thumbnail-block">
+                    <h2>HOMEOWNER PERSONALIZATION <br> EVEN MORE POWERFUL</h2>
+                    <p>Homeowners want the ability to personalize their Control4 Smart Home without calling a dealer. It’s been a top request from you and your customers for a very long time.</p>
+                    <p>When >> Then is a web-based tool that homeowners access through their Control4 account to personalize their home. With only a few clicks, they can tie a keypad button to a playlist, receive a push notification when their security system is in an alarm state, and adjust the schedule for their Smart Lighting. The options are only limited by the types of products installed in their home.</p>
+                    <p>Customers who use When >> Then start to imagine the possibilities that Control4 offers, and they want more of it.</p>
+                    <!-- <a href="" target="_blank" class="btn-2">See What's New</a> -->
+                </div>
+            </div>
+            <div class="span6">
+                <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><iframe src="https://fast.wistia.net/embed/iframe/7r3yu2ag73?seo=false&videoFoam=true" title="When >> Then Automation for Everyone Video" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="100%" height="100%"></iframe></div></div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="widget">
+    <div class="padding">
+        <div class="row-fluid align-items-center">
+            <div class="span6">
+                <div class="dynamic-image">
+                    <img class="block" src="//res.cloudinary.com/control4/image/upload/f_auto,q_auto,dpr_auto/00801_2018_CEDIA_Portal_When__Then_1a_pg_Side_Image_When_Action.jpg">
+                </div>
+            </div>
+            <div class="span6">
+                <div class="thumbnail-block">
+                    <h2>WHEN = ACTION <br> THEN = REACTION</h2>
+                    <div class="column2">
+                            <h3 class="no-margin"><strong>WHEN:</strong></h3>
+                            <p class="no-margin">There are dozens of available "When" actions that homeowners can use to customize their homes. Here are just a few of them:</p>
+                            <ul class="bullet-style">
+                                <li>Kitchen keypad button is pressed</li>
+                                <li>Door station detects motion</li>
+                                <li>Dinner lighting scene is activated</li>
+                                <li>It is sunset</li>
+                                <li>The garage light is turned on</li>
+                                <li>The front door is unlocked</li>
+                                <li>The home theater is paused</li>
+                                <li>Sprinkler system turns on</li>
+                                <li>Blinds open</li>
+                                <li>A voice command is given</li>
+                                <li>The security system alarm is activated</li>
+                                <li>And so much more</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column2">
+                        <h3 class="no-margin"><strong>THEN:</strong></h3>
+                        <p class="no-margin">"Thens" are automated reactions that homeowners want to happen in response to "When" actions. Here are a few of them:</p>
+                        <ul class="bullet-style">
+                            <li>Activate a lighting scene</li>
+                            <li>Play a specific TV station</li>
+                            <li>Send a push notification to my phone</li>
+                            <li>Find my remote control</li>
+                            <li>Start my latest music playlist</li>
+                            <li>Open or close the blinds</li>
+                            <li>Ramp the lights to 25%</li>
+                            <li>Lock the front door</li>
+                            <li>Change the color of LEDs on my <no-br>light switch</no-br></li>
+                            <li>Send me an email</li>
+                            <li>Turn off the sprinkler system</li>
+                            <li>And so much more</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="widget">
+    <div class="padding">
+        <div class="row-fluid align-items-center">
+            <div class="span6">
+                <div class="thumbnail-block">
+                    <h2>COMPOSER PROGRAMMING <br> UNLOCK IT OR NOT</h2>
+                    <p>Most dealers create custom programming using Composer Pro, a great tool that also gives them the ability to see programming that homeowners create using When >> Then. By default, Composer Pro programming is locked so homeowners can’t modify the important work that their dealer has done.</p>
+                    <p>Starting with OS 2.10.4, dealers now have the ability to unlock each element of their Composer Pro programming so homeowners can personalize it without having to start from scratch. In Composer, dealers simply click on the programming that they want to unlock and assign it to the customer. Homeowners can then access this programming through When >> Then.</p>
+                </div>
+            </div>
+            <div class="span6">
+                <div class="dynamic-image">
+                    <img class="block" src="//res.cloudinary.com/control4/image/upload/f_auto,q_auto,dpr_auto/00801_2018_CEDIA_Portal_When__Then_1a_pg_Side_Image_Composer_Programming_2.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="widget">
+    <div class="padding">
+        <div class="row-fluid align-items-center">
+            <div class="span6">
+                <div class="dynamic-image">
+                    <ul class="rollover-display no-style">
+						<li class="rollovers rollover1">
+							<img src="//res.cloudinary.com/control4/image/upload/h_400/f_auto,q_auto,dpr_auto/static-pages/whats-new/cedia2017/Whn-Thn-Screen1.png">
+						</li>
+						<!-- <li class="rollovers rollover2 hidden">
+							<img src="//res.cloudinary.com/control4/image/upload/h_400/f_auto,q_auto,dpr_auto/static-pages/whats-new/cedia2017/Whn-Thn-Screen2.png">
+						</li>
+						<li class="rollovers rollover3 hidden">
+							<img src="//res.cloudinary.com/control4/image/upload/h_400/f_auto,q_auto,dpr_auto/00801_2018_CEDIA_Portal_When__Then_Side_Images_1a_pg_2.jpg">
+						</li>
+						<li class="rollovers rollover4 hidden">
+							<img src="//res.cloudinary.com/control4/image/upload/h_400/f_auto,q_auto,dpr_auto/static-pages/whats-new/cedia2017/Whn-Thn-Screen4.png">
+						</li>
+						<li class="rollovers rollover5 hidden">
+							<img src="//res.cloudinary.com/control4/image/upload/h_400/f_auto,q_auto,dpr_auto/00801_2018_CEDIA_Portal_When__Then_Side_Images_1a_pg_1.jpg">
+						</li> -->
+					</ul>
+                </div>
+            </div>
+            <div class="span6">
+                <div class="thumbnail-block">
+                    <h2>GET STARTED NOW <br> SHOW EVERY CUSTOMER</h2>
+                    <p>Homeowners can be wary of automation systems that require a dealer for every change. Now they can feel confident in their choice of dealer and automation platform, knowing they have the ability to personalize their home on their own. And as they get a taste of what can be done through automation, they’ll want even more.</p>
+                    <p>Log in to your <a href="http://customer.control4.com" target="_blank" trackCategory="When >> Then" c4Track="Get Started Now" trackLabel="Control4 account">Control4 account</a> to give When >> Then a try. Then make When >> Then part of every demonstration with a customer.</p>
+                    <ol class="rollover-list ol-bullet-style">
+						<li c4HoverToggle hide="rollovers" show="rollover1" class="active">Log in at customer.control4.com</li>
+						<li c4HoverToggle hide="rollovers" show="rollover2">Create a New Automation</li>
+						<li c4HoverToggle hide="rollovers" show="rollover3">Select a When event</li>
+						<li c4HoverToggle hide="rollovers" show="rollover4">Choose a Then action</li>
+						<li c4HoverToggle hide="rollovers" show="rollover5">Test and Enable your new personalization</li>
+					</ol>
+                    <a href="https://customer.control4.com/programming" class="btn-2" target="_blank" trackCategory="When >> Then" c4Track="Get Started Now" trackLabel="Give When >> Then a Try">Give When >> Then a Try</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="widget">
+    <div class="padding">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="thumbnail-block">
+                    <h2>TIME MAKES WHEN >> THEN MORE POWERFUL</h2>
+                    <p>The latest update to When >> Then gives homeowners even more ways to personalize their Control4 Smart Home with the ability to now specify THEN events that happen only when certain time criteria is met, such as day time or between 11 p.m. and 6 a.m. Here is a simple example:</p>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="column3">
+                    <div class="when-background text-white-normal padding" style="min-height:150px; padding-left:25px;">
+						<div style="padding-top:45px;">
+							<p><strong>WHEN</strong> the Kitchen keypad button is pressed</p>
+						</div>
+					</div>
+				</div>
+                <div class="column3">
+					<div class="if-background text-white-normal padding" style="min-height:150px; padding-left:50px;">
+						<div style="padding-top:20px;">
+							<ul class="no-style">
+								<li>if it is night time</li>
+								<li>if it is day time</li>
+								<li>if it is between XX:XX am and XX:XX pm</li>
+								<li>if it is a certain time relative to sunrise<br> or sunset</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+                <div class="column3">
+					<div class="then padding text-white-normal" style="min-height:150px; padding-left:25px;">
+						<div style="padding-top:45px;">
+							<p><strong>THEN</strong> activate the Good Night lighting scene</p>
+						</div>
+					</div>
+				</div>
+            </div>
+        </div>
+        <hr>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="thumbnail-block">
+                    <h2>INCLUDE A DELAY</h2>
+                    <p>Delays are another new feature in When >> Then, giving homeowners the ability to specify THEN reactions that occur seconds, minutes, or even hours after the WHEN action. Here is a simple example:</p>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="column3">
+                    <div class="when-background text-white-normal padding" style="min-height:150px; padding-left:25px;">
+						<div style="padding-top:45px;">
+							<p><strong>WHEN</strong> the Kitchen keypad button is pressed</p>
+						</div>
+					</div>
+				</div>
+                <div class="column3">
+					<div class="if-background text-white-normal padding" style="min-height:150px; padding-left:110px;">
+						<div style="padding-top:45px;">
+							<ul class="no-style">
+								<li>wait 90 seoconds</li>
+								<li>wait 5 minutes</li>
+								<li>wait 120 minutes</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+                <div class="column3">
+                    <div class="then padding text-white-normal" style="min-height:150px; padding-left:25px;">
+						<div style="padding-top:45px;">
+							<p><strong>THEN</strong> activate the Good Night lighting scene</p>
+						</div>
+					</div>
+				</div>
+            </div>
+        </div>
+        <hr>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="thumbnail-block">
+                    <h2>USING DELAY AND TIME TOGETHER</h2>
+                    <p>Sometimes it makes sense to include a delay with a time element to create the perfect experience. Something like this:</p>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="column4">
+                    <div class="when-background text-white-normal padding" style="min-height:150px; padding-left:10px;">
+						<div style="padding-top:45px;">
+							<p><strong>WHEN</strong> the Kitchen keypad button is pressed</p>
+						</div>
+					</div>
+				</div>
+                <div class="column4">
+					<div class="wait-background text-white-normal padding" style="min-height:150px; padding-left:75px;">
+						<div style="padding-top:45px;">
+							<ul class="no-style">
+								<li>wait 90 seoconds</li>
+								<li>wait 5 minutes</li>
+								<li>wait 120 minutes</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+                <div class="column4">
+					<div class="if-background text-white-normal padding" style="min-height:150px; padding-left:35px;">
+						<div style="padding-top:10px;">
+							<ul class="no-style">
+								<li>if is night time</li>
+								<li>if it is day time</li>
+								<li>if it is between XX:XX a.m. and XX:XX p.m.</li>
+								<li>if it is a certain time relative to sunrise or sunset</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+                <div class="column4">
+					<div class="then padding text-white-normal" style="min-height:150px; padding-left:10px;">
+						<div style="padding-top:45px;">
+							<p><strong>THEN</strong> activate the Good Night lighting scene</p>
+						</div>
+					</div>
+				</div>
+            </div>
+        </div>
+        <hr>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="thumbnail-block">
+                    <h2>USE WHEN >> THEN IN YOUR SELLING</h2>
+                    <p>Customers who use When >> Then start to imagine the possibilities that Control4 offers and they want more of it. Include When >> Then in all your conversations with customers, then provide them with the Tips for Using When >> Then sheet that offers ideas for their own home.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12 half-padding-bottom">
+                <div class="column3" style="padding-left:35px">
+                    <a href="http://ctrl4.co/whenthen-ideas" target="_blank" class="btn-2">When >> Then Tips</a>
+				</div>
+                <div class="column3" style="padding-left:35px">
+                    <a href="http://ctrl4.co/user-automations" target="_blank" class="btn-2">When >> Then User Guide </a>
+				</div>
+                <div class="column3" style="padding-left:35px">
+                    <a href="http://ctrl4.co/whenthen-rn" target="_blank" class="btn-2">When >> Then Release Notes</a>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+
+<!-- FAQs -->
+<a id="faq"></a>
+<div class="widget">
+    <div class="padding">
+        <h1>FAQs</h1>
+        <a href="//res.cloudinary.com/control4/image/upload/v1688750734/static-pages/whats-new/4Sight/4Sight_FAQs_for_Snap_What_s_New_Cloud_Services.pdf" target="_blank">Frequently Asked Questions About 4Sight</a>
+    </div>
+</div>

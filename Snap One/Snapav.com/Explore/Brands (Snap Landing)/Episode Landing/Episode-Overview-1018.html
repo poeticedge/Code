@@ -1,0 +1,629 @@
+<style> 
+
+	/*====================
+	Navigation style 
+	=====================*/
+		.brand-nav {
+			margin-bottom: 0px;
+		}
+		.brand-pg-nav {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  overflow: hidden;
+		  float: right;
+	}
+		.brand-nav li {
+		  display: inline-block;
+		}
+		.brand-nav li a {
+		  display: block;
+		  color: #7c7e7f;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		  font-family: Lato;
+		  font-size: 1.5rem;
+		}
+		/* Change the link color on hover */
+		.brand-nav li a:hover {
+		  color: #4499e3;
+		}
+	/* Change the link color on click */
+		.brand-nav.active {
+		  color: #4499e3;
+		}	
+		
+		#episode-logo {
+			padding-top: 40px;
+		}
+	.superior-audio h1, .superior-audio h3, .black h1, .black p, .es-complete-solution h1, .es-complete-solution h3, .home-theater p {
+		color: white;
+		}
+		
+		
+	/*=======================================================
+	FORMATTING
+	========================================================*/
+	
+	.mobileshow {
+		display:none;	
+		}
+	
+	.mobilehide {
+		display:block;	
+		}
+	
+	h1.title {
+		font-size:2.4rem; 
+		font-weight:normal; 
+		color:#fff;	
+	}
+	
+	h3.sub {
+		color:#fff;	
+	}
+	   
+		
+	.p_padding_left {
+		padding: 120px 39px;
+		position:relative;
+		z-index:3;
+	}
+	
+	.p_padding_left2 {
+		padding:115px 85px 0;
+		position:relative;
+		z-index:3;
+	}
+	
+	.p_padding_right {
+		padding: 70px 40px;
+		position:relative;
+		z-index:3;
+	}
+	
+	.p_padding_right2 {
+		padding:80px 70px 0;
+		position:relative;
+		z-index:3;
+	}
+	
+	.hero {
+		padding: 0 160px;	
+	}
+	
+	h4 {
+		font-size:1.4rem;
+		color:#fff;	
+	}
+		
+		
+	/*=======================================================
+	IMAGES
+	========================================================*/
+		
+	.alpha_left {
+		background-color:#000;
+		opacity:0.7;
+		position:absolute;
+		z-index:2;
+		top:0;
+		bottom:0;
+		left:0;
+		right:0;
+		width:50%;
+		
+		}
+		
+	.alpha_right {
+		background-color:#000;
+		opacity:0.7;
+		position:absolute;
+		z-index:2;
+		top:0;
+		bottom:0;
+		right:0;
+		width:50%;
+		}	
+
+	.episode-header{
+		background-image: url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Episode-Overview-Header-img-101323.png');
+		background-size: cover;
+		background-position:center;
+		width: 100%;
+		height: 751px;
+		padding: 20px 202px 0px;
+		}
+		
+	.home-theater{
+		background-image: url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/HT-Section-update.png');
+		background-size: cover;
+		background-position:center;
+		width: 100%;
+		height: 400px;
+		position:relative;
+	}
+	
+	.architectural{
+		background-image: url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/speakers/ES-CORE-7.png');
+		background-size: cover;
+		background-position:center;
+		width: 100%;
+		height: 400px;
+		position:relative;
+	}	
+	.architectural h3, .home-theater h3 {
+			color: white;
+		}	
+	.subwoofers {
+		background-image:url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/speakers/Subwoofers.png');
+		background-size: cover;
+		background-position:center;
+		width: 100%;
+		height: 400px;
+		position:relative
+		/*padding: 165px 0px 0px 30px;*/
+		}
+	.subwoofers h3 {
+			color: white;
+		}	
+	.soundbars{
+		background-image: url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/speakers/ES-350-550-SNDBAR-Family-HERO.png');
+		background-size: cover;
+		background-position:center;
+		width: 100%;
+		height: 400px;
+		position:relative;
+	}	
+	.soundbars h3 {
+			color: white;
+		}	
+	.outdoor {
+		background-image:url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/speakers/Radiance_SLC-38.png');
+		background-size: cover;
+		background-position:center;
+		width: 100%;
+		height: 400px;
+		position:relative
+		/*padding: 165px 0px 0px 30px;*/
+		}
+	.outdoor h3 {
+			color: white;
+		}
+	.commercial{
+		background-image: url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/speakers/ECS-800-PND6-WHT-Lifestyle.png');
+		background-size: cover;
+		background-position:center;
+		width: 100%;
+		height: 400px;
+		position:relative;
+	}
+		
+	.amplifiers{
+		background-image: url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/speakers/EA-MINI-51D-20-Rack.png');
+		background-size: cover;
+		background-position:center;
+		width: 100%;
+		height: 400px;
+		position:relative;
+	}
+		.architectural-mobile, .subwoofers-mobile, .soundbars-mobile, .outdoor-mobile, .commercial-mobile, .amplifiers-mobile, .home-theater-mobile {
+			display: none;
+		}
+	/*=======================================================
+	MEDIA
+	========================================================*/  
+		
+	@media (min-width: 1025px) {
+	.row-fluid .span1 {
+		width: 8.3%;
+	}
+	
+	}
+	
+	@media (max-width: 1024px) and (min-width: 980px) {
+		
+	.row-fluid .span1 {
+		width: 8.3%;
+	}
+	
+	.p_padding_left {
+		padding:50px 40px 0;
+	}
+	
+	.p_padding_left2 {
+		padding:50px 40px 0;
+	}
+	
+	}
+	
+	@media (max-width: 979px) {
+	.row-fluid .span1 {
+		width: 80%;
+	}
+	
+	.p_padding_left {
+		padding:60px 20px 0;
+	}
+	
+	.p_padding_left2 {
+		padding:60px 20px 0;
+	
+	}
+	
+	.p_padding_right {
+		padding:60px 20px 0;
+	}
+	
+	.p_padding_right2 {
+		padding:60px 20px 0;
+	}
+	
+	}
+	
+	@media (max-width: 768px) {
+		h3.sub-nav {
+		margin: 2px 0;	
+		}
+		.episode-header {
+			padding: 42px 49px;
+		}
+	}
+	
+		
+	@media (max-width: 600px){
+		.episode-header {
+			height: auto;
+			padding: 42px 22px;
+		}
+		.architectural, .home-theater, .subwoofers, .outdoor, .commercial, .amplifiers, .soundbars {
+		  display: none; 
+		}
+		
+		.hero {
+		padding: 0 20px;	
+		}
+		
+		.p_padding_right {
+		padding:15px 20px 20px;
+		}
+		
+		.architectural-mobile, .subwoofers-mobile, .soundbars-mobile, .outdoor-mobile, .commercial-mobile, .amplifiers-mobile, .home-theater-mobile {
+			display: block;
+			height: auto;
+			text-align: center;
+		}
+		
+	
+		}
+	</style>
+	
+	<!-- START BREADCRUMBS !-->
+	<div id="productsGlobalBreadCrumbs">
+		<div id="breadcrumb" class="breadcrumb">
+			<div id="WC_BreadCrumbTrailDisplay_div_1" class="breadcrumb_links"> 
+				<a id="WC_BreadCrumbTrailDisplay_link_2" href="/shop/en/snapav/home">Home</a> 
+				<span class="breadcrumb-divider">|</span> 
+				<a id="WC_BreadCrumbTrailDisplay_link_5a" href="/shop/en/snapav/brands">Brands</a> 
+				<span class="breadcrumb-divider">|</span> Episode
+			</div>
+			<div id="WC_BreadCrumbTrailDisplay_div_3" class="breadcrumb_dropdowns">
+				<div id="WC_BreadCrumbTrailDisplay_div_4" class="breadcrumb_item"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- END BREADCRUMBS !-->
+	
+	<!-- NAV START -->
+	 
+	<div class="row-fluid brand-nav">
+		<div class="span12">
+			<h1 style="color:#7c7e7f; float:left;">Episode</h1>
+				<ul class="brand-pg-nav">
+				  <li><a class="active" href="/shop/en/snapav/episode" style="color:#4499e3;">Overview</a></li>
+				  <li><a href="/shop/en/snapav/episode-home-theater" >Home Theater</a></li>
+				  <li><a href="/shop/en/snapav/episode-architectural" >Architectural</a></li>
+				  <li><a href="/shop/en/snapav/episode-subwoofers">Subwoofers</a></li>
+				  <li><a href="/shop/en/snapav/episode-soundbars">Soundbars</a></li>
+				  <li><a href="/shop/en/snapav/episode-outdoor">Outdoor</a></li>
+				  <li><a href="/shop/en/snapav/episode-commercial">Commercial</a></li>
+				  <li><a href="/shop/en/snapav/episode-amps">Amplifiers</a></li>
+				</ul>
+		</div>
+	</div>
+	<hr style="margin:0 0 10px 0;">
+	 
+	
+	<!-- START SECTION 1 Mobile-ready -->
+	<div class="episode-header">
+		<div class="row-fluid">
+			<div class="span12 center">
+				<div class="dynamic-image" id="episode-logo">
+					<img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Episode-logo.png" alt="Episode Logo"></div>
+				<div class="thumbnail-block">
+					<p>Our speakers are designed to deliver premium audio to real-world applications, crafted from quality materials and only sold through custom integrators. From music to movies, bring media to life with Episode's lineup of audio solutions.</p>
+				</div>
+				   <a href="/shop/en/snapav/SearchDisplay?storeId=10151&catalogId=10010&langId=-1&pageSize=20&beginIndex=0&searchSource=Q&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&pageView=detailed&searchTerm=episode"><div class="btn-1">Shop Now</div></a>
+			</div>
+		</div>
+	</div>
+	<!-- END SECTION 1 !-->
+
+<!-- START HT SECTION 3 !-->
+	<div class="home-theater">
+		<div class="row-fluid">
+				<div class="span6">
+				&nbsp;
+				</div>
+				<div class="span6">
+					<div class="thumbnail-block">
+						<div class="alpha_right">
+						</div>
+						<div class="p_padding_right">
+						<h1 class="title">Home Theater</h1>
+						<h3 class="sub">Elevate the home theater experience with high-performance, high-value speakers from Episode® Home Theater. These world-class speakers provide support for the latest surround sound formats, feature a unified visual design, updated driver topology, harmonious acoustic voicing and are available in three beautiful in-room finishes.  </h3>
+							<a href="/shop/en/snapav/episode-home-theater" target="_blank">
+								<div class="btn-2">Learn More</div>
+							</a>
+					  </div> 
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="home-theater-mobile">
+		<div class="row-fluid">
+				<div class="span6">
+					<div class="dynamic-image">
+						<img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/HT-Section-update.png">
+					</div>
+				</div>
+				<div class="span6">
+					<div class="thumbnail-block">
+						<h1>Home Theater</h1>
+						<h3>Match an Episode amp to the speaker system with hybrid, dynamic or OvrC-enabled options providing the ultimate listening experience.</h3>
+							<a href="/shop/en/snapav/episode-home-theater" target="_blank">
+								<div class="btn-2">Learn More</div>
+							</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END HT of sound SECTION 3 !-->
+	
+	<!-- START Wide Architectural SECTION 3 !-->
+	<div class="architectural">
+		<div class="row-fluid">
+			<div class="span6">
+				<div class="thumbnail-block">
+					<div class="alpha_left">
+					</div>
+					<div class="p_padding_left">
+					<h1 class="title">Architectural</h1>
+					<h3 class="sub">Discreetly designed to blend in, while delivering immersive audio experiences for any space.</h3>
+						<a href="/shop/en/snapav/episode-architectural" target="_blank">
+								<div class="btn-2">Learn More</div>
+							</a>
+				  </div> 
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="architectural-mobile">
+		<div class="row-fluid">
+				<div class="span6">
+					<div class="dynamic-image">
+						<img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/speakers/ES-CORE-7-mobile.png">
+					</div>
+				</div>
+				<div class="span6">
+					<div class="thumbnail-block">
+						<h1>Architectural</h1>
+						<h3>Discreetly designed to blend in, while delivering immersive audio experiences for any space.</h3>
+							<a href="/shop/en/snapav/episode-architectural" target="_blank">
+								<div class="btn-2">Learn More</div>
+							</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END Wide Architectural SECTION 3 !-->
+	
+	<!-- START Subwoofers of sound SECTION 3 !-->
+	<div class="subwoofers">
+		<div class="row-fluid">
+				<div class="span6">
+				&nbsp;
+				</div>
+				<div class="span6">
+					<div class="thumbnail-block">
+						<div class="alpha_right">
+						</div>
+						<div class="p_padding_right">
+						<h1 class="title">Subwoofers</h1>
+						<h3 class="sub">Enhance low frequencies with rich bass from Episode, with a complete array of options and line of sub amps to provide deep bass in every room, no matter its size.</h3>
+							<a href="/shop/en/snapav/episode-subwoofers" target="_blank">
+								<div class="btn-2">Learn More</div>
+							</a>
+					  </div> 
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="subwoofers-mobile">
+		<div class="row-fluid">
+				<div class="span6">
+					<div class="dynamic-image">
+						<img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/speakers/Subwoofers-mobile.png">
+					</div>
+				</div>
+				<div class="span6">
+					<div class="thumbnail-block">
+						<h1>Subwoofers</h1>
+						<h3>Enhance low frequencies with rich bass from Episode, with a complete array of options and line of sub amps to provide deep bass in every room, no matter its size.</h3>
+							<a href="/shop/en/snapav/episode-subwoofers" target="_blank">
+								<div class="btn-2">Learn More</div>
+							</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END Subwoofers of sound SECTION 3 !-->
+	
+	<!-- START Wide Soundbar SECTION 3 !-->
+	<div class="soundbars">
+		<div class="row-fluid">
+			<div class="span6">
+				<div class="thumbnail-block">
+					<div class="alpha_left">
+					</div>
+					<div class="p_padding_left">
+					<h1 class="title">Soundbars</h1>
+					<h3 class="sub">Add exceptional sound to any media setup with an Episode soundbar to enhance a professional TV installation.</h3>
+						<a href="/shop/en/snapav/episode-soundbars" target="_blank">
+								<div class="btn-2">Learn More</div>
+							</a>
+				  </div> 
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="soundbars-mobile">
+		<div class="row-fluid">
+				<div class="span6">
+					<div class="dynamic-image">
+						<img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/speakers/ES-350-550-SNDBAR-Family-HERO-mobile.png">
+					</div>
+				</div>
+				<div class="span6">
+					<div class="thumbnail-block">
+						<h1>Soundbars</h1>
+						<h3>Add exceptional sound to any media setup with an Episode soundbar to enhance a professional TV installation.</h3>
+							<a href="/shop/en/snapav/episode-soundbars" target="_blank">
+								<div class="btn-2">Learn More</div>
+							</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END Wide Soundbar SECTION 3 !-->
+	
+	<!-- START Outdoor of sound SECTION 3 !-->
+	<div class="outdoor">
+		<div class="row-fluid">
+				<div class="span6">
+				&nbsp;
+				</div>
+				<div class="span6">
+					<div class="thumbnail-block">
+						<div class="alpha_right">
+						</div>
+						<div class="p_padding_right">
+						<h1 class="title">Outdoor</h1>
+						<h3 class="sub">Augment the great outdoors with solutions designed to withstand the variable conditions outside and sound good doing it.</h3>
+							<a href="/shop/en/snapav/episode-outdoor" target="_blank">
+								<div class="btn-2">Learn More</div>
+							</a>
+					  </div> 
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="outdoor-mobile">
+		<div class="row-fluid">
+				<div class="span6">
+					<div class="dynamic-image">
+						<img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/speakers/Radiance_SLC-38-mobile.png">
+					</div>
+				</div>
+				<div class="span6">
+					<div class="thumbnail-block">
+						<h1>Outdoor</h1>
+						<h3>Augment the great outdoors with solutions designed to withstand the variable conditions outside and sound good doing it.</h3>
+							<a href="/shop/en/snapav/episode-outdoor" target="_blank">
+								<div class="btn-2">Learn More</div>
+							</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END Outdoor of sound SECTION 3 !-->
+	
+	<!-- START Wide Commercial SECTION 3 !-->
+	<div class="commercial">
+		<div class="row-fluid">
+			<div class="span6">
+				<div class="thumbnail-block">
+					<div class="alpha_left">
+					</div>
+					<div class="p_padding_left">
+					<h1 class="title">Commercial</h1>
+					<h3 class="sub">Sound for any space, with wall-mounted, pendant or architectural options filling areas with pitch-perfect audio.</h3>
+						<a href="/shop/en/snapav/episode-commercial" target="_blank">
+								<div class="btn-2">Learn More</div>
+							</a>
+				  </div> 
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="commercial-mobile">
+		<div class="row-fluid">
+				<div class="span6">
+					<div class="dynamic-image">
+						<img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/speakers/ECS-800-PND6-WHT-Lifestyle-mobile.png">
+					</div>
+				</div>
+				<div class="span6">
+					<div class="thumbnail-block">
+						<h1>Commercial</h1>
+						<h3>Sound for any space, with wall-mounted, pendant or architectural options filling areas with pitch-perfect audio.</h3>
+							<a href="/shop/en/snapav/episode-commercial" target="_blank">
+								<div class="btn-2">Learn More</div>
+							</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END Wide Commercial SECTION 3 !-->
+	
+	<!-- START amplifiers of sound SECTION 3 !-->
+	<div class="amplifiers">
+		<div class="row-fluid">
+				<div class="span6">
+				&nbsp;
+				</div>
+				<div class="span6">
+					<div class="thumbnail-block">
+						<div class="alpha_right">
+						</div>
+						<div class="p_padding_right">
+						<h1 class="title">Amplifiers</h1>
+						<h3 class="sub">Match an Episode amp to the speaker system with hybrid, dynamic or OvrC-enabled options providing the ultimate listening experience.</h3>
+							<a href="/shop/en/snapav/episode-amps" target="_blank">
+								<div class="btn-2">Learn More</div>
+							</a>
+					  </div> 
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="amplifiers-mobile">
+		<div class="row-fluid">
+				<div class="span6">
+					<div class="dynamic-image">
+						<img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/speakers/EA-MINI-51D-20-Rack-mobile.png">
+					</div>
+				</div>
+				<div class="span6">
+					<div class="thumbnail-block">
+						<h1>Amplifiers</h1>
+						<h3>Match an Episode amp to the speaker system with hybrid, dynamic or OvrC-enabled options providing the ultimate listening experience.</h3>
+							<a href="/shop/en/snapav/episode-amps" target="_blank">
+								<div class="btn-2">Learn More</div>
+							</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END amplifiers of sound SECTION 3 !-->

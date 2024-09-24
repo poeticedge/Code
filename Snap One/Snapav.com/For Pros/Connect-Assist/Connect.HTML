@@ -1,0 +1,1181 @@
+<style>
+  /*====================Navigation style =====================*/
+  .brand-nav {
+    margin-bottom: 0px;
+  }
+  .brand-pg-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: right;
+  }
+  .brand-nav li {
+    display: inline-block;
+  }
+  .brand-nav li a {
+    display: block;
+    color: #7c7e7f;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Lato;
+    font-size: 1.5rem;
+  } /* Change the link color on hover */
+  .brand-nav li a:hover {
+    color: #4499e3;
+  } /* Change the link color on click */
+  .brand-nav.active {
+    color: #4499e3;
+  } /*=================================IMAGES and BACKGROUNDS===================================*/
+  .assist-gradiant {
+    background: transparent
+      linear-gradient(90deg, #e35a29 0%, #c32032 45%, #76296d 100%) 0% 0%
+      no-repeat padding-box;
+    border-radius: 10px;
+    opacity: 1;
+    height: 158px;
+    width: 100%;
+    margin: 120px 0;
+    text-align: center;
+    padding: 37px 100px;
+  }
+  .business-value .dynamic-image img,
+  .how-to-get-started-section .dynamic-image img,
+  .four-sight .dynamic-image img {
+    max-width: 88%;
+  }
+  .customer-experience .dynamic-image img {
+    max-width: 88%;
+    margin-top: 22px;
+  } /*==================================Toggle Button==================================*/
+  .icon-down:before {
+    content: none;
+  }
+  .icon-up:before {
+    content: none;
+  }
+  .toggle-control .icon-up,
+  .toggle-control .icon-down {
+    float: left;
+  }
+  .toggle-control .icon-up {
+    display: none;
+  }
+  .toggle-control.toggled .icon-up {
+    display: inline;
+  }
+  .toggle-control.toggled .icon-down {
+    display: none;
+  }
+  .icon-down img,
+  .icon-up img {
+    width: 50%;
+  }
+  .accordion {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-size: 1.6rem;
+  }
+  .toggle-content {
+    padding: 0 45px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+  } /*=================================FORMATTING===================================*/ /*h1*/
+  .main-header-bold {
+  } /*h2*/
+  .secondary-header {
+    font-size: 2.8rem;
+    text-align: center;
+    padding-bottom: 40px;
+  } /*h3*/
+  .section-subheader-bold {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  .c4-connect-header .thumbnail-block {
+    padding: 80px 140px;
+  }
+  .provide-header {
+    margin-top: 118px;
+  }
+  .customer-experience {
+    margin-top: 55px;
+    margin-bottom: 118px;
+  }
+  .customer-experience .thumbnail-block,
+  .business-value {
+    padding: 5px 10px;
+  }
+  .connect-section-subheaders {
+    font-weight: bold;
+  }
+  .provide-ul {
+    list-style-type: disc;
+    padding-left: 15px;
+  }
+  .provide-ul li {
+    padding-bottom: 10px;
+  }
+  .quote-copy {
+    color: white;
+    font-style: italic;
+    font-size: 1.6rem;
+  }
+  .assist-gradiant p {
+    color: white;
+  }
+  .smart-header {
+    margin-top: 120px;
+    margin-bottom: 70px;
+  }
+  .smart-header .secondary-header {
+    padding-bottom: 20px;
+  }
+  .smart-header p {
+    font-size: 1.6rem;
+  }
+  .connect-for-success {
+    margin: 118px 0;
+  }
+  .how-it-works,
+  .four-sight {
+    margin-bottom: 120px;
+  }
+  .steps-padding {
+    padding-left: 50px;
+  }
+  .get-started li {
+    padding: 15px 83px 10px 5px;
+  }
+  .how-to-get-started-section {
+    margin: 118px 0;
+  }
+  .how-to-get-started-section .secondary-header {
+    padding-bottom: 70px;
+  }
+  .red-line {
+    border-bottom: 3px solid #b43238;
+    margin-top: 32px;
+  }
+  .yellow-line {
+    border-bottom: 3px solid#E6AC6D;
+    margin-top: 32px;
+  }
+  .blue-line {
+    border-bottom: 3px solid#7AAECE;
+    margin: 32px 0;
+  }
+  .get-familiar,
+  .for-education {
+    margin-bottom: 120px;
+    margin-top: 80px;
+  }
+  .get-familiar .span8,
+  .for-customers .span8,
+  .for-education .span8 {
+    padding: 0 60px;
+  } /*===================================MEDIA=====================================*/
+  @media (max-width: 800px) {
+    .c4-connect-header .thumbnail-block {
+      padding: 20px 30px;
+    }
+    .provide-header {
+      margin-top: 50px;
+    }
+    .customer-experience,
+    .business-value {
+      margin-top: 50px;
+    }
+    .assist-gradiant {
+      height: auto;
+      margin: 50px 0;
+    }
+    .get-started li {
+      padding: 10px 5px;
+    }
+    .connect-for-success,
+    .how-to-get-started-section {
+      margin: 50px 0;
+    }
+  }
+  @media (max-width: 600px) {
+    .secondary-header {
+      padding-bottom: 10px;
+    }
+    .how-to-get-started-section .secondary-header {
+      padding-bottom: 20px;
+    }
+    .c4-connect-header .thumbnail-block,
+    .steps-padding {
+      padding: 20px 10px;
+    }
+    .customer-experience .dynamic-image img,
+    .business-value .dynamic-image img,
+    .how-to-get-started-section .dynamic-image img,
+    .four-sight .dynamic-image img {
+      max-width: 100%;
+    }
+    .assist-gradiant {
+      height: auto;
+      padding: 20px 10px;
+      margin: 75px 0;
+    }
+    .smart-header {
+      margin: 40px 0;
+    }
+    .four-sight,
+    .get-familiar,
+    .for-education,
+    .how-it-works {
+      margin-bottom: 50px;
+    }
+    .get-familiar .span8,
+    .for-customers .span8,
+    .for-education .span8 {
+      padding: 0 10px;
+    }
+    .get-familiar {
+      margin-top: 20px;
+    }
+  }
+</style>
+<!-- START BREADCRUMBS !-->
+<div id="productsGlobalBreadCrumbs">
+  <div id="breadcrumb" class="breadcrumb">
+    <div id="WC_BreadCrumbTrailDisplay_div_1" class="breadcrumb_links">
+      <a id="WC_BreadCrumbTrailDisplay_link_2" href="/shop/en/snapav/home"
+        >Home</a
+      >
+      <span class="breadcrumb-divider">|</span>
+      <a
+        id="WC_BreadCrumbTrailDisplay_link_5a"
+        href="/shop/en/snapav/control4-announcements"
+        >Control4 Announcements</a
+      >
+      <span class="breadcrumb-divider">|</span> Control4 Connect
+    </div>
+  </div>
+</div>
+<!-- END BREADCRUMBS !--><!-- NAV START -->
+<div class="row-fluid brand-nav">
+  <div class="span12">
+    <h1 style="color: #7c7e7f; float: left">Connect</h1>
+    <ul class="brand-pg-nav">
+      <!--<li><a href="/shop/en/snapav/episode">Overview</a></li>  <li><a class="active" href="/shop/en/snapav/control4-connect" style="color:#4499e3;">Connect</a></li>  <li><a href="/shop/en/snapav/control4-assist">Assist & Assist Premium</a></li>-->
+    </ul>
+  </div>
+</div>
+<hr style="margin: 0 0 10px 0" />
+<!-- START SECTION 1 Mobile-ready -->
+<div class="c4-connect-header">
+  <div class="row-fluid">
+    <div class="span12 center">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Connect_Header.png"
+          alt="C4 header with Logo"
+        />
+      </div>
+      <br />
+      <div class="thumbnail-block">
+        <h1><strong>POWERING THE POSSIBLE</strong></h1>
+        <p>
+          Control4<sup>&reg;</sup> Connect is the required software service to
+          enable essential features that keep customers’ systems secure and up
+          to date, give convenient access and insights, and ensure systems can
+          connect with new devices on the market. It also provides features of a
+          truly smart living experience, such as voice control, remote access,
+          on-the-go visibility, and personalization of mobile notifications.
+        </p>
+        <p>
+          Control4 Connect has been developed for over a year in collaboration
+          with our Partners, based on feedback from both customers and
+          integrators. Connect is currently available and required only within
+          the United States.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END SECTION 1 !-->
+
+<!-- START Video -->
+<div class="connect-video">
+  <div class="row-fluid">
+    <div class="span12">
+      <style>
+        .embed-container {
+          position: relative;
+          padding-bottom: 56.25%;
+          height: 0;
+          overflow: hidden;
+          max-width: 100%;
+          border-radius: 21px;
+        }
+        .embed-container iframe,
+        .embed-container object,
+        .embed-container embed {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      </style>
+      <div class="embed-container">
+        <iframe
+          src="https://player.vimeo.com/video/874941198?badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479"
+          width="3840"
+          height="2160"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          title="Control4 Connect Explained"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Video -->
+<div class="provide-header">
+  <div class="row-fluid">
+    <div class="span12">
+      <h3 class="secondary-header">
+        Provide for Your Customer, Provide for Yourself
+      </h3>
+    </div>
+  </div>
+  <div class="row-fluid customer-experience">
+    <div class="span6">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Module_1.png"
+          alt="Woman with headphones looking at her mobile device"
+        />
+      </div>
+    </div>
+    <div class="span6">
+      <div class="thumbnail-block">
+        <h4 class="section-subheader-bold">
+          Deliver an Improved Customer Experience
+        </h4>
+        <ul class="provide-ul">
+          <li>
+            Access to essential smart living features like voice control, remote
+            access, on-the-go visibility, system backups, and personalized
+            notifications
+          </li>
+          <li>
+            Visibility into the Control4 system’s connectivity and usage metrics
+            every month with a Systems Insights Report
+          </li>
+          <li>
+            System education which provides a source to learn and troubleshoot
+            from, allowing customers to understand their systems better and
+            become more confident users
+          </li>
+          <li>
+            Connect to 20k+ third-party and proprietary devices that add
+            convenience and enjoyment
+          </li>
+          <li>
+            Peace of mind that customer data and privacy are protected by having
+            access to the most up-to-date versions of our software
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid business-value">
+    <div class="span6">
+      <div class="thumbnail-block">
+        <h4 class="section-subheader-bold">Increase Your Business’ Value</h4>
+        <ul class="provide-ul">
+          <li>
+            Earn recurring revenue, operationalized by Snap One, and establish
+            predictable income for a more stable business with value in the
+            long-term
+          </li>
+          <li>Make more profit on Control4 systems with minimal effort</li>
+          <li>
+            See an increased likelihood of demand, customer referrals, and
+            upsell opportunities due to improved customer experience and better
+            industry reputation
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="span6">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Module_2.png"
+          alt="Man sitting at desk writing in a planner"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<div class="assist-gradiant">
+  <div class="row-fluid">
+    <div class="span12">
+      <q class="quote-copy"
+        >I like the simple, easy way clients register for Control4 Connect. And
+        I like how it bypasses the hassle of us documenting and billing the
+        client for essential software.</q
+      >
+      <p>-Ed Gilmore, Gilmore Sound Advice</p>
+    </div>
+  </div>
+</div>
+<div class="smart-header">
+  <div class="row-fluid">
+    <div class="span12 center">
+      <h3 class="secondary-header">A Truly Smart Experience</h3>
+      <p>Control4 Connect enables the following features:*</p>
+    </div>
+  </div>
+</div>
+<div class="smart-experience">
+  <div class="row-fluid">
+    <div class="span6">
+      <a
+        href="#"
+        class="toggle-control"
+        data-toggle-target-id="software-toggle"
+      >
+        <button class="accordion">
+          Access to Software Updates
+          <span class="icon-down"
+            ><img
+              src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"
+          /></span>
+          <span class="icon-up"
+            ><img
+              src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"
+          /></span>
+        </button>
+      </a>
+      <div id="software-toggle" class="toggle-content">
+        <p>
+          Control4 Connect provides access to software and security updates that
+          help the system installed today evolve and improve over time allowing
+          for new features and integrations – keeping it reliable and secure.
+        </p>
+      </div>
+    </div>
+    <div class="span6">
+      <a href="#" class="toggle-control" data-toggle-target-id="voice-toggle">
+        <button class="accordion">
+          Voice Control
+          <span class="icon-down"
+            ><img
+              src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"
+          /></span>
+          <span class="icon-up"
+            ><img
+              src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"
+          /></span>
+        </button>
+      </a>
+      <div id="voice-toggle" class="toggle-content">
+        <p>
+          Control4 Connect enables Amazon Alexa, and Google Assistant
+          integration so customers can use their voice to control a specific
+          device, a few devices simultaneously, or scenes across their whole
+          home or business.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span6">
+      <a href="#" class="toggle-control" data-toggle-target-id="c4app-toggle">
+        <button class="accordion">
+          System Control & Functionality
+          <span class="icon-down"
+            ><img
+              src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"
+          /></span>
+          <span class="icon-up"
+            ><img
+              src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"
+          /></span>
+        </button>
+      </a>
+      <div id="c4app-toggle" class="toggle-content">
+        <p>
+          Customers can control their systems quickly and easily from the
+          Control4 app while enjoying access to the latest features and
+          functionality as they become available and benefiting from the app's
+          ongoing evolution and improvement.
+        </p>
+      </div>
+    </div>
+    <div class="span6">
+      <a
+        href="#"
+        class="toggle-control"
+        data-toggle-target-id="intercom-toggle"
+      >
+        <button class="accordion">
+          Intercom Anywhere
+          <span class="icon-down"
+            ><img
+              src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"
+          /></span>
+          <span class="icon-up"
+            ><img
+              src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"
+          /></span>
+        </button>
+      </a>
+      <div id="intercom-toggle" class="toggle-content">
+        <p>
+          Customers can monitor and communicate with any room of their property,
+          even the front door, right from their mobile device or Control4
+          Touchscreen. Whether customers are abroad or in the office, they can
+          greet guests or delivery drivers via the Chime Video Doorbell—they can
+          even allow visitors to enter.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span6">
+      <a href="#" class="toggle-control" data-toggle-target-id="remote-toggle">
+        <button class="accordion">
+          Remote System Access
+          <span class="icon-down"
+            ><img
+              src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"
+          /></span>
+          <span class="icon-up"
+            ><img
+              src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"
+          /></span>
+        </button>
+      </a>
+      <div id="remote-toggle" class="toggle-content">
+        <p>
+          Customers can control their systems with the Control4 app even when
+          they are not at home. They can view and adjust surveillance cameras,
+          lock a door that was accidentally left unlocked, or even set the
+          temperature and mood for when they arrive.
+        </p>
+      </div>
+    </div>
+    <div class="span6">
+      <a href="#" class="toggle-control" data-toggle-target-id="scene-toggle">
+        <button class="accordion">
+          When>>Then Scene Personalization
+          <span class="icon-down"
+            ><img
+              src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"
+          /></span>
+          <span class="icon-up"
+            ><img
+              src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"
+          /></span>
+        </button>
+      </a>
+      <div id="scene-toggle" class="toggle-content">
+        <p>
+          Customers can add additional scenes and adjust them when seasons,
+          moods, and schedules change. Customers have the ability to adjust
+          outdoor lights as sunset changes, add a new playlist to their
+          “Cooking” scene, and reduce their “Dinner Time” lighting by 10
+          percent—with When>>Then, the system is theirs to fine-tune.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span6">
+      <a href="#" class="toggle-control" data-toggle-target-id="mobile-toggle">
+        <button class="accordion">
+          Mobile Notifications
+          <span class="icon-down"
+            ><img
+              src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"
+          /></span>
+          <span class="icon-up"
+            ><img
+              src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"
+          /></span>
+        </button>
+      </a>
+      <div id="mobile-toggle" class="toggle-content">
+        <p>
+          Control4 Connect will keep customers in the know by sending
+          notifications to their tablet, mobile phone, or Apple watch via the
+          Control4 app. They can create personalized notifications to alert them
+          when people come and go, if a water leak is detected, or even if the
+          garage door has been left open.
+        </p>
+      </div>
+    </div>
+    <div class="span6">
+      <a
+        href="#"
+        class="toggle-control"
+        data-toggle-target-id="insights-toggle"
+      >
+        <button class="accordion">
+          System Insights
+          <span class="icon-down"
+            ><img
+              src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"
+          /></span>
+          <span class="icon-up"
+            ><img
+              src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"
+          /></span>
+        </button>
+      </a>
+      <div id="insights-toggle" class="toggle-content">
+        <p>
+          Customers receive visibility into their Control4 system’s activities
+          every month with a system insights report. They can review useful
+          information like uptime, downtime, if they are on the latest software,
+          and more. These insights will guide them as they consider
+          personalization and scene changes.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span6">
+      <a
+        href="#"
+        class="toggle-control"
+        data-toggle-target-id="education-toggle"
+      >
+        <button class="accordion">
+          System Education
+          <span class="icon-down"
+            ><img
+              src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"
+          /></span>
+          <span class="icon-up"
+            ><img
+              src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"
+          /></span>
+        </button>
+      </a>
+      <div id="education-toggle" class="toggle-content">
+        <p>
+          Customers can learn and troubleshoot from system education, accessible
+          via the mobile app, allowing them to understand their systems better
+          and become more confident users.
+        </p>
+      </div>
+    </div>
+    <div class="span6">
+      <a href="#" class="toggle-control" data-toggle-target-id="backup-toggle">
+        <button class="accordion">
+          System Backup
+          <span class="icon-down"
+            ><img
+              src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"
+          /></span>
+          <span class="icon-up"
+            ><img
+              src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"
+          /></span>
+        </button>
+      </a>
+      <div id="backup-toggle" class="toggle-content">
+        <p>
+          Control4 Connect backs up user programming and preferences in order to
+          restore a customer’s system if necessary.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span6">
+      <a
+        href="#"
+        class="toggle-control"
+        data-toggle-target-id="applemusic-toggle"
+      >
+        <button class="accordion">
+          Apple Music<sup>†</sup>
+          <span class="icon-down"
+            ><img
+              src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"
+          /></span>
+          <span class="icon-up"
+            ><img
+              src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"
+          /></span>
+        </button>
+      </a>
+      <div id="applemusic-toggle" class="toggle-content">
+        <p>
+          Enjoy a wide range of benefits from Apple Music®, including
+          Recommended For You, curated and collaborative ad-free playlists, and
+          access to personal libraries. Additionally, Control4 audio to life,
+          providing exquisite clarity, one-touch access, and intuitive
+          multi-room controls. Easily access your Favorited media and Recently
+          Played content, distribute and share across zones through the Sessions
+          page, and take advantage of the ultra-fine EQ controls to fully
+          personalize your sound experience. You can also manage playback with a
+          simple touch on your Apple Watch® and explore a world of musical
+          discoveries with intuitive ease.
+        </p>
+      </div>
+    </div>
+    <div class="span6"></div>
+  </div>
+</div>
+<div class="smart-experience-disclaimer">
+  <div class="row-fluid">
+    <div class="span12">
+      <p>
+        *Some functions and features are dependent on hardware and system
+        configuration.
+      </p>
+      <p>
+        †<strong>To use Apple Music, the following are required:</strong> A CORE
+        Controller or Triad SA1, Control4 OS 3.4.2+, a Connect plan or 4Sight
+        subscription, and an Apple Music subscription (customers have the option
+        to create a new Apple Music account during the setup process).
+      </p>
+      <p>
+        *Some functions and features are dependent on hardware and system
+        configuration.
+      </p>
+      <p>
+        Apple, Apple Music, Apple Podcasts, and Apple Watch are registered
+        trademarks of Apple, Inc.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="connect-for-success">
+  <div class="row-fluid">
+    <div class="span12 center">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Connect_for_Success_2.png"
+          alt="C4 header with Logo"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<div class="how-it-works">
+  <div class="row-fluid">
+    <div class="span12 center">
+      <h3 class="secondary-header">How It Works</h3>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span6">
+      <div class="thumbnail-block steps-padding">
+        <h4>1. Required Service</h4>
+        <p>
+          As of April 23, 2024, all new systems installed in the United States
+          will require Control4 Connect. We recommend you include Control4
+          Connect in your proposals as soon as possible so your customers are
+          aware that payment for the service will be due beginning in April.
+        </p>
+      </div>
+    </div>
+    <div class="span6">
+      <div class="thumbnail-block steps-padding">
+        <h4>4. Recurring Revenue</h4>
+        <p>
+          Control4 will manage customer payments and compensate you monthly
+          through ACH transfers for your share of the recurring revenue, as long
+          as you remain the Dealer of Record for your customers with active
+          Control4 Connect. This process removes the hassle of you having to
+          operationalize payment collection and customer communications.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span6">
+      <div class="thumbnail-block steps-padding">
+        <h4>2. OvrC Registration and Handoff</h4>
+        <p>
+          Use OvrC to register the system before beginning configuration, as
+          well as when handing off the system to your customer. This requires
+          you to do a one-time mapping of your Control4 and OvrC accounts. After
+          system hand off, your customer will receive an introductory email from
+          us with instructions for how to download the Control4 app.
+        </p>
+        <p>
+          Note: As of April 23, 2024, all new Control4 systems must be
+          registered & handed off using OvrC. Controller registration and
+          account hand-off through all other methods will no longer be
+          available.
+          <a href="http://ctrl4.co/ovrc-ctrllr-reg" target="_blank"
+            >Click here</a
+          >
+          for details.
+        </p>
+      </div>
+    </div>
+    <div class="span6">
+      <div class="thumbnail-block steps-padding">
+        <h4>5. Improved Experiences</h4>
+        <p>
+          Post-install, your customers will enjoy an improved experience owing
+          to all the benefits Connect offers. You will also receive a monthly
+          System Insights Report which gives you visibility into your customers’
+          plan selections and system status at a glance.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span6">
+      <div class="thumbnail-block steps-padding">
+        <h4>3. It’s all in the App</h4>
+        <p>
+          Within the app, your customer can set up their Control4 account and
+          complete payment for Connect. The annual price is based upon the
+          controller installed.
+        </p>
+      </div>
+    </div>
+    <div class="span6"></div>
+  </div>
+</div>
+<hr />
+<div class="how-to-get-started-section">
+  <div class="row-fluid">
+    <div class="span12 center">
+      <h3 class="secondary-header">How To Get Started</h3>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span6">
+      <ol class="get-started">
+        <li>
+          Learn more about Control4 Connect by reviewing the resources found
+          below. Reach out to your Sales Rep with any questions.
+        </li>
+        <li>
+          Provide your
+          <a
+            href="/shop/AjaxRevenueShareList?catalogId=10010&currentSelection=revenueShareSlct&storeId=10151&langId=-1"
+            target="_blank"
+            id="Connent-W9-CTA"
+          >
+            W9 and ACH information</a
+          >
+          so you are qualified to begin receiving recurring revenue payments.
+        </li>
+        <li>
+          Include the required Control4 Connect on your proposals and begin to
+          enjoy recurring revenue. Connect will be required on all new systems
+          beginning April 2024. Pricing varies per job based on the
+          controller(s) installed.
+        </li>
+      </ol>
+    </div>
+    <div class="span6">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/how-to-get-started.png"
+          alt="gentleman working on a laptop"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<hr />
+<div class="assist-gradiant">
+  <div class="row-fluid">
+    <div class="span12">
+      <q class="quote-copy"
+        >Control4 Connect creates a paradigm for our customers to understand
+        that this software is going to continue to evolve over time and get
+        better. And continued investments in the software ultimately will
+        increase their overall satisfaction with the system in the long term.</q
+      >
+      <p>-Jonathan George, iWire</p>
+    </div>
+  </div>
+</div>
+<div class="four-sight">
+  <div class="row-fluid">
+    <div class="span6">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/4sight.png"
+          alt="gentleman working on a laptop"
+        />
+      </div>
+    </div>
+    <div class="span6">
+      <h4 class="section-subheader-bold">What does this mean for 4Sight?</h4>
+      <p>
+        4Sight continues to be available for customers with systems installed
+        prior to April 23, 2024. For any systems installed after April 23, 2024,
+        Connect is the required software service that replaces 4Sight. This
+        means:
+      </p>
+      <ul class="provide-ul">
+        <li>
+          Customers with systems installed prior to April 23, 2024, can purchase
+          and renew 4Sight to enjoy the feature set it delivers
+        </li>
+        <li>
+          Partners will continue to receive a product credit for all annual
+          sales and renewals of 4Sight
+        </li>
+        <li>
+          Snap One will invest in developing the capabilities and feature set of
+          Connect over time, while 4Sight will remain as it is today
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="row-fluid">
+  <div class="span12 center"><h3 class="secondary-header">Resources</h3></div>
+</div>
+<div class="get-familiar">
+  <div class="row-fluid">
+    <div class="span4">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/get-familiar.png"
+          alt="gentleman working on a laptop"
+        />
+      </div>
+    </div>
+    <div class="span8">
+      <h3 class="section-subheader-bold">Get Familiar with Control4 Connect</h3>
+      <div class="red-line"></div>
+      <div class="row-fluid">
+        <div class="span6">
+          <h4>Overview Video</h4>
+          <p>
+            This is a video for Partners to get a quick overview of Control4
+            Connect.
+          </p>
+          <p>
+            <a
+              href="https://vimeo.com/snapav/review/874941198/cadb6378fa"
+              target="_blank"
+              id="Connect-overview-video"
+              >Watch Now</a
+            >
+          </p>
+        </div>
+        <div class="span6">
+          <h4>Sales Guide</h4>
+          <p>
+            A comprehensive guide for getting to know and effectively including
+            Control4 Connect on all new proposals.
+          </p>
+          <p>
+            <a
+              href="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/protected/documents/Connect_Assist/C4Connect_SalesGuide_061224.pdf"
+              target="_blank"
+              id="Connect-sales-guide"
+              >View PDF</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span6">
+          <h4>Cutsheet</h4>
+          <p>
+            A brief summary of crucial information for Partners who need to sell
+            on the go.
+          </p>
+          <p>
+            <a
+              href="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/protected/documents/Connect_Assist/C4_Connect_cutsheet_061224.pdf"
+              target="_blank"
+              id="Connect-Cutsheet"
+              >View PDF</a
+            >
+          </p>
+        </div>
+        <div class="span6">
+          <h4>Customer Communications Guide</h4>
+          <p>
+            A guide to Control4 communications that will assist customers with
+            Connect payment, renewal, and system education to improve their
+            overall experience.
+          </p>
+          <p>
+            <a
+              href="http://ctrl4.co/connect-communication"
+              target="_blank"
+              id="Connect-Communications-Guide"
+              >Learn More</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="for-education">
+  <div class="row-fluid">
+    <div class="span4">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Resources_for-eduction.png"
+          alt="gentleman working on a laptop"
+        />
+      </div>
+    </div>
+    <div class="span8">
+      <h3 class="section-subheader-bold">Resources for Education</h3>
+      <div class="yellow-line"></div>
+      <div class="row-fluid">
+        <div class="span6">
+          <h4>FAQs for Partners</h4>
+          <p>Questions Partners may ask about Control4 Connect.</p>
+          <p>
+            <a
+              href="http://ctrl4.co/connect-partner-faq"
+              target="_blank"
+              id="Connect-FAQsforPartners"
+              >Learn More</a
+            >
+          </p>
+        </div>
+        <div class="span6">
+          <h4>Pricing & Revenue Share</h4>
+          <p>
+            Get the pricing breakdown and revenue share details for Control4
+            Connect.
+          </p>
+          <p>
+            <a
+              href="http://ctrl4.co/connect-pricing-revenue"
+              target="_blank"
+              id="Connect-pricing"
+              >Learn More</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span6">
+          <h4>Brand Assets</h4>
+          <p>Marketing assets, logos, and images for Control4 Connect.</p>
+          <p>
+            <a
+              href="https://brandfolder.com/s/fqwrnq666fkkb76h74kt3cp6"
+              target="_blank"
+              id="Connect-brand-assets"
+              >Learn More</a
+            >
+          </p>
+        </div>
+        <div class="span6">
+          <h4>Education</h4>
+          <p>
+            Get access to documentation, videos and conversations focused on
+            Control4 Connect.
+          </p>
+          <p>
+            <a
+              href="http://ctrl4.co/connect-help"
+              target="_blank"
+              id="Connect-education"
+              >Learn More</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="for-customers">
+  <div class="row-fluid">
+    <div class="span4">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Resources_for-customers.png"
+          alt="gentleman working on a laptop"
+        />
+      </div>
+    </div>
+    <div class="span8">
+      <h3 class="section-subheader-bold">Resources for Customers</h3>
+      <div class="blue-line"></div>
+      <div class="row-fluid">
+        <div class="span6">
+          <h4>Control4 Connect Product Page</h4>
+          <p>
+            Home for all product information on Control4 Connect for customers.
+          </p>
+          <p>
+            <a
+              href="https://www.control4.com/o/connect"
+              target="_blank"
+              id="Connect-wwwConnectlinkC4"
+              >Learn More</a
+            >
+          </p>
+        </div>
+        <div class="span6">
+          <h4>FAQs for Customers</h4>
+          <p>Questions Customers may ask about Control4 Connect.</p>
+          <p>
+            <a
+              href="http://ctrl4.co/connect-user-faq"
+              target="_blank"
+              id="Connect-faqs4customers"
+              >Learn More</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span6">
+          <h4>Including Control4 Connect in customer conversations</h4>
+          <p>
+            Learn about the best practices for incorporating Connect into
+            customer conversations from integrators.
+          </p>
+          <p>
+            <a
+              href="https://vimeo.com/927686545/player?lid=l7kf7p50p1qc"
+              target="_blank"
+              id="Connect-custconvo"
+              >Learn More</a
+            >
+          </p>
+        </div>
+        <div class="span6">
+          <h4>Connect customer leave-behind</h4>
+          <p>
+            A Connect overview to share and leave behind with customers.
+            Co-branded option available.
+          </p>
+          <p>
+            <a
+              href="https://brandfolder.com/s/jhr6j84qm7r4k9f8vhxfshg"
+              target="_blank"
+              id="Connect-leavebehind"
+              >Learn More</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

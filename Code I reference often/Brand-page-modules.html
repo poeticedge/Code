@@ -1,0 +1,275 @@
+<style>
+  /*====================
+  Formatting 
+  =====================*/
+  .main-headers {
+    font-size: 3rem;
+  }
+
+  .secondary-header {
+    font-size: 2.5rem;
+  }
+  /*==================================
+        Toggle Button
+    ==================================*/
+  .icon-down:before {
+    content: none;
+  }
+  .icon-up:before {
+    content: none;
+  }
+
+  .toggle-control .icon-up,
+  .toggle-control .icon-down {
+    float: left;
+  }
+
+  .toggle-control .icon-up {
+    display: none;
+  }
+
+  .toggle-control.toggled .icon-up {
+    display: inline;
+  }
+
+  .toggle-control.toggled .icon-down {
+    display: none;
+  }
+
+  .icon-down img,
+  .icon-up img {
+    width: 50%;
+  }
+
+  .accordion {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-family: Lato;
+  }
+
+  .toggle-content {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+  }
+  /*====================
+Grid
+=====================*/
+  .quotes-grid {
+    display: grid;
+    row-gap: 30px;
+    grid-template-columns: auto auto auto;
+    height: auto;
+    column-gap: 30px;
+  }
+
+  .tan-quotes-box {
+    display: inline-grid;
+    background-color: #f8f8f8;
+    height: auto;
+    border-radius: 10px;
+    padding: 40px 20px;
+  }
+  /*====================
+Backgrounds and images
+=====================*/
+  .help-clients {
+    background-image: url(/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/Help-Clients-Reach-You.png);
+    background-position: center;
+    background-size: cover;
+    height: 770px;
+    padding: 40px 224px 0px;
+    margin: 115px 0;
+    text-align: center;
+  }
+  /*====================
+Mobile 
+=====================*/
+  @media (max-width: 800px) {
+    .quotes-grid {
+      grid-template-columns: auto auto;
+    }
+  }
+</style>
+
+<!--Video NON VIMEO Just change url src-->
+<!-- START Video -->
+<div class="honeywell-video-secion">
+  <div class="row-fluid">
+    <div class="span12">
+      <style>
+        .embed-container {
+          position: relative;
+          padding-bottom: 56.25%;
+          height: 0;
+          overflow: hidden;
+          max-width: 100%;
+          border-radius: 21px;
+        }
+        .embed-container iframe,
+        .embed-container object,
+        .embed-container embed {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      </style>
+      <div class="embed-container">
+        <iframe
+          src="https://play.vidyard.com/JdiJ7LczhCDMPScRvFSC7a?disable_popouts=1&amp;v=4.3.15&amp;type=inline"
+          width="3840"
+          height="2160"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          title="Control4 Connect Explained"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Video -->
+
+<!----------Grid--------->
+<div class="quotes-grid">
+  <div class="tan-quotes-box">
+    <div class="dynamic-image">
+      <img
+        src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Portal-quote.png"
+        alt="Graphic element"
+      />
+    </div>
+    <div class="thumbnail-block">
+      <p class="quote-text">
+        I spend way less time doing proposals. I’ve had clients tell me that
+        they chose me based on the professionalism of my proposal.
+      </p>
+      <p><strong>Andrew Stricklan</strong><br />Galaxy Custom Audio Video</p>
+    </div>
+  </div>
+  <div class="tan-quotes-box">
+    <div class="dynamic-image">
+      <img
+        src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Portal-quote.png"
+        alt="Graphic element"
+      />
+    </div>
+    <div class="thumbnail-block">
+      <p class="quote-text">
+        After using several industry solutions, none of them are as well
+        designed and easy to use as Portal. Nothing comes close. This coming
+        from someone who does not give testimonials.
+      </p>
+      <p><strong>Scott Lumpkin</strong><br />Simply Automated Inc.</p>
+    </div>
+  </div>
+  <div class="tan-quotes-box">
+    <div class="dynamic-image">
+      <img
+        src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Portal-quote.png"
+        alt="Graphic element"
+      />
+    </div>
+    <div class="thumbnail-block">
+      <p class="quote-text">
+        Saves me time and money. Time and time again. And the Portal team
+        supports me instantaneously. It’s just awesome.
+      </p>
+      <p><strong>Gene Frechette </strong><br />MGi Systems</p>
+    </div>
+  </div>
+  <div class="tan-quotes-box">
+    <div class="dynamic-image">
+      <img
+        src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Portal-quote.png"
+        alt="Graphic element"
+      />
+    </div>
+    <div class="thumbnail-block">
+      <p class="quote-text">
+        Hands down the best proposal platform available. Absolutely love it.
+      </p>
+      <p><strong>Don Heany </strong><br />Zome Smart Home Systems</p>
+    </div>
+  </div>
+  <div class="tan-quotes-box">
+    <div class="dynamic-image">
+      <img
+        src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Portal-quote.png"
+        alt="Graphic element"
+      />
+    </div>
+    <div class="thumbnail-block">
+      <p class="quote-text">
+        Revolutionary software that makes things quick and accurate without a
+        huge learning curve.
+      </p>
+      <p><strong>Marc Moore</strong><br />Tomorrow Entertainment</p>
+    </div>
+  </div>
+  <div class="tan-quotes-box">
+    <div class="dynamic-image">
+      <img
+        src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Portal-quote.png"
+        alt="Graphic element"
+      />
+    </div>
+    <div class="thumbnail-block">
+      <p class="quote-text">
+        Portal is powerful and intuitive. More importantly, their support is
+        AMAZING. I can’t praise their team enough.
+      </p>
+      <p><strong>Karen Shelton </strong><br />Connect IT</p>
+    </div>
+  </div>
+</div>
+
+<!--FAQs-->
+<tr>
+  <td>
+    <a href="#" class="toggle-control" data-toggle-target-id="support-toggle">
+      <button class="accordion">
+        Direct Manufacturer Support
+        <span class="icon-down"
+          ><img
+            src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"
+        /></span>
+        <span class="icon-up"
+          ><img
+            src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"
+        /></span>
+      </button>
+    </a>
+    <div id="support-toggle" class="toggle-content">
+      <p>
+        You will use your expertise to design, install, and program your
+        customer’s system to meet their needs. However, long-term support and
+        maintenance are necessary when living with technology, and Control4
+        wants to make that as pleasant as possible. The Control4 Assist Team is
+        an additional layer of support (direct from the manufacturer) that is
+        just a phone call away.
+      </p>
+    </div>
+  </td>
+  <td class="red-check-icon">
+    <p>&#10004;</p>
+    <!--- <div class="dynamic-image">
+            <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Control4-Assist-Check.png" alt="Red check icon">
+        </div>-->
+  </td>
+  <td class="purple-check-icon">
+    <p>&#10004;</p>
+    <!-- <div class="dynamic-image">
+            <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Control4-Assist-Prem-Check.png" alt="Purple check icon">
+        </div>-->
+  </td>
+</tr>

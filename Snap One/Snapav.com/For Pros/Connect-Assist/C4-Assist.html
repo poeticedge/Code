@@ -1,0 +1,973 @@
+<style>
+    /*====================
+    Navigation style 
+    =====================*/
+        .brand-nav {
+                    margin-bottom: 0px;
+                }
+                .brand-pg-nav {
+                  list-style-type: none;
+                  margin: 0;
+                  padding: 0;
+                  overflow: hidden;
+                  float: right;
+            }
+                .brand-nav li {
+                  display: inline-block;
+                }
+                .brand-nav li a {
+                  display: block;
+                  color: #7c7e7f;
+                  text-align: center;
+                  padding: 14px 16px;
+                  text-decoration: none;
+                  font-family: Lato;
+                  font-size: 1.5rem;
+                }
+                /* Change the link color on hover */
+                .brand-nav li a:hover {
+                  color: #4499e3;
+                }
+            /* Change the link color on click */
+                .brand-nav.active {
+                  color: #4499e3;
+                }
+    /*=================================
+    IMAGES and BACKGROUNDS
+    ===================================*/
+    .assist-gradiant {
+        background: transparent linear-gradient(90deg, #E35A29 0%, #C32032 45%, #76296D 100%) 0% 0% no-repeat padding-box;
+        border-radius: 10px;
+        opacity: 1;
+        height: 158px;
+        width: 100%;
+        margin: 80px 0;
+        text-align: center;
+        padding: 30px 100px;
+    }
+    
+    /*==================================
+        Toggle Button
+    ==================================*/
+    .icon-down:before{
+            content:none;
+        }
+        .icon-up:before{
+            content:none;
+        }
+    
+        .toggle-control .icon-up, .toggle-control .icon-down{
+            float:left;
+        }
+    
+        .toggle-control .icon-up{
+            display:none;
+        }
+    
+        .toggle-control.toggled .icon-up{
+            display:inline;
+        }
+    
+        .toggle-control.toggled .icon-down{
+            display:none;
+        } 
+    
+        .icon-down img, .icon-up img{
+            width: 50%;
+        }
+    
+        .accordion {
+            background-color: white;
+            color: black;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+            font-family: Lato;
+        }
+    
+        .toggle-content {
+        padding: 0 18px;
+        background-color: white;
+        display: none;
+        overflow: hidden;
+        }
+    
+    /*=================================
+    FORMATTING
+    ===================================*/
+    /*h1*/
+    .main-header-bold {
+        font-weight: bold;
+    }
+    
+    /*h2*/
+    .secondary-header {
+        font-size: 2.8rem;
+        text-align: center;
+        padding: 40px 0;
+    }
+    
+    /*h3*/
+    .section-subheader-bold {
+        font-weight: bold;
+        font-size: 2rem;
+    }
+    
+    .c4-assist-header .thumbnail-block{
+        padding: 80px 140px 0px;
+    }
+    
+    .assist-video {
+        margin: 80px 0;
+    }
+    
+    .calls .thumbnail-block {
+        padding: 0 230px;
+    }
+    
+    .improved-experience {
+        margin: 80px 0 20px;
+    }
+    
+    .boost-efficiency {
+        margin: 110px 0;
+    }
+    
+    .increased-value .thumbnail-block, .improved-experience .thumbnail-block {
+        padding-top: 45px;
+    }
+    
+    .plans-and-features .thumbnail-block {
+        padding: 0 150px;
+    }
+    
+    .boost-efficiency .dynamic-image img, .improved-experience .dynamic-image img, .increased-value .dynamic-image img, .become-authorized .dynamic-image img{
+            max-width: 85%;
+            margin-top: 15px;
+        }
+    
+    .c4-assist-section {
+        padding: 80px 0 90px;
+    }
+    
+    .c4-assist-section .thumbnail-block {
+        padding: 10px 20px;
+    }
+    
+    .assist-logos {
+        max-width: 48%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+   .assist-ul {
+        list-style-type: disc;
+        padding: 30px 8px;
+    }
+    
+    .assist-ul li {
+        padding:0px 30px 10px 0px;
+    } 
+    
+    .increased-value {
+        margin-bottom: 110px;
+    }
+    
+    table {
+        width: 928px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    thead {
+        background: #F7F7F7 0% 0% no-repeat padding-box;
+        text-align: left;
+        padding: 28px 25px;
+        font-size: 1.6rem;
+        font-family: Lato;
+        border: 0.5px solid #DDDDDD;
+        border-radius: 10px 10px 0px 0px;
+    }
+    
+   th {
+        padding: 28px 25px;
+    }
+    
+    .right-align-title {
+        text-align: center;
+        width: 50px;
+    }
+    
+    /*.check-icon .dynamic-image {
+        text-align: right;
+        max-width: 85%;
+    }*/
+    
+    tr {
+        border: 0.5px solid #DDDDDD;
+    }
+
+    td {
+        padding: 5px 35px;
+    }
+
+    .red-check-icon, .purple-check-icon {
+        text-align: right;
+        font-size: 2.3rem;
+        width: 50px;
+    }
+
+    .red-check-icon .dynamic-image img{
+        max-width: 30%;
+    }
+
+    .red-check-icon {
+        color: #C32032;
+    }
+    .purple-check-icon {
+        color: #A33982;
+    }
+
+    .purple-check-icon .dynamic-image img{
+        max-width: 18%;
+    }
+
+    tfoot {
+        background: #F7F7F7 0% 0% no-repeat padding-box;
+        text-align: left;
+        font-size: 1.6rem;
+        font-family: Lato;
+    }
+    
+    .assist-disclaimer {
+        padding: 32px 45px;
+    }
+    
+    .quote-copy {
+            color: white;
+            font-style: italic;
+            font-size: 1.6rem;
+        }
+
+    .assist-gradiant p {
+            color: white;
+        }
+    
+    .trusted-partnership{
+        margin: 120px 0;
+    }
+    
+    .steps-padding {
+            padding: 0 75px;
+        }
+    
+    .become-authorized {
+        margin: 120px 0;
+    }
+    
+    .become-authorized .thumbnail-block{
+        padding: 32px 25px;
+    }
+    
+    .how-it-works, .four-sight {
+            margin-bottom: 120px;
+        }
+    
+        .yellow-line {
+            border-bottom: 3px solid#E6AC6D;
+            margin-top: 32px;
+        }
+    
+        .blue-line {
+            border-bottom: 3px solid#7AAECE;
+            margin: 32px 0;
+        }
+        .get-familiar, .for-education {
+            margin-bottom: 120px;
+        } 
+        .get-familiar .span8, .for-customers .span8, .for-education .span8 {
+            padding: 0 60px;
+        }
+    /*===================================
+    MEDIA
+    =====================================*/ 
+    
+    @media (max-width: 800px) {
+        .c4-assist-header .thumbnail-block{
+        padding: 40px 100px 0px;
+    }
+        .assist-video {
+        margin: 50px 0;
+    }
+    .calls .thumbnail-block {
+        padding: 0 130px;
+    }
+    
+    .increased-value {
+        margin-bottom: 50px;
+    }
+    .improved-experience, .become-authorized {
+        margin: 50px 0;
+    }
+    .assist-gradiant {
+        height: auto;
+    }
+    
+    .c4-assist-section {
+        padding: 40px 0;
+    }
+        table {
+        width: 685px;
+    }
+    .steps-padding {
+        padding: 0 30px;
+    }
+    }
+    
+    @media (max-width: 600px) {
+        .c4-assist-header .thumbnail-block{
+            padding: 20px 10px 0px;
+        }
+        .calls .thumbnail-block {
+            padding: 0 20px;
+        }
+        .improved-experience, .boost-efficienc, .trusted-partnership, .how-it-works {
+            margin: 20px 0;
+        }
+        .increased-value .thumbnail-block, .improved-experience .thumbnail-block {
+            padding-top: 0;
+        }
+    
+        .boost-efficiency .dynamic-image img, .improved-experience .dynamic-image img, .increased-value .dynamic-image img, .assist-logos{
+                max-width: 100%;
+            }
+    
+        .assist-gradiant {
+            height: auto;
+            padding: 20px 10px;
+            margin: 0;
+        }
+    
+        table {
+            width: 295px;
+    }
+    .right-align-title {
+        text-align: left;
+    }
+    
+    .check-icon .dynamic-image {
+        text-align: -webkit-center;
+    }
+    th {
+        padding: 20px 10px;
+    }
+    td {
+        padding: 5px;
+    }
+    
+    .become-authorized .thumbnail-block, .assist-disclaimer, .plans-and-features .thumbnail-block, .c4-assist-section .thumbnail-block{
+        padding: 20px 10px;
+    }
+    
+    .four-sight {
+            margin-bottom: 50px;
+        }
+    .get-familiar .span8, .for-customers .span8, .for-education .span8 {
+            padding: 0 10px;
+        }
+    
+        .get-familiar, .for-education {
+            margin-bottom: 50px;
+        }
+    }
+        </style>
+        
+        <!-- START BREADCRUMBS !-->
+        <div id="productsGlobalBreadCrumbs">
+            <div id="breadcrumb" class="breadcrumb">
+                <div id="WC_BreadCrumbTrailDisplay_div_1" class="breadcrumb_links"> 
+                    <a id="WC_BreadCrumbTrailDisplay_link_2" href="/shop/en/snapav/home">Home</a> 
+                    <span class="breadcrumb-divider">|</span> 
+                    <a id="WC_BreadCrumbTrailDisplay_link_5a" href="/shop/en/snapav/control4-announcements">Control4 Announcements</a> 
+                    <span class="breadcrumb-divider">|</span> Control4 Assist
+                </div>
+            </div>
+        </div>
+        <!-- END BREADCRUMBS !-->
+        
+        <!-- NAV START -->
+         
+        <div class="row-fluid brand-nav">
+            <div class="span12">
+                <h1 style="color:#7c7e7f; float:left;">Assist & Assist Premium</h1>
+                    <ul class="brand-pg-nav">
+                     <!-- <li><a href="/shop/en/snapav/episode">Overview</a></li>
+                      <li><a href="/shop/en/snapav/episode-home-theater">Connect</a></li>
+                      <li><a class="active" href="/shop/en/snapav/episode-architectural" style="color:#4499e3;">Assist & Assist Premium</a></li>-->
+                    </ul>
+            </div>
+        </div>
+        <hr style="margin:0 0 10px 0;">
+    
+        <!-- START SECTION 1 Mobile-ready -->
+        <div class="c4-assist-header">
+            <div class="row-fluid">
+                <div class="span12 center">
+                    <div class="dynamic-image">
+                        <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Connect_Assist-Header.png" alt="C4 header with Logo">
+                    </div>
+                    <br>
+                    <div class="thumbnail-block">
+                        <h1 class="main-header-bold">ASSISTANCE FROM A DISTANCE</h1>
+                        <p>Control4<sup>&reg;</sup> Assist and Control4<sup>&reg;</sup> Assist Premium are optional next-level manufacturer support plans that complement the services provided by you. These services have been developed for over a year in collaboration with our Partners, based on feedback from both customers and integrators. </p>
+     
+                        <p>Only Assist Authorized Partners may sell Assist. You become authorized to sell Assist by taking the Control4 Assist Authorization course and agreeing to the <a href="http://ctrl4.co/assist-partner-roles" target="_blank" id="Assist-SLA">Service Level expectations</a>. Assist and Assist Premium support plans are only available in the United States on systems that have the Control4 Connect service enabled </p>
+    
+                        <p>With these plans, Assist Authorized Partners are able to offer an elevated customer experience, improve your team’s quality of life, and earn recurring revenue without needing to scale up your service department. </p>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+        <!-- END SECTION 1 !-->
+    
+    <!-- START Video -->
+    <div class="assist-video">
+        <div class="row-fluid">
+            <div class="span12">
+                <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 21px; }
+                    .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+                    </style>
+                       <div class="embed-container">
+                        <iframe src="https://player.vimeo.com/video/874943453?badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" width="3840" height="2160" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="Control4 Assist Explained"></iframe>
+                      </div>
+            </div>
+        </div>
+    </div>
+    <!-- END Video -->
+    
+    <div class="calls">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="thumbnail-block">
+                    <h3 class="secondary-header">We Take the Calls, You Take the Credit, and Earn Recurring Revenue. </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="improved-experience">
+        <div class="row-fluid">
+            <div class="span6">
+                <div class="dynamic-image">
+                    <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/improved.png" alt="Woman with a mobile device">
+                </div>
+            </div>
+            <div class="span6">
+                <div class="thumbnail-block">
+                    <h3 class="section-subheader-bold">Improved Customer Experience </h3>
+                    <ul class="assist-ul">
+                        <li>Access to expert manufacturer support from the Control4 Assist Team to help remotely seven days a week </li>
+                        <li>Proactive system monitoring can solve customer issues before they’re noticed - helping their system and connected devices run reliably without your intervention </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="boost-efficiency">
+        <div class="row-fluid">
+            <div class="span6">
+                <div class="thumbnail-block">
+                    <h3 class="section-subheader-bold">Boost Business Efficiency </h3>
+                    <ul class="assist-ul">
+                        <li>Allow your technicians and programmers to focus on new projects as our team answers support calls, troubleshoots, and provides the concierge customer experience </li>
+                        <li>Enjoy your nights and weekends by not taking support calls our team can tackle </li>
+                        <li>Get visibility into your customers’ systems and support cases with Customer Systems Insights Reports </li>
+                        <li>Receive seamless hand-off when support cases are escalated to you </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="span6">
+                <div class="dynamic-image">
+                    <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/boost-efficiency.png" alt="Two installers hanging outside of a truck">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="increased-value">
+        <div class="row-fluid">
+            <div class="span6">
+                <div class="dynamic-image">
+                    <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/increase-value.png" alt="Man looking over paperwork at desk">
+                </div>
+            </div>
+            <div class="span6">
+                <div class="thumbnail-block">
+                    <h3 class="section-subheader-bold">Increase Your Business’ Value </h3>
+                    <ul class="assist-ul">
+                        <li>Earn recurring revenue, operationalized by Snap One, and establish predictable income for a more stable business with value in the long term </li>
+                        <li>See an increased likelihood of demand, customer referrals, and upsell opportunities due to improved customer experience and better industry reputation </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="assist-gradiant">
+        <div class="row-fluid">
+            <div class="span12">
+                <q class="quote-copy">Control4 Assist helps my technicians not to have to field calls for simple matters during the workday, after hours and on weekends.  It helps my techs stay focused on their daily task at hand and allows for uninterrupted after hours, weekend and family time for non-emergency situations.</q>
+                <p>- Chris Bell, Bell Integrated Home Solutions</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="plans-and-features">
+        <div class="row-fluid">
+            <div class="span12 center">
+                <div class="thumbnail-block">
+                    <h3 class="secondary-header">Our Optional Remote Support Plans and Features </h3>
+                    <p>Whether it’s a Control4 product or devices that are connected to Control4, our Assist Team is here to help. We understand that our specialists engage with your customers directly, which is why we carefully select them based on their expertise in A/V, automation, and networking, as well as their exceptional customer service skills to ensure that your customers receive excellent service. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="c4-assist-section">
+        <div class="row-fluid">
+            <div class="span6">
+                <div class="dynamic-image assist-logos">
+                    <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Control4-Assist.png" alt="Control4 Assist logo">
+                </div>
+                <div class="thumbnail-block">
+                    <p>Customers receive access to expert manufacturer support from the Control4 Assist Team to help remotely 7 days a week, 8 a.m. - 8 p.m. including holidays via phone, email, and video assistance.* Should any onsite service be required, you have access to all notes and system information to ensure a seamless support experience.  </p>
+                </div>
+            </div>
+            <div class="span6">
+                <div class="dynamic-image assist-logos">
+                    <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Control4-Assist-Premium.png" alt="Control4 Assist Premium logo">
+                </div>
+                <div class="thumbnail-block">
+                    <p>Customers will receive all the benefits of the Assist plan, plus a concierge experience that includes system education, scene modification, custom programming, and new device connection. Our team of highly trained specialists is ready and waiting to assist 24/7/365.  </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--Table with accordion-->
+    
+    <div class="row-fluid">
+        <div class="span12">
+            <table>
+                <thead><!--Need to add class, grey header-->
+                    <tr>
+                        <th>Remote Support Services </th><!--Bigger column-->
+                        <th class="right-align-title">Assist</th><!--Small column-->
+                        <th class="right-align-title">Assist Premium </th><!--Small column-->
+                    </tr>
+                </thead>
+                <tr>
+                    <td>   
+                    <a href="#" class="toggle-control" data-toggle-target-id="support-toggle">
+                        <button class="accordion">Direct Manufacturer Support
+                            <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                            <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                        </button>      
+                    </a>
+                    <div id="support-toggle" class="toggle-content"> 
+                        <p>You will use your expertise to design, install, and program your customer’s system to meet their needs. However, long-term support and maintenance are necessary when living with technology, and Control4 wants to make that as pleasant as possible. The Control4 Assist Team is an additional layer of support (direct from the manufacturer) that is just a phone call away. </p>
+                    </div>
+                    </td>
+                    <td class="red-check-icon">
+                        <p>&#10004;</p>
+                      <!--- <div class="dynamic-image">
+                            <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Control4-Assist-Check.png" alt="Red check icon">
+                        </div>-->
+                    </td>
+                    <td class="purple-check-icon">
+                        <p>&#10004;</p>
+                       <!-- <div class="dynamic-image">
+                            <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Control4-Assist-Prem-Check.png" alt="Purple check icon">
+                        </div>-->
+                    </td>
+                </tr>
+                <tr>
+                    <td>   
+                    <a href="#" class="toggle-control" data-toggle-target-id="monitoring-toggle">
+                        <button class="accordion">Proactive Monitoring 
+                            <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                            <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                        </button>      
+                    </a>
+                    <div id="monitoring-toggle" class="toggle-content"> 
+                        <p>Our specialist team will use proactive monitoring and remote management tools to help Control4 systems and connected devices run reliably. We proactively identify and solve potential problems remotely before they occur and collaborate with you if needed. Rest assured that customer privacy and security are always top of mind. Support agents never have access to cameras or what customers are watching or listening to. All actions performed on the system are logged for auditing and are visible to you and your customers through support tickets or monthly reporting. </p>
+                    </div>
+                         </td>
+                         <td class="red-check-icon">
+                            <p>&#10004;</p>
+                           <!-- <div class="dynamic-image">
+                                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Control4-Assist-Check.png" alt="Red check icon">
+                            </div>-->
+                        </td>
+                        <td class="purple-check-icon">
+                            <p>&#10004;</p>
+                           <!-- <div class="dynamic-image">
+                                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Control4-Assist-Prem-Check.png" alt="Purple check icon">
+                            </div>-->
+                        </td>
+                </tr>
+                <tr>
+                    <td>   
+                    <a href="#" class="toggle-control" data-toggle-target-id="troubleshooting-toggle">
+                        <button class="accordion">Troubleshooting & Support  
+                            <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                            <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                        </button>      
+                    </a>
+                    <div id="troubleshooting-toggle" class="toggle-content"> 
+                        <p>Customer experiences with Control4 should be exceptional. Whether it’s a Control4 product, or devices and services that are connected to Control4, we’re here to assist should issues arise. Our highly-trained specialists are available seven days a week to provide support via phone or email. For Assist Premium customers, the support team is available 24 hours a day, 365 days a year. </p>
+                    </div>
+                         </td>
+                         <td class="red-check-icon">
+                            <p>&#10004;</p>
+                            <!--<div class="dynamic-image">
+                                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Control4-Assist-Check.png" alt="Red check icon">
+                            </div>-->
+                        </td>
+                        <td class="purple-check-icon">
+                            <p>&#10004;</p>
+                            <!--<div class="dynamic-image">
+                                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Control4-Assist-Prem-Check.png" alt="Purple check icon">
+                            </div>-->
+                        </td>
+                </tr>
+                <tr>
+                    <td>   
+                    <a href="#" class="toggle-control" data-toggle-target-id="video-toggle">
+                        <button class="accordion">Video Assist    
+                            <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                            <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                        </button>      
+                    </a>
+                    <div id="video-toggle" class="toggle-content"> 
+                        <p>When your customer is having trouble describing an issue, sometimes it’s easier for them to show what the problem is live rather than trying to explain. With a subscription to either of our support plans, customers are able to connect with our specialists via video to navigate around the hardware and work efficiently toward a resolution. </p>
+                    </div>
+                         </td>
+                         <td class="red-check-icon">
+                            <p>&#10004;</p>
+                            <!--<div class="dynamic-image">
+                                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Control4-Assist-Check.png" alt="Red check icon">
+                            </div>-->
+                        </td>
+                        <td class="purple-check-icon">
+                            <p>&#10004;</p>
+                            <!--<div class="dynamic-image">
+                                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Control4-Assist-Prem-Check.png" alt="Purple check icon">
+                            </div>-->
+                        </td>
+                </tr>
+                <tr>
+                    <td>   
+                    <a href="#" class="toggle-control" data-toggle-target-id="education-toggle">
+                        <button class="accordion">Personalized System Education     
+                            <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                            <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                        </button>      
+                    </a>
+                    <div id="education-toggle" class="toggle-content"> 
+                        <p>Video tutorials and resources are available to all our customers, but if they prefer having someone they can call anytime for a personalized walk-through, then the Control4 Assist Premium plan may be right for them. Our team is ready to share their knowledge and their favorite tips and insights.</p>
+                    </div>
+                         </td>
+                         <td>
+                        </td>
+                        <td class="purple-check-icon">
+                            <p>&#10004;</p>
+                            <!--<div class="dynamic-image">
+                                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Control4-Assist-Prem-Check.png" alt="Purple check icon">
+                            </div>-->
+                        </td>
+                </tr>
+                <tr>
+                    <td>   
+                    <a href="#" class="toggle-control" data-toggle-target-id="program-toggle">
+                        <button class="accordion">Post-Install Personalizations & Programming†      
+                            <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                            <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                        </button>      
+                    </a>
+                    <div id="program-toggle" class="toggle-content"> 
+                        <p>The When>>Then feature empowers customers to modify scenes on their own, based on your initial system programming. With the Premium plan, our Assist team is able to modify any system personalization or programming to keep it evolving to customer needs. </p>
+                    </div>
+                         </td>
+                         <td>
+                        </td>
+                        <td class="purple-check-icon">
+                            <p>&#10004;</p>
+                            <!--<div class="dynamic-image">
+                                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Control4-Assist-Prem-Check.png" alt="Purple check icon">
+                            </div>-->
+                        </td>
+                </tr>
+                <tr>
+                    <td>   
+                    <a href="#" class="toggle-control" data-toggle-target-id="newdevice-toggle">
+                        <button class="accordion">New Device Connection<sup>1</sup>      
+                            <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                            <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                        </button>      
+                    </a>
+                    <div id="newdevice-toggle" class="toggle-content"> 
+                        <p>You have a wealth of knowledge when it comes to the latest tech, and we encourage customers to reach out to you directly regarding new products. However, we understand customers don’t always need an expert. If they want help connecting plug-and-play devices like cable boxes or Rokus to their Control4 system, our team is available remotely to assist.</p>
+                    </div>
+                         </td>
+                         <td>
+                        </td>
+                        <td class="purple-check-icon">
+                            <p>&#10004;</p>
+                            <!--<div class="dynamic-image">
+                                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Control4-Assist-Prem-Check.png" alt="Purple check icon">
+                            </div>-->
+                        </td>
+                </tr>
+                <tr>
+                    <td>   
+                    <a href="#" class="toggle-control" data-toggle-target-id="check-toggle">
+                        <button class="accordion">Bi-annual Check-ins     
+                            <span class="icon-down"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"></span>
+                            <span class="icon-up"><img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"></span>
+                        </button>      
+                    </a>
+                    <div id="check-toggle" class="toggle-content"> 
+                        <p>Our Assist Team will proactively check in twice a year by your customer's preferred method of communication (phone or email), to set up an optional appointment for assessing their system. We will review system data, devices, and usage to provide recommendations, updates, or optimizations like modifying/updating lighting scenes, and suggested programming enhancements. This is an opportunity for customers to further personalize their system, ask questions, and repair configurations if necessary. </p>
+                    </div>
+                         </td>
+                         <td>
+                        </td>
+                        <td class="purple-check-icon">
+                            <p>&#10004;</p>
+                            <!--<div class="dynamic-image">
+                                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Control4-Assist-Prem-Check.png" alt="Purple check icon">
+                            </div>-->
+                        </td>
+                </tr>
+                <tfoot>
+                    <tr>
+                        <th>Customer Price</th>
+                        <th class="right-align-title">$899/year</th>
+                        <th class="right-align-title">$2,999/year</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    
+    <div class="assist-disclaimer">
+        <div class="row-fluid">
+            <div class="span12">
+                <p>Note: Control4 Assist and Assist Premium support plans are only available in the United States on systems that have the Control4 Connect service enabled. You must be selected and authorized to offer Control4 Assist support plans. Our services are limited to what can be reasonably provided remotely pursuant to the applicable Terms of Use and within the scope of the Assist Services you purchase. </p>
+                <p>*Hawaii and Alaska support operate on Pacific Time.  </p>
+                <p>† Programing may be limited to programing that can be performed by using the system’s “When >> Then” programing functionality as well as adding new products that can be reasonably added remotely.  Security system updates are not included.</p>
+                <p><sup>1</sup>Limited to remote assistance for plug-and-play devices that are compatible with Control4. No onsite service provided. See Terms & Conditions for details. </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="trusted-partnership">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="dynamic-image">
+                    <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/assist_ui-banner-v1.png" alt="Mobile device showing the UI if the Assist program">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="how-it-works">
+        <div class="row-fluid">
+            <div class="span12 center">
+                <h3 class="secondary-header">How It Works</h3>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span6">
+                <div class="thumbnail-block steps-padding">
+                    <h4>1. Assist Authorized</h4>
+                    <p>Only Assist Authorized Partners may sell Assist. You become authorized to sell Assist by meeting certain qualifications, taking the Control4 Assist Authorization course, and agreeing to the Service Level expectations. If you’re interested in applying, you should reach out to your Sales Representative. </p>
+                </div>
+            </div>
+            <div class="span6">
+                <div class="thumbnail-block steps-padding">
+                    <h4>4. We Take the Calls, You Take the Credit</h4>
+                    <p>Your customers call us when they have problems instead of you, allowing your technicians and programmers to focus on revenue-generating work such as acquiring new clients or installing new projects. </p>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span6">
+                <div class="thumbnail-block steps-padding">
+                    <h4>2. Connect Customers Only</h4>
+                    <p>You may sell these remote support plans to new Control4 customers who have Connect enabled. Connect is required on all new Control4 systems in the United States beginning April 23, 2024.</p>
+                </div>
+            </div>
+            <div class="span6">
+                <div class="thumbnail-block steps-padding">
+                    <h4>5. Earn Recurring Revenue</h4>
+                    <p>Control4 will manage customer payment processing and compensate you monthly through ACH transfers for your share of the recurring revenue, as long as you remain the Dealer of Record for your customers with active Control4 Connect. This process removes the hassle of you having to operationalize payment collection and customer communications.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span6">
+                <div class="thumbnail-block steps-padding">
+                    <h4>3. It’s All in the App</h4>
+                    <p>Your customer chooses the plan that best fits their needs and pays directly through the Control4 App. </p>
+                </div>
+            </div>
+            <div class="span6">
+            </div>
+        </div>
+    </div>
+    
+    <div class="assist-gradiant">
+        <div class="row-fluid">
+            <div class="span12">
+                <q class="quote-copy">I have already made several calls to make slight programming adjustments or to ask how to make this feature work, etc. The Snap One professional contacts were articulate, knowledgeable, supportive and available when I needed assistance. They also followed up to ensure all was still working per our discussion.</q>
+                <p>- Karen A., Control4 customer</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    
+    <div class="become-authorized">
+        <div class="row-fluid">
+            <div class="span6">
+                <div class="dynamic-image">
+                    <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/become-authorized.png" alt="Man at a computer desk">
+                </div>
+            </div>
+            <div class="span6">
+                <div class="thumbnail-block">
+                    <h4 class="section-subheader-bold">How to Become Authorized to Sell Assist: </h4>
+                    <p>You become authorized to sell Assist by taking the Control4 Assist Authorization course and agreeing to the Service Level expectations. You can apply to become Assist Authorized, which requires you to meet eligibility requirements, complete the Assist Authorization course and agree to Service Level expectations. If you’re interested in applying, you should reach out to your Sales Representative. </p>
+                    <!--<p><a href="#">Control4 Assist Authorization </a></p>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    
+    <div class="row-fluid">
+        <div class="span12 center">
+            <h3 class="secondary-header">Resources</h3>
+        </div>
+    </div>
+    
+    <div class="get-familiar">
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="dynamic-image">
+                    <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/get-familiar-w-c4-assist.png" alt="gentleman working on a laptop">
+                </div>
+            </div>
+            <div class="span8">
+                <h3 class="section-subheader-bold">Get Familiar with Control4 Assist and Assist Premium </h3>
+                <div class="yellow-line"></div>
+                <div class="row-fluid">
+                    <div class="span6">
+                        <h4>Overview Video </h4>
+                        <p>This is a video for Partners to get a quick overview of Control4 Assist. </p>
+                        <p><a  class="video-link" herf="#" data-id="874943453">Watch Now</a>
+                            <!--<a href="https://player.vimeo.com/video/874943453?h=119e9f6299" target="_blank" id="Assist-Overview-Video"> </a>-->
+                        </p>
+                    </div>
+                    <div class="span6">
+                        <h4>Sales Guide</h4>
+                        <p>A comprehensive guide for getting to know and effectively including Control4 Assist on all new proposals. </p>
+                        <p><a href="http://ctrl4.co/assist-salesguide" target="_blank" id="Assist-SalesGuide">View PDF</a></p>
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span6">
+                        <h4>Cutsheet</h4>
+                        <p>A brief summary of crucial information for Partners who need to sell on the go. </p>
+                        <p><a href="http://ctrl4.co/assist-cutsheet " target="_blank" id="Assist-Cutsheet">View PDF</a></p>
+                    </div>
+                    <div class="span6">
+                        <h4>Customer Communications Overview </h4>
+                        <p>A guide to Control4 communications that will assist customers with payment, renewal, and system education to improve their overall experience.</p>
+                        <p><a href="http://ctrl4.co/assist-communications" target="_blank" id="Assist-CommGuide">Learn More</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="for-education">
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="dynamic-image">
+                    <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/integrators-talking-at-tradeshow.png" alt="gentleman working on a laptop">
+                </div>
+            </div>
+            <div class="span8">
+                <h3 class="section-subheader-bold">Resources for Education </h3>
+                <div class="yellow-line"></div>
+                <div class="row-fluid">
+                    <div class="span6">
+                        <h4>Pricing & Revenue Share </h4>
+                        <p>Get the pricing breakdown and revenue share details for Control4 Assist and Assist Premium. </p>
+                        <p><a href="http://ctrl4.co/assist-pricing-revenue" target="_blank" id="Assist-Pricing">Learn More</a></p>
+                    </div>
+                    <div class="span6">
+                        <h4>Education</h4>
+                        <p>Get access to documentation, videos, and conversations focused on Control4 Assist. </p>
+                        <p><a href="http://ctrl4.co/assist-help" target="_blank" id="Assist-Education">Learn More</a></p>
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span6">
+                        <h4>FAQs for Partners </h4>
+                        <p>Questions Partners may ask about Control4 Assist.</p>
+                        <p><a href="http://ctrl4.co/assist-partner-faq" target="_blank" id="Assist-FAQPartners">View PDF</a></p>
+                    </div>
+                    <div class="span6">
+                        <h4>Brand Assets </h4>
+                        <p>Marketing assets, logos, and images for Control4 Assist. </p>
+                        <p><a href="https://brandfolder.com/s/2bcxw6tpfbrfjnpncgsvn7gb" target="_blank" id="Assist-BrandAssets">Learn More</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="for-customers">
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="dynamic-image">
+                    <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Assist-Resource-for-customers.png" alt="gentleman working on a laptop">
+                </div>
+            </div>
+            <div class="span8">
+                <h3 class="section-subheader-bold">Resources for Customers </h3>
+                <div class="blue-line"></div>
+                <div class="row-fluid">
+                    <div class="span6">
+                        <h4>FAQs for Customers </h4>
+                        <p>Questions Customers may ask about Control4 Assist and Assist Premium. </p>
+                        <p><a href="http://ctrl4.co/assist-user-faq " target="_blank" id="Assist-FAQCustomers">Learn More</a></p>
+                    </div>
+                    <div class="span6">
+                        <h4>Control4 Assist and Assist Premium Product Page </h4>
+                        <p>Home for all product information on Control4 Assist for customers. </p>
+                        <p><a href="https://www.control4.com/o/assist" target="_blank" id="Assist-wwwC4">Learn More</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,673 @@
+<style> 
+		/*====================
+Navigation style 
+=====================*/
+	.brand-nav {
+		margin-bottom: 0px;
+	}
+	.brand-pg-nav {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  overflow: hidden;
+	  float: right;
+}
+	.brand-nav li {
+	  display: inline-block;
+	}
+	.brand-nav li a {
+	  display: block;
+	  color: #7c7e7f;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	  font-family: Lato;
+	  font-size: 1.5rem;
+	}
+	/* Change the link color on hover */
+	.brand-nav li a:hover {
+	  color: #4499e3;
+	}
+/* Change the link color on click */
+	.brand-nav.active {
+	  color: #4499e3;
+	}	
+
+/*=======================================================
+FORMATTING
+========================================================*/
+h1.title {
+	font-size:2.4rem; 
+	font-weight:normal; 
+	color:#fff;	
+}
+
+h3.sub {
+	color:#fff;	
+}
+	
+.p_padding_left {
+	padding:50px 70px 0;
+	position:relative;
+	z-index:3;
+}
+
+.p_padding_left2 {
+	padding:130px 85px 0;
+	position:relative;
+	z-index:3;
+}
+
+.p_padding_right {
+	padding:35px 70px 0;
+	position:relative;
+	z-index:3;
+}
+
+.p_padding_right2 {
+	padding:90px 70px 0;
+	position:relative;
+	z-index:3;
+}
+
+.hero {
+	padding: 0 160px;	
+}
+
+h4 {
+	font-size:1.4rem;
+	color:#fff;	
+}
+	
+	
+/*=======================================================
+IMAGES
+========================================================*/
+
+.mobileshow {
+	display:none;	
+}
+
+.mobilehide {
+	display:block;	
+}
+
+.alpha_left {
+	background-color:#000;
+	opacity:0.6;
+	position:absolute;
+	z-index:2;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	width:40%
+	
+	}
+	
+.alpha_right {
+	background-color:#000;
+	opacity:0.6;
+	position:absolute;
+	z-index:2;
+	top:0;
+	bottom:0;
+	right:0;
+	width:40%
+	}
+	
+.mega_bkgr{
+    background-image:url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Mega.jpg');
+    background-size: cover;
+	background-position:center;
+	width: 100%;
+    height: 400px;
+    /*padding: 165px 0px 0px 30px;*/
+	position:relative;
+    }	
+	    
+.img1{
+	background-image: url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/episode_top_banner.png');
+	background-size: cover;
+	background-position:center;
+    width: 100%;
+    height: 400px;
+    padding: 100px 0px 0px 0px;
+	z-index:-1;
+	}
+.img2{
+	background-image: url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/sub_2_image.jpg');
+	background-size: cover;
+	background-position:center;
+	width: 100%;
+    height: 400px;
+    /*padding: 60px;*/
+	position:relative;
+	}
+	  
+.img3{
+    background-image:url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/sub_3_image.jpg');
+    background-size: cover;
+	background-position:center;
+	width: 100%;
+    height: 400px;
+    /*padding: 165px 0px 0px 30px;*/
+	position:relative;
+    }
+.img4{
+	background-image: url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/sub_4_image.jpg');
+	background-size: cover;
+	background-position:center;
+	width: 100%;
+    height: 400px;
+	position:relative;
+}
+
+.img5{
+    background-image:url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/speakers/sub.png');
+    background-size: cover;
+	background-position:center;
+	width: 100%;
+    height: 400px;
+	position:relative;
+    /*padding: 185px 0px 0px 30px;*/
+    } 
+	
+	.bandpass {
+		background-image:url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Bandpass.jpg');
+		background-size: cover;
+		background-position:center;
+		width: 100%;
+		height: 400px;
+		position:relative;
+	}
+	.bandpass-mobile {
+		display: none;
+	}
+	.sub-amps {
+		background-image:url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Subwoofer-Amplifiers.jpg');
+		background-size: cover;
+		background-position:center;
+		width: 100%;
+		height: 400px;
+		position:relative;
+		margin-top: -10px;
+	}
+	.sub-amps-mobile {
+		display: none;
+	}
+
+/*=======================================================
+MEDIA
+========================================================*/  
+	
+@media (min-width: 1025px) {
+.row-fluid .span1 {
+    width: 8.3%;
+}
+
+}
+
+@media (max-width: 1024px) and (min-width: 980px) {
+	
+.row-fluid .span1 {
+    width: 8.3%;
+}
+
+.p_padding_left {
+	padding:50px 40px 0;
+}
+
+.p_padding_left2 {
+	padding:50px 40px 0;
+}
+
+}
+
+@media (max-width: 979px) {
+.row-fluid .span1 {
+    width: 80%;
+}
+
+.p_padding_left {
+	padding:60px 20px 0;
+}
+
+.p_padding_left2 {
+	padding:60px 20px 0;
+}
+
+.p_padding_right {
+	padding:60px 20px 0;
+}
+
+.p_padding_right2 {
+	padding:60px 20px 0;
+}
+
+}
+
+@media (max-width: 768px) {
+	h3.sub-nav {
+	margin: 2px 0;	
+	}
+}
+
+	
+@media (max-width: 541px){
+	
+	h1.title { 
+	color:#000;	
+	}
+	
+	h3.sub {
+	color:#000;	
+	}
+	
+	h4 {
+	font-size:1.4rem;
+	color:#000;	
+	}
+	
+	.hero {
+	padding: 0 20px;	
+	}
+	
+	.p_padding_right {
+	padding:15px 20px 20px;
+	}
+	
+	.mobileshow {
+	display:block;	
+	}
+
+	.mobilehide {
+	display:none;	
+	}
+
+	.alpha_left {
+	opacity:0;
+	}
+	
+	.alpha_right {
+	opacity:0;
+	}
+	
+	
+	.mega_bkgr {
+		text-align:center;
+		background-image:none;
+		height:auto;
+	}
+	
+	.img1 {
+		padding: 70px 0px 40px 0px;	
+	}
+	
+	
+	.img2 {
+		text-align:center;
+		background-image:none;
+		height:auto;
+	}	
+	
+	.img3 {
+		text-align:center;
+		background-image:none;
+		height:auto;
+	}
+	
+	.img4 {
+		text-align:center;
+		background-image:none;
+		height:auto;
+	}
+	
+	.img5 {
+		text-align:center;
+		background-image:none;
+		height:auto;
+	}
+	.bandpass, .sub-amps{
+		display: none;
+	}
+	.sub-amps-mobile, .bandpass-mobile {
+		display: block;
+		text-align: center;
+		padding: 10px;
+	}
+    }
+</style>
+
+<!-- START BREADCRUMBS !-->
+<div id="productsGlobalBreadCrumbs">
+    <div id="breadcrumb" class="breadcrumb">
+        <div id="WC_BreadCrumbTrailDisplay_div_1" class="breadcrumb_links"> 
+            <a id="WC_BreadCrumbTrailDisplay_link_2" href="/shop/en/snapav/home">Home</a> 
+            <span class="breadcrumb-divider">|</span> 
+            <a id="WC_BreadCrumbTrailDisplay_link_5a" href="/shop/en/snapav/about">About SnapAV</a> 
+            <span class="breadcrumb-divider">|</span> 
+            <a id="WC_BreadCrumbTrailDisplay_link_5a" href="/shop/en/snapav/brands">Brands</a> 
+            <span class="breadcrumb-divider">|</span> Episode
+        </div>
+        <div id="WC_BreadCrumbTrailDisplay_div_3" class="breadcrumb_dropdowns">
+            <div id="WC_BreadCrumbTrailDisplay_div_4" class="breadcrumb_item"> </div>
+        </div>
+    </div>
+</div>
+<!-- END BREADCRUMBS !-->
+
+<!-- NAV START -->
+ 
+<div class="row-fluid brand-nav">
+	<div class="span12">
+		<h1 style="color:#7c7e7f; float:left;">Episode</h1>
+			<ul class="brand-pg-nav">
+			  <li><a class="active" href="/shop/en/snapav/episode">Overview</a></li>
+			  <li><a href="/shop/en/snapav/episode-architectural" >Architectural</a></li>
+			  <li><a href="/shop/en/snapav/episode-subwoofers" style="color:#4499e3;">Subwoofers</a></li>
+			  <li><a href="/shop/en/snapav/episode-soundbars">Soundbars</a></li>
+			  <li><a href="/shop/en/snapav/episode-outdoor">Outdoor</a></li>
+			  <li><a href="/shop/en/snapav/episode-commercial">Commercial</a></li>
+			  <li><a href="/shop/en/snapav/episode-amps">Amplifiers</a></li>
+			</ul>
+	</div>
+</div>
+<hr style="margin:0 0 10px 0;">
+ 
+<!-- NAV END -->
+
+<!-- START SECTION 1 Mobile-ready -->
+<div class="img1">
+	<div class="row-fluid">
+		<div class="span12">
+			<div class="thumbnail-block center">
+                <!--<div class="dynamic-image">
+                    <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/NPC/landingpages/Luma_overview_logo.png">
+                </div>-->
+                <br>
+                <h1 style="color: white; font-size:3rem; font-weight:normal">Bring the Boom</h1>
+                <h3 style="color: white; font-weight:normal" class="hero">No audio install is complete without the deep, rich bass of an Episode subwoofer. With multiple options, as well as a complete line of sub amps, you'll have everything you need to provide deep bass in every room, no matter the size.</h3>
+                <div style="padding-top:20px;"><a href="/shop/en/snapav/search/subwoofers"><div class="btn-1">Shop Now</div></a></div>
+            </div>
+		</div>
+	</div>
+</div>
+<!-- END SECTION 1 !-->
+
+<!-- START MEGA -->
+<!-- START SECTION 3 !-->
+<div class="mega_bkgr mobilehide">
+	<div class="row-fluid">
+    	<div class="span7">
+        &nbsp;
+        </div>
+		<div class="span5">
+			<div class="thumbnail-block">
+            <div class="alpha_right"></div>
+            	<div class="p_padding_right">
+                <h1 class="title">MEGA </h1>
+                <h3 class="sub">MEGA is an extremely powerful line of advanced subs that deliver seriously low bass at very loud volumes with negligible distortion. </h3>
+                 <h4>Size: 8”, 10”, 12”, 15”<br />
+                Power: 120W - 1000W Continuous <br />
+                Frequency: 30-250 Hz - 17-250 Hz <br />
+                Best for: High-End Home Theaters </h4>  
+              </div> 
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="mega_bkgr mobileshow">
+	<div class="row-fluid">
+    	<div class="span12">
+                <div class="dynamic-image">
+                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Mega_mobile.jpg" alt="Angled view of Episode MEGA subwoofer on the floor of a living room">
+                </div>
+        </div>
+    </div>
+	<div class="row-fluid">
+		<div class="span12">
+			<div class="thumbnail-block">
+            	<div class="p_padding_right">
+                <h1 class="title">MEGA </h1>
+                <h3 class="sub">MEGA is an extremely powerful line of advanced subs that deliver seriously low bass at very loud volumes with negligible distortion. </h3>
+                 <h4>Size: 8”, 10”, 12”, 15”<br />
+                Power: 120W - 1000W Continuous <br />
+                Frequency: 30-250 Hz - 17-250 Hz <br />
+                Best for: High-End Home Theaters </h4>  
+              </div> 
+		</div>
+	</div>
+</div>
+</div>
+<!-- END MEGA -->
+
+
+<!-- START SECTION 2 -->
+<div class="img2 mobilehide">
+	<div class="row-fluid">
+		<div class="span5">
+			<div class="thumbnail-block">
+            <div class="alpha_left"></div>
+            	<div class="p_padding_left">
+                <h1 class="title">Triple </h1>
+                <h3 class="sub">In the case of the Episode Triple subwoofer, the name speaks for itself. Three woven fiberglass woofers mean this sub is ideal for dedicated home theaters and audio systems that require high output from a small cabinet.</h3>
+                <h4>Size: 8" or 10"<br />
+                Power: 1200W <br />
+                Frequency: 30-200 Hz <br />
+                Best for: Music </h4>     
+                </h3>
+              </div> 
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="img2 mobileshow" style="padding-top: 20px;">
+	<div class="row-fluid">
+    	<div class="span12">
+                <div class="dynamic-image">
+                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/mob_sub_2_image.jpg" alt="Episode subwoofer">
+                </div>
+        </div>
+    </div>
+	<div class="row-fluid">
+		<div class="span12">
+			<div class="thumbnail-block">
+            	<div class="p_padding_right">
+                <h1 class="title">Triple </h1>
+                <h3 class="sub">In the case of the Episode Triple subwoofer, the name speaks for itself. Three woven fiberglass woofers mean this sub is ideal for dedicated home theaters and audio systems that require high output from a small cabinet.</h3>
+                <h4>Size: 8" or 10"<br />
+                Power: 1200W <br />
+                Frequency: 30-200 Hz <br />
+                Best for: Music </h4>     
+                </h3>
+              </div> 
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- START SECTION 3 !-->
+<div class="img3 mobilehide">
+	<div class="row-fluid">
+    	<div class="span7">
+        &nbsp;
+        </div>
+		<div class="span5">
+			<div class="thumbnail-block">
+            <div class="alpha_right"></div>
+            	<div class="p_padding_right">
+                <h1 class="title">Evolution  </h1>
+                <h3 class="sub">Our engineers wanted to achieve the big bass performance of a large, ported subwoofer, but with the tight punchiness of a sealed enclosure. Enter the Episode Evolution sub, designed with a dual EQ system that precisely shapes the output for flatter and lower frequency response. </h3>
+                 <h4>Size: 6", 8", 10", 12"<br />
+                Power: 720W <br />
+                Frequency: 50-200 Hz <br />
+                Best for: Music &amp; Movies </h4>  
+              </div> 
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="img3 mobileshow">
+	<div class="row-fluid">
+    	<div class="span12">
+                <div class="dynamic-image">
+                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/mob_sub_3_image.jpg" alt="Episode subwoofer on the floor of a living room">
+                </div>
+        </div>
+    </div>
+	<div class="row-fluid">
+		<div class="span12">
+			<div class="thumbnail-block">
+            	<div class="p_padding_right">
+                <h1 class="title">Evolution  </h1>
+                <h3 class="sub">Our engineers wanted to achieve the big bass performance of a large, ported subwoofer, but with the tight punchiness of a sealed enclosure. Enter the Episode Evolution sub, designed with a dual EQ system that precisely shapes the output for flatter and lower frequency response. </h3>
+                 <h4>Size: 6", 8", 10", 12"<br />
+                Power: 720W <br />
+                Frequency: 50-200 Hz <br />
+                Best for: Music &amp; Movies </h4>  
+              </div> 
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- START SECTION 4 !-->
+<div class="img4 mobilehide">
+	<div class="row-fluid">
+		<div class="span5">
+			<div class="thumbnail-block">
+            	<div class="alpha_left">
+            	</div>
+            	<div class="p_padding_left">
+                <h1 class="title">Element  </h1>
+                <h3 class="sub">For customer who want the most bang for their buck, look no further than the Episode Element Ported subwoofer. This sub’s aerodynamic port design minimizes port noise and reduces distortion, leaving you solid, thumping lows. </h3>
+                <h4>Size: 8", 10",  12"<br />
+                Power: 720W <br />
+                Frequency: 17-200 Hz <br />
+                Best for: Movies </h4> 
+              </div> 
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="img4 mobileshow">
+	<div class="row-fluid">
+    	<div class="span12">
+                <div class="dynamic-image">
+                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/mob_sub_4_image.jpg" alt="Element subwoofer from Episode">
+                </div>
+        </div>
+    </div>
+	<div class="row-fluid">
+		<div class="span12">
+			<div class="thumbnail-block">
+            	<div class="p_padding_right">
+                <h1 class="title">Element  </h1>
+                <h3 class="sub">For customer who want the most bang for their buck, look no further than the Episode Element Ported subwoofer. This sub’s aerodynamic port design minimizes port noise and reduces distortion, leaving you solid, thumping lows. </h3>
+                <h4>Size: 8", 10",  12"<br />
+                Power: 720W <br />
+                Frequency: 17-200 Hz <br />
+                Best for: Movies </h4> 
+              </div> 
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- START SECTION 5 !-->
+<div class="img5 mobilehide">
+	<div class="row-fluid">
+    	<div class="span7">
+        &nbsp;
+        </div>
+		<div class="span5">
+			<div class="thumbnail-block">
+            <div class="alpha_right"></div>
+            	<div class="p_padding_right2">
+                <h1 class="title">Architectural</h1>
+                <h3 class="sub">Deliver room-shaking bass that hides discreetly out of sight with our lineup of architectural subwoofers and enclosures. </h3>
+                <h4>Size: 8"<br />
+                Enclosure Options: None (Free Air), Preconstruction, Retrofit, Single and Dual Configuration </h4>
+              </div> 
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="img5 mobileshow" style="padding-bottom:30px;">
+	<div class="row-fluid">
+    	<div class="span12">
+                <div class="dynamic-image">
+                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/speakers/mob_sub_5_image_v2.jpg" alt="Architectural speaker from Episode">
+                </div>
+        </div>
+    </div>
+	<div class="row-fluid">
+		<div class="span12">
+			<div class="thumbnail-block">
+            	<div class="p_padding_right">
+                <h1 class="title">Architectural</h1>
+                <h3 class="sub">Deliver room-shaking bass that hides discreetly out of sight with our lineup of architectural subwoofers and enclosures.</h3>
+				<h4>Size: 8"<br>
+                Enclosure Options: None (Free Air), Preconstruction, Retrofit, Single and Dual Configuration </h4>
+              </div> 
+		</div>
+	</div>
+</div>
+</div>
+<!-- Bandpass -->	
+<div class="row-fluid bandpass">
+		<div class="span5">
+			<div class="thumbnail-block">
+				<div class="alpha_left"></div>
+            	<div class="p_padding_left">
+                <h1 class="title">Bandpass</h1>
+                <h3 class="sub">The Episode Impression bandpass in-ceiling subwoofer pairs with our Impression speakers to provide excellent full-range sound while adhering to room aesthetics. This sub uses a bandpass design to produce deeper bass through a smaller opening for discreet integration.</h3>    
+              </div> 
+		</div>
+	</div>
+</div>
+<div class="bandpass-mobile" style="padding-top: 20px;">
+	<div class="row-fluid">
+    	<div class="span12">
+                <div class="dynamic-image">
+                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Bandpass.jpg" alt="New Episode Impression series subwoofer">
+                </div>
+				<div class="thumbnail-block">
+					<h1>Bandpass</h1>
+					<h3>The Episode Impression bandpass in-ceiling subwoofer pairs with our Impression speakers to provide excellent full-range sound while adhering to room aesthetics. This sub uses a bandpass design to produce deeper bass through a smaller opening for discreet integration.</h3>    
+				</div>
+        </div>
+    </div>
+</div>	
+<!-- Sub amps -->	
+<div class="row-fluid sub-amps">
+		<div class="span7">&nbsp;</div>
+		<div class="span5">
+			<div class="thumbnail-block">
+				<div class="alpha_right"></div>
+            	<div class="p_padding_right">
+                <h1 class="title">Subwoofer Amplifiers</h1>
+                <h3 class="sub">Give your customers deep bass in every room using an Episode subwoofer amplifier. With three options to choose from, we have the perfect amp for any size room. Plus, they work perfectly with our dynamic amps. Simply connect directly into the dedicated subwoofer output in any zone for total-home bass.</h3>    
+              </div> 
+		</div>
+	</div>
+</div>
+<div class="sub-amps-mobile" style="padding-top: 20px;">
+	<div class="row-fluid">
+    	<div class="span12">
+                <div class="dynamic-image">
+                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Subwoofer-Amplifiers.jpg" alt="Episode subwoofer amps">
+                </div>
+				<div class="thumbnail-block">
+					<h1>Subwoofer Amplifiers</h1>
+					<h3>Give your customers deep bass in every room using an Episode subwoofer amplifier. With three options to choose from, we have the perfect amp for any size room. Plus, they work perfectly with our dynamic amps. Simply connect directly into the dedicated subwoofer output in any zone for total-home bass.</h3>    
+				</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,457 @@
+<style> 
+    /*====================
+Navigation style 
+=====================*/
+.brand-nav {
+    margin-bottom: 0px;
+}
+.brand-pg-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  float: right;
+}
+.brand-nav li {
+  display: inline-block;
+}
+.brand-nav li a {
+  display: block;
+  color: #7c7e7f;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: Lato;
+  font-size: 1.5rem;
+}
+/* Change the link color on hover */
+.brand-nav li a:hover {
+  color: #4499e3;
+}
+/* Change the link color on click */
+.brand-nav.active {
+  color: #4499e3;
+}   
+/*====================
+Formatting
+=====================*/
+h2 {
+    font-size: 2.5rem;
+}
+.surveillance-streamlined{
+background-image: url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Surveillance-Streamlined.png');
+background-size: cover;
+background-position:center;
+width: 100%;
+height: auto;
+text-align: center;
+padding: 45px 10px;
+margin-bottom: 45px;
+}
+
+.surveillance-streamlined .thumbnail-block {
+    padding: 20px 145px 270px;
+}
+
+.ai-tech{
+    text-align: center;
+    margin: 75px 0px 50px;
+    padding: 20px 135px;
+}
+
+.ai-video-section {
+    margin: 65px 0;
+}
+
+.cards {
+    margin: 30px auto;
+    max-width: 1025px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    gap: 30px;
+}
+
+.card {
+    
+}
+
+.card .dynamic-image{
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card .dynamic-image img {
+    border-radius: 10px 10px 0px 0px;
+}
+
+.card-content {
+    padding: 20px 30px;
+    background: #EBEBEB;
+    text-align: center;
+    border-radius: 0px 0px 10px 10px;
+    height: 240px;
+}
+
+.human-detection-card .container, .vehicle-detection-card .container, .non-motor-detection-card .container {
+    background-color: #EBEBEB;
+    width: 30%;
+    height: auto;
+}
+
+.faster-setup{
+    margin: 95px 0;
+}
+.faster-setup .thumbnail-block{
+    padding: 60px 86px 60px 43px;
+}
+
+.luma-view {
+    margin: 50px 0;
+}
+
+.luma-view .thumbnail-block{
+    padding: 78px 40px 78px 25px;
+}
+   
+.client-privacy{
+background-image:url(/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/SnapOne_Keeps-Clients-Privacy-Safe.png);
+background-size: cover;
+background-position:center;
+margin: 10px 0;
+width: 100%;
+height: auto;
+}    
+
+.client-privacy h3 {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.client-privacy p {
+    color: white;
+}
+
+.client-privacy .thumbnail-block {
+    padding: 133px 42px 90px 616px;
+}
+
+.cameras-and-nvrs{ 
+margin: 30px 0;
+}
+
+.cameras-and-nvrs .thumbnail-block {
+    padding: 45px 38px;
+}
+
+.system-integration {
+    margin: 30px 0;
+}
+
+.system-integration .thumbnail-block{
+    text-align: center;
+    padding: 20px 225px;
+}
+   
+.built-to-last{
+background-image:url(/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Built-to-last.png);
+background-size: cover;
+background-position:center;
+margin: 10px 0;
+width: 100%;
+height: auto;
+}    
+
+.built-to-last h3 {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.built-to-last p {
+    color: white;
+}
+
+.built-to-last .dynamic-image {
+    display: none;
+}
+
+.built-to-last .thumbnail-block {
+    padding: 211px 46px 84px 94px;
+}
+/*====================
+Mobile
+=====================*/
+@media (max-width: 800px){
+    .surveillance-streamlined .thumbnail-block {
+    padding: 16px 10px 100px;
+    }
+        .ai-video-section {
+        margin: 65px 0;
+    }
+    .ai-tech {
+        padding: 20px 10px;
+        margin: 20px 0;
+    }
+    .card-content {
+        height: 353px;
+        padding: 10px;
+    }
+    .luma-view .thumbnail-block{
+        padding: 25px 0px 8px 10px;
+}
+    .client-privacy .thumbnail-block{
+        text-align: center;
+        padding: 45px;
+    }
+    .system-integration .thumbnail-block{
+        text-align: center;
+        padding: 20px 10px;
+    }
+    .built-to-last {
+        background-image: none;
+    }
+    .built-to-last .dynamic-image {
+        display: block;
+    }
+    .built-to-last p, .built-to-last h3 {
+        color: black;
+    }
+    .built-to-last .thumbnail-block {
+        padding: 68px 25px;
+    }
+}
+
+@media (max-width: 600px){
+
+.surveillance-streamlined{
+    text-align: center;
+    padding: 0px 10px 240px;
+    margin-bottom: 20px;
+}
+.ai-video-section {
+    margin: 0;
+}
+.cards {
+    display: block;
+}
+.card {
+    margin: 30px 0;
+}
+.faster-setup, .luma-view{
+    margin: 10px 0;
+}
+.system-integration .thumbnail-block, .luma-view .thumbnail-block, .cameras-and-nvrs .thumbnail-block, .faster-setup .thumbnail-block{
+    padding: 20px 10px;
+    text-align: center;
+}
+
+}
+</style>
+
+<!-- START BREADCRUMBS !-->
+<div id="productsGlobalBreadCrumbs">
+    <div id="breadcrumb" class="breadcrumb">
+        <div id="WC_BreadCrumbTrailDisplay_div_1" class="breadcrumb_links"> 
+            <a id="WC_BreadCrumbTrailDisplay_link_2" href="/shop/en/snapav/home">Home</a> 
+            <span class="breadcrumb-divider">|</span> 
+            <a id="WC_BreadCrumbTrailDisplay_link_5a" href="/shop/en/snapav/brands">Brands</a> 
+            <span class="breadcrumb-divider">|</span> Luma
+        </div>
+    </div>
+</div>
+<!-- END BREADCRUMBS !-->
+
+<!-- NAV START -->
+
+<div class="row-fluid brand-nav">
+    <div class="span12">
+        <h1 style="color:#7c7e7f; float:left;">Luma</h1>
+            <ul class="brand-pg-nav">
+            <li><a class="active" href="/shop/en/snapav/luma-overview" style="color:#4499e3;">Overview</a></li>
+            <!--<li><a href="/shop/en/snapav/luma-insights">Luma Insights</a></li>-->
+            <li><a href="/shop/en/snapav/luma-and-ovrc">Luma + OvrC</a></li>
+            <li><a href="/shop/en/snapav/luma-view">Luma View</a></li> 
+            <!--<li><a href="/shop/en/snapav/luma-vms">Luma View VMS</a></li> -->     
+            </ul>
+    </div>
+</div>
+<hr style="margin:0 0 10px 0;">
+
+<!-- NAV END -->
+
+<!-- START SECTION 1 !-->
+<div class="surveillance-streamlined">
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="dynamic-image">
+                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Luma-Surveillance-logo-color.png" alt="Luma Surveillance logo">
+            </div>
+            <div class="thumbnail-block">
+                <h1>Surveillance Streamlined</h1>
+                <p>Luma's robust product line offers easy-to-install, high-quality solutions with multiple, attractive end-user features. Your clients will enjoy the benefits of AI-filtered events, more accurate notifications, additional privacy measures, and advanced recording playback; all through the new Luma View app. Installation is simple thanks to Luma’s discreet form factors and streamlined control system integration. And, when you use OvrC you can save up to 50% of your time setting up and configuring a Luma system.</p>
+                <br>
+                <a class="video-link" href="#" data-id="781168169"><div class="btn-2">Watch Video</div></a>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END SECTION 1 !-->
+
+<div class="ai-tech">
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="thumbnail-block">
+                <h2>The Power of AI Technology </h2>
+                <p>Reduce false notifications and have your clients respond more accurately to them with the latest AI technology including advanced human, vehicle, and non-motor vehicle detection, as well as AI-filtered events. With AI-filtered events, your clients can quickly be notified, share, and view key moments their system finds throughout the day.</p>
+                <br>
+               <!-- <a class="video-link" href="#" data-id="768246021"><div class="btn-2">Watch Video</div></a>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ai-video-section">
+    <div class="cards">
+        <div class="card">
+            <a class="video-link" href="#" data-id="765800149">
+            <div class="dynamic-image">
+                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Human-detection.png" alt="Video screen grab for Human Detection">
+            </div>
+            </a>
+            <div class="card-content">
+                <h2>Human Detection</h2>
+                <p>View foot traffic, delivery people, or anyone else as they enter a Luma camera’s view. Through the Luma View app, clients can receive notifications and view events for enhanced peace of mind, even when they’re away.</p>
+            </div>
+        </div>
+        <div class="card">
+            <a class="video-link" href="#" data-id="765056806">
+            <div class="dynamic-image">
+                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Vehicle-Detection.png" alt="Video screen grab for Humna Detection">
+            </div>
+            </a>
+            <div class="card-content">
+                <h2>Vehicle Detection</h2>
+                <p>Luma’s advanced AI can detect vehicles, which can then send a notification, record a snapshot, create an event-based recording or even trigger a series of events when using a control system (ex. When a car enters the driveway, turn on pathway lighting).</p>
+            </div>
+        </div>
+        <div class="card">
+            <a class="video-link" href="#" data-id="765797808">
+            <div class="dynamic-image">
+                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Non-motor-detection.png
+                " alt="Video screen grab for Human Detection">
+            </div>
+            </a>
+            <div class="card-content">
+                <h2>Non-Motor Vehicle Detection</h2>
+                <p>Give your clients more accurate alerts with activity from non-motor vehicles like bikes or scooters.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- START SECTION 3 !-->
+<div class="faster-setup">
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="dynamic-image">
+                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Faster-Setup-with-OvrC.png">
+            </div> 
+        </div>
+        <div class="span6">
+            <div class="thumbnail-block">
+                <h2>Faster Setup with OvrC</h2>
+                <p>Save up to 50% of your time deploying and configuring a Luma system with OvrC! Setup is easy with OvrC allowing you to adjust event and image settings in real-time using a live video feed, all without needing to go into the device's local UI. Remotely manage and troubleshoot devices, set up AI-filtered events, record, and assign camera channels on NVRs.</p>
+                <br>
+                <a href="/shop/en/snapav/luma-and-ovrc"><div class="btn-2">Learn More</div></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Start SECTION 4!-->
+<div class="luma-view">
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="thumbnail-block">
+                <h2>Viewing Made Easy with Luma View </h2>
+                <p>Luma View gives your clients intuitive access to their surveillance system with push notifications, lightning-fast video viewing, easy access to share and view recordings, 16-channel synchronous playback, activity highlights with AI-filtered events, and more.</p>
+                <br>
+                <a href="/shop/en/snapav/luma-view"><div class="btn-2">Learn More</div></a>
+            </div>
+        </div>
+        <div class="span6">
+            <div class="dynamic-image">
+                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Luma-View.png" alt="">
+            </div> 
+        </div>
+    </div>
+</div>
+
+<!-- START SECTION 5 !-->
+<div class="client-privacy">
+    <div class="row-fluid">
+        <div class="thumbnail-block">
+            <h3>Keeps Client’s Privacy Safe</h3>
+            <p>Maintaining your client’s privacy and safety is essential for your business. Luma is built with privacy settings and features so the client can be assured that they are in control of their information.</p>
+            <p>After the installation is complete, a <a href="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/documents/Surveillance/SupportDocuments/Luma-Handoff-One-page-Overview.pdf" target="_blank" style="color: white; text-decoration: underline;">customer handoff </a>from the installer to the client happens giving them exclusive control and access to live videos and passwords. After this, only the client can view live video and can choose to give you access for troubleshooting purposes. Additionally, cameras never have their microphones enabled by default and can be turned on via Luma View as needed – or disabled altogether via OvrC.</p>
+        </div>
+    </div>
+</div>
+
+<!-- START SECTION 6 !-->
+<div class="cameras-and-nvrs">
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="dynamic-image">
+                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Luma-Cameras.png" alt="Luma bullet camera in ceiling">
+            </div>
+            <div class="thumbnail-block center">
+                <h2>Luma Cameras</h2>
+                <p>The Luma family of IP cameras is available in Bullet, Turret, Dome, and PTZ. Ranging from 2MP to 8MP resolution, fixed and varifocal lens options are also available. With a robust line of solutions, you can choose from cameras that include 24/7 color with Color at Night technology, improved clarity in low-light environments with Starlight, or IR imagery for dim settings. Luma cameras are fully NDAA-compliant and have you covered for any job that requires it. </p>
+                <a href="/shop/en/snapav/search/ip-cameras"><div class="btn-1">Shop Now</div></a>
+            </div>
+        </div>
+        <div class="span6">
+            <div class="dynamic-image">
+                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Luma-NVRs.png" alt="Luma NVR nested in a rack with Wattbox, Control4 and Araknis product">
+            </div>
+            <div class="thumbnail-block center">
+                <h2>Luma NVRs</h2>
+                <p>Luma NVRs provide powerful all-around performance and features, including recording for higher resolution cameras on all channels, with up to 12MP on some models, 4K HDMI output, intelligent analytics capabilities, and long-distance PoE with Cat6 cable up to 200m. All models are NDAA-compliant and are available in configurations of up to 32 channels and up to 144TB of total storage.  </p><br>
+                <a href="/shop/en/snapav/search/nvrs"><div class="btn-1">Shop Now</div></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- START SECTION 7-->
+<div class="system-integration">
+    <div class="row-fluid">
+        <div class="thumbnail-block">
+            <h2>Control System Integration</h2>
+            <p>Luma solutions have been redeveloped  to deliver deeper integration with control systems like Control4. Enjoy applications like Live Thumbnails, Single Camera view, enhanced PTZ Controls and camera settings management, auto resolution detection, and more.  </p>
+        </div>
+        <div class="dynamic-image">
+            <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Control-System-Integration.gif" alt="Bullet Camera sitting next to a control system interface">
+        </div>
+    </div>
+</div>
+
+<!-- START SECTION 8-->
+<div class="built-to-last">
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="dynamic-image">
+                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Built-to-last-Mobile.png" alt="Bullet Camera sitting next to a control system interface">
+            </div>
+        </div>
+        <div class="span6">
+            <div class="thumbnail-block">
+                <h3>Built to last</h3>
+                <p>Luma products are rigorously tested in our Quality Labs to ensure optimal performance. For additional assurance, a Luma 3-Year Limited Warranty is also included.</p>
+            </div>
+        </div>
+    </div>
+</div>

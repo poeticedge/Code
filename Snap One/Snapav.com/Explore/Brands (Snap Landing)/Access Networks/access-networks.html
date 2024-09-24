@@ -1,0 +1,580 @@
+<style>
+  /*====================Navigation style =====================*/
+  .brand-nav {
+    margin-bottom: 0px;
+  }
+  .brand-pg-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: right;
+  }
+  .brand-nav li {
+    display: inline-block;
+  }
+  .brand-nav li a {
+    display: block;
+    color: #7c7e7f;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Lato;
+    font-size: 1.5rem;
+  } /* Change the link color on hover */
+  .brand-nav li a:hover {
+    color: #4499e3;
+  } /* Change the link color on click */
+  .brand-nav.active {
+    color: #4499e3;
+  } /*====================Formatting=====================*/
+  .access-networks-header {
+    background-image: url(/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Access-Networks-header.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 799px;
+    padding: 175px 265px;
+    margin-bottom: 100px;
+  }
+  .access-networks-header h1,
+  .access-networks-header p {
+    color: white;
+  }
+  .next-level-container {
+    background-color: #f5f4f1;
+    height: auto;
+    padding: 60px 75px 50px;
+  }
+  .next-level-container .thumbnail-block {
+    padding: 20px 100px;
+  }
+  .advanced-access-points,
+  .network-support,
+  .unmatched-networking-reliability {
+    margin: 80px 0;
+  }
+  .staying-connected .thumbnail-block {
+    text-align: center;
+    padding: 50px 190px;
+  }
+  .custom-network .thumbnail-block {
+    padding: 50px 170px;
+  }
+  .access-nw-provides {
+    margin-bottom: 90px;
+  }
+  .access-nw-provides .thumbnail-block {
+    padding: 40px 10px;
+  }
+  .an-ovrc .thumbnail-block {
+    padding: 20px 100px;
+    margin-bottom: 80px;
+  }
+  .earn-pr-points {
+    background-color: #f5f4f1;
+    height: auto;
+    padding: 40px 25px;
+    border-radius: 10px;
+  }
+  .earn-pr-points .thumbnail-block {
+    padding: 10px 50px;
+  }
+  .earn-pr-points .dynamic-image {
+    padding-top: 20px;
+  }
+  .sub-header {
+    font-size: 2.5rem;
+  }
+  .network-services {
+    margin-bottom: 60px;
+  }
+  .navy-bkgnd {
+    background-color: #2d4052;
+    margin-top: 0px;
+    padding: 57px 17px;
+    height: auto;
+    text-align: center;
+  }
+  .navy-bkgnd-p {
+    color: white;
+  }
+  .navy-bkgnd-h3 {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  .advanced-access-points .thumbnail-block {
+    padding: 25px 30px;
+  }
+  .network-support .thumbnail-block {
+    padding: 25px 30px;
+  }
+  .unmatched-networking-reliability .thumbnail-block {
+    padding: 25px 30px;
+  }
+  .become-an-dealer {
+    background-image: url(/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Become-An-Dealer.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 556px;
+    padding: 80px 0px 80px 567px;
+  }
+  .text-container {
+    background-color: #f5f4f1;
+    padding: 47px 43px;
+    border-radius: 10px 0px 0px 10px;
+    height: 402px;
+  } /*====================Mobile=====================*/
+  @media (max-width: 800px) {
+    .access-networks-header,
+    .an-ovrc .thumbnail-block {
+      padding: 30px 10px;
+    }
+    .staying-connected,
+    .network-services,
+    .advanced-access-points,
+    .network-support,
+    .unmatched-networking-reliability {
+      margin: 30px 0;
+    }
+    .staying-connected .thumbnail-block,
+    .custom-network .thumbnail-block {
+      padding: 45px 50px;
+    }
+    .next-level-container {
+      padding: 20px 10px;
+    }
+    .next-level-container .thumbnail-block {
+      padding: 20px 10px;
+    }
+    .access-nw-provides .thumbnail-block {
+      padding: 10px;
+    }
+    .earn-pr-points .thumbnail-block {
+      padding: 10px;
+    }
+    .become-an-dealer {
+      height: auto;
+      padding: 20px 10px;
+    }
+    .text-container {
+      padding: 20px 10px;
+      height: auto;
+      border-radius: 10px;
+    }
+  }
+  @media (max-width: 600px) {
+    .access-networks-header {
+      height: auto;
+      margin-bottom: 20px;
+      padding: 133px 10px 268px;
+    }
+    .staying-connected,
+    .network-services,
+    .advanced-access-points,
+    .network-support,
+    .unmatched-networking-reliability {
+      margin: 30px 0;
+    }
+    .staying-connected .thumbnail-block,
+    .custom-network .thumbnail-block {
+      padding: 20px 10px;
+    }
+    .next-level-container {
+      padding: 20px 10px;
+    }
+    .next-level-container .thumbnail-block {
+      padding: 0px;
+    }
+    .earn-pr-points {
+      padding-top: 20px;
+    }
+    .become-an-dealer {
+      height: auto;
+      padding: 20px 10px;
+    }
+    .text-container {
+      padding: 20px 10px;
+      height: auto;
+      border-radius: 10px;
+    }
+  }
+</style>
+<!-- START BREADCRUMBS !-->
+<div id="productsGlobalBreadCrumbs">
+  <div id="breadcrumb" class="breadcrumb">
+    <div id="WC_BreadCrumbTrailDisplay_div_1" class="breadcrumb_links">
+      <a id="WC_BreadCrumbTrailDisplay_link_2" href="/shop/en/snapav/home"
+        >Home</a
+      >
+      <span class="breadcrumb-divider">|</span>
+      <a id="WC_BreadCrumbTrailDisplay_link_5a" href="/shop/en/snapav/brands"
+        >Brands</a
+      >
+      <span class="breadcrumb-divider">|</span> Access Networks
+    </div>
+  </div>
+</div>
+<!-- END BREADCRUMBS !--><!-- NAV START -->
+<div class="row-fluid brand-nav">
+  <div class="span12">
+    <h1 style="color: #7c7e7f; float: left">Access Networks</h1>
+    <ul class="brand-pg-nav">
+      <li>
+        <a class="active" href="/shop/en/snapav/access-networks">Overview</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<hr style="margin: 0 0 10px 0" />
+<!-- NAV END -->
+<div class="access-networks-header">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="thumbnail-block center">
+        <h1>Enterprise-Grade Network Solutions for the Modern Environment</h1>
+        <p>
+          Experience technology the way it was intended every time and meet
+          increased connectivity demands with high-performance network solutions
+          from Access Networks.
+        </p>
+        <a
+          href="/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10010&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=detailed&pageGroup=Search&beginIndex=0&pageSize=20&searchTerm=access+networks"
+          ><div class="btn-1">Shop Now</div></a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<div class="next-level-container">
+  <div class="row-fluid">
+    <div class="span12 center">
+      <div class="thumbnail-block">
+        <h2 class="sub-header">Next-Level Networking with Access Networks</h2>
+        <p>
+          The network is the foundation of any connected environment. With the
+          proper networking solution installed, all connected devices perform at
+          their optimal level. Access Networks offers the most advanced products
+          and services to satisfy your client’s technical needs while making
+          install a breeze.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span3 center">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Higher-security-standards.png"
+          alt="decorative logo"
+        />
+      </div>
+      <p><strong>Higher Security Standards</strong></p>
+    </div>
+    <div class="span3 center">
+      <br />
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Future-ready-scale.png"
+          alt="decorative logo"
+        />
+      </div>
+      <p><strong>Future-Ready Scalability</strong></p>
+    </div>
+    <div class="span3 center">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/10x-more-robust.png"
+          alt="decorative logo"
+        />
+      </div>
+      <p><strong>10x More Robust</strong></p>
+    </div>
+    <div class="span3 center">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Purpose-driven-performance.png"
+          alt="decorative logo"
+        />
+      </div>
+      <p><strong>Purpose-Driven Performance</strong></p>
+    </div>
+  </div>
+</div>
+<div class="staying-connected">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="thumbnail-block">
+        <h2 class="sub-header">Staying Connected to What Matters Most</h2>
+        <p>
+          Access Networks offers a reliable, high-performance network solution
+          for any environment that keeps clients connected to what matters most.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="access-nw-provides">
+  <div class="row-fluid">
+    <div class="span6">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/AN-provides.png"
+          alt="lifestyle image of a living room"
+        />
+      </div>
+    </div>
+    <div class="span6">
+      <div class="thumbnail-block">
+        <h2>Access Networks Provides:</h2>
+        <ul style="list-style: outside disc; padding: 15px">
+          <li>Enterprise-Grade Access Points & Hardware</li>
+          <li>Pre-Configuration Services</li>
+          <li>Complete, Fully Custom-Tailored Networks</li>
+          <li>Proactive Network Monitoring</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="an-ovrc">
+  <div class="row-fluid">
+    <div class="span12 center">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ANW_OvrC_BrandPageUpdate.png"
+          alt="Access Networks and OvrC"
+        />
+      </div>
+      <div class="thumbnail-block">
+        <h2>Streamline with OvrC</h2>
+        <p>
+          OvrC is a free, cloud-based remote management platform created by Snap
+          One that empowers professionals to configure, manage, and troubleshoot
+          devices across a network seamlessly. By combining high-performance,
+          reliable hardware with the power of OvrC, the Access Networks®
+          Unleashed Wi-Fi 6 Access Points provide a comprehensive solution for
+          your networking needs. Enjoy streamlined setup, easy scalability,
+          enhanced remote management capabilities, and more. Access Networks
+          Unleashed Wi-Fi 6 Access Points are also now available through the
+          client
+          <a href="/shop/en/snapav/ovrc-connect" target="_blank"
+            >OvrC-Connect</a
+          >
+          app.
+        </p>
+        <a href="/shop/en/snapav/ovrc-ecosystem"
+          ><div class="btn-2">Learn More</div></a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<div class="earn-pr-points">
+  <div class="row-fluid">
+    <div class="span6">
+      <div class="thumbnail-block">
+        <h2>Earn Partner Rewards Points</h2>
+        <p>
+          Get 3 points per dollar spent on all Access Networks purchases,
+          including services! Each purchase will help to advance your Partner
+          Rewards level and secure perks and benefits that bring the value to
+          your business.
+        </p>
+      </div>
+    </div>
+    <div class="span6">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/partner-rewards-logo.png"
+          alt="decorative logo"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<div class="custom-network">
+  <div class="row-fluid">
+    <div class="span12 center">
+      <div class="thumbnail-block">
+        <h2 class="sub-header">
+          Custom Network Services that<br />
+          Enhance Your Business
+        </h2>
+        <p>
+          Access Networks offers a wide range of service options that help our
+          Partners save time and money on network installation & monitoring. We
+          handle the networking so you can focus on your business efficiency.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="network-services">
+  <div class="row-fluid">
+    <div class="span4">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/basic-config-icon.png"
+          alt="decorative logo"
+        />
+      </div>
+      <div class="thumbnail-block navy-bkgnd">
+        <h3 class="navy-bkgnd-h3">Basic Configuration Services</h3>
+        <p class="navy-bkgnd-p">
+          Products pre-configured to your specifications & shipped ready to
+          install
+        </p>
+      </div>
+    </div>
+    <div class="span4">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/design-services.png"
+          alt="decorative logo"
+        />
+      </div>
+      <div class="thumbnail-block navy-bkgnd">
+        <h3 class="navy-bkgnd-h3">Design Services</h3>
+        <p class="navy-bkgnd-p">
+          Heat mapping with access points layouts, system quotes, and network
+          diagraming
+        </p>
+      </div>
+    </div>
+    <div class="span4">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/core-nw-logo.png"
+          alt="decorative logo"
+        />
+      </div>
+      <div class="thumbnail-block navy-bkgnd">
+        <h3 class="navy-bkgnd-h3">Core Networks</h3>
+        <p class="navy-bkgnd-p">
+          Complete custom network with design, pre-configuration, & monitoring
+          included
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row-fluid">
+  <div class="span12 center">
+    <a href="https://www.accessnetworks.com/connect-with-us/contact-us/"
+      ><div class="btn-1">Contact Our Team For Services</div></a
+    >
+  </div>
+</div>
+<div class="advanced-access-points">
+  <div class="row-fluid">
+    <div class="span6">
+      <div class="thumbnail-block">
+        <h2 class="sub-header">Advanced Access Points</h2>
+        <p>
+          Patented BeamFlex+ technology dynamically adjusts the Wi-Fi beam to
+          your devices hundreds of times per second for faster performance
+          anywhere in your space.
+        </p>
+        <p>
+          With up to 4,000 dynamic antenna patterns, our access points direct
+          Wi-Fi signals to devices in use no matter their orientation,
+          ultimately delivering signal gain and interference mitigation for
+          range extension, reliability, and higher data rates.
+        </p>
+        <br />
+        <a
+          href="https://www.snapav.com/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10010&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=detailed&pageGroup=Search&beginIndex=0&pageSize=20&searchTerm=access+networks"
+          ><div class="btn-1">Shop Now</div></a
+        >
+      </div>
+    </div>
+    <div class="span6">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/BeamFlex-Gif.gif"
+          alt="decorative logo"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<!--<div class="unmatched-networking-reliability">
+  <div class="row-fluid">
+    <div class="span6">
+      <div class="thumbnail-block">
+        <h2 class="sub-header">Unmatched Networking Reliability</h2>
+        <p>
+          Access Networks switches are designed for tough network environments
+          requiring peak performance and capabilities. With advanced Layer 3
+          functionality, enterprise-grade components, and sophisticated network
+          traffic management, these switches are designed to create optimal
+          performance where milliseconds of latency matter.
+        </p>
+        <br />
+        <a
+          href="https://www.snapav.com/shop/SearchDisplay?categoryId=&storeId=10151&catalogId=10010&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=detailed&pageGroup=Search&beginIndex=0&pageSize=20&searchTerm=access+networks"
+          ><div class="btn-1">Shop Now</div></a
+        >
+      </div>
+    </div>
+    <div class="span6">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/229_24_AccessNetworksSwitches_Switches.png"
+          alt="Unmatched Networking Reliability logo"
+        />
+      </div>
+    </div>
+  </div>
+</div>-->
+<div class="network-support">
+  <div class="row-fluid">
+    <div class="span6">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Network-Support.png"
+          alt="Network support team member on a call"
+        />
+      </div>
+    </div>
+    <div class="span6">
+      <div class="thumbnail-block">
+        <h2 class="sub-header">Network Support You Can Count On</h2>
+        <p>
+          Our team becomes your team! Our certified staff of expert engineers
+          are here to assist with any network need from design to installation,
+          troubleshooting, and beyond. Four years of support are included with
+          any Access Networks purchase.
+        </p>
+        <p>
+          Whether you purchase our solutions from the Snap One&trade; or Access
+          Networks Portals, or in a Snap One Partner Store, the support you
+          receive will always be from the Access Networks team of certified
+          network professionals.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="become-an-dealer">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="thumbnail-block text-container">
+        <h2 class="sub-header">Become an Access Networks Dealer</h2>
+        <p>
+          Shop Unleashed access points now online or in Snap One Partner Stores.
+          For other Access Networks Managed Services and products, such as
+          complete custom networks, design services, preconfigured solutions and
+          our Sophos Router/Firewalls, you must be an Access Networks Authorized
+          Dealer. Click below to get started!
+        </p>
+        <a href="https://www.accessnetworks.com/connect-with-us/contact-us/"
+          ><div class="btn-5">Sign Up</div></a
+        >
+      </div>
+    </div>
+  </div>
+</div>

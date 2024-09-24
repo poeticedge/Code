@@ -1,0 +1,979 @@
+<style>
+  body .span12,
+  .span6,
+  .span4,
+  .span3,
+  .span2 {
+    margin: 0 0 40px 0;
+  }
+
+  /* *Misc */
+  p a {
+    color: #3b8ede;
+  }
+
+  /* new button */
+  .btn-5 {
+    background-color: #31aa3a;
+    border-radius: 2px;
+    color: #fff;
+    border: medium none;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 300;
+    height: auto;
+    line-height: 1;
+    margin: 0;
+    padding: 9px 16px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  .btn-5:hover,
+  .btn-5:active {
+    background-image: linear-gradient(to bottom, #31aa3a, #23772a);
+    background-size: 100% auto;
+  }
+
+  /* colored boxes */
+  .box {
+    width: 149px;
+    height: 89px;
+  }
+
+  .blue1 {
+    background: #3b8ede;
+  }
+  .blue2 {
+    background: #0f94e0;
+  }
+  .blue3 {
+    background: #42b6f4;
+  }
+  .green1 {
+    background: #31aa3a;
+  }
+  .yellow {
+    background: #ffaf32;
+  }
+  .red {
+    background: #ff4b41;
+  }
+  .green2 {
+    background: #2bad07;
+  }
+  .grey1 {
+    background: #343f4b;
+  }
+  .orange {
+    background: #d46031;
+  }
+  .grey2 {
+    background: #4b4b4b;
+  }
+  .red2 {
+    background: #ff1f3a;
+  }
+  /* font colors */
+  .t_grey {
+    color: #25282a;
+  }
+  .t_white {
+    color: #ffffff;
+  }
+
+  /* heros */
+  .hero_title {
+    font-size: 5rem;
+    margin: 0;
+    line-height: 1.1;
+  }
+  .hero_sub {
+    margin: 10px 0 20px 0;
+    font-size: 1.4rem;
+  }
+  .hero_anchor {
+    display: block;
+    width: 100%;
+    height: 300px;
+  }
+  /* left */
+  .hero_left {
+    background-repeat: no-repeat;
+    background-position: right top;
+    min-height: 300px;
+    position: relative;
+    max-width: 1025px;
+    margin-bottom: 30px;
+  }
+  .hero_copy_left {
+    max-width: 420px;
+    width: 50%;
+    position: absolute;
+    margin: 20px 0 0 30px;
+  }
+  /* /left */
+  /* Right */
+  .hero_right {
+    background-repeat: no-repeat;
+    background-position: left top;
+    min-height: 300px;
+    position: relative;
+    max-width: 1025px;
+    margin-bottom: 30px;
+  }
+  .hero_copy_right {
+    right: 0;
+    max-width: 420px;
+    width: 50%;
+    position: absolute;
+    margin: 20px 20px 0 0;
+  }
+  /* /Right */
+  /* Logo */
+  .hero_logo_right {
+    position: absolute;
+    right: 30px;
+    top: 210px;
+  }
+  /* /Logo */
+  /* /heros */
+  /* Banners */
+  .banner_anchor {
+    display: block;
+    width: 100%;
+    height: 180px;
+  }
+  .banner_title {
+    font-size: 2.4rem;
+    margin: 0;
+    line-height: 1.1;
+  }
+  .banner_sub {
+    margin: 10px 0 20px 0;
+    font-size: 1.4rem;
+  }
+  /* Left */
+  .banner_left {
+    background-repeat: no-repeat;
+    background-position: right top;
+    min-height: 200px;
+    position: relative;
+    max-width: 763px;
+    margin-bottom: 30px;
+  }
+  .banner_copy_left {
+    width: 420px;
+    position: absolute;
+    margin: 20px 0 0 20px;
+  }
+  /* Left */
+  /* Right */
+  .banner_right {
+    background-repeat: no-repeat;
+    background-position: left top;
+    min-height: 200px;
+    position: relative;
+    max-width: 763px;
+    margin-bottom: 30px;
+  }
+  .banner_copy_right {
+    right: 0;
+    width: 420px;
+    position: absolute;
+    margin: 20px 20px 0 0;
+  }
+  /* Right */
+  /* Logo */
+  .banner_logo_right {
+    position: absolute;
+    right: 30px;
+    top: 95px;
+  }
+  /* /Logo */
+  /* Home Page */
+  .hp_title {
+    font-size: 5rem;
+    margin: 0;
+    line-height: 1.1;
+  }
+  .hp_sub {
+    margin: 10px 0 20px 0;
+    font-size: 1.4rem;
+  }
+  .hp_anchor {
+    display: block;
+    width: 100%;
+    height: 400px;
+  }
+  .hp_left {
+    background-repeat: no-repeat;
+    background-position: right top;
+    min-height: 400px;
+    position: relative;
+    max-width: 1025px;
+    margin-bottom: 30px;
+  }
+  .hp_copy_left {
+    width: 420px;
+    position: absolute;
+    margin: 20px 0 0 30px;
+  }
+  .hp_logo_right {
+    position: absolute;
+    right: 30px;
+    top: 310px;
+  }
+  /* /home page */
+  /* Banners */
+
+  .page_hero {
+    background-repeat: no-repeat;
+    background-position: center top;
+    min-height: 300px;
+    position: relative;
+    max-width: 1025px;
+  }
+  .page_hero_sub {
+    width: 50%;
+    margin: 10px 0 20px 0;
+  }
+  .page_module_sub {
+    width: 80%;
+    margin: 10px 0 20px 0;
+  }
+  .row-fluid h2 {
+    margin: 20px 0 0 0;
+  }
+  .banner-img img {
+    width: 100%;
+  }
+  .p-half {
+    font-family: Lato;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  @media (max-width: 700px) {
+    /* heros */
+    .hero_title {
+      font-size: 2.2rem;
+      margin: 0 0 10px;
+      font-weight: bold;
+      color: #525355;
+    }
+    .hero_sub {
+      font-size: 1.2rem;
+      width: 99%;
+    }
+    .hero_copy_left {
+      margin: 320px 0 0 0;
+      width: 100%;
+    }
+    .hero_left {
+      min-height: 460px;
+    }
+    .hero_copy_right {
+      margin: 320px 0 0 0;
+      width: 100%;
+    }
+    .hero_right {
+      min-height: 460px;
+    }
+    .hero_logo_right {
+      position: absolute;
+      left: 30px;
+      top: 30px;
+    }
+    /* heros */
+    /* Banners */
+    .banner_title {
+      font-size: 2.2rem;
+      margin: 0 0 10px;
+      font-weight: bold;
+      color: #525355;
+    }
+    .banner_sub {
+      font-size: 1.2rem;
+      width: 99%;
+    }
+    .banner_copy_left {
+      margin: 200px 0 0 0;
+      width: 100%;
+    }
+    .banner_left {
+      min-height: 320px;
+    }
+    .banner_copy_right {
+      margin: 200px 0 0 0;
+      width: 100%;
+    }
+    .banner_right {
+      min-height: 320px;
+    }
+    .banner_logo_right {
+      position: absolute;
+      left: 30px;
+      top: 30px;
+    }
+    /* /Banners */
+    /* Home Page */
+    .hp_title {
+      font-size: 2.2rem;
+      margin: 0 0 10px;
+      font-weight: bold;
+      color: #525355;
+    }
+    .hp_sub {
+      font-size: 1.2rem;
+      width: 99%;
+    }
+    .hp_copy_left {
+      margin: 420px 0 0 0;
+      width: 100%;
+    }
+    .hp_left {
+      min-height: 560px;
+    }
+    .hp_logo_right {
+      position: absolute;
+      left: 30px;
+      top: 30px;
+    }
+    /* /Home Page */
+
+    .page_module_sub {
+      font-size: 1.2rem;
+      width: 99%;
+    }
+  }
+</style>
+<!-- ==================================
+	Header and Paragraph tags
+==================================*/ -->
+<h1>Header &amp; Paragraph styling</h1>
+<h1>H1 - 3rem/30px - #25282a</h1>
+<h2>H2 - 2.2rem/36px - Bold - #525355</h2>
+<h3>H3 - 1.6rem/26px - #4a4a4a</h3>
+<h4>H4 - 1.8rem/30px - #4a4a4a</h4>
+<h5>H5 - 1.4rem/22px - #4a4a4a</h5>
+<p>p: Standard font - 1.4rem/22px - #4a4a4a</p>
+<p>
+  Reference:
+  <a href="https://offroadcode.com/prototypes/rem-calculator/" target="_blank"
+    >rem conversion calculator</a
+  >
+</p>
+<!--END H / P tags -->
+
+<!-- seperator -->
+<br />
+<hr />
+<!-- ==================================
+	CTA Buttons and link styling
+==================================*/ -->
+<h1>Buttons / CTA's/ Link Styling</h1>
+<p>18 Char Max, Sentence case</p>
+<br />
+<div class="row-fluid">
+  <div class="span3">
+    <a href="#">
+      <div class="btn-5">action</div>
+    </a>
+    <h4></h4>
+    <ul>
+      <li>• For use on Log in</li>
+      <li>• Form submissions</li>
+    </ul>
+  </div>
+  <div class="span3">
+    <a href="#"> <div class="btn-1">Purchase</div></a>
+    <h4></h4>
+    <ul>
+      <li>• Add to cart</li>
+      <li>• Shop now</li>
+      <li>• Shop Araknis (only brands are capitalize on second word)</li>
+      <li>• Shop cameras</li>
+    </ul>
+  </div>
+  <div class="span3">
+    <a href="#">
+      <div class="btn-2">Content</div>
+    </a>
+    <h4></h4>
+    <ul>
+      <li>• Learn more</li>
+      <li>• Explore Luma (only Brands are capitalize on second word)</li>
+      <li>• Account Menu (selected item)</li>
+      <li>• Find out more</li>
+    </ul>
+  </div>
+  <div class="span3">
+    <a href="#">
+      <div class="btn-4">Checkout</div>
+    </a>
+  </div>
+</div>
+<br /><br />
+<div class="row-fluid">
+  <a href="#" style="font-size: 1.6rem; font-family: lato"
+    >Standard Link (font sizing is 1.6rem)</a
+  >
+  <br />
+</div>
+
+<!-- seperator -->
+<br />
+<hr />
+<!-- /seperator -->
+<!-- ==================================
+	Color guide
+==================================*/ -->
+<h1>Color guide</h1>
+<br />
+<div class="row-fluid">
+  <div class="span2">
+    <div class="box blue1"></div>
+    <h4>#3B8EDE</h4>
+    <ul>
+      <li>• Universal blue including all clickable text</li>
+      <li>• Info buttons (learn more, explore, see details, etc.)</li>
+      <li>• Account Menu (selected item)</li>
+      <li>• Blue Icons (e.g.: Support Page)</li>
+    </ul>
+  </div>
+  <div class="span2">
+    <div class="box blue2"></div>
+    <h4>#0F94E0</h4>
+    <ul>
+      <li>• Dashboard</li>
+    </ul>
+  </div>
+  <div class="span2">
+    <div class="box blue3"></div>
+    <h4>#42B6F4</h4>
+    <ul>
+      <li>• Dashboard</li>
+    </ul>
+  </div>
+  <div class="span2">
+    <div class="box green1"></div>
+    <h4>#31AA3A</h4>
+    <ul>
+      <li>• Account buttons</li>
+      <li>• Go button</li>
+      <li>• Apply coupon button</li>
+      <li>• Inventory status</li>
+      <li>• Log in button</li>
+      <li>• Most buttons under Support page</li>
+    </ul>
+  </div>
+  <div class="span2">
+    <div class="box yellow"></div>
+    <h4>#FFAF32</h4>
+    <ul>
+      <li>
+        • All shop related buttons (homepage, list view, PDP, Add to cart,
+        Re-order, shop product, shop now etc.)
+      </li>
+      <li>
+        • Member discount and savings under Grand Total section on order
+        confirmation page
+      </li>
+    </ul>
+  </div>
+  <div class="span2">
+    <div class="box red"></div>
+    <h4>#FF4B41</h4>
+    <ul>
+      <li>• Check out and Place order button</li>
+      <li>• Shopping cart icon and View entire cart button</li>
+      <li>• Important notices through check out</li>
+      <li>• Feedback button</li>
+      <li>• Log in button</li>
+      <li>• Sale price and Options On Sale</li>
+      <li>• Call for Availability</li>
+      <li>• Out of Stock</li>
+    </ul>
+  </div>
+</div>
+<div class="row-fluid">
+  <div class="span2">
+    <div class="box green2"></div>
+    <h4>#2BAD07</h4>
+    <ul>
+      <li>• In Stock</li>
+    </ul>
+  </div>
+  <div class="span2">
+    <div class="box grey1"></div>
+    <h4>#343F4B</h4>
+    <ul>
+      <li>• Footer</li>
+    </ul>
+  </div>
+  <div class="span2">
+    <div class="box orange"></div>
+    <h4>#D46031</h4>
+    <ul>
+      <li>• Star Rating</li>
+    </ul>
+  </div>
+  <div class="span2">
+    <div class="box grey2"></div>
+    <h4>#4B4B4B</h4>
+    <ul>
+      <li>• Store icons (UPP, Virtual Tech, Centrally Stock, 4k Related)</li>
+    </ul>
+  </div>
+  <div class="span2">
+    <div class="box red2"></div>
+    <h4>#FF4B41</h4>
+    <ul>
+      <li>• Feedback button</li>
+    </ul>
+  </div>
+</div>
+
+<!-- /Color guide -->
+<!-- seperator -->
+<br />
+<hr />
+<!-- /seperator -->
+<!-- ==================================
+	Start Banners section
+==================================*/ -->
+Auth Banner
+
+<div
+  class="hero_right"
+  style="background-image: url('https://dummyimage.com/702x300/efefef/fff.jpg')"
+>
+  <div class="hero_copy_left">
+    <p class="hero_title" style="font-size: 3.5rem">
+      Lato 3.5rem Lorem lipsum ipsum sub dolor ipsum sub
+    </p>
+    <p class="hero_sub" style="font-size: 1.6rem">
+      Lato Regular 1.6rem. 120 character max including secondary link. Lorem
+      lipsum ipsum sub dolor ipsum sub.
+    </p>
+    <a href="#">
+      <div class="btn-5">Register Now</div>
+    </a>
+  </div>
+  <a href="#" class="hero_anchor"></a>
+</div>
+
+<h1>Catagory/Unauthenticated Banners</h1>
+<h3>
+  *Hero options for Header sizing. 5rem for simpler messaging / 4rem for more
+  complex header messaging/ 64px
+</h3>
+<h3>**Max sub characters is 120</h3>
+<br />
+<!-- Heros -->
+<!-- Hero Left -->
+<div
+  class="hero_left"
+  style="
+    background-image: url('http://dummyimage.com/1025x300/efefef/ffffff.jpg');
+  "
+>
+  <div class="hero_copy_left">
+    <p class="hero_title" style="font-size: 3rem">
+      Lorem lipsum ipsum sub dolor ipsum sub
+    </p>
+    <p class="hero_sub">
+      Lato Regular 1.6rem. 120 character max including secondary link. Lorem
+      lipsum ipsum sub dolor ipsum sub. <a href="#">Secondary Link</a>
+    </p>
+    <a href="#">
+      <div class="btn-2">Learn More</div>
+    </a>
+  </div>
+  <a href="#" class="hero_anchor"></a>
+</div>
+<!-- /Hero Left -->
+<!-- Hero Right -->
+<div
+  class="hero_right"
+  style="
+    background-image: url('http://dummyimage.com/1025x300/efefef/ffffff.jpg');
+  "
+>
+  <div class="hero_copy_right">
+    <p class="hero_title" style="font-size: 3rem">
+      Lato Reg 35 Max 3rem Titlecase
+    </p>
+    <p class="hero_sub">
+      Lato Regular 1.6rem. 120 character max including secondary link. Lorem
+      lipsum ipsum sub dolor ipsum sub. <a href="#">Secondary Link</a>
+    </p>
+    <a href="#">
+      <div class="btn-1">Shop now</div>
+    </a>
+  </div>
+  <a href="#" class="hero_anchor"></a>
+</div>
+<!-- /Hero Right -->
+<!-- Hero Logo -->
+<div
+  style="
+    background-image: url('http://dummyimage.com/1025x300/efefef/ffffff.jpg');
+  "
+  class="hero_left"
+>
+  <div class="hero_copy_left">
+    <p class="hero_title" style="font-size: 4rem">
+      Lato Reg 35 Max 4rem Titlecase
+    </p>
+    <p class="hero_sub">
+      Lato Regular 1.4rem. 120 character max including secondary link. Lorem
+      lipsum ipsum sub dolor ipsum sub. <a href="#">Secondary Link</a>
+    </p>
+    <a href="#">
+      <div class="btn-2">Learn more</div>
+    </a>
+  </div>
+  <a class="hero_logo_right" href="#logo"
+    ><img src="http://dummyimage.com/180x60/cecece/fff.jpg&amp;text=LOGO"
+  /></a>
+  <a class="hero_anchor" href="#"></a>
+</div>
+<!-- /Hero Logo -->
+<!-- /Heros -->
+
+<!-- seperator -->
+<br />
+<hr />
+<!-- /seperator -->
+
+<h1>List View Banners</h1>
+<h3>**Max title characters at 2.5rem is 35</h3>
+<h3>**Max sub characters is 120</h3>
+<br />
+<!-- Banners -->
+<!-- Left -->
+
+<div
+  class="banner_left"
+  style="background-image: url('https://dummyimage.com/763x200/efefef/fff.jpg')"
+>
+  <div class="banner_copy_left">
+    <p class="banner_title">Lato Reg 2.4rem 35 Max Titlecase</p>
+    <p class="banner_sub">
+      Lato Regular 1.6rem 120 character max including secondary link. Lorem
+      lipsum ipsum sub dolor ipsum sub.
+    </p>
+    <a href="#">
+      <div class="btn-2">Learn More</div>
+    </a>
+  </div>
+  <a href="#" class="banner_anchor"></a>
+</div>
+<!-- /Left -->
+<!-- Right -->
+<div
+  class="banner_right"
+  style="background-image: url('https://dummyimage.com/763x200/efefef/fff.jpg')"
+>
+  <div class="banner_copy_right">
+    <p class="banner_title">Lato Reg 24pt 35 Char Max Titlecase</p>
+    <p class="banner_sub">
+      Lato Regular 1.6rem 120 character max including secondary link. Lorem
+      lipsum ipsum sub dolor ipsum sub. <a href="#">Secondary Link</a>
+    </p>
+    <a href="#">
+      <div class="btn-2">Lipsum ipsum</div>
+    </a>
+  </div>
+  <a href="#" class="banner_anchor"></a>
+</div>
+<!-- /Right -->
+<!-- Logo -->
+<div
+  class="banner_left"
+  style="background-image: url('https://dummyimage.com/763x200/efefef/fff.jpg')"
+>
+  <div class="banner_copy_left">
+    <p class="banner_title">Lato Reg 2.4rem 35 Max Titlecase</p>
+    <p class="banner_sub">
+      Lato Regular 1.4rem 120 character max including secondary link. Lorem
+      lipsum ipsum sub dolor ipsum sub. <a href="#">Secondary Link</a>
+    </p>
+    <a href="#">
+      <div class="btn-2">Lipsum ipsum</div>
+    </a>
+  </div>
+  <a href="#" class="banner_anchor"></a>
+  <a class="banner_logo_right" href="#logo"
+    ><img src="http://dummyimage.com/180x60/cecece/fff.jpg&amp;text=LOGO"
+  /></a>
+</div>
+<!-- /Logo -->
+<!-- /Banners -->
+<br />
+<hr />
+<!-- HP 1/3rd -->
+<h1>One third Homepage and Splash Banners</h1>
+<p>*doi/1/3/targeted promos/Company wide messaging (CVV info, webinars, etc)</p>
+<div class="row-fluid">
+  <div class="span5 center">
+    <div
+      class=""
+      style="
+        background-image: url('https://dummyimage.com/300x300/efefef/fff.jpg');
+        max-height: 300px;
+        max-width: 300px;
+      "
+    >
+      <div class="p-half" style="padding: 50px 30px">
+        <p class="banner_sub">
+          Can be a toggle banner, plain image banner, or banner with text
+        </p>
+        <p>Image sizing 300px x 300px</p>
+        <p><a href="#">View Details</a></p>
+        <a href="#" target="_blank"><div class="btn-2">Learn more</div></a>
+      </div>
+      <a href="#" class="banner_anchor"></a>
+    </div>
+  </div>
+  <div class="span5"></div>
+  <div class="span2">
+    <style>
+      .border {
+        height: auto;
+        border: 20px solid #4171b8;
+      }
+      .bckgrnd {
+        background-color: white;
+        font-family: Lato;
+      }
+    </style>
+    <div
+      class="shadow-box border"
+      style="text-align: center; margin-bottom: 10px"
+    >
+      <div class="bckgrnd">
+        <p style="margin: 10px 0px 10px 0px; font-size: 1.5rem">JUST FOR YOU</p>
+        <center><hr style="color: #34a6fe; margin: 0px" width="80%" /></center>
+        <h3 style="margin: 20px 0px 20px 0px; font-size: 2.8rem">20% OFF</h3>
+        <center><hr style="color: #34a6fe; margin: 0px" width="80%" /></center>
+        <p style="margin: 10px 0px 5px 0px; font-size: 1.5rem">
+          Wirepath bulk wire
+        </p>
+        <p style="margin: 0px 0px 0px 0px; font-size: 1.5rem">
+          <b>USE CODE: </b>
+        </p>
+        <p style="margin: 0px 0px 10px 0px; font-size: 1.5rem"><b>BW20</b></p>
+        <a
+          id="DOIcart"
+          href="/shop/en/snapav/bulk-wire-connectors-tools"
+          style="font-family: lato"
+          >Shop Now >></a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+#EFEFEF
+<!-- END HP 1/3rd -->
+<div class="row-fluid"></div>
+<!-- ==================================
+  Shopping Cart
+==================================*/ -->
+
+<!-- seperator -->
+<br />
+<hr />
+<!-- /seperator -->
+
+<h1>Content Modules: Spans</h1>
+<hr />
+<!-- /seperator -->
+<div class="row-fluid">
+  <div class="span12">
+    <h2>Span 12</h2>
+    <div class="dynamic-image">
+      <img src="https://dummyimage.com/1025x195/efefef/fff.jpg&text=Span+12" />
+    </div>
+  </div>
+</div>
+<div class="row-fluid">
+  <div class="span11">
+    <h2>Span 11</h2>
+    <div class="dynamic-image">
+      <img src="https://dummyimage.com/938x195/efefef/fff.jpg&text=Span+11" />
+    </div>
+  </div>
+</div>
+<div class="row-fluid">
+  <div class="span10">
+    <h2>Span 10</h2>
+    <div class="dynamic-image">
+      <img src="https://dummyimage.com/850x195/efefef/fff.jpg&text=Span+10" />
+    </div>
+  </div>
+</div>
+<div class="row-fluid">
+  <div class="span9">
+    <h2>Span 9</h2>
+    <div class="dynamic-image">
+      <img src="https://dummyimage.com/763x195/efefef/fff.jpg&text=Span+9" />
+    </div>
+  </div>
+</div>
+<div class="row-fluid">
+  <div class="span8">
+    <h2>Span 8</h2>
+    <div class="dynamic-image">
+      <img src="https://dummyimage.com/675x195/efefef/fff.jpg&text=Span+8" />
+    </div>
+  </div>
+</div>
+<div class="row-fluid">
+  <div class="span7">
+    <h2>Span 7</h2>
+    <div class="dynamic-image">
+      <img src="https://dummyimage.com/587x195/efefef/fff.jpg&text=Span+7" />
+    </div>
+  </div>
+</div>
+<h2>Span 6</h2>
+<br />
+<div class="row-fluid">
+  <div class="span6">
+    <div class="dynamic-image">
+      <img src="https://dummyimage.com/500x195/efefef/fff.jpg&text=Span+6" />
+    </div>
+  </div>
+</div>
+<h2>Span 5</h2>
+<br />
+<div class="row-fluid">
+  <div class="span5">
+    <div class="dynamic-image">
+      <a href="#"
+        ><img src="https://dummyimage.com/412x195/efefef/fff.jpg&text=Span+5"
+      /></a>
+    </div>
+  </div>
+</div>
+<h2>Span 4</h2>
+<br />
+<div class="row-fluid">
+  <div class="span4">
+    <div class="dynamic-image">
+      <a href="#"
+        ><img src="https://dummyimage.com/325x195/efefef/fff.jpg&text=Span+4" />
+      </a>
+    </div>
+  </div>
+</div>
+
+<h2>Span 3</h2>
+<br />
+<div class="row-fluid">
+  <div class="span3">
+    <div class="dynamic-image">
+      <a href="#"
+        ><img src="https://dummyimage.com/235x100/efefef/fff.jpg&text=Span+3"
+      /></a>
+    </div>
+  </div>
+</div>
+
+<h2>Span 2</h2>
+<br />
+<div class="row-fluid">
+  <div class="span2">
+    <center>
+      <div class="banner-img">
+        <a href="#"
+          ><img src="https://dummyimage.com/150x100/efefef/fff.jpg&text=Span+2"
+        /></a>
+      </div>
+    </center>
+  </div>
+</div>
+
+<h2>Span 1</h2>
+<br />
+<div class="row-fluid">
+  <div class="span1">
+    <div class="banner-img">
+      <a href="#"
+        ><img src="https://dummyimage.com/62x75/efefef/fff.jpg&text=Span+1"
+      /></a>
+    </div>
+  </div>
+</div>
+
+<hr />
+<h1>Standard Image Sizes</h1>
+<h3>Full Width Callout Image</h3>
+<div class="row-fluid">
+  <div class="span12">
+    <div class="banner-img">
+      <a href="#"><img src="https://dummyimage.com/1025x300/efefef/fff" /></a>
+    </div>
+  </div>
+</div>
+<h3>2 up PDP page</h3>
+<div class="row-fluid">
+  <div class="span6">
+    <div class="banner-img">
+      <a href="#"
+        ><img src="http://dummyimage.com/500x300/efefef/ffffff.jpg"
+      /></a>
+    </div>
+  </div>
+  <div class="span6">
+    <div class="banner-img">
+      <a href="#"
+        ><img src="http://dummyimage.com/500x300/efefef/ffffff.jpg"
+      /></a>
+    </div>
+  </div>
+</div>
+
+<h3>Three Across</h3>
+<div class="row-fluid">
+  <div class="span4">
+    <div class="dynamic-image">
+      <a><img src="https://dummyimage.com/325x195/efefef/fff" /></a>
+    </div>
+  </div>
+  <div class="span4">
+    <div class="dynamic-image">
+      <a><img src="https://dummyimage.com/325x195/efefef/fff" /></a>
+    </div>
+  </div>
+  <div class="span4">
+    <div class="dynamic-image">
+      <a><img src="https://dummyimage.com/325x195/efefef/fff" /></a>
+    </div>
+  </div>
+</div>
+
+<h3>Product image sizing</h3>
+<div class="row-fluid">
+  <div class="span4">
+    <h3>Thumbnail 65x65</h3>
+    <div class="dynamic-image">
+      <a><img src="https://dummyimage.com/65x65/efefef/fff" /></a>
+    </div>
+  </div>
+  <div class="span4">
+    <h3>Full Size 225x225</h3>
+    <div class="dynamic-image">
+      <a><img src="https://dummyimage.com/225x225/efefef/fff" /></a>
+    </div>
+  </div>
+  <div class="span4">
+    <h3>Zoom 1000x850</h3>
+    <div class="dynamic-image">
+      <a><img src="https://dummyimage.com/1000x850/efefef/fff" /></a>
+    </div>
+  </div>
+</div>

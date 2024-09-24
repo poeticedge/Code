@@ -1,0 +1,554 @@
+<style>
+  body {
+    height: 100vh;
+    margin: 0;
+    background: #10264d;
+  }
+
+  .gradient {
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(
+        farthest-corner at top right,
+        rgba(60, 24, 74, 1),
+        transparent 70%
+      ),
+      radial-gradient(
+        farthest-corner at bottom right,
+        rgba(19, 94, 126, 1),
+        transparent 100%
+      );
+
+    display: flex;
+    flex-direction: row;
+  }
+
+  .left-column {
+    width: 100%;
+    /* width: 50%; */
+    height: 100%;
+  }
+
+  .left-column div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo {
+    padding-left: 16%;
+    padding-right: 16%;
+    padding-bottom: 25px;
+    justify-content: flex-end;
+    flex: 1;
+  }
+
+  .logo img {
+  }
+
+  .apple-music-text {
+    font-family: Roboto, sans-serif;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 15%;
+    padding-right: 15%;
+    flex: 0;
+  }
+
+  .apple-music-text p {
+    justify-content: flex-start;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    opacity: 50%;
+  }
+
+  .connect-button {
+    flex: 1;
+    padding-top: 25px;
+    padding-left: 5%;
+    padding-right: 5%;
+    visibility: visible;
+  }
+
+  .connect-button button {
+    background: #000;
+    opacity: 1;
+    color: rgba(255, 255, 255, 1);
+    width: 100%;
+    height: 40px;
+    background-color: rgba(75, 126, 19, 1);
+    border: none;
+    font-size: 17px;
+    font-weight: 400;
+    font-style: normal;
+    font-family: Roboto, sans-serif;
+    letter-spacing: 0px;
+    text-align: center;
+    border-radius: 10vw;
+  }
+
+  .right-column {
+    width: 50%;
+    height: 100%;
+    display: none;
+  }
+
+  .right-column div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .qr-code {
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+  }
+
+  .qr-code img {
+    object-fit: cover;
+  }
+
+  .qr-code div {
+    width: 128px;
+    height: 128px;
+
+    border: 2px solid black;
+  }
+
+  .qr-code-text {
+    flex: 1;
+    font-family: Roboto, sans-serif;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+  .qr-code-text p {
+    padding-top: 30px;
+    justify-content: flex-start;
+    color: white;
+    text-align: center;
+    opacity: 50%;
+  }
+
+  @media screen and (orientation: landscape) {
+    .left-column {
+      width: 50%;
+      padding-left: 25%;
+      padding-right: 25%;
+    }
+
+    .right-column {
+      display: none;
+    }
+
+    .connect-button {
+      visibility: visible;
+    }
+
+    .connect-button button {
+      font-size: 16px;
+      height: 40px;
+    }
+
+    .apple-music-text p {
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (orientation: portrait) and (min-width: 700px) {
+    .left-column {
+    }
+
+    .logo {
+      padding-left: 20%;
+      padding-right: 20%;
+      padding-bottom: 25px;
+      justify-content: flex-end;
+    }
+
+    .apple-music-text {
+      font-size: 24px;
+      padding-left: 20%;
+      padding-right: 20%;
+      flex: 0;
+    }
+
+    .right-column {
+      display: none;
+    }
+
+    .connect-button {
+      visibility: visible;
+      padding-left: 20%;
+      padding-right: 20%;
+    }
+
+    .connect-button button {
+      font-size: 32px;
+      height: 80px;
+    }
+  }
+
+  /* T3 */
+  @media screen and (device-width: 960px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.33) {
+    .left-column {
+      width: 50%;
+      padding-left: 0%;
+      padding-right: 0%;
+    }
+
+    .apple-music-text {
+      flex: 1;
+    }
+
+    .right-column {
+      display: unset;
+    }
+
+    .connect-button {
+      flex: 0;
+      margin-bottom: 0px;
+      visibility: hidden;
+      padding-top: 0;
+    }
+
+    .connect-button button {
+      height: 0px;
+    }
+  }
+
+  /* T4 */
+  @media screen and (device-width: 967px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.98) {
+    .left-column {
+      width: 50%;
+      padding-left: 0%;
+      padding-right: 0%;
+    }
+
+    .apple-music-text {
+      flex: 1;
+    }
+
+    .right-column {
+      display: unset;
+    }
+
+    .connect-button {
+      flex: 0;
+      margin-bottom: 0px;
+      visibility: hidden;
+      padding-top: 0;
+    }
+
+    .connect-button button {
+      height: 0px;
+    }
+  }
+
+  @media screen and (min-width: 968px) {
+    .left-column {
+      width: 50%;
+      padding-left: 25%;
+      padding-right: 25%;
+    }
+
+    .right-column {
+      display: none;
+    }
+
+    .connect-button {
+      visibility: visible;
+    }
+
+    .connect-button button {
+      font-size: 32px;
+      height: 80px;
+    }
+
+    .apple-music-text p {
+      font-size: 24px;
+    }
+  }
+</style>
+
+<div class="gradient">
+  <div class="left-column">
+    <div>
+      <div class="logo">
+        <img
+          id="AppleMusicLogo"
+          src="https://res.cloudinary.com/control4/image/upload/v1718718966/static-pages/whats-new/Apple_Music_logo.svg"
+        />
+      </div>
+
+      <div class="apple-music-text">
+        <p id="AppleMusicText">
+          Integrating Apple Music into your system provides a convenient and
+          immersive way to enjoy music in any setting.
+        </p>
+      </div>
+
+      <div class="connect-button">
+        <button id="connectButton">Connect</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="right-column">
+    <div>
+      <div class="qr-code">
+        <div>
+          <img
+            id="qrCodeImage"
+            src="https://res.cloudinary.com/control4/image/upload/v1718721672/static-pages/whats-new/PleaseWait.png"
+          />
+        </div>
+      </div>
+
+      <div class="qr-code-text">
+        <p id="qrCodeText">Generating QR Code. Please wait.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  // Copyright 2024 Snap One, LLC. All rights reserved.
+
+  /* global MusicKit C4 */
+
+  function log(line) {
+    console.log("C4AM: " + line);
+  }
+
+  log("start");
+
+  const isT3 =
+    window.devicePixelRatio > 1.3 &&
+    window.devicePixelRatio < 1.4 &&
+    window.screen.height === 600 &&
+    window.screen.width === 960 &&
+    window.screen.availHeight === 600 &&
+    window.screen.availWidth === 960 &&
+    window.screen.orientation.type === "landscape-primary";
+
+  const isT4 =
+    window.devicePixelRatio > 1.98 &&
+    window.devicePixelRatio < 1.99 &&
+    window.screen.height === 604 &&
+    window.screen.width === 967 &&
+    window.screen.availHeight === 604 &&
+    window.screen.availWidth === 967 &&
+    window.screen.orientation.type === "landscape-primary";
+
+  function onSendCommandError(message) {
+    //alert('Error sending command: ' + message)
+  }
+
+  function onSubscribeToDataToUiError(message) {
+    //alert('Error subscribing to data to ui: ' + message)
+  }
+
+  function onSubscribeToVariableError(variable, message) {
+    //alert('Error subscribing to variable: ' + variable + ',' + message)
+  }
+
+  function onVariable(variableName, value) {
+    //alert ('onVariable: ' + variableName + ' : ' + value)
+  }
+
+  function onDataToUi(value) {
+    //alert('onDataToUi: ' + value)
+    let response;
+    try {
+      response = JSON.parse(value);
+    } catch (parseError) {
+      //alert('JSON parse error: ' + parseError.toString())
+      return;
+    }
+
+    if (Object.hasOwn(response, "devicecommand")) {
+      if (Object.hasOwn(response.devicecommand, "command")) {
+        if (response.devicecommand.command === "closeWebView") {
+          C4.closeWebView();
+        }
+
+        if (response.devicecommand.command === "imageBase64") {
+          const params = response.devicecommand.params.param[0];
+          if (params.name === "b64data") {
+            const value = params.value.static;
+            const image = document.getElementById("qrCodeImage");
+            image.src = value;
+
+            const text = document.getElementById("qrCodeText");
+            text.innerText =
+              "Scan QR Code to complete login on your mobile device";
+          }
+        }
+      }
+    }
+  }
+
+  function sendCommand(
+    command,
+    payload = {},
+    async = false,
+    sendToProtocol = true
+  ) {
+    if (typeof C4 === "object" && typeof C4.sendCommand === "function") {
+      if (typeof command !== "string") {
+        log("Error sendCommand: invalid command type: " + typeof command);
+        return;
+      }
+
+      if (typeof payload === "object") {
+        payload = JSON.stringify(payload);
+      } else {
+        log("Error sendCommand: invalid payload type: " + typeof payload);
+        return;
+      }
+
+      log("Sending command: " + command + ", payload: " + payload);
+      C4.sendCommand(command, payload, async, sendToProtocol);
+    } else {
+      log(
+        "No C4 object, could not send command: " +
+          command +
+          ", payload: " +
+          payload
+      );
+    }
+  }
+
+  function closeWebView() {
+    if (typeof C4 === "object" && typeof C4.closeWebView === "function") {
+      log("Closing webview");
+      C4.closeWebView();
+    } else {
+      log("No C4 object, could not close webView");
+    }
+  }
+
+  async function sendMusicUserToken(musicUserToken) {
+    const items = { ...localStorage };
+    for (const key in items) {
+      if (key.endsWith(".media-user-token")) {
+        localStorage.removeItem(key);
+        log("Removed musicUserToken before sending to C4");
+      }
+    }
+
+    if (typeof C4 === "object") {
+      const navId = urlParams.get("navId");
+      const params = {
+        musicUserToken,
+        navId,
+      };
+      log("Using C4 object to send token");
+      sendCommand("musicUserToken", params);
+      closeWebView();
+    } else {
+      log("No C4 object, using callback URL");
+      const state = urlParams.get("state");
+      const callbackUrl = urlParams.get("callbackUrl");
+      const url =
+        callbackUrl + "callback?code=" + musicUserToken + "&state=" + state;
+      window.location.replace(url);
+    }
+  }
+
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+
+  document.addEventListener("DOMContentLoaded", async () => {
+    if (
+      typeof C4 === "object" &&
+      typeof C4.subscribeToDataToUi === "function"
+    ) {
+      C4.subscribeToDataToUi(false); // Proxy events
+      C4.subscribeToDataToUi(true); // Protocol events
+    }
+
+    if (isT3 || isT4) {
+      /*
+            const text = document.getElementById('qrCodeText')
+            if (isT3) {
+                const t3Text = document.createTextNode(': T3')
+                text.appendChild(t3Text)
+            }
+
+            if (isT4) {
+                const t4Text = document.createTextNode(': T4')
+                text.appendChild(t4Text)
+            }
+            */
+
+      sendCommand("SendImageBase64");
+    }
+  });
+
+  if (!(isT3 || isT4)) {
+    const firstScript = document.getElementsByTagName("script")[0];
+    const musicKitJS = document.createElement("script");
+    musicKitJS.src = "https://js-cdn.music.apple.com/musickit/v3/musickit.js";
+    musicKitJS.type = "text/javascript";
+    firstScript.parentNode.insertBefore(musicKitJS, firstScript);
+
+    const developerToken = urlParams.get("developerToken");
+    const build = urlParams.get("build");
+    const version = urlParams.get("version");
+
+    document.addEventListener("musickitloaded", async () => {
+      log("musickitloaded");
+
+      try {
+        await MusicKit.configure({
+          developerToken,
+          app: {
+            build,
+            icon: "https://" + window.location.hostname + "/c4icon.png",
+            name: "Ryff",
+            version,
+          },
+        });
+      } catch (err) {
+        log("MusicKit.configure error: " + err);
+      }
+
+      const music = MusicKit.getInstance();
+      if (music.isAuthorized) {
+        log("Already authorized!");
+        sendMusicUserToken(music.musicUserToken);
+      }
+    });
+
+    const connectButton = document.getElementById("connectButton");
+    connectButton.addEventListener("click", async () => {
+      log("Starting Auth");
+
+      const errorPayload = {};
+
+      const music = MusicKit.getInstance();
+      try {
+        const musicUserToken = await music.authorize();
+        if (typeof musicUserToken === "string" && musicUserToken.length > 0) {
+          log("Authorized music-user-token: " + musicUserToken);
+          sendMusicUserToken(musicUserToken);
+          return;
+        }
+
+        errorPayload.message = "AuthorizeNoToken";
+      } catch (err) {
+        errorPayload.message = err.toString();
+        log("Error authing: " + err);
+        sendCommand("AuthorizationError", errorPayload);
+      }
+
+      closeWebView();
+    });
+  }
+
+  log("done");
+</script>

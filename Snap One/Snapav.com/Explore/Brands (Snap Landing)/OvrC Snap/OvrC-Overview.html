@@ -1,0 +1,964 @@
+<style>
+  /*====================
+ Navigation style 
+ =====================*/
+  .brand-nav {
+    margin-bottom: 0px;
+  }
+  .brand-pg-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: right;
+  }
+  .brand-nav li {
+    display: inline-block;
+  }
+  .brand-nav li a {
+    display: block;
+    color: #7c7e7f;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Lato;
+    font-size: 1.5rem;
+  }
+  /* Change the link color on hover */
+  .brand-nav li a:hover {
+    color: #4499e3;
+  }
+  /* Change the link color on click */
+  .brand-nav.active {
+    color: #4499e3;
+  }
+  /*====================
+Backgrounds and images
+ =====================*/
+  .webinar {
+    background-color: #f2f2f3;
+    height: auto;
+    padding: 15px;
+  }
+  .ovrc-header {
+    background-image: url(/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/OvrC-Overview-hero.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    padding: 40px 100px 581px;
+    margin-bottom: 10px;
+  }
+  .ovrc-banner {
+    background-image: url(/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/Ovrc10-block.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    padding: 210px 10px 40px;
+    margin: 40px 0;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .ovrc-header-mobile,
+  .connected-ecosystem-mobile {
+    display: none;
+  }
+  .new-ovrc-video {
+    background-image: url(/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/OvrC-Video.png);
+    background-position: center;
+    background-size: cover;
+    height: 557px;
+    padding: 400px 100px 0px;
+    border-radius: 10px;
+    margin: 50px 0;
+  }
+  .connected-ecosystem {
+    background-image: url(/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/A-Connected-Ecosystem.png);
+    background-position: center;
+    background-size: cover;
+    height: auto;
+    width: 100%;
+    padding: 470px 100px 54px;
+    border-radius: 10px;
+    margin: 40px 0;
+  }
+  .ovrc-box {
+    background-image: url(/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/OvrC-bkgrnd.png);
+    background-position: center;
+    background-size: cover;
+    height: 430px;
+    width: 100%;
+    padding: 150px 30px;
+    border-radius: 10px;
+  }
+  .ovrc-pro-box {
+    background-image: url(/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/OvrC-Pro-bkgnd.png);
+    background-position: center;
+    background-size: cover;
+    height: 430px;
+    width: 100%;
+    padding: 138px 30px;
+    border-radius: 10px;
+  }
+
+  .orange-bkgnd {
+    background-color: #fe8423;
+    height: auto;
+    padding: 50px 160px 50px 160px;
+    max-width: 100%;
+    margin-top: 40px;
+  }
+  /*====================
+Formatting
+ =====================*/
+  .main-headers {
+    font-size: 2.8rem;
+  }
+  .browser-section-header {
+    font-size: 2.5rem;
+    font-weight: 100;
+  }
+  .future-of-mgmt {
+    margin: 85px 10px;
+  }
+
+  .future-of-mgmt .span12 {
+    padding: 0px 50px 120px;
+  }
+
+  .future-of-mgmt .span8 {
+    padding: 30px 50px;
+  }
+
+  .element-padding {
+    padding-top: 30px;
+  }
+
+  .ovrc-connect {
+    margin: 85px 0;
+  }
+
+  .ovrc-connect .thumbnail-block {
+    padding: 30px 50px;
+  }
+
+  .connected-ecosystem .main-headers,
+  .connected-ecosystem p {
+    color: white;
+  }
+  .comparison {
+    margin: 50px 0px;
+  }
+  .comparison .thumbnail-block {
+    padding: 50px 100px 25px 100px;
+  }
+
+  .future-of-mgmt ul {
+    list-style-type: disc;
+    padding: 0px 15px;
+  }
+  .upgrade-ovrc-pro,
+  .ovrc-includes-section {
+    margin: 70px 0;
+  }
+  .upgrade-ovrc-pro .thumbnail-block {
+    padding: 10px 180px;
+    height: auto;
+  }
+
+  .mobilehide {
+    display: block;
+  }
+  .mobileshow {
+    display: none;
+  }
+
+  .ovrc-comparison-ul {
+    list-style: disc;
+    text-align: left;
+    font-size: 1.6rem;
+    padding-left: 20px;
+    padding-bottom: 10px;
+  }
+  .ovrc-comparison-ul li {
+    color: white;
+  }
+  .ovrc-awards ul {
+    list-style: disc;
+  }
+  .ovrc-awards .thumbnail-block {
+    padding: 20px 130px 20px 40px;
+  }
+  /*====================
+Grid
+=====================*/
+  .ovrcpro-green-grid {
+    display: grid;
+    row-gap: 30px;
+    grid-template-columns: auto auto auto;
+    height: auto;
+    column-gap: 30px;
+    text-align: center;
+  }
+
+  .card {
+    display: inline-grid;
+    height: auto;
+    border-radius: 10px;
+    padding: 40px 10px;
+  }
+
+  /*==================================
+ MEDIA
+ ==================================*/
+
+  @media (max-width: 800px) {
+    .ovrc-header {
+      padding: 15px 13px 473px;
+    }
+    .new-ovrc-video {
+      height: auto;
+      padding: 242px 30px 20px;
+    }
+    .future-of-mgmt .span8 {
+      padding: 24px 20px;
+    }
+    .future-of-mgmt .span12 {
+      padding: 0px 20px 50px;
+    }
+    .ovrc-connect {
+      margin: 10px 0;
+    }
+    .ovrc-connect .thumbnail-block {
+      padding: 0px;
+    }
+
+    .comparison .thumbnail-block {
+      padding: 50px 41px;
+    }
+    .ovrc-home {
+      padding: 45px 36px 0px;
+      height: 932px;
+    }
+    .connected-ecosystem {
+      padding: 285px 20px 5px;
+    }
+    .ovrcpro-green-grid {
+      row-gap: 20px;
+      grid-template-columns: auto auto;
+      column-gap: 20px;
+    }
+    .upgrade-ovrc-pro,
+    .ovrc-includes-section {
+      margin: 30px 0;
+    }
+
+    .ovrc-box {
+      height: auto;
+      padding: 123px 30px;
+    }
+    .ovrc-awards .thumbnail-block {
+      padding: 20px 80px 20px 30px;
+    }
+    .orange-bkgnd {
+      padding: 50px;
+    }
+  }
+  @media (max-width: 600px) {
+    .ovrc-header,
+    .connected-ecosystem {
+      display: none;
+    }
+    .ovrc-header-mobile {
+      display: block;
+      height: auto;
+      background: #242c36;
+      padding: 28px 10px;
+    }
+    .future-of-mgmt {
+      margin: 10px 0px;
+    }
+    .future-of-mgmt .span12 {
+      padding: 0px;
+    }
+    .future-of-mgmt .span8 {
+      padding: 30px 10px;
+    }
+    .ovrc-connect {
+      margin: 10px 0px;
+    }
+    .ovrc-connect .thumbnail-block,
+    .upgrade-ovrc-pro .thumbnail-block,
+    .ovrc-awards .thumbnail-block,
+    .connected-ecosystem {
+      padding: 20px 10px;
+    }
+    .connected-ecosystem-mobile {
+      display: block;
+      height: auto;
+      padding: 28px 10px 0px;
+    }
+    .ovrcpro-green-grid {
+      grid-template-columns: auto;
+    }
+    .ovrc-home {
+      padding: 15px 10px;
+      height: 907px;
+    }
+    .new-ovrc-video {
+      height: auto;
+      padding: 164px 10px 0px;
+    }
+    .ovrc-connect {
+      text-align: center;
+    }
+
+    .ovrc-pro-box,
+    .ovrc-box {
+      padding: 165px 10px;
+      height: auto;
+    }
+
+    .orange-bkgnd {
+      padding: 10px;
+    }
+
+    .comparison {
+      margin: 10px 0px;
+    }
+    .comparison .thumbnail-block {
+      padding: 20px 10px;
+    }
+    .mobilehide {
+      display: none;
+    }
+    .mobileshow {
+      display: block;
+    }
+  }
+</style>
+
+<!-- START BREADCRUMBS !-->
+<div id="productsGlobalBreadCrumbs">
+  <div id="breadcrumb" class="breadcrumb">
+    <div id="WC_BreadCrumbTrailDisplay_div_1" class="breadcrumb_links">
+      <a id="WC_BreadCrumbTrailDisplay_link_2" href="/shop/en/snapav/home"
+        >Home</a
+      >
+      <span class="breadcrumb-divider">|</span>
+      <a id="WC_BreadCrumbTrailDisplay_link_5a" href="/shop/en/snapav/brands"
+        >Brands</a
+      >
+      <span class="breadcrumb-divider">|</span> OvrC
+    </div>
+    <div id="WC_BreadCrumbTrailDisplay_div_3" class="breadcrumb_dropdowns">
+      <div id="WC_BreadCrumbTrailDisplay_div_4" class="breadcrumb_item"></div>
+    </div>
+  </div>
+</div>
+<!-- END BREADCRUMBS !-->
+
+<!-- NAV START -->
+
+<div class="row-fluid brand-nav">
+  <div class="span12">
+    <h1 style="color: #7c7e7f; float: left">OvrC</h1>
+    <ul class="brand-pg-nav">
+      <li>
+        <a class="active" href="/shop/en/snapav/ovrc" style="color: #4499e3"
+          >Overview</a
+        >
+      </li>
+      <li><a href="/shop/en/snapav/ovrc-pro">OvrC Pro</a></li>
+      <li><a href="/shop/en/snapav/ovrc-connect">OvrC Connect</a></li>
+      <li><a href="/shop/en/snapav/ovrc-ecosystem">OvrC Ecosystem</a></li>
+    </ul>
+  </div>
+</div>
+
+<hr style="margin: 0 0 10px 0" />
+
+<!-- NAV END -->
+
+<!--OvrC Header -->
+<div class="ovrc-header">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="thumbnail-block center">
+        <h2 class="main-headers" style="color: white">
+          Save Time. Grow Your Business. Welcome to OvrC
+        </h2>
+        <h3 style="color: white">
+          OvrC is a free, cloud-based remote management and monitoring platform
+          designed by Snap One exclusively for professionals. From setup to
+          support, OvrC empowers you to install, monitor, and troubleshoot
+          connected devices remotely, helping you deliver world-class support
+          from anywhere. With a new system coming online every six minutes, OvrC
+          is trusted by pros around the world to solve problems quickly and keep
+          customers’ systems up and running.
+        </h3>
+        <a href="/shop/en/snapav/ovrc-products"
+          ><div class="btn-1">Shop OvrC</div></a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ovrc-header-mobile">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="thumbnail-block center">
+        <h1 style="color: white">
+          Save Time. Grow Your Business.
+          <br />
+          Welcome to OvrC
+        </h1>
+        <h3 style="color: white">
+          OvrC is a free, cloud-based remote management and monitoring platform
+          designed by Snap One exclusively for professionals. From setup to
+          support, OvrC empowers you to install, monitor, and troubleshoot
+          connected devices remotely, helping you deliver world-class support
+          from anywhere. With a new system coming online every six minutes, OvrC
+          is trusted by pros around the world to solve problems quickly and keep
+          customers’ systems up and running.
+        </h3>
+        <a href="/shop/en/snapav/ovrc-products"
+          ><div class="btn-1">Shop OvrC</div></a
+        >
+      </div>
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/OvrC-Overview-hero.png"
+          alt="OvrC product family shot"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<!--END OvrC Header -->
+
+<div class="ovrc-banner">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="thumbnail-block">
+        <p>New Features and continued evolution</p>
+        <a href="https://snp1.co/ovrc-turns-10" target="_blank"
+          ><p>Discover More &gt; &gt;</p></a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- START Video -->
+
+<a class="video-link" href="#" data-id="655015631">
+  <div class="new-ovrc-video">
+    <div class="row-fluid" style="margin-bottom: 0px">
+      <div class="span12 center">
+        <div class="thumbnail-block">
+          <h1 style="color: white">
+            OvrC: Snap One’s Premium Platform for the Future
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</a>
+
+<div class="ovrc-features-section">
+  <div class="row-fluid" style="padding-top: 15px">
+    <div class="span4">
+      <div class="thumbnail-block center">
+        <div class="dynamic-image">
+          <img
+            src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/NPC/landingpages/ovrc_overview_img_icon_realtimenotifications.png"
+            alt="Real Time Notifications Icon"
+          />
+        </div>
+        <h2 style="color: black">Real-Time Notifications</h2>
+        <h3 style="color: black">
+          Receive alerts and troubleshoot common issues before your customer
+          even realizes there's a problem. Plus, batch notifications provide you
+          with a single offline alert based on location.
+        </h3>
+      </div>
+    </div>
+    <div class="span4">
+      <div class="thumbnail-block center">
+        <div class="dynamic-image">
+          <img
+            src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/NPC/landingpages/ovrc_overview_img_icon_remotereboots.png"
+            alt="OvrC Remote reboots icon"
+          />
+        </div>
+        <h2>Remote Reboots</h2>
+        <h3>
+          Most troubleshooting calls are resolved with a simple reboot, so OvrC
+          allows you to remotely reboot Snap One devices or those powered
+          through a WattBox or Araknis PoE switch, instead of rolling a truck.
+        </h3>
+      </div>
+    </div>
+    <div class="span4">
+      <div class="thumbnail-block center">
+        <div class="dynamic-image">
+          <img
+            src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/NPC/landingpages/ovrc_overview_img_icon_modifyconfigurations.png"
+            alt="Modify Configurations icon"
+          />
+        </div>
+        <h2>Modify Configurations</h2>
+        <h3>
+          Through an easy-to-use interface, you can modify the most common
+          configuration settings of a device ¬in OvrC – even after your install
+          is complete.
+        </h3>
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid" style="padding-bottom: 30px">
+    <div class="span4">
+      <div class="thumbnail-block center">
+        <div class="dynamic-image">
+          <img
+            src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/NPC/landingpages/ovrc_overview_img_icon_firmware-update.png"
+            alt="Firmware update icon"
+          />
+        </div>
+        <h2>Firmware Updates</h2>
+        <h3>
+          If a firmware update is available for a device, you’ll instantly be
+          notified. Then you can update the device remotely with a single click.
+        </h3>
+      </div>
+    </div>
+    <div class="span4">
+      <div class="thumbnail-block center">
+        <div class="dynamic-image">
+          <img
+            src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/NPC/landingpages/ovrc_overview_img_icon-remoteaccess.png"
+            alt="Remote Access icon"
+          />
+        </div>
+        <h2>Remote Access</h2>
+        <h3>
+          Get remote, secure access to a device’s local UI with just the click
+          of a button, where you can access advanced configuration settings.
+        </h3>
+      </div>
+    </div>
+    <div class="span4">
+      <div class="thumbnail-block center">
+        <div class="dynamic-image">
+          <img
+            src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/NPC/landingpages/ovrc_overview_img_icon_app.png"
+            alt="Mobile App icon"
+          />
+        </div>
+        <h2>Client-Facing Mobile App</h2>
+        <h3>
+          Through OvrC Connect, an optional mobile app you can personalize for
+          each job, customers can fix common issues and manage parental controls
+          on their own time.
+        </h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- START Ecosystem-->
+<div class="connected-ecosystem">
+  <div class="row-fluid">
+    <div class="span12 center">
+      <div class="thumbnail-block">
+        <h2 class="main-headers">A Connected Ecosystem</h2>
+        <p>
+          OvrC works with an ever-expanding list of products ranging from our
+          connected brands like Araknis, WattBox, Luma, and Pakedge, to popular
+          third-party choices like Google Nest, Pioneer, Samsung, Philips, and
+          more. When you can install, configure, and monitor every device on the
+          job site within a single easy-to-use platform, you save time and
+          create more opportunities to grow your business.
+          <a href="/shop/en/snapav/ovrc-ecosystem" style="font-size: 1.6rem"
+            >Learn more about the OvrC Ecosystem &gt; &gt;</a
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="connected-ecosystem-mobile">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/A-Connected-Ecosystem.png"
+          alt="OvrC connected ecosystem"
+        />
+      </div>
+      <div class="thumbnail-block center">
+        <h2 class="main-headers">A Connected Ecosystem</h2>
+        <p>
+          OvrC works with an ever-expanding list of products ranging from our
+          connected brands like Araknis, WattBox, Luma, and Pakedge, to popular
+          third-party choices like Google Nest, Pioneer, Samsung, Philips, and
+          more. When you can install, configure, and monitor every device on the
+          job site within a single easy-to-use platform, you save time and
+          create more opportunities to grow your business.
+          <a href="/shop/en/snapav/ovrc-ecosystem" style="font-size: 1.6rem"
+            >Learn more about the OvrC Ecosystem >></a
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Ecosystem-->
+
+<!-- START Upgrade to OvrC Pro-->
+<div class="upgrade-ovrc-pro">
+  <div class="row-fluid">
+    <div class="span12 center">
+      <div class="thumbnail-block">
+        <div class="dynamic-image" style="padding-bottom: 20px">
+          <img
+            src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/NPC/landingpages/araknis_ovrc_img_ocrvprologo.png"
+          />
+        </div>
+        <h2 class="main-headers">Upgrade to OvrC Pro</h2>
+        <p>
+          Upgrade to OvrC Pro, and you’ll get full visibility of all connected
+          devices and premium network transparency, so you can tackle common
+          network issues quickly and discreetly, without rolling a truck.
+        </p>
+      </div>
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/ProTrio-Trim.png"
+          alt="Several screenshots with the OvrC dashboard displayed"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Upgrade to OvrC Pro-->
+
+<div class="ovrcpro-green-grid">
+  <div class="card">
+    <div class="dynamic-image">
+      <img
+        src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/Network-access-OvrC-Icon.png"
+        alt="Graphic element"
+      />
+    </div>
+    <div class="thumbnail-block">
+      <h2>Upgrade to Full Network Access</h2>
+      <p>
+        Gain complete visibility of every connected device while enjoying
+        premium network transparency. Quickly and discreetly resolve network
+        issues without the hassle of dispatching a truck.
+      </p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="dynamic-image">
+      <img
+        src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/Network-OvrC-Icon.png"
+        alt="Graphic element"
+      />
+    </div>
+    <div class="thumbnail-block">
+      <h2>Network Diagnostics:</h2>
+      <p>
+        Access the customer dashboard to track devices requiring updates,
+        experiencing connectivity issues, or in critical condition. Utilize the
+        Network Health section to troubleshoot, analyzing LAN/WAN latency and
+        download/upload speeds.
+      </p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="dynamic-image">
+      <img
+        src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/Scan-OvrC-Icon.png"
+        alt="Graphic element"
+      />
+    </div>
+    <div class="thumbnail-block">
+      <h2>Scan & Monitor Devices:</h2>
+      <p>
+        Identify all network IP devices, noting their IPs and manufacturer
+        details. Assign unique names, adjust settings, and add notes. Use
+        controls for rebooting and updating. Select devices to monitor for
+        status changes.
+      </p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="dynamic-image">
+      <img
+        src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/advanced-remote-ovrc-icon.png"
+        alt="Graphic element"
+      />
+    </div>
+    <div class="thumbnail-block">
+      <h2>Advanced Remote Access:</h2>
+      <p>
+        Securely connect to a device's UI through port, SSH, or telnet with a
+        single click, without needing port forwarding or VPNs. Ports are
+        auto-identified or can be manually added.
+      </p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="dynamic-image">
+      <img
+        src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/Interoperability-OvrC-Icon.png"
+        alt="Graphic element"
+      />
+    </div>
+    <div class="thumbnail-block">
+      <h2>Interoperability</h2>
+      <p>
+        Access enhanced diagnostic data and troubleshooting capabilities for
+        supported products, along with cloud-based tools such as Ping,
+        Traceroute, and a terminal emulator for SSH and telnet communication.
+      </p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="dynamic-image">
+      <img
+        src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/Secure-OvrC-icon.png"
+        alt="Graphic element"
+      />
+    </div>
+    <div class="thumbnail-block">
+      <h2>Secured and Authenticated:</h2>
+      <p>
+        Ensure your customer's privacy and network security using multi-factor
+        authentication, HTTPS, user permission levels, group access, shared
+        sites, and an account handoff process.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!--OvrC Connect -->
+
+<div class="ovrc-connect">
+  <div class="row-fluid">
+    <div class="span6">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/OvrC-connect-Convenient-v2.png"
+          alt="OvrC Connect App icon"
+        />
+      </div>
+    </div>
+    <div class="span6">
+      <div class="thumbnail-block">
+        <div class="dynamic-image">
+          <img
+            src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/OvrC-Connect-logo.png"
+            alt="OvrC Connect icon"
+            style="width: 40%"
+          />
+        </div>
+        <h2 class="main-headers">Give OvrC's Power to Your Clients</h2>
+        <p>
+          Customers benefit from unique remote features, too. Customize our
+          client-facing app, OvrC Connect, and give it to your clients –
+          empowering them to fix common issues, filter network content, and
+          manage their Wi-Fi.
+        </p>
+        <p>
+          <a href="/shop/en/snapav/ovrc-connect"
+            >Learn more about OvrC Connect &gt; &gt;</a
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--END OvrC Connect -->
+<!-- START Comparison-->
+
+<div class="comparison">
+  <div class="row-fluid">
+    <div class="span12 center">
+      <div class="thumbnail-block">
+        <h2 class="main-headers">Quick Comparison</h2>
+        <p>
+          OvrC allows you to remotely monitor and manage Snap One connected
+          products, while OvrC Pro extends those capabilities to everything else
+          on the network, including ISP and non-Snap One products. Plus, you get
+          access to a remote service dashboard that helps you solve problems
+          from anywhere.
+        </p>
+      </div>
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/OvrC-Overciew-ComparisonChart-2024.png"
+          alt="ovrc and ovrc pro comparison chart"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Comparison-->
+
+<!-- START OvrC and OvrC Pro Boxes-->
+
+<div class="ovrc-includes-section">
+  <div class="row-fluid">
+    <div class="span6">
+      <div class="ovrc-box">
+        <div class="thumbnail-block">
+          <h2 style="color: white">
+            OvrC is included with all Snap One connected products, and lets you:
+          </h2>
+          <br />
+          <ul class="ovrc-comparison-ul">
+            <li>Monitor and manage products remotely</li>
+            <li>View device diagnostics info and troubleshoot remotely</li>
+          </ul>
+        </div>
+        <br />
+        <br />
+        <div class="thumbnail-block center">
+          <a href="https://app.ovrc.com/#/signup" target="_blank"
+            ><div class="btn-5">Sign Up</div></a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="span6">
+      <div class="ovrc-box">
+        <div class="thumbnail-block">
+          <h2 style="color: white">
+            With OvrC Pro, you get all the features of OvrC, plus:
+          </h2>
+          <br />
+          <ul class="ovrc-comparison-ul">
+            <li>The ability to monitor and manage ALL connected products</li>
+            <li>A quick snapshot of a location’s system health</li>
+            <li>Enhanced diagnostics data and troubleshooting capabilities</li>
+          </ul>
+        </div>
+        <br />
+        <div class="thumbnail-block center">
+          <a href="/shop/en/snapav/ovrc-pro"
+            ><div class="btn-2">Learn More</div></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Browser and Smart phone compatibility -->
+
+<div class="row-fluid" style="padding: 25px 0">
+  <div class="span6 center">
+    <div class="thumbnail-block">
+      <h3 class="browser-section-header">Browser Compatibility</h3>
+      <p>OvrC supports the latest versions of these browsers:</p>
+      <div class="dynamic-image center">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/12-browser.png"
+          alt="image for browsers"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="span6 center">
+    <div class="thumbnail-block">
+      <h3 class="browser-section-header">New Smartphone App</h3>
+      <p>Compatible with iOS7+ and Android OS 4.4+</p>
+    </div>
+    <div class="row-fluid">
+      <div class="span6">
+        <div class="dynamic-image center">
+          <a
+            href="https://apps.apple.com/us/app/ovrc/id1413853229?ls=1"
+            target="_blank"
+            ><img
+              src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/NPC/landingpages/ovrc_overview_img_appledownloadapp.png"
+              alt="image of smart apps"
+          /></a>
+        </div>
+      </div>
+      <div class="span6">
+        <div class="dynamic-image center">
+          <a
+            href="https://play.google.com/store/apps/details?id=com.ovrc.app"
+            target="_blank"
+            ><img
+              src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/NPC/landingpages/ovrc_overview_img_googleplaybtn.png"
+              alt="image of smart apps"
+          /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ovrc-awards">
+  <div class="row-fluid">
+    <div class="span6">
+      <div class="thumbnail-block">
+        <h2 class="main-headers">Award Winning Services</h2>
+        <ul>
+          <li>
+            The 2023 CEDIA Smart Home Awards inducted OvrC into the Product Hall
+            of Fame.
+          </li>
+          <li>
+            OvrC has held the title of CEPro Brand Leader for Remote Managed
+            Services annually since 2017.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="span6">
+      <div class="row-fluid">
+        <div class="span6">
+          <div class="dynamic-image">
+            <img
+              src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/Cedia_Awards.png"
+              alt="Cedia Award badge"
+            />
+          </div>
+        </div>
+        <div class="span6">
+          <div class="dynamic-image" style="margin-top: 88px">
+            <img
+              src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/CEDIA-Hall-of-Fame.png"
+              alt="Cedia Award badge"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="orange-bkgnd">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="thumbnail-block center">
+        <h2 style="color: white">
+          We’re always adding new features to OvrC, so visit our blog to see the
+          latest updates.
+        </h2>
+        <a href="https://news.snapav.com/category/ovrc/" target="_blank"
+          ><div class="btn-2">Learn more</div></a
+        >
+      </div>
+    </div>
+  </div>
+</div>

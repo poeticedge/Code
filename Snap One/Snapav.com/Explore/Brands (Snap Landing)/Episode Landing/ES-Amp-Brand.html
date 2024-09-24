@@ -1,0 +1,504 @@
+<style> 
+	/*====================
+Navigation style 
+=====================*/
+	.brand-nav {
+		margin-bottom: 0px;
+	}
+	.brand-pg-nav {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  overflow: hidden;
+	  float: right;
+}
+	.brand-nav li {
+	  display: inline-block;
+	}
+	.brand-nav li a {
+	  display: block;
+	  color: #7c7e7f;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	  font-family: Lato;
+	  font-size: 1.5rem;
+	}
+	/* Change the link color on hover */
+	.brand-nav li a:hover {
+	  color: #4499e3;
+	}
+/* Change the link color on click */
+	.brand-nav.active {
+	  color: #4499e3;
+	}	
+
+/*=======================================================
+FORMATTING
+========================================================*/
+
+.mobileshow {
+	display:none;	
+	}
+
+.mobilehide {
+	display:block;	
+	}
+
+h1.title {
+	font-size:2.4rem; 
+	font-weight:normal; 
+	color:#fff;	
+}
+
+h3.sub {
+	color:#fff;	
+}
+   	
+.p_padding_left {
+	padding: 70px 70px 0;
+	position:relative;
+	z-index:3;
+}
+
+.p_padding_left2 {
+	padding:115px 85px 0;
+	position:relative;
+	z-index:3;
+}
+
+.p_padding_right {
+	padding:45px 70px 0;
+	position:relative;
+	z-index:3;
+}
+
+.p_padding_right2 {
+	padding: 54px 56px 0;
+	padding: 54px 56px 0;
+	position:relative;
+	z-index:3;
+}
+
+.hero {
+	padding: 0 160px;	
+}
+
+h4 {
+	font-size:1.4rem;
+	color:#fff;	
+}
+	
+	
+/*=======================================================
+IMAGES
+========================================================*/
+
+	
+.alpha_left {
+	background-color:#000;
+	opacity:0.6;
+	position:absolute;
+	z-index:2;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	width:40%
+	
+	}
+	
+.alpha_right {
+	background-color:#000;
+	opacity:0.6;
+	position:absolute;
+	z-index:2;
+	top:0;
+	bottom:0;
+	right:0;
+	width:40%
+	}
+	    
+.img1{
+	background-image: url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/amps_1_image.jpg');
+	background-size: cover;
+	background-position:center;
+    width: 100%;
+    height: 400px;
+    padding: 100px 0px 0px 0px;
+	z-index:-1;
+	}
+.img2{
+	background-image: url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/amps_2_image.jpg');
+	background-size: cover;
+	background-position:center;
+	width: 100%;
+    height: 400px;
+    /*padding: 60px;*/
+	position:relative;
+	}
+	
+    
+.img3{
+    background-image:url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Episode-ovrc-amps-update.jpg');
+    background-size: cover;
+	background-position:center;
+	width: 100%;
+    height: 400px;
+    /*padding: 165px 0px 0px 30px;*/
+	position:relative;
+    }
+.img4{
+	background-image: url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/amps_4_image.jpg');
+	background-size: cover;
+	background-position:center;
+	width: 100%;
+    height: 400px;
+	position:relative;
+}
+
+.dynamic-amp {
+	background-image: url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ES-DYN-AMP-011720.jpg');
+	background-size: cover;
+	background-position:center;
+	width: 100%;
+    height: 400px;
+	position:relative;
+	}	
+.img5{
+	background-image: url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ES-Mini-011720.jpg');
+	background-size: cover;
+	background-position:center;
+	width: 100%;
+    height: 400px;
+	position:relative;
+}
+.sub-amps {
+	background-image: url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/sub-Amp.jpg');
+	background-size: cover;
+	background-position:center;
+	width: 100%;
+    height: 400px;
+	position:relative;
+	}   
+	.response-amps {
+	background-image: url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Response-amps.jpg');
+	background-size: cover;
+	background-position:center;
+	width: 100%;
+    height: 400px;
+	position:relative;
+	}
+.img6{
+	background-image: url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Hybrid-amps.png');
+	background-size: cover;
+	background-position:center;
+	width: 100%;
+    height: 400px;
+	position:relative;
+}
+	.mini-avr {
+	background-image: url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/51Amp-FPO-6.png');
+	background-size: cover;
+	background-position:center;
+	width: 100%;
+    height: 400px;
+	position:relative;
+	}
+
+
+/*=======================================================
+MEDIA
+========================================================*/  
+	
+@media (min-width: 1025px) {
+.row-fluid .span1 {
+    width: 8.3%;
+}
+
+}
+
+@media (max-width: 1024px) and (min-width: 980px) {
+	
+.row-fluid .span1 {
+    width: 8.3%;
+}
+
+.p_padding_left {
+	padding:50px 40px 0;
+}
+
+.p_padding_left2 {
+	padding:50px 40px 0;
+}
+
+}
+
+@media (max-width: 979px) {
+.row-fluid .span1 {
+    width: 80%;
+}
+
+.p_padding_left {
+	padding:60px 20px 0;
+}
+
+.p_padding_left2 {
+	padding:60px 20px 0;
+}
+
+.p_padding_right {
+	padding:60px 20px 0;
+}
+
+.p_padding_right2 {
+	padding:60px 20px 0;
+}
+
+}
+
+@media (max-width: 768px) {
+	h3.sub-nav {
+	margin: 2px 0;	
+	}
+}
+
+	
+@media (max-width: 541px){
+	
+	/*h1.title { 
+	color:#000;	
+	}
+	
+	h3.sub {
+	color:#000;	
+	}
+	
+	h4 {
+	font-size:1.4rem;
+	color:#000;	
+	}*/
+	
+	.hero {
+	padding: 0 20px;	
+	}
+	
+	.p_padding_right {
+	padding:15px 20px 20px;
+	}
+	
+	.mobileshow {
+	display:block;	
+	}
+
+	.mobilehide {
+	display:none;	
+	}
+	
+	/*.alpha_left {
+	opacity:0;
+	}
+	
+	.alpha_right {
+	opacity:0;
+	}*/
+	
+
+    }
+</style>
+
+<!-- START BREADCRUMBS !-->
+<div id="productsGlobalBreadCrumbs">
+    <div id="breadcrumb" class="breadcrumb">
+        <div id="WC_BreadCrumbTrailDisplay_div_1" class="breadcrumb_links"> 
+            <a id="WC_BreadCrumbTrailDisplay_link_2" href="/shop/en/snapav/home">Home</a> 
+            <span class="breadcrumb-divider">|</span> 
+            <a id="WC_BreadCrumbTrailDisplay_link_5a" href="/shop/en/snapav/brands">Brands</a> 
+            <span class="breadcrumb-divider">|</span> Episode
+        </div>
+        <div id="WC_BreadCrumbTrailDisplay_div_3" class="breadcrumb_dropdowns">
+            <div id="WC_BreadCrumbTrailDisplay_div_4" class="breadcrumb_item"> </div>
+        </div>
+    </div>
+</div>
+<!-- END BREADCRUMBS !-->
+
+<!-- NAV START -->
+ 
+<div class="row-fluid brand-nav">
+	<div class="span12">
+		<h1 style="color:#7c7e7f; float:left;">Episode</h1>
+			<ul class="brand-pg-nav">
+			  <li><a class="active" href="/shop/en/snapav/episode">Overview</a></li>
+			  <li><a href="/shop/en/snapav/episode-architectural" >Architectural</a></li>
+			  <li><a href="/shop/en/snapav/episode-subwoofers">Subwoofers</a></li>
+			  <li><a href="/shop/en/snapav/episode-soundbars">Soundbars</a></li>
+			  <li><a href="/shop/en/snapav/episode-outdoor">Outdoor</a></li>
+			  <li><a href="/shop/en/snapav/episode-commercial">Commercial</a></li>
+			  <li><a href="/shop/en/snapav/episode-amps" style="color:#4499e3;">Amplifiers</a></li>
+			</ul>
+	</div>
+</div>
+<hr style="margin:0 0 10px 0;">
+ 
+<!-- NAV END -->
+
+<!-- START SECTION 1 !-->
+<div class="img1">
+	<div class="row-fluid">
+		<div class="span12">
+			<div class="thumbnail-block center">
+                <!--<div class="dynamic-image">
+                    <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/NPC/landingpages/Luma_overview_logo.png">
+                </div>-->
+                <br>
+                <h1 style="color: white; font-size:3rem; font-weight:normal">Amp it Up </h1>
+                <h3 style="color: white; font-weight:normal" class="hero">Maximize the sound of your speaker system with Episode amps, or check out our full array of <a href="https://www.snapav.com/shop/en/snapav/SearchDisplay?storeId=10151&catalogId=10010&langId=-1&pageSize=20&beginIndex=0&searchSource=Q&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&pageView=detailed&searchTerm=autonomic&catGroupId=" style="font-family:Lato; font-size:1.6rem; ">Autonomic music streamers and amps.</a>    </h3>
+                <div style="padding-top:20px;"><a href="/shop/en/snapav/amplifiers"><div class="btn-1">Shop Now</div></a></div>
+            </div>
+		</div>
+	</div>
+</div>
+<!-- END SECTION 1 !-->
+
+<!-- START SECTION 2 DESKTOP !-->
+<div class="img2">
+	<div class="row-fluid">
+		<div class="span5">
+			<div class="thumbnail-block">
+            <div class="alpha_left"></div>
+            	<div class="p_padding_left">
+                <h1 class="title">70-Volt</h1>
+                <h3 class="sub">Our 70-volt digital amps are OvrC enabled for easy remote management, while popular control drivers, IR, IP, and RS-232 allow you to customize audio in commercial environments. They’re the perfect fit for restaurants, bars, or small conference rooms. </h3>
+                <!--<h4>Lengths: 30", 40", 50", 60"</h4> -->     
+              </div> 
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- END SECTION 2 DESKTOP !-->
+
+<!-- START SECTION 3 !-->
+<div class="img3">
+	<div class="row-fluid">
+    	<div class="span7">
+        &nbsp;
+        </div>
+		<div class="span5">
+			<div class="thumbnail-block">
+            <div class="alpha_right"></div>
+            	<div class="p_padding_right">
+                <h1 class="title">OvrC Capability </h1>
+                <h3 class="sub">Adjust audio routing, input gain and output levels, and a wide variety of amplifier network setting remotely with the help of <a href="/shop/en/snapav/ovrc" style="font-family:Lato; font-size:1.6rem;">OvrC</a>, our free remote management platform. Through a desktop or mobile app, OvrC gives you access to the local UI where you can update firmware, modulate the amplifier gain, select inputs, set clipping levels, power-cycle the unit, or troubleshoot devices that have fallen offline.  </h3>
+                 <!--<h4>Size: 10" or 12"<br />
+                Power: 720W <br />
+                Frequency: 50-200 Hz <br />
+                Best for: Music &amp; Movies </h4>  -->
+              </div> 
+		</div>
+	</div>
+</div>
+</div>
+<div class="img6">
+	<div class="row-fluid">
+		<div class="span5">
+			<div class="thumbnail-block">
+            	<div class="alpha_left">
+            	</div>
+            	<div class="p_padding_left">
+                <h1 class="title">Hybrid</h1>
+                <h3 class="sub">Our powerful hybrid amps feature two configurable output channels that support 70V, 8-ohm, and hybrid configurations. Enjoy premium performance in any application, plus control system compatibility and OvrC remote management. </h3>
+              </div> 
+		</div>
+	</div>
+</div>
+</div>
+<div class="img4">
+	<div class="row-fluid">
+        <div class="span7">
+        &nbsp;
+        </div>
+		<div class="span5">
+			<div class="thumbnail-block">
+            	<div class="alpha_right">
+            	</div>
+            	<div class="p_padding_right2">
+                <h1 class="title">8-ohm  </h1>
+                <h3 class="sub">With multiple audio-tuning options, this amp offers the versatility required for today's sophisticated audio systems. </h3>
+                <!--<h4>Size: 8", 10",  12"<br />
+                Power: 720W <br />
+                Frequency: 17-200 Hz <br />
+                Best for: Movies </h4>--> 
+              </div> 
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="dynamic-amp">
+	<div class="row-fluid">
+		<div class="span5">
+			<div class="thumbnail-block">
+            <div class="alpha_left"></div>
+            	<div class="p_padding_left">
+                <h1 class="title">Dynamic Amps</h1>
+                <h3 class="sub">Our Dynamic Series Amps deliver premium audio in an efficient design, with useful features like audio sensing, global inputs, bridgeable outputs, and adjustable gain control for ultimate versatility. Available in 2-, 8-, 12-, and 16-channel options.</h3>
+              </div> 
+		</div>
+	</div>
+    <div class="span7">
+        &nbsp;
+        </div>
+</div>
+</div>
+<div class="response-amps">
+	<div class="row-fluid">
+        <div class="span7">
+        &nbsp;
+        </div>
+		<div class="span5">
+			<div class="thumbnail-block">
+            	<div class="alpha_right">
+            	</div>
+            	<div class="p_padding_right2">
+                <h1 class="title">Response</h1>
+                <h3 class="sub">Episode Response Amplifiers give pros a matrix switching DSP amp with a built-in preamp and 10-band parametric EQ for incredible performance. Available in four models and loaded with features like IP Control and sub outs in every zone, these amps provide powerful sound in any space.</h3>
+              </div> 
+		</div>
+	</div>
+</div>
+</div>
+<div class="sub-amps">
+	<div class="row-fluid">
+		<div class="span5">
+			<div class="thumbnail-block">
+            <div class="alpha_left"></div>
+            	<div class="p_padding_left">
+                <h1 class="title">Subwoofer Amplifiers </h1>
+                <h3 class="sub">Give your customers deep bass in every room using an Episode subwoofer amplifier. With three options to choose from, we have the perfect amp for any size room. Plus, they work perfectly with our dynamic amps. Simply connect directly into the dedicated subwoofer output in any zone for total-home bass.</h3>
+              </div> 
+		</div>
+	</div>
+    <div class="span7">
+        &nbsp;
+        </div>
+</div>
+</div>
+<div class="mini-avr">
+	<div class="row-fluid">
+        <div class="span7">
+        &nbsp;
+        </div>
+		<div class="span5">
+			<div class="thumbnail-block">
+            	<div class="alpha_right">
+            	</div>
+            	<div class="p_padding_right2">
+                <h1 class="title">Mini 5.1 AVR</h1>
+                <h3 class="sub">This AVR delivers incredible surround sound from a small form factor, enhancing your customers’ listening experience in bedrooms, playrooms, bonus rooms, and anywhere else where space is limited. It’s even small enough to fit behind a TV in a Strong VersaBox! Pair with an Episode soundbar or Signature by Episode speakers for a fully immersive AV experience.</h3>
+              </div> 
+		</div>
+	</div>
+</div>
+</div>

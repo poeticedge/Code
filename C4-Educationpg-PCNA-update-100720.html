@@ -1,0 +1,304 @@
+<style>
+	.gradient-red-1 {
+		color: #fff;
+		background: url('//res.cloudinary.com/control4/image/upload/c_scale,h_300/static-pages/training-step1.png') left center no-repeat, radial-gradient(circle, #C32032, #780c0f);
+	}
+
+	.gradient-red-2 {
+		color: #fff;
+		background: url('//res.cloudinary.com/control4/image/upload/c_scale,h_300/static-pages/training-step2.png') left center no-repeat, radial-gradient(circle, #C32032, #780c0f);
+	}
+
+	.gradient-red-1:hover,
+	.gradient-red-2:hover {
+		background: radial-gradient(circle, #C32032, #C32032);
+	}
+
+	.gradient-grey {
+		color: #000;
+		background: radial-gradient(circle, #dddddd, #aaaaaa);
+	}
+
+	.gradient-grey:hover {
+		background: radial-gradient(circle, #dddddd, #dddddd);
+	}
+</style>
+
+<!--<div class="slider" style="height: 400px;">
+	<div class="slide background" style="background-image: url('//res.cloudinary.com/control4/image/upload/v1490906556/static-pages/slider-training-1.jpg');">
+		<div class="vertically-center">
+			<div class="padding text-white">
+				<h2 class="bold">Control4 Certification Training</h2>
+				<a routerLink="/education/certification" class="c4btn" data-track-category="Training" data-track="Click" data-track-label="Slide 1">Get Certified</a>
+			</div>
+		</div>
+	</div>
+	<div class="slide background" style="background-image: url('//res.cloudinary.com/control4/image/upload/v1490906556/static-pages/slider-training-2.jpg');">
+		<div class="vertically-center">
+			<div class="padding text-dark">
+				<h2 class="bold">Quick Training with Smart Skills</h2>
+				<a href="https://control4.learnupon.com/catalog/courses?category=50320" class="c4btn block grey"
+					c4Track="Click" trackCategory="Training" trackLabel="Slide 2">Learn More</a>
+			</div>
+		</div>
+	</div>
+</div>-->
+
+<div class="banner background"
+	style="height: 300px; background-image: url('//res.cloudinary.com/control4/image/upload/v1490906556/static-pages/slider-training-1.jpg');">
+	<div class="vertically-center">
+		<div class="padding text-white">
+			<h2 class="bold">Control4 Certification Education</h2>
+			<a routerLink="/education/certification" class="c4btn" trackCategory="Training" c4Track="Click"
+				trackLabel="Slide 1">Get Certified</a>
+		</div>
+	</div>
+</div>
+
+<div class="padding">
+	<h1>Education</h1>
+	<div class="widget padding">
+		<div class="row">
+			<div class="col-xs-12">
+				<h2 class="block no-margin half-margin-bottom">Your Certifications</h2>
+				<c4-user-certifications></c4-user-certifications>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+			    <a href="https://control4.learnupon.com/dashboard?display=my_courses" class="c4btn" c4Track="Click"
+					trackCategory="Training" trackLabel="My Courses">My Courses</a>
+				<a href="https://control4.learnupon.com/catalog/courses" class="c4btn grey" c4Track="Click"
+					trackCategory="Training" trackLabel="All Courses">Course Catalog</a>
+			</div>
+		</div>
+		<c4-static-training-content [certificationType]="4" [hideWhenCertified]="true">
+			<div class="row half-padding-bottom">
+				<div class="col-sm-5">
+					<a routerLink="/education/pcna" trackCategory="Training" c4Track="Click"
+						trackLabel="PCNA Certification">
+						<div class="gradient-grey aspect two-to-one" style="min-height: 300px;">
+							<div class="vertically-center"
+								style="height: 250px; background: url('https://res.cloudinary.com/control4/image/upload/v1602101238/PCNA-for-education-page.png') no-repeat center center; background-size: contain;">
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-sm-7">
+					<h2 class="no-margin">PCNA</h2>
+					<h3 class="half-padding-bottom">Professional Certified Network Administrator</h3>
+					<p>Professional Certified Network Administrator combines practical hands-on experience with fast-paced,
+						fun
+						online learning to make you confident and competent at building and supporting reliable AV
+						networks.
+					</p>
+					<a routerLink="/education/pcna" class="c4btn grey">Get PCNA Certified</a>
+				</div>
+			</div>
+		</c4-static-training-content>
+		<c4-static-training-content [certificationType]="1" [hideWhenCertified]="true">
+			<div class="row half-padding-bottom">
+				<div class="col-sm-5">
+					<a routerLink="/education/certification" fragment="course1" trackCategory="Training" c4Track="Click"
+						trackLabel="Certification 1">
+						<div class="gradient-red-1 aspect two-to-one" style="min-height: 300px;">
+							<div class="vertically-center padding text-center">
+								<h3 class="text-white uppercase bold">Control4<br>Associate Installer<br>Certification
+								</h3>
+								<ul class="no-style">
+									<li>4 Short Online Classes</li>
+									<li>Prerequisite to Course 2: Automation Programmer Certification</li>
+								</ul>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-sm-7">
+					<h2 class="no-margin">Associate Installer</h2>
+					<h3 class="half-padding-bottom">Control4® Associate Installer Certification</h3>
+					<p>Associate Installer Certification is your first step to becoming a certified Control4 Automation
+						Programmer. This is an online course featuring four short classes that you'll be required to
+						take
+						before enrolling in the four-day Automation Programmer Certification course.</p>
+					<a routerLink="/education/certification" fragment="course1" class="c4btn grey">Learn More</a>
+				</div>
+			</div>
+		</c4-static-training-content>
+		<c4-static-training-content [certificationType]="2" [hideWhenCertified]="true">
+			<div class="row half-padding-bottom">
+				<div class="col-sm-5">
+					<a routerLink="/education/certification" fragment="course2" trackCategory="Training" c4Track="Click"
+						trackLabel="Certification 2">
+						<div class="gradient-red-2 aspect two-to-one" style="min-height: 300px;">
+							<div class="vertically-center padding text-center">
+								<h3 class="uppercase bold text-white">Control4<br>Automation Programmer<br>Certification
+								</h3>
+								<ul class="no-style">
+									<li>4-Day Classroom Training</li>
+									<li>Multiple Locations Worldwide Available</li>
+									<li>Requires Associate Installer Certification</li>
+								</ul>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-sm-7">
+					<h2 class="no-margin">Automation Programmer</h2>
+					<h3 class="half-padding-bottom">Control4® Automation Programmer Certification</h3>
+					<p>Associate Installer Certification is your first step to becoming a certified Control4 Automation
+						Programmer. This is an online course featuring four short classes that you'll be required to
+						take
+						before enrolling in the four-day Automation Programmer Certification course.</p>
+					<a routerLink="/education/certification" fragment="course2" class="c4btn grey">Learn More</a>
+				</div>
+			</div>
+		</c4-static-training-content>
+	</div>
+
+	<div class="widget padding">
+		<h2 class="text-red">Testimonials</h2>
+		<div class="row">
+			<div class="col-sm-4 col-xs-6 half-margin-bottom">
+				<div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+					<div class="wistia_responsive_wrapper"
+						style="height:100%;left:0;position:absolute;top:0;width:100%;">
+						<iframe src="https://fast.wistia.net/embed/iframe/b3hk09rhzr?videoFoam=true"
+							title="Wistia video player" allowtransparency="true" frameborder="0" scrolling="no"
+							class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen
+							webkitallowfullscreen oallowfullscreen msallowfullscreen width="100%"
+							height="100%"></iframe>
+					</div>
+				</div>
+				<script src="https://fast.wistia.net/assets/external/E-v1.js" async></script>
+				<p>Training Love</p>
+			</div>
+			<div class="col-sm-4 col-xs-6 half-margin-bottom">
+				<div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+					<div class="wistia_responsive_wrapper"
+						style="height:100%;left:0;position:absolute;top:0;width:100%;">
+						<iframe src="https://fast.wistia.net/embed/iframe/m7dsovelh0?videoFoam=true"
+							title="Wistia video player" allowtransparency="true" frameborder="0" scrolling="no"
+							class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen
+							webkitallowfullscreen oallowfullscreen msallowfullscreen width="100%"
+							height="100%"></iframe>
+					</div>
+				</div>
+				<script src="https://fast.wistia.net/assets/external/E-v1.js" async></script>
+				<p>Tricks of the Trade</p>
+			</div>
+			<div class="col-sm-4 col-xs-6 half-margin-bottom">
+				<div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+					<div class="wistia_responsive_wrapper"
+						style="height:100%;left:0;position:absolute;top:0;width:100%;">
+						<iframe src="https://fast.wistia.net/embed/iframe/mkvsr0dlsq?videoFoam=true"
+							title="Wistia video player" allowtransparency="true" frameborder="0" scrolling="no"
+							class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen
+							webkitallowfullscreen oallowfullscreen msallowfullscreen width="100%"
+							height="100%"></iframe>
+					</div>
+				</div>
+				<script src="https://fast.wistia.net/assets/external/E-v1.js" async></script>
+				<p>Designing a System with a Customer</p>
+			</div>
+		</div>
+	</div>
+
+	<div id="smartskillsvideo"></div>
+	<div id="smartskills" class="widget padding">
+		<h2 class="text-red">Smart Skills</h2>
+		<p>These 2-3 minute videos are packed full of information explaining how to complete a single task. Smart Skills
+			are the perfect complement to your Control4 certification, as they extend you current capabilities without
+			seizing much of your time. We add new Smart Skills often and cover various topics. Follow <a
+				href="https://twitter.com/Control4Dealer" target="_blank" class="overridelegal">@Control4Dealer</a> on
+			Twitter to see announcements when new videos are released.</p>
+		<div class="row">
+			<div class="col-sm-4 col-xs-6 half-margin-bottom">
+				<a href="https://control4.learnupon.com/catalog/courses/481000" trackCategory="Training" c4Track="Click"
+					trackLabel="Smart Skill 1">
+					<div class="background aspect two-to-one"
+						style="background-image: url('//res.cloudinary.com/control4/image/upload/static-pages/training/pdu-schedule.jpg');">
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-4 col-xs-6 half-margin-bottom">
+				<a href="https://control4.learnupon.com/catalog/courses/481001" trackCategory="Training" c4Track="Click"
+					trackLabel="Smart Skill 2">
+					<div class="background aspect two-to-one"
+						style="background-image: url('//res.cloudinary.com/control4/image/upload/static-pages/training/pdu-restart.jpg');">
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-4 col-xs-6 half-margin-bottom">
+				<a href="https://control4.learnupon.com/catalog/courses/481004" trackCategory="Training" c4Track="Click"
+					trackLabel="Smart Skill 3">
+					<div class="background aspect two-to-one"
+						style="background-image: url('//res.cloudinary.com/control4/image/upload/static-pages/training/pdu-powerpak-c4.jpg');">
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-4">
+				<a href="https://control4.learnupon.com/catalog/courses?category=50320" class="c4btn block grey"
+					c4Track="Click" trackCategory="Training" trackLabel="All Smart Skills">All Smart Skills</a>
+			</div>
+		</div>
+	</div>
+	<div class="widget padding">
+		<h2 class="text-red">The Education Team</h2>
+		<div class="row">
+			<div class="col-xs-4 col-sm-2 half-margin-bottom">
+				<div class="aspect one-to-one background"
+					style="background-image: url('//res.cloudinary.com/control4/image/upload/static-pages/training/trainers/Chris_Alldredge_-_Instructional_Designer.jpg');">
+				</div>
+			</div>
+			<div class="col-xs-4 col-sm-2 half-margin-bottom">
+				<div class="aspect one-to-one background"
+					style="background-image: url('//res.cloudinary.com/control4/image/upload/static-pages/training/trainers/Alex_Cockram_-_Trainer_United_Kingdom.jpg');">
+				</div>
+			</div>
+			<div class="col-xs-4 col-sm-2 half-margin-bottom">
+				<div class="aspect one-to-one background"
+					style="background-image: url('//res.cloudinary.com/control4/image/upload/static-pages/trainer-charlotte.jpg');">
+				</div>
+			</div>
+			<div class="col-xs-4 col-sm-2 half-margin-bottom">
+				<div class="aspect one-to-one background"
+					style="background-image: url('//res.cloudinary.com/control4/image/upload/static-pages/training-designer.jpg');">
+				</div>
+			</div>
+			<div class="col-xs-8 col-sm-4 half-margin-bottom">
+				<a routerLink="/education/certification" fragment="trainers" class="c4btn block grey"
+					data-track-category="Training" data-track="Click" data-track-label="More training team">more</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-3 col-sm-1 half-margin-bottom">
+				<img src="//res.cloudinary.com/control4/image/upload/e_trim/c_scale,w_175/static-pages/training-award-1.jpg"
+					class="block">
+			</div>
+			<div class="col-xs-3 col-sm-1 half-margin-bottom">
+				<img src="//res.cloudinary.com/control4/image/upload/e_trim/c_scale,w_175/static-pages/training-award-2.jpg"
+					class="block">
+			</div>
+			<div class="col-xs-3 col-sm-1 half-margin-bottom">
+				<img src="//res.cloudinary.com/control4/image/upload/e_trim/c_scale,w_175/static-pages/training-award-3.jpg"
+					class="block">
+			</div>
+			<div class="col-xs-3 col-sm-1 half-margin-bottom">
+				<img src="//res.cloudinary.com/control4/image/upload/e_trim/c_scale,w_175/static-pages/training-award-4.jpg"
+					class="block">
+			</div>
+		</div>
+		<a routerLink="/education/certification" fragment="training-dates" data-track-category="Training"
+			data-track="Click" data-track-label="Map Training Dates">
+			<img src="//res.cloudinary.com/control4/image/upload/v1552510273/C4_Training_Center_Map.png" class="block">
+		</a>
+		<div class="row half-padding-top">
+			<div class="col-sm-3">
+				<a routerLink="/education/certification" fragment="training-dates" class="c4btn grey block">See Dates &
+					Locations</a>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,205 @@
+<style>
+	.partner-rw-dash {
+		max-width: 700px;
+		padding: 7px;
+		height: 300px;	
+	}
+	.rewards-dash-icon{
+		margin: 0px 10px 13px 0px;
+		display: inline-block;
+  }
+	.rewards-header {
+		display: inline-block;
+		color: #0E94E0;
+	  	font-size: 2.3rem;
+  }
+  .next-level-header {
+    color: #0E94E0;
+    font-size: 2.0rem;
+	  padding: 0px 0px 0px 18px
+  }
+  
+.rew-check-li li:before {
+      content:"\e801";
+      font-family: 'fontello';
+      margin-right: 14px;
+  font-size: 1.2rem;
+}
+  .rew-check-li li {
+    font-size: 1.1rem;
+    line-height: 2.3rem;
+  }
+
+.rew-check-li.blue-check li:before{
+      color: #0E94E0;
+  font-size: 1.2rem;
+}
+	.radial-bar .data-block{display:none;}
+  
+  .radial-bar {
+    width: 80%;
+    padding-top: 40px;
+  }
+  .re-graph-data{
+    text-align:center;
+padding-top: 21px;
+  }
+  
+  .re-graph-data>*{
+    margin:0;
+    line-height:1.2;
+  }
+  .radial-goal {
+    text-align: center;
+ padding-top: 21px;
+  }
+  .radial-points {
+    text-align: center;
+    color:#0E94E0;
+  }
+.rew-details{
+      margin-top:21px;
+}
+.rew-prog{
+      background: #0E94E0;
+    height: 100%;
+    border-radius: 14px;
+}
+.rew-prog-back{
+      padding: 4px;
+    background: #ccc;
+    display: inline-block;
+    width: 100%;
+    height: 21px;
+    border-radius: 14px;
+}
+	.prog-section-padding {
+		padding-left: 21px;
+	}
+.prog-bottom-text p{
+      display:inline-text;
+      margin:0;
+}
+	.rew-details .in-t-cell{
+      font-weight:bold;
+      padding-bottom:7px;
+}
+	.automation-icon {
+	padding: 0px 55px;
+	}
+	.pr-explore {
+		padding-left: 21px;
+	}
+	@media (max-width: 768px) and (max-width: 1024px)	{
+		  .rew-check-li li {
+    		line-height: 1.8rem;
+  }
+		.rew-details {
+			margin-top: 10px;
+	}
+		.prog-section-padding {
+			padding-left: 0px;
+	}
+		.rewards-header {
+			font-size: 1.5rem;
+		}
+		.next-level-header {
+			font-size: 1.5rem;
+		}
+	}
+	@media only screen and (min-width: 320px) and (max-width: 541px){
+		.partner-rw-dash {
+			width: auto;
+			height: auto;
+		}
+		 .rew-check-li li {
+    		font-size: 1.6rem;
+    		line-height: 3rem;
+  }
+		.pr-explore {
+			padding-left: 130px;
+	}
+		.radial-bar {
+    		width: 100%;
+  }
+		.automation-icon {
+			padding: 0px;
+			text-align: center;
+	}
+		.prog-section-padding {
+			padding-left: 0px;
+	}
+	}
+</style>
+
+
+<div class="partner-rw-dash">
+	<div class="row-fluid">
+		 <div class="span4">
+			<div class="rewards-dash-icon">
+				<img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Silver.svg" alt="" style="width: 32px;">  
+			</div>
+                 <h2 class="rewards-header">Silver</h2>
+                        <ul class="rew-check-li">
+                              <li>4% reward pricing discount</li>
+                              <li>Free Shipping</li>
+                              <li>Exclusive Training opportunities</li>
+                        </ul>
+                        <h2 class="next-level-header">Exclusive Next level</h2>
+                        <ul class="rew-check-li blue-check">
+                            <li>6% Rewards Pricing Discount</li>
+							<li>Expedited Advanced Replacement</li>
+							<li>Premium Tech Support </li>                       
+                        </ul> 
+                  </div>
+		                  <div class="span4">
+                        <div id="rew-01" class="radial-bar" data-color="#0E94E0" data-amount="[PercentPointGoalAchieved]">
+                              <div class="data-block">
+                                  <div class="re-graph-data">
+                                    <h2 class="radial-goal">[annualPointsGoalStr]</h2>
+                    				<p><span style="color:#000000;">Total Points</span></p>
+                    				<h2 class="radial-points">[PercentPointGoalAchieved]%</h2>
+                                  </div>
+                              </div>
+                        </div>
+						<div class="automation-icon">
+							<img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/C4_Authorized-Silver.png" alt="" style="width: 58px;">	
+						</div>
+                  </div>
+		          <div class="span4 prog-section-padding">
+					<div class="prog-holder">
+					  <div style="text-align:right;">
+						<p>[DaysRemaingInYear] Days left</p>
+					  </div>
+					  <div class="rew-prog-back">
+						<div class="rew-prog" style="width: [PercentDaysPassedInYear]%;"></div>
+					  </div>
+					  <div class="prog-bottom-text clearfix">
+						<p style="float:left;">[ProgramStartDate]</p>
+					<p style="float:right;">[ProgramEndDate]</p>
+					  </div>
+					</div>
+
+                        
+                        <div class="rew-details in-table">
+                              <div class="in-t-row">
+                                    <div class="in-t-cell">YTD Points:</div>
+                                    <div class="in-t-cell">[AnnualPointsEarned]</div>
+                              </div>
+                              <div class="in-t-row">
+                                    <div class="in-t-cell">YTD Saving:</div>
+                                    <div class="in-t-cell">[TotalSavedYR]</div>
+                              </div>
+                              <div class="in-t-row">
+                                    <div class="in-t-cell">QTD Points:</div>
+                                    <div class="in-t-cell">[QuarterlyPoints]</div>
+                              </div>
+                              <div class="in-t-row">
+                                    <div class="in-t-cell">QTR End Date:</div>
+                                    <div class="in-t-cell">[QuarterEndDate]</div>
+                              </div>
+                        </div>
+            <a href="/shop/AjaxLogonForm?catalogId=10010&myAcctMain=1&langId=-1&storeId=10151#https%3A%2F%2Fqa.snapav.com%2Fshop%2FAjaxRewardsStatusView%3FcurrentSelection%3DrewardsStatusSlct%26catalogId%3D10010%26langId%3D-1%26storeId%3D10151%26identifier%3D1626959044558"><p class="pr-explore"><u>Explore Partner Rewards</u></p></a>
+           </div>
+	</div>
+</div>

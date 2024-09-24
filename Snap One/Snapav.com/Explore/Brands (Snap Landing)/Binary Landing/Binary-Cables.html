@@ -1,0 +1,576 @@
+<style>
+	/*====================
+Navigation style 
+=====================*/
+	.brand-nav {
+		margin-bottom: 0px;
+	}
+	.brand-pg-nav {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  overflow: hidden;
+	  float: right;
+}
+	.brand-nav li {
+	  display: inline-block;
+	}
+	.brand-nav li a {
+	  display: block;
+	  color: #7c7e7f;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	  font-family: Lato;
+	  font-size: 1.5rem;
+	}
+	/* Change the link color on hover */
+	.brand-nav li a:hover {
+	  color: #4499e3;
+	}
+/* Change the link color on click */
+	.brand-nav.active {
+	  color: #4499e3;
+	}
+    .wire-name {
+        color: #007FFF;
+        margin-top: 10px;
+        text-align: center;
+        font-weight: bold;
+    }
+	.b-cables-section {
+		background-color: #3F5588;
+		height: auto;
+		padding: 40px 60px;
+	} 
+	
+	/*.b-cables-section {
+		background-image:url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/binary-cable-bkgnd.png');
+        background-size: cover;
+        background-position: center;
+		height: auto;
+		padding: 40px 60px;
+	} */
+	.b-cable-padding {
+		padding: 20px 4px;
+	}
+	.b4-cable-padding {
+		padding: 20px 244px;
+	}
+    .b-cables-section p, .b-cables-section h2{
+        color: white;
+    }
+
+    #binary-copy {
+        width: 75%;
+    }
+	.eight-k {
+		background-image:url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/binary-8k.png');
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 301px;
+        padding: 30px 29px 10px 51px;
+        margin: 36px 0px;
+	}
+    .multi-reso {
+        background-image:url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Supports-High-Res-Formats.png');
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 301px;
+        padding: 60px 42px 0px 112px;
+        margin: 36px 0px;
+    }
+	.multi-reso h1, .multi-reso h3, .eight-k h1, .eight-k h3 {
+		color: white;
+	}
+	.binary-R-copy {
+		width: 40%;
+		margin-left: 530px;
+	}
+    
+   .binary-wht{
+        color: white;
+    }
+   .guaranteed-power {
+        background-image:url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Full-4k.png');
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 301px;
+        padding: 71px 412px 10px 68px;
+        margin: 36px 0px;
+    }
+    .stronger{
+        background-image:url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/StrongerCable.jpg');
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 300px;
+        padding: 75px 28px 0px 108px;
+        margin: 36px 0px;
+    }
+    .truck-pack {
+        background-image:url('/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Binary-truck-pack.png');
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 302px;
+        padding: 71px 412px 0px 68px;
+        margin: 36px 0px;
+    }
+
+	.multi-reso-mobile, .guaranteed-power-mobile, .truck-pack-mobile, .uncompressed-mobile, .stronger-mobile, .eight-k-mobile {
+		display: none;
+	}
+    .cable-title {
+        padding: 18px 0px 0px 25px;
+    }
+    #white-box {
+        height: 300px;
+    }
+ /*==================================
+MEDIA
+==================================*/   
+    @media only screen and (min-width: 768px) and (max-width: 979px){
+		.binary-R-copy {
+			margin-left: 425px;
+	}
+		#binary-copy {
+        	width: 50%;
+    }
+		.b4-cable-padding {
+			padding: 20px 107px;
+		}
+		.eight-k {
+			padding: 12px 48px 0px 0px;
+		}
+        .multi-reso {
+               padding: 12px 48px 0px 0px;
+}
+        .guaranteed-power {
+            padding: 48px 0px 10px 20px;
+        }
+        .stronger {
+            padding: 42px 16px 53px 0px;
+        }
+        .truck-pack {
+            padding: 48px 24px 20px 30px;
+        }
+    }
+    @media only screen and (min-width: 320px) and (max-width: 541px){
+      /*  .binary-wht{
+            color: black;
+               
+    } */
+        #binary-copy {
+            width: 100%;
+    }
+        #binary-copy2 {
+            width: 100%;        
+    }
+	.b4-cable-padding {
+		padding: 20px 10px;
+		}
+	.b-cables-section {
+		height: auto;
+		padding: 30px, 10px;
+		text-align: center;
+	}
+    .multi-reso, .guaranteed-power, .stronger, .truck-pack, .eight-k {
+		display: none;
+    }
+	.multi-reso-mobile, .guaranteed-power-mobile, .stronger-mobile, .truck-pack-mobile, .eight-k-mobile {
+		display: block;
+		text-align: center;
+		margin-top: 20px; 
+		}
+    .cable-title {
+        padding: 0px 68px;
+    }
+    #white-box {
+        height: auto;
+        }
+}
+
+</style>
+
+<!-- START BREADCRUMBS !-->
+<div id="productsGlobalBreadCrumbs">
+    <div id="breadcrumb" class="breadcrumb">
+        <div id="WC_BreadCrumbTrailDisplay_div_1" class="breadcrumb_links"> 
+            <a id="WC_BreadCrumbTrailDisplay_link_2" href="/shop/en/snapav/home">Home</a> 
+            <span class="breadcrumb-divider">|</span> 
+            <a id="WC_BreadCrumbTrailDisplay_link_5a" href="/shop/en/snapav/about">About Us</a> 
+            <span class="breadcrumb-divider">|</span> 
+            <a id="WC_BreadCrumbTrailDisplay_link_5a" href="/shop/en/snapav/brands">Brands</a> 
+            <span class="breadcrumb-divider">|</span> Binary
+        </div>
+        <div id="WC_BreadCrumbTrailDisplay_div_3" class="breadcrumb_dropdowns">
+            <div id="WC_BreadCrumbTrailDisplay_div_4" class="breadcrumb_item"> </div>
+        </div>
+    </div>
+</div>
+<!-- END BREADCRUMBS !-->
+
+<!-- NAV START -->
+
+<div class="row-fluid brand-nav">
+	<div class="span12">
+		<h1 style="color:#7c7e7f; float:left;">Binary</h1>
+			<ul class="brand-pg-nav">
+			  <li><a class="active" href="/shop/en/snapav/binary" style="color:#4499e3;">Overview</a></li>
+			  <li><a href="/shop/en/snapav/binary-moip">Media Over IP</a></li>
+			  <li><a href="/shop/en/snapav/binary-cables">Cables</a></li>
+			</ul>
+	</div>
+</div>
+<hr style="margin:0 0 10px 0;">
+ 
+<!-- NAV END -->
+
+<!-- Header -->
+<div class="row-fluid">
+    <div class="span12">
+        <div class="dynamic-image">
+            <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/BinaryCablesHeader.png" alt="Binary cables plugged into device">
+        </div>
+    </div>
+</div>
+<div class="row-fluid">
+    <div class="span12 center">
+        <br>
+        <h1>Where Hi-Res meets High-Strength</h1>
+        <p>Binary™ HDMI cables deliver the highest quality resolution with unprecedented strength - up to 48Gbps 8K video with the HDMI 2.1 specification! These HDMI cables feature reinforced connectors and enhanced pull and bend strength to handle all residential, IT, and commercial applications.</p>
+        <br>
+        <a href="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/documents/Cables/SupportDocuments/HDMIComparisonChart_052821.pdf" target="_blank"><div class="btn-2">Compare our cables</div></a>
+        <br>
+        <br>
+    </div>
+</div>
+<!-- END Header -->
+
+<!-- B cables -->
+<div class="b-cables-section">
+	<div class="row-fluid">
+		<div class="span6 center">
+			<div class="dynamic-image">
+				 <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/binary-8k-cable.png" alt="4K image on TV"> 
+			</div>
+			<div class="thumbnail-block b-cable-padding">
+					<h2>BX</h2>
+					<p>Binary's advanced BX HDMI cables deliver 8K video with up to 48Gbps transmission speeds. Plus, they feature zinc metal heads and GripTek technology for a strong and durable connection.</p>
+					<a href="/shop/en/snapav/hdmi/binary™-bx-series-8k-ultra-hd-high-speed-hdmi®-cable-with-griptek™---4m-%2815-ft%29-bx-8k-4" target="_blank"><div class="btn-1">Shop now</div></a>
+			</div>
+		</div>
+		<div class="span6 center">
+			<div class="dynamic-image">
+				 <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Binary-BX-Active-8K.png" alt="4K image on TV"> 
+			</div>
+			<div class="thumbnail-block b-cable-padding">
+					<h2>BX Active</h2>
+					<p>BX Active cables feature Dynamic HDR and ARC and use high-performance micro-electronics to ensure reliable 8K@60Hz 48Gbps transmission up to 20M with low EMI.</p>
+					<a href="/shop/en/snapav/hdmi/binary-bx-series-active-8k-ultra-hd-high-speed-hdmi-cable-with-griptek-10m-328-ft-bx-8k-10" target="_blank"><div class="btn-1">Shop now</div></a>
+			</div>
+		</div>
+	</div>
+	<div class="row-fluid">
+		<div class="span6 center">
+				<div class="dynamic-image">
+					<img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Binary-B8Fiber-cables.png" alt="B8 cable">
+				</div>
+			<div class="thumbnail-block center b-cable-padding">
+					<h2 class="bcable-p">B8</h2>
+					<p>With a metal-encased head and no USB power needed, our B8 active cables deliver uncompressed 4K with HDR up to 50m with ease.</p>
+				<br>
+					<a href="/shop/en/snapav/binary-b8-series-active-4k-ultra-hd-with-hdr-high-speed-fiber-optic-hdmi-cables-20m-656-ft-b8-fiber2-4khdr-20" target="_blank"><div class="btn-1">Shop now</div></a>
+				</div>
+		</div>
+		<div class="span6 center">
+			<div class="dynamic-image">
+				<img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Binary-B6-Cable.png" alt="4K image on TV">
+			</div>
+			<div class="thumbnail-block b-cable-padding">
+					<h2>B6</h2>
+					<p>Step up to the HDMI Premium Certified 4K B6 Series for lightning-fast 18Gbps bandwidth, HDR, and reinforced connectors – delivering unmatched speed &amp; strength.</p>
+					<a href="/shop/en/snapav/binary-b6-series-4k-ultra-hd-premium-certified-high-speed-hdmi-cable-with-griptek-1m-33-ft-b6-4k2-1" target="_blank"><div class="btn-1">Shop now</div></a>
+			</div>
+		</div>
+	</div>
+	<div class="row-fluid">
+		<div class="span6 center">
+				<div class="dynamic-image">
+				     <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Binary-B4-Cable.png" alt="BX cable">
+				</div>
+			<div class="thumbnail-block b-cable-padding">
+					<h2>B6A</h2>
+					<p>Deliver 4K Ultra HD up to 30m without external power with the B6A active cable. Reinforced with a protective gel that extends to the strain relief, the B6A delivers flawless video you can count on.</p>
+					<a href="/shop/en/snapav/binary-b6-active-4k-high-speed-hdmi-cables-with-ethernet-10m-328-ft-b6a-4k2-10" target="_blank"><div class="btn-1">Shop now</div></a>
+			</div>
+		</div>
+		<div class="span6 center">
+				<div class="dynamic-image">
+				     <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Binary-B4-Cable.png" alt="BX cable">
+				</div>
+			<div class="thumbnail-block b-cable-padding">
+					<h2>B4</h2>
+					<p>Enjoy an affordable 4K solution for any job that needs 10.2 Gbps. A low-profile connector head, flexible jacket, and high pull strength mean it can go almost anywhere with ease.</p>
+					<a href="/shop/en/snapav/binary-b4-series-4k-ultra-hd-high-speed-hdmi-cable-with-ethernet--3m-1-ft-b4-hd2-3" target="_blank"><div class="btn-1">Shop now</div></a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END B cables -->
+
+<!-- B cables -->
+<div class="eight-k">
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="thumbnail-block binary-R-copy">
+                <h1>The Most Advanced HDMI Technology</h1>
+                <h3>Binary BX HDMI cables deliver a more immersive viewing experience with sharper high-speed content. They support up to 8K UHD @ 60Hz 4:2:0 and up to 10K @ 30Hz 4:4:4 with transmission speeds up to 48Gbps. They’ll also display 4K @ 120Hz and 4K @ 60Hz 4:4:4.</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="eight-k-mobile">
+    <div class="row-fluid">
+        <div class="span12">
+			<div class="dynamic-image">
+                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/binary-8k.png" alt="Men enjoiying 4k television">
+            </div>
+            <div class="thumbnail-block" id="binary-copy">
+                <h1>The Most Advanced HDMI Technology</h1>
+                <h3>Binary BX HDMI cables deliver a more immersive viewing experience with sharper high-speed content. They support up to 8K UHD @ 60Hz 4:2:0 and up to 10K @ 30Hz 4:4:4 with transmission speeds up to 48Gbps. They’ll also display 4K @ 120Hz and 4K @ 60Hz 4:4:4.</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Guaranteed-power -->
+<div class="guaranteed-power">
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="thumbnail-block" id="binary-copy">
+                <h1>Guaranteed Power for Full 4K </h1>
+                <h3>Our Binary B6A copper and B8 fiber active cables do not require external power to deliver full 4K. Instead, they pull all necessary power from the source, ensuring your 4K and 4K HDR sources and displays are receiving full 4K every time.</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="guaranteed-power-mobile">
+    <div class="row-fluid">
+        <div class="span12">
+			<div class="dynamic-image">
+                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Full-4k.png" alt="Men enjoiying 4k television">
+            </div>
+            <div class="thumbnail-block" id="binary-copy">
+                <h1>Guaranteed Power for Full 4K </h1>
+                <h3>Our Binary B6A copper and B8 fiber active cables do not require external power to deliver full 4K. Instead, they pull all necessary power from the source, ensuring your 4K and 4K HDR sources and displays are receiving full 4K every time.</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Guaranteed-power -->
+
+<div class="multi-reso">
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="thumbnail-block binary-R-copy">
+                <h1>Supports Multiple High-Resolution Formats</h1>
+                <h3>These HDMI cables also supports other high-resolution audio and video formats, including Dolby® ATMOS, Dolby® True HD, Dolby® Digital Plus, DTX™ -X, DTS™-HD Master, three types of Deep Color (a/10/12bit), and HDMI® 3D.</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="multi-reso-mobile">
+    <div class="row-fluid">
+        <div class="span12">
+			<div class="dynamic-image">
+                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Supports-High-Res-Formats.png" alt="Men enjoiying 4k television">
+            </div>
+            <div class="thumbnail-block">
+                <h1>Supports Multiple High-Resolution Formats</h1>
+                <h3>These HDMI cables also supports other high-resolution audio and video formats, including Dolby® ATMOS, Dolby® True HD, Dolby® Digital Plus, DTX™ -X, DTS™-HD Master, three types of Deep Color (a/10/12bit), and HDMI® 3D.</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END cables -->
+
+<!-- truck-pack -->
+<div class="truck-pack">
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="thumbnail-block" id="binary-copy">
+                <h1>Reinforced Truck Packs </h1>
+                <h3>Our Truck Packs let you order the cables you use most in bulk, so you always have the right length at hand to make your job easier. Plus, they have a durable plastic handle, a large top opening, and fit standard van shelving for ultimate convenience.</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="truck-pack-mobile">
+    <div class="row-fluid">
+        <div class="span12">
+			<div class="dynamic-image">
+                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Binary-truck-pack.png" alt="Binary Cable Truck Pack box">
+            </div>
+            <div class="thumbnail-block">
+                <h1>Reinforced Truck Packs </h1>
+                <h3>Our Truck Packs let you order the cables you use most in bulk, so you always have the right length at hand to make your job easier. Plus, they have a durable plastic handle, a large top opening, and fit standard van shelving for ultimate convenience.</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END truck-pack -->
+
+<!-- Stronger -->
+<div class="stronger">
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="thumbnail-block binary-R-copy">
+                <h1 class="binary-wht">A Stronger Cable </h1>
+                <h3 class="binary-wht">All Binary cables are reinforced to be stronger than the competition, enhancing pull and bend strength for unmatched reliability on any job.</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="stronger-mobile">
+    <div class="row-fluid">
+        <div class="span12">
+			<div class="dynamic-image">
+                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/StrongerCable.jpg" alt="Image with all 4 Binary HDMI cables showing construction of cable">
+            </div>
+            <div class="thumbnail-block">
+                <h1>A Stronger Cable </h1>
+                <h3>All Binary cables are reinforced to be stronger than the competition, enhancing pull and bend strength for unmatched reliability on any job.</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Stronger -->
+
+<!-- cable features -->
+<div class="row-fluid">
+	<div class="span6">
+		<div class="thumbnail-block center">
+            <div class="dynamic-image">
+                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Binary-Griptek.png" alt="Image of the griptek head on B6 cable">
+            </div>
+            <h2>GripTek™</h2> 
+            <p>Prevent cables from accidentally being unplugged thanks to GripTek™, Binary’s exclusive gripping HDMI connector. Small bumps on the connector head create a strong hold, requiring 8lbs of pulling force to remove – that’s 40% more force than a traditional HDMI connector!</p>    
+        </div>
+	</div>
+	<div class="span6">
+        <div class="dynamic-image">
+           <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/B6-4K2-Pull-Strength-A.png" alt="close up of the low profile of binary cables">
+        </div>
+		<div class="thumbnail-block center">
+            <h2>Short &amp; Sleek Connector</h2> 
+            <p>Our first low-profile connector helped you fit HDMI cables into tight spaces. Now narrower and sleeker, this unique connector head still fits easily into the space behind flat panels and is perfect to use when pulling wires for conduit work.</p>    
+        </div>
+	</div>
+</div>
+<div class="row-fluid">
+	<div class="span6">
+        <div class="dynamic-image">
+            <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/B6-4K2-XX-Bend.png" alt="Binary cable bent behind a tight space">
+        </div>
+		<div class="thumbnail-block center">
+            <h2>Bendy, Flexible Jackets</h2> 
+            <p>All HDMI cables feature an ultra-pliable jacket that makes them as flexible as the installs you put them through. Plus, a tighter bend radius saves up to 1” behind equipment.</p>    
+        </div>
+	</div>
+	<div class="span6">
+		<div class="thumbnail-block center">
+            <div class="dynamic-image">
+                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Binary-HDMI-Audio-Arc.png" alt="close up of the low profile of binary cables">
+            </div>
+            <h2>Audio Return Channel (ARC)</h2> 
+            <p>ARC technology saves you time and money by streamlining system design and eliminating hassles. Integrating local sources like a Roku, Apple TV, or Blu-ray player into a system is easier than ever.</p>    
+        </div>
+	</div>
+</div>
+<!-- END cable features -->
+
+<div class="row-fluid">
+    <div class="span12 center">    
+        <h1 class="">Browse the Binary Family </h1>
+        <p>We don’t just make HDMI cables. We’ve got a cable for every video, data, and audio job.</p>
+    </div>
+</div>
+<div class="shadow-box" id="white-box">
+    <h2 class="cable-title">Video &amp; Data Cables</h2>
+    <div class="row-fluid">
+        <div class="span1"></div>
+        <div class="span2 center">
+            <div class="dynamic-image">
+                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/B6-4K2-XX-1.png" alt="Binary HDMI cable">
+            </div>
+            <a href="/shop/en/snapav/search/hdmi"><div class="wire-name">HDMI</div></a>
+        </div>
+        <div class="span2 center">
+            <div class="dynamic-image">
+                <img src="/wcsstore/SnapAV/images/categories/CABLES_COMPONENT.jpg" alt="Component cables">
+            </div>
+            <a href="/shop/en/snapav/search/component"><div class="wire-name">Component</div></a>
+        </div>
+        <div class="span2 center">
+            <div class="dynamic-image">
+                <img src="/wcsstore/SnapAV/images/categories/CABLES_VGA.jpg">
+            </div>
+            <a href="/shop/en/snapav/search/vga"><div class="wire-name">VGA</div></a>
+        </div>
+        <div class="span2 center">
+            <div class="dynamic-image">
+                <img src="/wcsstore/SnapAV/images/categories/CABLES_USB.jpg" alt="VGA cables">
+            </div>
+            <a href="/shop/en/snapav/search/usb"><div class="wire-name">USB</div></a>
+        </div>
+        <div class="span2 center">
+            <div class="dynamic-image">
+                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/PATCH-CAT6-10FT-BLK-B.png" alt="USB cable">
+            </div>
+            <a href="/shop/en/snapav/search/ethernet"><div class="wire-name">Ethernet</div></a>
+        </div>
+        <div class="span1"></div>
+    </div>
+</div>
+
+<div class="shadow-box" id="white-box">
+    <h2 class="cable-title">Audio Cables</h2>
+    <div class="row-fluid">
+        <div class="span1"></div>
+        <div class="span2 center">
+            <div class="dynamic-image">
+                <img src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/B5-DIGCOAX-1.png" alt="Black ethernet cable">
+            </div>
+            <a href="/shop/en/snapav/search/digital-coaxial"><div class="wire-name">Digital Coaxial &amp; Toslink</div></a>
+        </div>
+        <div class="span2 center">
+            <div class="dynamic-image">
+                <img src="/wcsstore/SnapAV/images/categories/CABLES_MINI_MONO.jpg" alt="Digital coaxial cable">
+            </div>
+            <a href="/shop/en/snapav/search/mini-stereo"><div class="wire-name">Mini Stereo &amp; Mono</div></a>
+        </div>
+        <div class="span2 center">
+            <div class="dynamic-image">
+                <img src="/wcsstore/SnapAV/images/categories/CABLES_RCA.jpg" alt="Mini stereo cable">
+            </div>
+            <a href="/shop/en/snapav/search/rca"><div class="wire-name">RCA</div></a>
+        </div>
+        <div class="span2 center">
+            <div class="dynamic-image">
+                <img src="/wcsstore/SnapAV/images/categories/CABLES_SUBWOOFER.jpg" alt="Sunwoofer cable">
+            </div>
+            <a href="/shop/en/snapav/search/subwoofer-cables"><div class="wire-name">Subwoofer</div></a>
+        </div>
+        <div class="span2 center">
+            <div class="dynamic-image">
+                <img src="/wcsstore/SnapAV/images/categories/CABLES_XLR.jpg" alt="XLR cable">
+            </div>
+            <a href="/shop/en/snapav/search/xlr"><div class="wire-name">XLR</div></a>
+        </div>
+        <div class="span1"></div>
+    </div>
+</div>

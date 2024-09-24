@@ -1,0 +1,755 @@
+<style>
+.aspect-70::before {
+	padding-top: 70%;
+}
+.aspect-64::before {
+	padding-top: 64%;
+}
+@media (max-width: 992px) {
+	.masonry-item::before {
+		padding-top: 33% !important;
+	}
+}
+@media (max-width: 768px) {
+	.masonry-item::before {
+		padding-top: 50% !important;
+	}
+}
+.masonry-desc {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	min-height: 75px;
+	background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
+	padding: 15px;
+}
+.short-height {
+	font-size: 14px;
+	line-height: 22px;
+}
+.container-lg {
+    margin: auto;
+    max-width: 1700px;
+	}
+.container-md {
+    margin: auto;
+    max-width: 1500px;
+	}
+.text-bottom {
+    position: absolute;
+	bottom: 100px;
+	left: 0;
+	right: 0;
+	}
+	
+/* solutions */
+circle {
+	display: block;
+	padding: 0;
+	margin: 0;
+	background: transparent !important;
+}
+circle div.icon {
+	display: inline-block;
+	height: 75px;
+	width: 75px;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: #939598;
+	border-radius: 50%;
+	transition: 0.1s;
+}
+circle:hover div.icon {
+	background-color: #c32032;
+}
+.icon-name {
+	text-transform: uppercase;
+	font-size: 10px;
+}
+</style>
+
+<div id="video" class="black block" style="margin-top: 50px;"></div>
+
+<div id="hero" class="full-screen background black" style="background-image: url('https://res.cloudinary.com/control4/image/upload/v1675286298/www/control4/control4connect/Hero_image_Connect_1.png');">
+	<div class="vertically-center">
+		<div class="container fade-top text-center">
+	        <h1 class="uppercase text-white half-padding-top"><strong>CONTROL4 CONNECT</strong> <br>POWERING THE POSSIBLE</h1>
+<!--	        <a href="javascript:;" class="c4btn outline" data-wistia="kfbtzlsoi0" data-target="#video" data-hide="#hero" data-track-category="Navigation" data-track="Essential Lighting" data-track-label="Play Video"><i class="fal fa-play" style="padding-right: 10px;"></i>Watch Now</a>-->
+		</div>
+	</div>
+</div> 
+
+<!-- c4yourself -->
+{{ if {settings:get_setting name="c4yourself" } == 1 }}
+	{{ pages:display slug="cta-white" }}
+{{ else }}
+
+<div class="white">
+	<div class="container-lg fade-top fade-bottom padding-top padding-bottom">
+		<div class="row">
+			<div class="col-md-6 text-center half-padding-bottom">
+				<img src="https://res.cloudinary.com/control4/image/upload/www/control4/control4connect/C4_Connect_Logo_FC.svg" alt="Control4 Connect logo" width="80%">
+			</div>	
+			<div class="col-md-5 half-padding-left half-padding-right">
+				<h2 class="bold">GET THE MOST FROM <br>YOUR CONTROL4 EXPERIENCE</h2>
+				<p>Our primary goal is to deliver the best experience possible and Control4 Connect ensures that we can. Control4 Connect is the software service that operates in the background to enable the Control4 App and essential features that: keep your system secure and up to date, give you convenient access and insights, and ensure your system can connect with new devices on the market.*</p>
+			</div>	
+		</div>
+	</div>
+</div>
+
+{{ endif }}
+<!-- end c4yourself -->
+
+<!-- Accordion OPENED TEXT BOTTOM VERSION -->
+<style>
+/* Accordion CSS */
+    .accordion {
+        display: flex;        
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        transition-duration: 800ms;
+    }
+    .accordion-item {
+        flex-grow: 1;
+        transition-duration: 800ms;
+        z-index: 1;
+    }
+    .accordion-item:not(:last-child) {
+        border-right: 1px solid #fff;
+    }
+    .accordion-item:hover {
+        background-color: rgba(195, 32, 50, 0.8);
+        cursor: pointer;
+    }
+    .accordion-item:hover h3.hidden {
+        display: inline-block;
+    }        
+    .accordion .absolute.bottom i.fa-plus,
+    #exit-accordion i.fa-times {
+        border: 1px solid #FFF;
+		border-radius: 50%;
+		height: 50px;
+		width: 50px;
+		padding: 17px 18px;
+        margin-right: 12.5px;
+        z-index: 2;
+    }
+	.accordion i.fa.fa-plus,
+	.accordion #exit-accordion i.fa.fa-times,
+	.accordion i.fal.fa-plus,
+	.accordion #exit-accordion i.fal.fa-times {
+		border: 1px solid #fff;
+		border-radius: 28px;
+		padding: 18px 19px;
+		margin-right: 12.5px;
+		z-index: 2;
+	}
+	.accordion i.fa.fa-plus,
+	.accordion #exit-accordion i.fa.fa-times,
+	.accordion i.fal.fa-plus,
+	.accordion #exit-accordion i.fal.fa-times {
+		border: 1px solid #fff;
+		border-radius: 28px;
+		padding: 18px 19px;
+		margin-right: 12.5px;
+		z-index: 2;
+	}
+    .accordion-item:hover i.fa-plus,
+    div#exit-accordion:hover i.fa-times {
+        border: none;
+        background-color: #fff;
+    }
+    .accordion-item:hover i.fa.fa-plus:before,
+    div#exit-accordion:hover i.fa.fa-times:before {
+        color: #8a878a;
+    }
+	.accordion-item:hover i.fal.fa-plus:before,
+	div#exit-accordion:hover i.fal.fa-times:before {
+    color: #8a878a;
+    padding-left: 1px;
+	}
+    .accordion-item span {
+        opacity: 0;
+    }
+    .accordion-item:hover span {
+        opacity: 1;
+    }
+    .accordion-item.active {
+        flex-grow: 5;
+    }    
+    .accordion-item.active:hover {
+        background-color: transparent;
+    }
+    .accordion-item.active .hidden
+    .accordion-item.active p.hidden,
+    .accordion-item.active a.hidden,
+	.accordion-item.active h2.hidden,
+    .accordion.active .accordion-item:hover.active h3.hidden {
+        display: block;
+    }
+    .accordion.active .accordion-item i.fa.fa-plus,
+    .accordion.active .accordion-item span,
+	.accordion-item.active h2,
+    .accordion.active .accordion-item:hover h3.hidden {
+        display: none;
+    }    
+    .accordion.active #exit-accordion.hidden {
+        display: block;
+        top: 100px;
+        left: 50%;
+    }
+    @media (min-width: 801px) {
+        .accordion-item {
+            min-height: 100vh;
+        }
+        .accordion-item .padding {
+            height: 350px;
+        }
+        .accordion.active .accordion-item .padding {
+            height: 500px;
+        }
+        .accordion.active .accordion-item.active .padding {
+            height: 300px;
+        }
+        .accordion.active .accordion-item.active h2 {
+            transform: rotate(0deg);
+            float: none;
+            width: 100%;
+            left: 0px;
+        }
+        .accordion.active .accordion-item h2 {
+            transform: rotate(90deg);
+            float: left;
+            width: 100vh;
+            transform-origin: left;
+            left: 50%;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .accordion,
+        .accordion.full-screen {
+            flex-direction: column;
+            min-height: calc(100vh + 100px) !important;
+        }
+        .accordion-item.active {
+            background-color: rgba(0,0,0,0.5) !important;
+        }
+        .accordion-item:not(:last-child) {
+            border-bottom: 1px solid #fff;
+        }
+        .accordion-item:hover {
+            background-color: none;
+        }
+        .accordion-item h2,
+        .accordion-item h3 {
+            margin-bottom: 12.5px;
+        }
+        .accordion-item p {
+            line-height: 21px;
+        }
+        .accordion.active .accordion-item.active h3.hidden {
+            display: inline-block;
+            font-size: 1.1em;
+        }
+        .accordion-item div.absolute {
+            position: relative;
+        }
+        .accordion .accordion-item h3.hidden {
+            display: none;
+        }
+        .accordion-item.active {
+            flex-grow: 10;
+        }
+        .accordion.active .accordion-item.active h2,
+        .accordion.active .accordion-item h2 {
+            transform: rotate(0deg);
+        }
+        .accordion.active #exit-accordion.hidden {
+            display: none;
+        }
+        i.fa.fa-plus {
+            padding: 14px;
+        }
+    }
+</style>
+	<div class="accordion full-screen background flawed-z-correct black" data-background="https://res.cloudinary.com/control4/image/upload/www/control4/control4connect/Accordian_Home.jpg">
+		<div id="exit-accordion" class="absolute hidden hidden-xs"><i class="fal fa-times"></i></div>
+		<div class="accordion-item" data-background="https://res.cloudinary.com/control4/image/upload/www/control4/control4connect/Accordian_1__dark.jpg" data-track-category="Intercom Anywhere" data-track="Accordion" data-track-label="Smart Experience">
+			<!-- Collapsed & Mobile -->
+			<div class="padding vertically-center text-white">
+				<h2>A TRULY SMART EXPERIENCE</h2>
+				<p class="hidden hidden-sm hidden-md hidden-lg">Voice control, remote access, on-the-go visibility, and personalization are hallmarks of a truly smart home or business—and those are just a few of the features that the Control4 Connect service enables within your <no-br>Control4 system.</no-br></p>				
+				<div class="absolute bottom"><i class="fal fa-plus"></i><span>Read More</span></div>
+			</div>
+			<!-- Expanded -->
+			<div class="padding text-bottom text-white hidden-xs">
+				<div class="row padding-left">
+					<div class="col-sm-8">
+						<h2 class="hidden">A TRULY SMART EXPERIENCE</h2>
+						<p class="hidden">Voice control, remote access, on-the-go visibility, and personalization are hallmarks of a truly smart home or business—and those are just a few of the features that the Control4 Connect service enables within your <no-br>Control4 system.</no-br></p>
+						</div>
+					</div>
+			</div>
+		</div>
+		<div class="accordion-item" data-background="https://res.cloudinary.com/control4/image/upload/www/control4/control4connect/Accordian_2_dark.jpg" data-track-category="Intercom Anywhere" data-track="Accordion" data-track-label="Keeping You Connected">
+			<!-- Collapsed & Mobile -->
+			<div class="padding vertically-center text-white">
+				<h2>KEEPING YOU CONNECTED</h2>
+				<p class="hidden hidden-sm hidden-md hidden-lg">Get mobile alerts from your system and be able to view events and interact with your system remotely thanks to Control4 Connect. This is particularly helpful when used with the Control4 Chime Video Doorbell, Intercom Anywhere, or surveillance solutions, but the possibilities <no-br>are endless.</no-br></p>
+				<div class="absolute bottom"><i class="fal fa-plus"></i><span>Read More</span></div>
+			</div>
+			<!-- Expanded -->
+			<div class="padding text-bottom text-white hidden-xs">
+				<div class="row padding-left">
+					<div class="col-sm-8">
+						<h2 class="hidden">KEEPING YOU CONNECTED</h2>
+						<p class="hidden">Get mobile alerts from your system and be able to view events and interact with your system remotely thanks to Control4 Connect. This is particularly helpful when used with the Control4 Chime Video Doorbell, Intercom Anywhere, or surveillance solutions, but the possibilities <no-br>are endless.</no-br></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="accordion-item" data-background="https://res.cloudinary.com/control4/image/upload/www/control4/control4connect/Accordian_3_dark.jpg" data-track-category="Intercom Anywhere" data-track="Accordion" data-track-label="Always Up To Date">
+			<!-- Collapsed & Mobile -->
+			<div class="padding vertically-center text-white">
+				<h2>UP-TO-DATE AND RELIABLE</h2>
+				<p class="hidden hidden-sm hidden-md hidden-lg">You can trust that your system is up-to-date, secure, and reliable thanks to Control4 Connect. It makes it possible for your system to be updated with the latest security updates, software improvements and integrations to deliver the best experience possible. These updates enable your Control4 home or business to connect with over 20,000 third-party and proprietary devices that add convenience and enjoyment to <no-br>your life.</no-br></p>
+				<div class="absolute bottom"><i class="fal fa-plus"></i><span>Read More</span></div>
+			</div>
+			<!-- Expanded -->
+			<div class="padding text-bottom text-white hidden-xs">
+				<div class="row padding-left">
+					<div class="col-sm-8">
+						<h2 class="hidden">UP-TO-DATE AND RELIABLE</h2>
+						<p class="hidden">You can trust that your system is up-to-date, secure, and reliable thanks to Control4 Connect. It makes it possible for your system to be updated with the latest security updates, software improvements and integrations to deliver the best experience possible. These updates enable your Control4 home or business to connect with over 20,000 third-party and proprietary devices that add convenience and enjoyment to <no-br>your life.</no-br></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script>
+docReady(function() {
+	var originalimage = "url(" + $('.accordion').data('background') + ")";
+    $('.accordion').css('background-image', originalimage);
+    $('.accordion-item').each(function(){
+        $('<img/>')[0].src = $(this).data('background');
+    });
+    $('.accordion .accordion-item').on('click', function() {        
+        var $clicked = $(this);
+        var bg = "url(" + $(this).data('background') + ")";
+        $clicked.parent('.accordion').css('background-image', bg).find('.accordion-item').not($clicked).removeClass('active');
+        $clicked.addClass('active');
+        $('.accordion').addClass('active');            
+    });
+    $('#exit-accordion').on('click', function() {            
+        $('.accordion, .accordion .accordion-item').removeClass('active');
+        $('.accordion').css('background-image', originalimage);
+    });
+});
+</script>
+<!-- End Accordion -->
+
+<!--
+<div class="white hidden-xs hidden-mobile padding-top">
+    <div class="container-lg padding padding-top padding-bottom">
+        <div class="row">
+            <div class="col-md-6 text-right">
+                <img src="https://res.cloudinary.com/control4/image/upload/www/control4/control4connect/OS_3_WWW_Home_SMTHNG4.png" alt="Smartphone with Control4 OS on screen" width="90%">
+            </div>
+            <div class="col-md-5 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-offset-0">
+                <div class="aspect one-to-one">
+                    <div class="vertically-center padding-top">
+						<h2>WHAT TO EXPECT</h2>
+						<p>Control4 Connect enables many of the key features that make your Control4 system a truly smart experience. It also empowers your independent Control4 Professional with the ability to make sure your system is regularly updated and supports the latest and greatest features, integrations, and security updates.</p>
+						<p>Your enrollment in the Control4 Connect service makes the following features and functions possible*:</p>
+						<ul>
+							<li>Software Updates</li>
+							<li>Control4 App (Mobile)</li>
+							<li>Remote System Access</li>
+							<li>Mobile Notifications</li>
+							<li>Voice Control</li>
+							<li>Intercom Anywhere</li>
+							<li>When>>Then Scene Personalization</li>
+							<li>System Backup</li>
+						</ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+<div class="white  padding-top">
+    <div class="container-lg padding padding-top padding-bottom">
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <img src="https://res.cloudinary.com/control4/image/upload/www/control4/control4connect/OS_3_WWW_Home_SMTHNG4.png" alt="Smartphone with Control4 OS on screen" width="90%">
+            </div>
+            <div class="col-md-5 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-offset-0 padding-top">
+				<h2 class="half-padding-top">WHAT TO EXPECT</h2>
+				<p>Control4 Connect enables many of the key features that make your Control4 system a truly smart experience. It also empowers your independent Control4 Professional with the ability to make sure your system is regularly updated and supports the latest and greatest features, integrations, and security updates.</p>
+				<p>Your enrollment in the Control4 Connect service makes the following features and functions possible*:</p>
+				<div style="padding-bottom: 8px;">
+					<a href="javascript:void(0);" data-toggle="#software"><i class="fal fa-plus" style="font-size: 12px"></i>Software Development</a>
+					<div class="row hidden" id="software">
+						<div class="col-xs-12" style="padding-top: 8px; padding-bottom: 10px; padding-left: 31px;">
+							<p>Software improvements and security updates are part of living with technology and are essential for reliability and long-term satisfaction. Control4 Connect allows us to invest in long-term software development and makes it possible for your system to receive updates that improve user experience and add new features and integrations.</p>
+						</div>
+					</div>
+				</div>
+				<div style="padding-bottom: 8px;">
+					<a href="javascript:void(0);" data-toggle="#app"><i class="fal fa-plus" style="font-size: 12px"></i>Control4 App (Mobile)</a>
+					<div class="row hidden" id="app">
+						<div class="col-xs-12" style="padding-top: 8px; padding-bottom: 10px; padding-left: 31px;">
+							<p>With Control4 Connect you can use the Control4 App for iOS and Android to personalize, view, control, and get notified about what is going on in your home or business. Whether at home or abroad, as long as you have an Internet connection, you can use your own tablet or mobile phone to be alerted of events and be able to respond. See “Remote System Access”, ”Mobile Notifications”, and “When>>Then Scene Personalization” for examples.</p>
+						</div>
+					</div>
+				</div>
+				<div style="padding-bottom: 8px;">
+					<a href="javascript:void(0);" data-toggle="#remote"><i class="fal fa-plus" style="font-size: 12px"></i>Remote System Access</a>
+					<div class="row hidden" id="remote">
+						<div class="col-xs-12" style="padding-top: 8px; padding-bottom: 10px; padding-left: 31px;">
+							<p>Control your system with the Control4 App even when you’re not at home. Want to view and adjust your surveillance cameras? Need to lock a door that was accidentally left unlocked? Or maybe you’d like to set the temperature and the mood for when you arrive. All this is possible and more.</p>
+						</div>
+					</div>
+				</div>
+				<div style="padding-bottom: 8px;">
+					<a href="javascript:void(0);" data-toggle="#mobile"><i class="fal fa-plus" style="font-size: 12px"></i>Mobile Notifications</a>
+					<div class="row hidden" id="mobile">
+						<div class="col-xs-12" style="padding-top: 8px; padding-bottom: 10px; padding-left: 31px;">
+							<p>Create your own personalized push notifications to alert you when people come and go, if a water leak is detected, or even if the garage door has been left open. Whether it’s urgent and needs immediate attention, or you simply want a status update, Control4 will keep you in the know by sending notifications to your tablet, mobile phone, or Apple Watch via the Control4 App.</p>
+						</div>
+					</div>
+				</div>
+				<div style="padding-bottom: 8px;">
+					<a href="javascript:void(0);" data-toggle="#voice"><i class="fal fa-plus" style="font-size: 12px"></i>Voice Control</a>
+					<div class="row hidden" id="voice">
+						<div class="col-xs-12" style="padding-top: 8px; padding-bottom: 10px; padding-left: 31px;">
+							<p>Control4 Connect enables Amazon Alexa and Google Assistant integration so you can use your voice to control a specific device, a few devices simultaneously, or scenes across your whole home or business.</p>
+						</div>
+					</div>
+				</div>
+				<div style="padding-bottom: 8px;">
+					<a href="javascript:void(0);" data-toggle="#intercom"><i class="fal fa-plus" style="font-size: 12px"></i>Intercom Anywhere</a>
+					<div class="row hidden" id="intercom">
+						<div class="col-xs-12" style="padding-top: 8px; padding-bottom: 10px; padding-left: 31px;">
+							<p>With Intercom Anywhere you can monitor and communicate with any room of your property, even the front door, right from your mobile device or Control4 Touchscreen. Whether you’re abroad or in the office, you can greet guests or delivery drivers via the Chime Video Doorbell—you can even allow them to enter. Do you have kids or employees that never answer the phone? See them and check in by intercomming into a Control4 Touchscreen from your phone or another touchscreen.</p>
+						</div>
+					</div>
+				</div>
+				<div style="padding-bottom: 8px;">
+					<a href="javascript:void(0);" data-toggle="#when"><i class="fal fa-plus" style="font-size: 12px"></i>When>>Then Scene Personalization</a>
+					<div class="row hidden" id="when">
+						<div class="col-xs-12" style="padding-top: 8px; padding-bottom: 10px; padding-left: 31px;">
+							<p>Your Control4 professional orchestrates the devices in your home or business with advanced scene programming so everything works in harmony. With When>>Then you can add additional scenes and adjust them when seasons, moods, and schedules change. Adjust outdoor lights as sunset changes, add a new playlist to your “Cooking” scene, and reduce your “Dinner Time” lighting by 10 percent—with When>>Then the system is yours to fine-tune.</p>
+						</div>
+					</div>
+				</div>					
+<!--
+				<div style="padding-bottom: 8px;">
+					<a href="javascript:void(0);" data-toggle="#health"><i class="fal fa-plus"></i>System Health and Usage Reports</a>
+					<div class="row hidden" id="health">
+						<div class="col-xs-12 col-sm-10">
+							<p>A monthly Health and Usage Report, enabled by Control4 Connect, provides useful information like lighting usage, most used scenes, and the battery-level status for smart locks, remotes, and more. These insights will guide you as you consider personalization and scene changes and help you better understand what goes on around your property.</p>
+						</div>
+					</div>
+				</div>
+-->
+				<div style="padding-bottom: 8px;">
+					<a href="javascript:void(0);" data-toggle="#backup"><i class="fal fa-plus" style="font-size: 12px"></i>System Backup</a>
+					<div class="row hidden" id="backup">
+						<div class="col-xs-12" style="padding-top: 8px; padding-bottom: 10px; padding-left: 31px;">
+							<p>Control4 Connect backs up your programming and preferences in order to restore your system if necessary.</p>
+						</div>
+					</div>
+				</div>
+				<br><br><br>
+				<small><sup>*</sup>Some features are dependent on hardware and system configuration. </small>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="white">
+	<div class="checkered left">
+		<div class="background" style="background-image:url('https://res.cloudinary.com/control4/image/upload/www/control4/control4connect/Resource_Owners.jpg'); "></div>
+		<div class="container-md">
+			<div class="row">
+				<div class="col-md-5">
+					<div class="fade-bottom padding-top padding-bottom half-padding-left half-padding-right" style="margin-top: 130px; margin-bottom: 130px;">
+						<h2><strong>RESOURCES</strong> FOR OWNERS</h2>
+						<p>We make it easy for you to get the most from your Control4 experience. Here are resources to help you learn about your system:</p>
+						<ul>
+							<li><a href="https://help.control4.com/s/" target="_blank">Customer Support Center</a></li>
+							<li><a href="/os3/getting-the-most-out-of-os3#videos" target="_blank">Video Tutorials</a></li>
+							<li><a href="/help/c4/user/userguide/" target="_blank">User Guide</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="white padding-top"></div>
+
+<div class="light-grey">
+	<div class="padding-top padding-bottom half-padding-left half-padding-right">
+		<div class="row">
+			<div class="col-sm-4 half-padding-bottom">
+				<img src="https://res.cloudinary.com/control4/image/upload/www/control4/control4connect/Voice_Control.jpg" alt="Voice control4 unit mounted to the wall" class="block half-padding-bottom">
+				<h2 style="font-size: 24px">VOICE CONTROL</h2>
+				<p class="half-padding-bottom">Smart keypads, in-wall touchscreens, and remote controls are convenient and easy to use—unless your hands are full. That’s why Control4 works with industry-leading voice assistants to give you yet another way to engage with your <no-br>smart devices.</no-br></p>
+				<a href="/solutions/voice-control" class="c4btn outline dark" target="_blank">Learn More</a>
+			</div>
+			<div class="col-sm-4 half-padding-bottom">
+				<img src="https://res.cloudinary.com/control4/image/upload/www/control4/control4connect/When_Then.jpg" alt="Modern staircase with purple ambient lighting in the background" class="block half-padding-bottom">
+				<h2 style="font-size: 24px">WHEN >> THEN</h2>
+				<p class="half-padding-bottom">Control4 professionals expertly program advanced automations that are customized to your needs—but as the seasons change, so do moods and schedules. See how you can use When>>Then to easily add and personalize scenes whenever <no-br>you like.</no-br></p>
+				<a href="https://fast.wistia.net/embed/iframe/7r3yu2ag73" class="c4btn outline dark" target="_blank">Watch Video</a>
+			</div>
+			<div class="col-sm-4 half-padding-bottom">
+				<img src="https://res.cloudinary.com/control4/image/upload/www/control4/control4connect/Intercom_Anywhere.jpg" alt="Person holding phone watching live feed of security system" class="block half-padding-bottom">
+				<h2 style="font-size: 24px">INTERCOM ANYWHERE</h2>
+				<p class="half-padding-bottom">Video call and check in on any room, even your front door, using Intercom Anywhere. Use any combination of Control4 Touchscreens, the Chime Video Doorbell, or your mobile device to communicate—even when you’re on <no-br>the go.</no-br></p>
+				<a href="/o/intercom-anywhere" class="c4btn outline dark" target="_blank">Learn More</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="white padding-top"></div>
+
+<!-- all solutions -->
+<div class="light-grey">
+<!-- Desktop View -->
+<div class="container padding-top padding-bottom hidden-xs">
+	<h2>POWERED BY CONTROL4</h2>
+	<p>We have the products to enable control of virtually anything in your home, tied to a system that makes living and interacting with them easy for the whole family. Select what is most important to you for more information.</p>
+	<div class="row half-padding-bottom">
+		<div class="col-md-1 col-xs-4 text-center half-padding-bottom">
+			<a href="/os3">
+			<circle>
+				<div class="icon">
+					<img src="https://res.cloudinary.com/control4/image/upload/C4_WWW_Icons_White-Smart-Home-OS.svg" alt="Icon - Smart Home OS">
+				</div>
+				<h4 class="icon-name">Smart Home OS</h4>
+			</circle>
+			</a>
+		</div>
+		<div class="col-md-1 col-xs-4 text-center half-padding-bottom">
+			<a href="/solutions/whole-home">
+			<circle>
+				<div class="icon">
+					<img src="https://res.cloudinary.com/control4/image/upload/C4_WWW_Icons_White-Whole-Home.svg" alt="Icon - Home Climate Control">
+				</div>
+				<h4 class="icon-name">Whole Home</h4>
+			</circle>
+			</a>
+		</div>
+		<div class="col-md-1 col-xs-4 text-center half-padding-bottom">
+			<a href="/solutions/smart-lighting">
+			<circle>
+				<div class="icon">
+					<img src="https://res.cloudinary.com/control4/image/upload/C4_WWW_Icons_White-Smart-Lighting.svg" alt="Icon - Lightbulb for Smart Lighting">
+				</div>
+				<h4 class="icon-name">Smart Lighting</h4>
+			</circle>
+			</a>
+		</div>
+		<div class="col-md-1 col-xs-4 text-center half-padding-bottom">
+			<a href="/solutions/peace-of-mind">
+			<circle>
+				<div class="icon">
+					<img src="https://res.cloudinary.com/control4/image/upload/C4_WWW_Icons_White-Home-Security.svg" alt="Icon - Security camera">
+				</div>
+				<h4 class="icon-name">Home Security</h4>
+			</circle>
+			</a>
+		</div>
+		<div class="col-md-1 col-xs-4 text-center half-padding-bottom">
+			<a href="/o/intercom-anywhere">
+			<circle>
+				<div class="icon">
+					<img src="https://res.cloudinary.com/control4/image/upload/C4_WWW_Icons_White-Intercom-Anywhere.svg" alt="Icon - Intercom for communicating in any/all rooms of residence-business">
+				</div>
+				<h4 class="icon-name">Intercom Anywhere</h4>
+			</circle>
+			</a>
+		</div>
+		<div class="col-md-1 col-xs-4 text-center half-padding-bottom">
+			<a href="/solutions/home-theater">
+			<circle>
+				<div class="icon">
+					<img src="https://res.cloudinary.com/control4/image/upload/C4_WWW_Icons_White-Home-Theater.svg" alt="Icon - TV and Speakers portraying a home theater.">
+				</div>
+				<h4 class="icon-name">Home Theater</h4>
+			</circle>
+			</a>
+		</div>
+		<div class="col-md-1 col-xs-4 text-center half-padding-bottom">
+			<a href="/solutions/multi-room-audio">
+			<circle>
+				<div class="icon">
+					<img src="https://res.cloudinary.com/control4/image/upload/C4_WWW_Icons_White-Multiroom-Audio.svg" alt="Icon - Speaker to portray multi-room audio">
+				</div>
+				<h4 class="icon-name">Multi-room Audio</h4>
+			</circle>
+			</a>
+		</div>
+		<div class="col-md-1 col-xs-4 text-center half-padding-bottom">
+			<a href="/solutions/universal-remote">
+			<circle>
+				<div class="icon">
+					<img src="https://res.cloudinary.com/control4/image/upload/v1603737541/C4_WWW_Icons_White_No_Circle_Un_Rmt_v2.svg" alt="Icon - Remote">
+				</div>
+				<h4 class="icon-name">Universal Remote</h4>
+			</circle>
+			</a>
+		</div>
+		<div class="col-md-1 col-xs-4 text-center half-padding-bottom">
+			<a href="/solutions/voice-control">
+			<circle>
+				<div class="icon">
+					<img src="https://res.cloudinary.com/control4/image/upload/C4_WWW_Icons_White-Voice-Control.svg" alt="Icon - Voice control station for total control of home-business with your voice">
+				</div>
+				<h4 class="icon-name">Voice Control</h4>
+			</circle>
+			</a>
+		</div>
+	</div>
+</div>
+<!-- Mobile View -->
+<div class="container padding-top padding-bottom hidden-sm hidden-md hidden-lg">
+	<h2>POWERED BY CONTROL4</h2>
+	<p>We have the products to enable control of virtually anything in your home, tied to a system that makes living and interacting with them easy for the whole family. Select what is most important to you for more information.</p>
+	<div class="row half-padding-bottom">
+		<div class="col-md-1 col-xs-4 text-center half-padding-bottom"><a href="/os3">
+			<circle>
+				<div class="icon">
+					<img src="https://res.cloudinary.com/control4/image/upload/C4_WWW_Icons_White-Smart-Home-OS.svg" alt="Icon - Smart Home OS">
+				</div>
+				<h4 class="icon-name">Smart <br><no-br>Home OS</no-br></h4>
+			</circle>
+			</a>
+		</div>
+		<div class="col-md-1 col-xs-4 text-center half-padding-bottom">
+			<a href="/solutions/whole-home">
+			<circle>
+				<div class="icon">
+					<img src="https://res.cloudinary.com/control4/image/upload/C4_WWW_Icons_White-Whole-Home.svg" alt="Icon - Home Climate Control">
+				</div>
+				<h4 class="icon-name">Whole <br>Home</h4>
+			</circle>
+			</a>
+		</div>
+		<div class="col-md-1 col-xs-4 text-center half-padding-bottom">
+			<a href="/solutions/smart-lighting">
+			<circle>
+				<div class="icon">
+					<img src="https://res.cloudinary.com/control4/image/upload/C4_WWW_Icons_White-Smart-Lighting.svg" alt="Icon - Lightbulb for Smart Lighting">
+				</div>
+				<h4 class="icon-name">Smart <br>Lighting</h4>
+			</circle>
+			</a>
+		</div>
+		<div class="col-md-1 col-xs-4 text-center half-padding-bottom">
+			<a href="/solutions/peace-of-mind">
+			<circle>
+				<div class="icon">
+					<img src="https://res.cloudinary.com/control4/image/upload/C4_WWW_Icons_White-Home-Security.svg" alt="Icon - Security camera">
+				</div>
+				<h4 class="icon-name">Home <br>Security</h4>
+			</circle>
+			</a>
+		</div>
+		<div class="col-md-1 col-xs-4 text-center half-padding-bottom">
+			<a href="/o/intercom-anywhere">
+			<circle>
+				<div class="icon">
+					<img src="https://res.cloudinary.com/control4/image/upload/C4_WWW_Icons_White-Intercom-Anywhere.svg" alt="Icon - Intercom for communicating in any/all rooms of residence-business">
+				</div>
+				<h4 class="icon-name">Intercom <br>Anywhere</h4>
+			</circle>
+			</a>
+		</div>
+		<div class="col-md-1 col-xs-4 text-center half-padding-bottom">
+			<a href="/solutions/home-theater">
+			<circle>
+				<div class="icon">
+					<img src="https://res.cloudinary.com/control4/image/upload/C4_WWW_Icons_White-Home-Theater.svg" alt="Icon - TV and Speakers portraying a home theater.">
+				</div>
+				<h4 class="icon-name">Home <br>Theater</h4>
+			</circle>
+			</a>
+		</div>
+		<div class="col-md-1 col-xs-4 text-center half-padding-bottom">
+			<a href="/solutions/multi-room-audio">
+			<circle>
+				<div class="icon">
+					<img src="https://res.cloudinary.com/control4/image/upload/C4_WWW_Icons_White-Multiroom-Audio.svg" alt="Icon - Speaker to portray multi-room audio">
+				</div>
+				<h4 class="icon-name"><no-br>Multi-room</no-br> <br>Audio</h4>
+			</circle>
+			</a>
+		</div>
+		<div class="col-md-1 col-xs-4 text-center half-padding-bottom">
+			<a href="/solutions/universal-remote">
+			<circle>
+				<div class="icon">
+					<img src="https://res.cloudinary.com/control4/image/upload/v1603737541/C4_WWW_Icons_White_No_Circle_Un_Rmt_v2.svg" alt="Icon - Remote">
+				</div>
+				<h4 class="icon-name">Universal <br>Remote</h4>
+			</circle>
+			</a>
+		</div>
+		<div class="col-md-1 col-xs-4 text-center half-padding-bottom">
+			<a href="/solutions/voice-control">
+			<circle>
+				<div class="icon">
+					<img src="https://res.cloudinary.com/control4/image/upload/C4_WWW_Icons_White-Voice-Control.svg" alt="Icon - Voice control station for total control of home-business with your voice">
+				</div>
+				<h4 class="icon-name">Voice <br>Control</h4>
+			</circle>
+			</a>
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- ctas -->
+<div class="white half-padding-top half-padding-bottom" style="border: 35px solid #fff;">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="background half-margin-bottom" style="background-image: url('https://res.cloudinary.com/control4/image/upload/f_auto,q_auto,dpr_auto/WWW_Whl_Hm_New_to_C4.jpg'); height: 850px">
+				<div class="masonry-desc half-padding-left half-padding-right">
+					<h2 class="text-white" style="font-size: 20px; margin-bottom: 20px">NEW TO CONTROL4?</h2>
+					<p class="short-height">You don't know what you're missing. That's why you must #C4Yourself! Visit a Control4 Showroom today to experience the comfort, convenience, peace of mind, and enjoyment a truly intelligent <no-br>home delivers.</no-br></p>
+					<a href="/dealer_locator" class="c4btn outline block">#C4Yourself</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="background aspect one-to-one half-margin-bottom" style="background-image: url('https://res.cloudinary.com/control4/image/upload/f_auto,q_auto,dpr_auto/WWW_Whl_Hm_aPro.jpg'); height: 850px">
+				<div class="masonry-desc half-padding-left half-padding-right">
+					<h2 class="text-white" style="font-size: 20px; margin-bottom: 20px">A PRO IS THE WAY TO GO</h2>
+					<p class="short-height">Much like electricity, plumbing, and heating and cooling, a complete smart home is not a DIY project. With individual “smart” products that are added to your home, the more complexity you will introduce because they simply don’t talk or listen to one another. In order to get a seamless, fully integrated smart home system, you’ll want to hire an experienced and well-trained installer. Control4 Smart Home professionals give you confidence that your system is expertly designed, functions on a robust network, and features personalized experiences in tune with how <no-br>you live.</no-br></p>
+					<a href="/o/go-with-a-pro" class="c4btn outline block">Learn More</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="background half-margin-bottom" style="background-image: url('https://res.cloudinary.com/control4/image/upload/v1634588484/761247117_C4_WWW_Solution_App_Update_FNL.jpg'); height: 850px">
+				<div class="masonry-desc half-padding-left half-padding-right">
+					<h2 class="text-white" style="font-size: 20px; margin-bottom: 20px">ALREADY A CUSTOMER?</h2>
+					<p class="short-height">Log into your account to renew 4Sight, connect to voice control, get hands-on with When >> Then Automation, manage your profile, or find your dealer’s <no-br>contact information.</no-br></p>
+					<a href="https://customer.control4.com/4sight" class="c4btn outline block">Sign In</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,558 @@
+<style>
+        form input, form select, form button{
+            background-color: transparent !important; 
+            color: #fff !important; 
+            border: 1px solid #fff !important;
+        }
+        #top-banner {
+            min-height: 900px !important;
+            height: 100vh !important;
+            width: 100vw;
+        }
+         form input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: white !important;        
+        }
+        form input::-moz-placeholder { /* Firefox 19+ */
+            color: white !important;
+        }
+            form input:-ms-input-placeholder { /* IE 10+ */
+            color: white !important;
+        }
+        form input:-moz-placeholder { /* Firefox 18- */
+            color: white !important;
+        }
+</style>
+
+<div id="top-banner" class="full-screen flawed-z-correct">
+    <div id="page-backgrounds" class="flawed-z-correct">
+        <div id="herobg" class="full-screen fixed background black" style="background-image: url('//res.cloudinary.com/control4/image/upload/q_auto,f_auto,dpr_auto/www/cedia-2017/4Sight/4Sight-Intrcm-Anywhr.jpg');"></div>
+    </div>
+    <div class="vertically-center"> 
+        <div class="container">
+            <div class="row fade-in fade-bottom">
+                <div class="col-sm-8 col-md-6">
+                    <h1 class="text-white uppercase"><strong>4SIGHT</strong><br>ENHANCE YOUR <no-br>CONTROL4 EXPERIENCE</no-br></h1>
+                    <p class="text-white">With a 4Sight subscription, you can use the Control4 App to access and control your system from anywhere in the world (with an internet connection). 4Sight also enables features like Intercom Anywhere, voice control, and When>>Then Scene Personalization that will allow you to modify scenes for a more <no-br>personal experience.</no-br></p>
+                    <p class="text-white">4Sight is only available for Control4 systems installed prior to April 23, 2024. For any systems installed after that date, Control4 Connect is the required software service that replaces 4Sight. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+<div class="white">
+    <div class="container padding-top padding-bottom fade-bottom text-center">
+		<h2 class="bold">FASTER CONNECTIONS <br>AND GREATER CUSTOMER CONTROL</h2>
+		<p>4Sight now delivers faster connection times with the Control4 App for iOS and Android, and integrates with your Apple Watch to provide quick and easy access to Customer Favorites. Our latest update also makes it easy to manage your own 4Sight subscriptions and edit your credit card information directly from the Control4 App (iOS and Android).</p>
+    </div>
+</div>
+
+<style>
+/* Accordion CSS */
+    .accordion {        
+        display: flex;        
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        transition-duration: 800ms;
+    }
+    .accordion-item {
+        flex-grow: 1;
+        transition-duration: 800ms;
+        z-index: 1;
+    }
+    .accordion-item:not(:last-child) {
+        border-right: 1px solid #fff;
+    }
+    .accordion-item:hover {
+        background-color: rgba(195, 32, 50, 0.8);
+        cursor: pointer;
+    }
+    .accordion-item:hover h3.hidden {
+        display: inline-block;
+    }        
+    i.fa.fa-plus,
+    #exit-accordion i.fa.fa-times {
+        border: 1px solid #FFF;
+        border-radius: 28px;
+        padding: 18px;
+        margin-right: 12.5px;
+        z-index: 2;
+    }
+    .accordion-item:hover i.fa.fa-plus,
+    div#exit-accordion:hover i.fa.fa-times {
+        border: none;
+        background-color: #fff;
+    }
+    .accordion-item:hover i.fa.fa-plus:before,
+    div#exit-accordion:hover i.fa.fa-times:before {
+        color: #8a878a;
+    }
+    .accordion-item span {
+        opacity: 0;
+    }
+    .accordion-item:hover span {
+        opacity: 1;
+    }
+    .accordion-item.active {
+        flex-grow: 5;
+    }    
+    .accordion-item.active:hover {
+        background-color: transparent;
+    }
+    .accordion-item.active .hidden {
+        display: block;
+    }
+    .accordion.active .accordion-item i.fa.fa-plus,
+    .accordion.active .accordion-item span,
+    .accordion.active .accordion-item:hover h3.hidden {
+        display: none;
+    }    
+    .accordion.active #exit-accordion.hidden {
+        display: block;
+        top: 100px;
+        left: 50%;
+    }
+    @media (min-width: 801px) {
+        .accordion-item {
+            min-height: 100vh;
+        }
+        .accordion-item .padding {
+            height: 350px;
+        }
+        .accordion.active .accordion-item .padding {
+            height: 500px;
+        }
+        .accordion.active .accordion-item.active .padding {
+            height: 300px;
+        }
+        .accordion.active .accordion-item.active h2 {
+            transform: rotate(0deg);
+            float: none;
+            width: 100%;
+            left: 0px;
+        }
+        .accordion.active .accordion-item h2 {
+            transform: rotate(90deg);
+            float: left;
+            width: 100vh;
+            transform-origin: left;
+            left: 50%;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .accordion,
+        .accordion.full-screen {
+            flex-direction: column;
+            min-height: calc(100vh + 100px) !important;
+        }
+        .accordion-item.active {
+            background-color: rgba(0,0,0,0.5) !important;
+        }
+        .accordion-item:not(:last-child) {
+            border-bottom: 1px solid #fff;
+        }
+        .accordion-item:hover {
+            background-color: none;
+        }
+        .accordion-item h2,
+        .accordion-item h3 {
+            margin-bottom: 12.5px;
+        }
+        .accordion-item p {
+            line-height: 21px;
+        }
+        .accordion.active .accordion-item.active h3.hidden {
+            display: inline-block;
+            font-size: 1.1em;
+        }
+        .accordion-item div.absolute {
+            position: relative;
+        }
+        .accordion .accordion-item h3.hidden {
+            display: none;
+        }
+        .accordion-item.active {
+            flex-grow: 10;
+        }
+        .accordion.active .accordion-item.active h2,
+        .accordion.active .accordion-item h2 {
+            transform: rotate(0deg);
+        }
+        .accordion.active #exit-accordion.hidden {
+            display: none;
+        }
+        i.fa.fa-plus {
+            padding: 14px;
+        }
+    }
+/* End of Accordion CSS */
+</style>
+    
+<!-- Accordion -->
+<div id="video" class="black"></div>
+<div id="accordion-vid">    
+    <div class="accordion full-screen background flawed-z-correct" style="background-image: url('https://res.cloudinary.com/control4/image/upload/v1596214167/4Sight_Img_Update_Main_Image.jpg');">
+        <div id="exit-accordion" class="absolute hidden hidden-xs"><i class="fal fa-times"></i></div>
+        <div class="accordion-item a-track" data-track-event="accordion click" data-track-category="Personalization" data-track-action="click" data-track-site-section="accordion" data-background="//res.cloudinary.com/control4/image/upload/q_auto,f_auto,dpr_auto/www/cedia-2017/4Sight/4Sight-Personalization.jpg">
+            <div class="padding vertically-center text-white">
+                <h2>REMOTE ACCESS</h2>
+                <h3 class="hidden hidden-xs text-white">CONTROL AND PEACE-OF-MIND <no-br>FROM ANYWHERE</no-br></h3>
+                <p class="hidden">Don’t remember if you shut the garage door before hitting the road for the long weekend? Or maybe you just want to take a look around the house through your surveillance cameras while you are away to make sure everything is all good.  Safely and securely control your home while you are away as if you were sitting right in your <no-br>living room.</no-br><br><br>
+				<!-- <a href="javascript:;" class="c4btn outline a-track" data-wistia="7r3yu2ag73" data-target="#video" data-hide="#accordion-vid" data-track-label="See it in Action" data-track-event="Personalization Video Play" data-track-category="Personalization Video" data-track-action="Play Video" data-track-site-section="accordion"><i class="fal fa-play"></i>Watch the Video</a> -->
+                </p>
+				<div class="hidden">
+					<ul class="inline">
+						<li style="margin-right: 15px;"><a href="https://itunes.apple.com/us/app/control4-for-os-3/id1320153814?ls=1&mt=8" target="_blank" class="overridelegal"><img src="https://res.cloudinary.com/control4/image/upload/e_trim/h_50,q_auto,f_auto,dpr_auto/apple-app-store-button"></a></li>
+						<li><a href="https://play.google.com/store/apps/details?id=com.control4.phoenix" target="_blank" class="overridelegal"><img src="https://res.cloudinary.com/control4/image/upload/e_trim/h_50,q_auto,f_auto,dpr_auto/google-play-app-button"></a></li>
+					</ul>
+				</div>
+                <div class="absolute bottom"><i class="fal fa-plus"></i><span>Read More</span></div>
+            </div>
+        </div>
+        <div class="accordion-item a-track" data-track-event="accordion click" data-track-category="Intercom Anywhere" data-track-action="click" data-track-site-section="accordion" data-background="https://res.cloudinary.com/control4/image/upload/q_auto,f_auto,dpr_auto/4Sight_Accrdn_Intrcm_NEWhre.jpg">
+            <div class="padding vertically-center text-white">
+                <h2>Intercom Anywhere</h2>
+                <h3 class="hidden text-white">RECEIVE INSTANT CALLS—HOME OR AWAY—FROM THE FRONT DOOR TO YOUR <no-br>MOBILE DEVICE</no-br></h3>
+                <p class="hidden">With Intercom Anywhere, receiving a delivery or remotely unlocking the front door for a neighbor or family member while you are away from your home, has never <no-br>been easier.</no-br></p>
+				 <p class="hidden">Make video calls from your device to any of the touch screens throughout the house or from your house to a family member’s connected mobile device. And with When >> Then Personalization, you can even create your own custom buttons that puts locking and unlocking the front door right at <no-br>your fingertips.</no-br></p>
+                 <p class="hidden"> <a href="/o/intercom-anywhere" style="color: white;" class="c4btn outline white text-white">Learn more about Intercom Anywhere</a></p>
+<!--
+                <div class="hidden">
+                    <ul class="inline">
+                        <li style="margin-right: 15px;"><a href="https://itunes.apple.com/us/app/control4-intercom-anywhere/id1170604157?ls=1&mt=8" target="_blank" class="overridelegal"><img src="https://res.cloudinary.com/control4/image/upload/e_trim/h_50,q_auto,f_auto,dpr_auto/apple-app-store-button"></a></li>
+                        <li><a href="https://play.google.com/store/apps/details?id=com.control4.intercom" target="_blank" class="overridelegal"><img src="https://res.cloudinary.com/control4/image/upload/e_trim/h_50,q_auto,f_auto,dpr_auto/google-play-app-button"></a></li>
+                    </ul>
+                </div>
+-->
+                <div class="absolute bottom"><i class="fal fa-plus"></i><span>Read More</span></div>
+            </div>
+        </div>
+        <div class="accordion-item a-track" data-track-event="accordion click" data-track-category="Voice Control" data-track-action="click" data-track-site-section="accordion" data-background="//res.cloudinary.com/control4/image/upload/v1596214102/4Sight_Img_Update_Voice_Control.jpg">
+            <div class="padding vertically-center text-white">
+                <h2>Voice Control</h2>
+                <h3 class="hidden text-white">SPEAK UP AND <no-br>BE HEARD</no-br></h3>
+                <p class="hidden">At Control4, we believe that our voices are one of the most powerful tools we have.  With voice control, you will be able to adjust the temperature in your home, set a timer to pre-heat your oven, tune to your favorite TV programs when it’s time to unwind, or adjust the brightness of your lighting.  You can do all that and more, with the power of your voice.</p>
+                <p class="hidden">Controlling your home can simply… roll right off your tongue.  Create and edit your voice scenes using When >> Then, adding power to your own words for the <no-br>ultimate personalization.</no-br></p>
+                 <p class="hidden"> <a href="/solutions/voice-control" style="color: white;" class="c4btn outline white text-white">Learn more</a></p>
+                <div class="absolute bottom"><i class="fal fa-plus"></i><span>Read More</span></div>
+            </div>
+        </div>
+        <div class="accordion-item a-track" data-track-event="accordion click" data-track-category="Notifications and Alerts" data-track-action="click" data-track-site-section="accordion"  data-background="//res.cloudinary.com/control4/image/upload/q_auto,f_auto,dpr_auto/www/cedia-2017/4Sight/4Sight-Notifications.jpg">
+            <div class="padding vertically-center text-white">
+                <h2>Notifications & Alerts</h2>
+                <h3 class="hidden text-white">KNOW WHAT HAPPENED <no-br>IN REAL-TIME</no-br></h3>
+                <p class="hidden">With so much going on in our daily lives, we rely on real-time notifications to alert us of important events and to keep us updated for additional peace-of-mind. Whether it’s as simple as letting you know that the kids got home from school safely, as useful as reminding you to replace the batteries in the door lock, or as important as alerting you that smoke or a leak had been detected, your Control4 system can push real-time notifications to your mobile devices to keep you informed.</p>
+                <p class="hidden">Stay up to date with what matters to you. Create and edit your own notifications for status updates, device states, or system events with When >> Then for the ultimate in <no-br>personalized communication.</no-br></p>
+                 <p class="hidden"> <a href="/blog/335/alerts-from-your-smart-home-on-your-watch-and-mobile-video" style="color: white;" class="c4btn outline white text-white">Learn more</a></p>
+                <div class="absolute bottom"><i class="fal fa-plus"></i><span>Read More</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+            
+<script>
+    docReady(function() {
+    $('.accordion-item').each(function(){
+        $('<img/>')[0].src = $(this).data('background');
+    });
+    $('.accordion .accordion-item').on('click', function() {        
+        var $clicked = $(this);
+        var bg = "url(" + $(this).data('background') + ")";
+        $clicked.parent('.accordion').css('background-image', bg).find('.accordion-item').not($clicked).removeClass('active');
+        $clicked.addClass('active');
+        $('.accordion').addClass('active');            
+    });
+    $('#exit-accordion').on('click', function() {            
+        $('.accordion, .accordion .accordion-item').removeClass('active');
+        $('.accordion').css('background-image', 'url(https://res.cloudinary.com/control4/image/upload/v1596214167/4Sight_Img_Update_Main_Image.jpg)');
+    });
+});
+</script>
+<!-- End Accordion -->
+    
+<div class="background dark-grey" style="background-image: url('//res.cloudinary.com/control4/image/upload/q_auto,f_auto,dpr_auto/www/cedia-2017/4Sight/4Sight-Lead-Gen-Form.jpg');">
+    <div class="padding-top padding-bottom container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="form-wrapper text-white">
+					<form name="4sight-services" class="ajax validate" method="post" action="/assets/scripts/post-forwarder-sf.php" data-next="/o/thank-you">
+						<input type="hidden" name="postUrl" value="https://login.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8">
+						<input type="hidden" name="oid" value="00D5000000078mu">
+						<input type="hidden" name="recordType" value="012500000005eVd">
+						<input type="hidden" name="retURL" value="//www.control4.com/o/4sight-services">
+						<input type="hidden" name="priority" value="Standard">
+						<input type="hidden" name="Ad_Campaign__c" id="Ad_Campaign__c" value="4sight-services">
+						<input type="hidden" name="Page_Source__c" id="Page_Source__c" value="/{{ url:uri_string }}">
+						<input type="hidden" name="company" id="company" value="Control4">
+						<input type="hidden" name="Status" id="Status" value="New">
+						<input type="hidden" name="Form_Name__c" id="Form_Name__c" value="4sight-services">
+						<input type="hidden" name="lead_source" id="lead_source" value="Web">
+						<input type="hidden" id="origin" name="origin" value="Control4 Leads" />
+						
+                        <h3 class="text-white uppercase">Not yet a Control4 homeowner? Get a free quote!</h3>
+                        <input type="text" name="first_name" id="first_name" placeholder="First Name*" required>
+                        <input type="text" name="last_name" id="last_name" placeholder="Last Name*" required>
+                        <input type="tel" name="phone" id="phone" placeholder="Phone*" required>
+                        <select name="country" id="country" required>
+                            {{theme:partial name="form/options-country" placeholder="true" }}
+                        </select>
+                        <input type="email" name="email" id="email" placeholder="Email*" required>
+                        <button class="btn" type="submit">SUBMIT</button> 
+<!--                        <button class="btn" type="submit" name="submit">SUBMIT</button> -->
+					</form>
+<!--
+                    <form class="ajax validate" method="post" action="/assets/scripts/post-forwarder.php" name="4Sight" data-track-category="Lead Form Submit" data-next="/o/thank-you"> 
+                        <input name="postUrl" type="hidden" value="https://go.pardot.com/l/63762/2016-03-03/7fs4nz"> 
+                        <input type="hidden" name="campaign" value="4Sight">
+
+                        <h3 class="text-white uppercase">Not yet a Control4 homeowner? Get a free quote!</h3>
+                        <input required type="text" name="firstName" placeholder="FIRST NAME*" /> 
+                        <input required type="text" name="lastName" placeholder="LAST NAME*" /> 
+                        <input required type="tel" name="phoneNumber" placeholder="PHONE NUMBER*" /> 
+                        <select name="country" required>
+                            {{theme:partial name="form/options-country" placeholder="true" }}
+                        </select>
+                        <input required type="email" name="email" placeholder="EMAIL*" /> 
+                        <button type="submit" name="submit">SUBMIT</button> 
+                    </form>
+-->
+                    <p><small>We take your privacy seriously and we promise we won’t spam you; please see our <a href="/legal/privacy-policy" target="_blank">privacy policy</a> for details. By submitting your information, you are confirming that you are 18 years of age <no-br>or older.</no-br></small></p>
+<!--
+                    <div id="g-recaptcha-container">
+                            <small class="captcha-terms-of-use pull-right">This form uses Invisible reCAPTCHA by Google <a id="recatpcha-privacy-policy" class="text-white" href="https://www.google.com/intl/en/policies/privacy" target="_blank">Privacy Policy</a> &nbsp;and&nbsp; <a id="recaptcha-sign-up-consent" class="text-white" href="https://www.google.com/intl/en/policies/terms/" target="_blank"> Terms of Use</a></small> 
+                    </div>
+-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- interactive slider -->
+<style>
+    .full-screen,
+    html:not(.mobile-browser) .full-screen-desktop {
+        min-height: 100vh !important;
+        width: 100vw !important;
+        overflow: hidden;
+    }
+    .slider-controls {
+        position: absolute;
+        bottom: 25px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 1000;
+    }
+    .slider-controls a[data-slick-slide] > div {
+        opacity: 0.7;
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 50%;
+        transition: 400ms;
+    }
+    .slider-controls a[data-slick-slide]:hover > div,
+    .slider-controls a[data-slick-slide].active > div {
+        opacity: 1;
+        background-color: rgba(195, 32, 50, 0.8);
+        border: 1px solid transparent;
+    }
+    .slider-controls a div {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        max-height: 100px;
+        max-width: 100px;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .black p {
+        color: #fff;
+    }
+    div.slider {
+        min-height: 450px;
+    }
+    div.slider .slide {
+        min-height: 450px !important;
+        height: 100vh !important;
+        width: 100vw;
+    }
+    div.slider .slick-list {
+        height: 100vh !important;
+    }
+    @media (max-width: 1300px) {
+        .slide .vertically-center {
+            width: calc(100vw - 70px);
+            top: 40%;
+        }        
+    }
+    @media (max-width: 480px) {
+        .full-screen.black {
+            border: none !important;
+        }
+        .slider .slide {
+            height: calc(100vh + 100px) !important;
+        }
+        .slide .vertically-center {
+            width: 100vw;
+        }
+        .slider-controls a div {
+            height: 80px;
+            width: 80px;
+        }
+        div.slider .slide,
+        div.slider .slick-list {
+            min-height: 600px !important;
+        }
+    }
+</style>
+    
+<div class="full-screen black" style="border: 35px solid #fff;">
+    <div id="video2" class="black"></div>
+    <div id="slider-vid">    
+        <div class="slider">     
+            <div class="slide full-screen background" style="background-image: url('https://res.cloudinary.com/control4/image/upload/q_auto,f_auto,dpr_auto/4Sight_Sldr_Hmonr_Prsnlztn.jpg');">
+                <div class="vertically-center">
+                    <div class="padding">
+                        <div class="row">
+                            <div class="col-lg-offset-1 col-lg-6 text-white fade-bottom">	
+                                <h2>Homeowner Personalization</h2>
+                                <p>At Control4, we’ve crafted a perfect balance between providing smart home systems that are professionally-installed and reliable with the flexibility for homeowners to customize and fine-tune their automation to evolve with their <no-br>changing lifestyles.</no-br></p>
+                                <p>This intuitive, web-based personalization tool, called When >> Then, is unlocked with a 4Sight subscription, and it’s incredibly easy <no-br>to use.</no-br></p>
+                                <a href="javascript:;" class="c4btn outline" data-wistia="7r3yu2ag73" data-target="#video2" data-hide="#slider-vid" data-track-label="See it in Action">See It In Action</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide full-screen background" style="background-image: url('//res.cloudinary.com/control4/image/upload/q_auto,f_auto,dpr_auto/v1/www/cedia-2017/4Sight/4Sight-Alexa.jpg');">
+                <div class="vertically-center">
+                    <div class="padding">
+                        <div class="row">
+                            <div class="col-lg-offset-1 col-lg-6 text-white fade-bottom">	
+                                <h2>Hands-Free Automation</h2>
+								<h3>SPEAK UP AND <no-br>BE HEARD</no-br></h3>
+                                <p>We’ve all been there—walking through the door into a dark house, arms full. Wouldn’t it be nice if you could ask your Control4 system to help? Now you can. Your favorite voice assistants can execute spoken requests to select or control media, turn on/off lights or lighting scenes, and execute personalized automations. An active 4Sight subscription enables Alexa and Google Assistant integration with your Control4 system, or ask your Control4 Professional about adding Josh.ai with its natural-language processing (NLP) technology that puts <no-br>privacy first.</no-br></p>
+                                <a id="sight" href="javascript:;" class="c4btn outline" data-wistia="mobzxkviat" data-target="#video2" data-hide="#slider-vid">Check It Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide full-screen background" style="background-image: url('//res.cloudinary.com/control4/image/upload/q_auto,f_auto,dpr_auto/www/cedia-2017/4Sight/4Sight-Advanced-Cntrl.jpg');">
+                <div class="vertically-center">
+                    <div class="padding">
+                        <div class="row">
+                            <div class="col-lg-offset-1 col-lg-6 text-white">	
+                                <h2>Advanced Control</h2>
+                                <h3>GIVING YOU MORE OPTIONS <no-br>FOR CONTROL</no-br></h3>
+                                <p>Aside from the new Halo and Halo Touch remote controls, and the Control4 Touchscreens, you can access your system with the Control4 App on your Android and iOS devices, including Apple Watch! While away from your home or business, an internet connection and an active 4Sight subscription enable device control, status updates, notifications and alerts, and Intercom Anywhere from your favorite <no-br>mobile devices.</no-br></p>
+								<ul class="inline">
+									<li style="margin-right: 15px;"><a href="https://itunes.apple.com/us/app/control4-for-os-3/id1320153814?ls=1&mt=8" target="_blank" class="overridelegal"><img src="https://res.cloudinary.com/control4/image/upload/e_trim/h_50,q_auto,f_auto,dpr_auto/apple-app-store-button"></a></li>
+									<li><a href="https://play.google.com/store/apps/details?id=com.control4.phoenix" target="_blank" class="overridelegal"><img src="https://res.cloudinary.com/control4/image/upload/e_trim/h_50,q_auto,f_auto,dpr_auto/google-play-app-button"></a></li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>	   
+        </div>
+        <div class="slider-controls">
+            <div class="col-sm-offset-3 col-sm-2 col-xs-4">
+                <a data-slick-slide="0" class="active">
+                    <div class="aspect one-to-one background-contain" style="background-image: url('//res.cloudinary.com/control4/image/upload/q_auto,f_auto,dpr_auto/v1/www/cedia-2017/4Sight/4Sight-Icons-Whn-Thn.svg');"></div>
+                </a>
+            </div>
+            <div class="col-sm-2 col-xs-4">
+                <a data-slick-slide="1">
+                    <div class="aspect one-to-one background-contain" style="background-image: url('//res.cloudinary.com/control4/image/upload/q_auto,f_auto,dpr_auto/v1/www/cedia-2017/every-room/ERA-Chart-Alexa.svg');"></div>
+                </a>
+            </div>
+            <div class="col-sm-2 col-xs-4">
+                <a data-slick-slide="2">
+                    <div class="aspect one-to-one background-contain" style="background-image: url('//res.cloudinary.com/control4/image/upload/q_auto,f_auto,dpr_auto/v1/www/cedia-2017/every-room/ERA-Chart-Watch.svg');"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End interactive slider -->
+
+<style>
+    #sight.c4play::before{
+        content: "See it in Action";
+        width: 160px;
+        left: 45%;
+    }
+    #alexa.c4play::before{
+        content: "Check it out";
+        width: 130px;
+        left: 47%;
+    }
+</style>
+
+<div class="black background" style="background-image: url('//res.cloudinary.com/control4/image/upload/q_auto,f_auto,dpr_auto/v1/www/cedia-2017/4Sight/4Sight-Subscribe-Now.jpg');">
+    <div class="padding-top padding-bottom container">
+        <div class="row">
+            <div class="col-lg-offset-1 col-lg-6 text-white fade-bottom">	
+                <h2>Experience the <no-br>4Sight Advantage</no-br></h2>
+                <p>Subscribing to 4Sight enables the Control4 cloud-services, which adds features and benefits that will allow you to take control of your home automation system like never before. Get the most out of your smart home with voice control, Apple Watch support, Intercom Anywhere, automation personalization, alerts and notifications, and remote access while you’re away to ensure that you are connected at <no-br>all times.</no-br></p>
+                <div class="row">                                
+                    <div class="col-sm-6">
+                        <h3 class="uppercase text-white" style="height: 50px;">New to Control4?</h3>
+                        <a href="/dealer_locator" class="c4btn outline block">Get Started Today</a>
+                    </div>
+                    <div class="col-sm-6">
+                        <h3 class="uppercase text-white" style="height: 50px;">Already living with Control4?</no-br></h3>
+                        <a href="//customer.control4.com/" class="c4btn outline block">Get 4Sight Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js" defer></script>
+<script type="text/javascript">
+docReady(function() {
+
+    // slick slider
+    var $slider = $('.slider').slick({
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 7000,
+        arrows: false,
+        //	prevArrow: '<a href="javascript:;" class="slick-prev"><i class="fal fa-arrow-left"></i></a>', // uncomment if arrows set to true
+        //	nextArrow: '<a href="javascript:;" class="slick-next"><i class="fal fa-arrow-right"></i></a>', // uncomment if arrows set to true
+        dots: false,
+        draggable: false,
+        fade: true,
+        //	initialSlide: Math.floor(Math.random() * $('div.slider div.slide').length), // randomize
+        variableWidth: true,
+        customPaging: function (slider, i) {
+            return '<button class="tab">' + $('.slick-thumbs li:nth-child(' + (i + 1) + ')').html() + '</button>';
+        }
+    });
+
+    // highligh selected slide's icon
+    $('.slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        var $slidericon = $('[data-slick-slide=' + nextSlide + ']');
+        $('[data-slick-slide]').removeClass('active');
+        $slidericon.addClass('active');
+    });
+
+    // go to slide
+    $('[data-slick-slide]').click(function() {
+        var $this = $(this);
+        // accounted for in above function
+        // $('[data-slick-slide]').not($this).removeClass('active');
+        // $this.addClass('active');
+        var clicked = $this.data('slick-slide');
+        $slider.slick('slickGoTo', clicked);
+    });
+
+});	    
+</script>

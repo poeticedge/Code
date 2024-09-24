@@ -1,0 +1,1076 @@
+<style>
+  /*====================
+Navigation style 
+=====================*/
+  .brand-nav {
+    margin-bottom: 0px;
+  }
+  .brand-pg-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: right;
+  }
+  .brand-nav li {
+    display: inline-block;
+  }
+  .brand-nav li a {
+    display: block;
+    color: #7c7e7f;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Lato;
+    font-size: 1.5rem;
+  }
+  /* Change the link color on hover */
+  .brand-nav li a:hover {
+    color: #4499e3;
+  }
+  /* Change the link color on click */
+  .brand-nav.active {
+    color: #4499e3;
+  }
+
+  .hero_title,
+  .hero_sub {
+    font-family: Lato;
+  }
+  .category-ul li {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    white-space: normal;
+    margin: 0 35px 30px 0;
+  }
+  .category-ul {
+    margin: 20px 0 0 0;
+  }
+
+  .category-ul li {
+    margin: 0 20px 20px 0;
+  }
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .dynamic-image.icon-i img {
+    height: 50px;
+  }
+  .toggle-control {
+    display: block;
+  }
+  .icon-down:before {
+    content: none;
+  }
+  .icon-up:before {
+    content: none;
+  }
+
+  .toggle-control .icon-up,
+  .toggle-control .icon-down {
+    float: left;
+  }
+
+  .toggle-control .icon-up {
+    display: none;
+  }
+
+  .toggle-control.toggled .icon-up {
+    display: inline;
+  }
+
+  .toggle-control.toggled .icon-down {
+    display: none;
+  }
+  .green-heading {
+    color: #49b44f;
+    display: inline;
+    margin-left: 22px;
+  }
+  .green-heading span {
+    margin-left: 104px;
+  }
+  .ombre-hr {
+    background: transparent linear-gradient(90deg, #49b44f 0%, #0066cc 100%) 0%
+      0% no-repeat padding-box;
+    border: none;
+    opacity: 1;
+    height: 4px;
+    width: 483px;
+  }
+  .learn-more-title {
+    margin: -5px 10px;
+  }
+  .control-systems {
+    margin: 30px 0px;
+  }
+  .interoperability,
+  .network-diagnostics,
+  .scan-monitor,
+  .remote-access {
+    padding: 30px 0px;
+  }
+  .button-pad {
+    padding: 30px 0px 10px;
+  }
+
+  .learn-more-content-ul li {
+    list-style-type: disc;
+    padding-left: 10px;
+    padding-top: 20px;
+  }
+  /*==================================
+BACKGROUND IMAGES
+==================================*/
+
+  .hub {
+    background-image: url("/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/Purchase-OvrC-ProHub.png");
+    height: 400px;
+    width: 90%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 223px 55px 10px;
+    text-align: center;
+    background-position: center;
+  }
+
+  .ovrc-pro-header .thumbnail-block {
+    padding: 0px 90px;
+  }
+
+  .mod7 {
+    background-image: url("/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/NPC/solutions/ovrcpro_green_background.jpg");
+    height: 336px;
+  }
+  .orange-bkgnd {
+    background-color: #fe8423;
+    height: auto;
+    padding: 50px 160px 50px 160px;
+    max-width: 100%;
+    margin-top: 40px;
+  }
+  /*====================
+Grid
+=====================*/
+  .icons-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    height: auto;
+    column-gap: 30px;
+    text-align: center;
+  }
+
+  .icons-grid .thumbnail-block {
+    display: inline-grid;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  /*==================================
+STYLING
+==================================*/
+  .how-to-start {
+    margin: 50px 0;
+  }
+
+  .get-ovrc-pro-section {
+    border: solid 3px #f4f4f4;
+    border-radius: 10px;
+    height: auto;
+    padding: 40px 30px;
+    margin: 70px 0;
+  }
+  .mobile-only {
+    display: none;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .mobile2 {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+
+  .header_padding {
+    padding: 550px 90px 0px;
+  }
+
+  .icon_padding {
+    padding-top: 30px;
+  }
+
+  p.kpadding {
+    padding: 180px 30px 20px;
+  }
+
+  .top {
+    text-align: center;
+    margin: 2% 20%;
+  }
+
+  .homeowner {
+    color: #25282a;
+    margin-left: 23%;
+    margin-right: 23%;
+    margin-top: 20px;
+  }
+
+  .bottom {
+    padding: 80px 0px 0px 0px;
+    color: #fff;
+  }
+
+  /*==================================
+MEDIA
+==================================*/
+
+  @media (max-width: 800px) {
+    .ombre-hr {
+      width: auto;
+    }
+    .mobile {
+      display: block;
+    }
+
+    .mobile2 {
+      display: none;
+    }
+
+    .desktop {
+      display: none;
+    }
+
+    p.kpadding {
+      padding: 180px 180px 0px;
+    }
+    .green-heading {
+      margin: auto;
+      text-align: center;
+      font-size: 2rem;
+    }
+    /*====================
+Grid
+=====================*/
+    .icons-grid {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      height: auto;
+      column-gap: 30px;
+      text-align: center;
+    }
+
+    .icons-grid .thumbnail-block {
+      display: inline-grid;
+      height: auto;
+      padding: 40px 20px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .ovrc-pro-header {
+      text-align: center;
+      padding: 20px 10px;
+    }
+    .ovrc-pro-header .thumbnail-block,
+    .orange-bkgnd {
+      padding: 20px 10px;
+    }
+    .icons-grid {
+      grid-template-columns: auto;
+    }
+
+    .icons-grid .thumbnail-block {
+      display: inline-grid;
+      height: auto;
+      padding: 40px 20px;
+    }
+    .mobile-only {
+      display: block;
+      text-align: center;
+    }
+
+    #mobile {
+      display: inline-block;
+      width: auto;
+    }
+    #mobile2 {
+      display: inline-block;
+      width: auto;
+    }
+
+    .ombre-hr {
+      width: auto;
+    }
+    .icon {
+      margin: 13px;
+    }
+
+    .toggle-control .icon-down {
+      float: none;
+    }
+
+    .sub-text {
+      display: none;
+    }
+
+    .green-heading span {
+      margin-left: 0;
+    }
+    .mobile {
+      display: none;
+    }
+
+    .mobile2 {
+      display: block;
+    }
+
+    .desktop {
+      display: none;
+    }
+
+    p.kpadding {
+      padding: 0px 40px 20px;
+    }
+
+    .top {
+      margin: 2% 5%;
+    }
+
+    .homeowner {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+
+    .bottom {
+      padding: 60px 20px 0px 20px;
+      color: #fff;
+    }
+  }
+</style>
+
+<!-- START BREADCRUMBS !-->
+<div id="productsGlobalBreadCrumbs">
+  <div id="breadcrumb" class="breadcrumb">
+    <div id="WC_BreadCrumbTrailDisplay_div_1" class="breadcrumb_links">
+      <a id="WC_BreadCrumbTrailDisplay_link_2" href="/shop/en/snapav/home"
+        >Home</a
+      >
+      <span class="breadcrumb-divider">|</span>
+      <a id="WC_BreadCrumbTrailDisplay_link_5a" href="/shop/en/snapav/brands"
+        >Brands</a
+      >
+      <span class="breadcrumb-divider">|</span> OvrC
+    </div>
+    <div id="WC_BreadCrumbTrailDisplay_div_3" class="breadcrumb_dropdowns">
+      <div id="WC_BreadCrumbTrailDisplay_div_4" class="breadcrumb_item"></div>
+    </div>
+  </div>
+</div>
+<!-- END BREADCRUMBS !-->
+
+<!-- NAV START -->
+
+<div class="row-fluid brand-nav">
+  <div class="span12">
+    <h1 style="color: #7c7e7f; float: left">OvrC</h1>
+    <ul class="brand-pg-nav">
+      <li><a class="active" href="/shop/en/snapav/ovrc">Overview</a></li>
+      <li>
+        <a href="/shop/en/snapav/ovrc-pro" style="color: #4499e3">OvrC Pro</a>
+      </li>
+      <li><a href="/shop/en/snapav/ovrc-connect">OvrC Connect</a></li>
+      <li><a href="/shop/en/snapav/ovrc-ecosystem">OvrC Ecosystem</a></li>
+    </ul>
+  </div>
+</div>
+<hr style="margin: 0 0 10px 0" />
+
+<!-- NAV END -->
+
+<div class="ovrc-pro-header">
+  <div class="row-fluid">
+    <div class="span12 center">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/ProPage-hero-2x-update.png"
+          alt="OvrC pro banner image with mobile devices showcasing OvrC Pro on the screens"
+        />
+      </div>
+      <div class="thumbnail-block">
+        <div class="dynamic-image">
+          <img
+            src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/OvrC-Pro-logo.png"
+            alt="OvrC pro icon"
+          />
+        </div>
+        <p>
+          OvrC Pro expands your visibility and access to the entire network of
+          IP devices, all within the same OvrC platform that you already use.
+          With OvrC Pro, you gain access to enhanced troubleshooting
+          capabilities and diagnostic data, making remote support easy and
+          eliminating the need for unnecessary onsite service calls. This allows
+          you to provide world-class service to your clients.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="icons-grid-container">
+  <div class="icons-grid">
+    <div class="thumbnail-block">
+      <div class="dynamic-image" style="height: 85px">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Icon-Network Diagnostics.png"
+          alt="Network Diagnostics icon"
+        />
+      </div>
+      <p style="padding: 0 20px">Network Diagnostics</p>
+    </div>
+    <div class="thumbnail-block center">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Icon-Scan & Monitor Devices.png"
+          alt="Scan and Monitor Devices icon"
+        />
+      </div>
+      <p style="padding: 0 20px">Scan &amp; Monitor Devices</p>
+    </div>
+    <div class="thumbnail-block">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/Interoperability-Icon.png"
+          alt="System health icon"
+        />
+      </div>
+      <p style="padding: 0 20px">Interoperability</p>
+    </div>
+    <div class="thumbnail-block center">
+      <div class="dynamic-image" style="height: 85px">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Icon-Advanced Remote Access Devices.png"
+          alt="Advanced Remote Access icon"
+        />
+      </div>
+      <p style="padding: 0 20px">Advanced Remote Access</p>
+    </div>
+    <div class="thumbnail-block center">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/PlatformSecurity-icon.png"
+          alt="Product integration icon"
+        />
+      </div>
+      <p style="padding: 0 20px">Platform Security</p>
+    </div>
+    <div class="thumbnail-block center">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/Icon-Product Integration.png"
+          alt="Product integration icon"
+        />
+      </div>
+      <p style="padding: 0 20px">Product Integrations</p>
+    </div>
+  </div>
+</div>
+
+<!-- HOW to Get -->
+<div class="get-ovrc-pro-section">
+  <div class="row-fluid">
+    <div class="span12 center">
+      <h2 class="main-headers">How to Get OvrC Pro:</h2>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span4 center">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/Hub.png"
+          alt="OvrC pro icon"
+        />
+      </div>
+      <div class="thumbnail-block">
+        <p>
+          Place this compact hub on your jobsite to get full network visibility
+          without any licenses or fees.
+        </p>
+      </div>
+    </div>
+    <div class="span4 center">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/Router@2x.png"
+          alt="OvrC pro icon"
+        />
+      </div>
+      <div class="thumbnail-block">
+        <p>
+          Each Araknis router is embedded with OvrC Pro for free, so you can
+          save space, while still getting advanced remote management features.
+        </p>
+      </div>
+    </div>
+    <div class="span4 center">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/ControllerFamPhoto@2x.png"
+          alt="OvrC pro icon"
+        />
+      </div>
+      <div class="thumbnail-block">
+        <p>
+          In addition to providing powerful automation, Control4 CORE Series, CA
+          and EA Controllers come with built-in OvrC Pro for enhanced
+          troubleshooting.*
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span12 center">
+      <a href="/shop/en/snapav/ovrc-300-pro"
+        ><div class="btn-1">Shop Now</div></a
+      >
+    </div>
+  </div>
+</div>
+
+<!-- Start Network Diagnostics -->
+<div class="network-diagnostics">
+  <div class="row-fluid">
+    <div class="span6">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/description/images/Ovrc/icon_NetworkDiagnostics.png"
+          alt="System Health icon"
+        />
+        <h1 class="green-heading">Network Diagnostic Utilities</h1>
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span6">
+      <hr class="ombre-hr" />
+      <p>
+        The customer dashboard identifies the total number of monitored devices
+        and those that need an update, have limited connectivity, or are in a
+        critical state.
+      </p>
+      <div class="row-fluid">
+        <div class="overview-content">
+          <hr />
+          <div id="mobile" class="span1">
+            <a href="#" class="toggle-control" data-toggle-target-id="faq-2">
+              <span class="icon-down"
+                ><img
+                  src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"
+              /></span>
+              <span class="icon-up"
+                ><img
+                  src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"
+              /></span>
+            </a>
+          </div>
+          <div id="mobile2" class="span10">
+            <h2 class="learn-more-title">Learn more</h2>
+            <div id="faq-2" class="toggle-content">
+              <ul class="r-faq-list">
+                <li class="">
+                  <div class="thumbnail-block">
+                    <p>
+                      Troubleshooting any issues or concerns begins in the
+                      Network Health section at the bottom of the page, where
+                      current and historical data can be found for:
+                    </p>
+                    <ul class="learn-more-content-ul">
+                      <li>
+                        <strong>LAN latency </strong> – indicator for an issue
+                        within the local network
+                      </li>
+                      <li>
+                        <strong>WAN latency </strong> – consistency and quality
+                        of ISP service
+                      </li>
+                      <li>
+                        <strong>Download and Upload Speed </strong> – Ping IP
+                        addresses on the network to see device response times
+                        and packet loss on the local network.
+                      </li>
+                    </ul>
+
+                    <p>
+                      Additionally, take advantage of the CRM lite functionality
+                      to organize customer data and contact information, a
+                      Google Map of the location, and secured vault for linked
+                      documentation: designs, spec sheets, bills of materials,
+                      etc.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="span6 center">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/Network-Diagnostic-Utilities.png"
+          alt="OvrC network diagnostics dashboard"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DIV Network END -->
+<hr />
+<!-- DIV Scan & Monitor START -->
+
+<div class="scan-monitor">
+  <div class="row-fluid">
+    <div class="span6">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/description/images/Ovrc/Icon_ScanandMonitor.png"
+          alt="Scan and monitor icon"
+        />
+        <h1 class="green-heading">Scan &amp; Monitor Devices</h1>
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span6">
+      <hr class="ombre-hr" />
+      <p>
+        Locate all IP devices on the network and take advantage of easily
+        accessible controls such as reboot and update options. Enable device
+        monitoring for any applicable device to receive notifications regarding
+        changes in its online/offline status. Enter a unique device name for
+        each device, configure the necessary settings - dependent upon its level
+        of OvrC integration – and add any pertinent notes for future reference.
+      </p>
+      <div class="row-fluid">
+        <div class="overview-content">
+          <hr />
+          <div id="mobile" class="span1">
+            <a href="#" class="toggle-control" data-toggle-target-id="faq-3">
+              <span class="icon-down"
+                ><img
+                  src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"
+              /></span>
+              <span class="icon-up"
+                ><img
+                  src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"
+              /></span>
+            </a>
+          </div>
+          <div id="mobile2" class="span10">
+            <h2 class="learn-more-title">Learn more</h2>
+            <div id="faq-3" class="toggle-content">
+              <ul class="r-faq-list">
+                <li class="">
+                  <div class="thumbnail-block">
+                    <ul class="learn-more-content-ul">
+                      <li>
+                        Scan VLANS, Ports and Services - Scan the network or
+                        across multiple VLANs for available ports and their
+                        associated services: HTTP, HTTPS, telnet, SSH, and any
+                        other custom-defined combination.
+                      </li>
+                      <li>
+                        General Device & SNMP Information - View the device's
+                        name, MAC & IP addresses, manufacturer, first and last
+                        seen time stamps, uptime, and list of any network
+                        interfaces with their respective connection speeds,
+                        states, and in/out data statistics.
+                      </li>
+                      <li>
+                        Device Monitoring & Alerts - Choose devices to track and
+                        get automatic alerts via email or push notification for
+                        any changes in their connectivity or online status.
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="span6">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/Scan-Monitor-Devices.png"
+          alt="Screenshot showing the screening and monitoring of multiple devices"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- DIV Scan & Monitor END -->
+<hr />
+
+<!-- Start Interoperability -->
+<div class="interoperability">
+  <div class="row-fluid">
+    <div class="span6">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/Interoperability-Icon.png"
+          alt="System Health icon"
+        />
+        <h1 class="green-heading">Interoperability</h1>
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span6">
+      <hr class="ombre-hr" />
+      <p>
+        Support for third-party, open-source, and custom integrations provides
+        detailed device information, configuration options, status updates, and
+        controls.
+      </p>
+      <div class="row-fluid">
+        <div class="overview-content">
+          <hr />
+          <div id="mobile" class="span1">
+            <a href="#" class="toggle-control" data-toggle-target-id="faq-1">
+              <span class="icon-down"
+                ><img
+                  src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"
+              /></span>
+              <span class="icon-up"
+                ><img
+                  src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"
+              /></span>
+            </a>
+          </div>
+          <div id="mobile2" class="span10">
+            <h2 class="learn-more-title">Learn more</h2>
+            <div id="faq-1" class="toggle-content">
+              <ul class="r-faq-list">
+                <li class="">
+                  <div class="thumbnail-block">
+                    <p>
+                      <strong>ONVIF Information</strong> – Camera protocol for
+                      Partners to access video streams, snapshots, user lists,
+                      firmware versions, and soft reboot for select devices.
+                      (Capabilities may vary based on manufacturer)
+                    </p>
+                    <p>
+                      <strong>PJLink Information</strong> – Standard protocol
+                      for operating compliant LAN-capable projectors: Controls
+                      include input selection, volume control, and reboot. View
+                      status information for errors (lamp error, power, etc.),
+                      and check lamp status and hours.
+                    </p>
+                    <p>
+                      <strong>Deep Integrations</strong> – Working with
+                      third-party brands allows us to offer more device data,
+                      controls, and diagnostics, although integration depth
+                      varies by device type and manufacturer.
+                    </p>
+                    <p>
+                      <strong>Complete Integration </strong> – Our proprietary
+                      brands feature simplified configuration and deployment
+                      processes, including auto-discovery, network
+                      configuration, "Apply To All" settings, automatic
+                      programming, and automated notifications.
+                    </p>
+                    <p>For example:</p>
+                    <ul class="learn-more-content-ul">
+                      <li>Luma X20 Surveillance Systems</li>
+                      <li>MoIP 960 AV Distribution</li>
+                      <li>
+                        Wi-Fi Management for Araknis, Access Networks and
+                        Pakedge access points
+                      </li>
+                      <li>Luma Insights for Control4</li>
+                      <li>Control4 account setup and transfer</li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="span6 center">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/Interoperability-ovrc-pro.png"
+          alt="OvrC system health dashboards"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- DIV Interoperability END -->
+<hr />
+<!-- DIV Remote Access START -->
+
+<div class="remote-access">
+  <div class="row-fluid">
+    <div class="span6">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/description/images/Ovrc/Icon_AdvancedRemoteAccess.png"
+          alt="Remote Access icon"
+        />
+        <h1 class="green-heading">Advanced Remote Access</h1>
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span6">
+      <hr class="ombre-hr" />
+      <p>
+        Web Connect allows technicians to remotely connect to a device's local
+        user interface (UI) webpage as if they were directly connected to the
+        customer's local network.
+      </p>
+      <div class="row-fluid">
+        <div class="overview-content">
+          <hr />
+          <div id="mobile" class="span1">
+            <a href="#" class="toggle-control" data-toggle-target-id="faq-4">
+              <span class="icon-down"
+                ><img
+                  src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"
+              /></span>
+              <span class="icon-up"
+                ><img
+                  src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"
+              /></span>
+            </a>
+          </div>
+          <div id="mobile2" class="span10">
+            <h2 class="learn-more-title">Learn more</h2>
+            <div id="faq-4" class="toggle-content">
+              <ul class="r-faq-list">
+                <li class="faq-li">
+                  <div class="thumbnail-block">
+                    <ul class="learn-more-content-ul">
+                      <li>
+                        Uses the existing, secure, authenticated communication
+                        via OvrC Pro Agent to OvrC servers.
+                      </li>
+                      <li>
+                        Supports HTTPS (port 443), SSH, and telnet connections
+                        without needing VPNs, port forward, or complicated
+                        setups.
+                      </li>
+                      <li>
+                        Enables cloud tools like Ping, Traceroute, and a
+                        terminal emulator for telnet and SSH to function as if
+                        they're connected locally.
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="span6">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/Advanced-Remote-Access-Update.png"
+          alt="Screenshot showing the advanced remote access features"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DIV Remote Access END -->
+<hr />
+
+<!-- DIV Platform Security START -->
+
+<div class="platform-security">
+  <div class="row-fluid">
+    <div class="span6">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/PlatformSecurity-icon.png"
+          alt="Remote Access icon"
+        />
+        <h1 class="green-heading">Platform Security</h1>
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span6">
+      <hr class="ombre-hr" />
+      <p>
+        Ensure customer data and privacy are safeguarded by providing
+        authenticated access through a secure connection for instant system
+        management and diagnosis.
+      </p>
+      <div class="row-fluid">
+        <div class="overview-content">
+          <hr />
+          <div id="mobile" class="span1">
+            <a href="#" class="toggle-control" data-toggle-target-id="faq-6">
+              <span class="icon-down"
+                ><img
+                  src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/plus.png"
+              /></span>
+              <span class="icon-up"
+                ><img
+                  src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/minus.png"
+              /></span>
+            </a>
+          </div>
+          <div id="mobile2" class="span10">
+            <h2 class="learn-more-title">Learn more</h2>
+            <div id="faq-6" class="toggle-content">
+              <ul class="r-faq-list">
+                <li class="faq-li">
+                  <div class="thumbnail-block">
+                    <ul class="learn-more-content-ul">
+                      <li>
+                        Multi-factor authentication for OvrC Platform access.
+                      </li>
+                      <li>
+                        Individual technician or group-based permissions for
+                        customer account management.
+                      </li>
+                      <li>
+                        Secure HTTPS tunnel and end-to-end encryption between
+                        OvrC Pro devices and servers.
+                      </li>
+                      <li>
+                        Secure processes for transferring customer account
+                        ownership and privileges. 
+                      </li>
+                      <li>
+                        Customer-managed access controls for system or
+                        surveillance, with options for permanent or temporary
+                        restrictions.
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="span6">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/Platform-Security.png"
+          alt="Screenshot showing the advanced remote access features"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DIV Remote Access END -->
+<hr />
+<!-- DIV Product Integration START -->
+
+<!-- bkgr START-->
+<div class="container">
+  <div class="row-fluid">
+    <div class="span6">
+      <div class="dynamic-image">
+        <img
+          src="/wcsstore/ExtendedSitesCatalogAssetStore/description/images/Ovrc/Icon_productIntegration.png"
+          alt="Product Integration icon"
+        />
+        <h1 class="green-heading">Product Integration</h1>
+      </div>
+    </div>
+    <div class="span6"></div>
+  </div>
+  <hr class="ombre-hr" />
+</div>
+<div class="row-fluid">
+  <div class="span12">
+    <div class="thumbnail-block">
+      <h3>
+        Get enhanced diagnostics data and troubleshooting capabilities from an
+        ever-growing list of supported products.
+      </h3>
+    </div>
+  </div>
+  <div class="gif">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="thumbnail-block center">
+          <div class="dynamic-image">
+            <img
+              src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/Product-integration-animation-UPDATED.gif"
+              alt="Animated gif of OvrC screenshots"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIV Product Integration END -->
+
+  <!-- DIV Control Systems START -->
+  <div class="control-systems">
+    <div class="row-fluid">
+      <div class="span12 center">
+        <div class="dynamic-image">
+          <img
+            src="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/images/LandingPage/ovrc/OvrC-Works-with.png"
+            alt="Control system logos that work with OvrC"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row-fluid button-pad">
+      <div class="span12 center">
+        <div class="thumbnail-block">
+          <a
+            href="/wcsstore/ExtendedSitesCatalogAssetStore/attachments/documents/OvrC/SupportDocuments/Product_Integration-03102020.pdf"
+            ><div class="btn-2">Learn more</div></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- DIV Control Systems END -->
+
+  <div class="orange-bkgnd">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="thumbnail-block center">
+          <h2 style="color: white">
+            We continuously refine our tools and technology to make OvrC the
+            most powerful platform on the market. See our blog for the latest
+            updates.
+          </h2>
+          <a href="https://news.snapav.com/category/ovrc/" target="_blank"
+            ><div class="btn-2">Learn more</div></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

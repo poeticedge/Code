@@ -1,0 +1,285 @@
+<style>
+  .icons {
+    display: inline-flex;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: auto;
+    column-gap: 30px;
+    padding-top: 75px;
+  }
+  .icons img {
+    border-radius: 15%;
+    width: 20vw;
+    vertical-align: middle;
+    height: 20vw;
+  }
+
+  .icons p {
+    font-size: 6vw;
+    padding: 11vw 6vw;
+  }
+
+  .main-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5vw 25vw;
+  }
+
+  .main-text p {
+    text-align: center;
+    width: 70vw;
+    font-size: 16px;
+  }
+  .button-container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 10vw;
+  }
+
+  .connect-button {
+    background: #000;
+    opacity: 1;
+    color: rgba(255, 255, 255, 1);
+    width: 80vw;
+    height: 10vw;
+    background-color: rgba(75, 126, 19, 1);
+    border: none;
+    font-size: 4vw;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    border-radius: 10vw;
+  }
+</style>
+
+<div class="black">
+  <div class="container">
+    <div class="padding-top padding-bottom text-center">
+      <div class="icons">
+        <img
+          src="https://res.cloudinary.com/control4/image/upload/v1716237746/www/control4/Apple_Music.svg"
+        />
+
+        <p>&plus;</p>
+
+        <img
+          src="https://res.cloudinary.com/control4/image/upload/v1716238229/www/control4/Ryff.svg"
+        />
+      </div>
+
+      <div class="main-text">
+        <p>
+          Incorporating Apple Music into your Ryff system offers a convenient
+          and immersive way to enjoy music throughout your home.
+        </p>
+      </div>
+      <div class="button-container">
+        <button class="connect-button" id="connectButton">Connect</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--<script type="text/javascript">
+  const firstScript = document.getElementsByTagName("script")[0];
+  const newScript = document.createElement("script");
+  newScript.src = "https://js-cdn.music.apple.com/musickit/v3/musickit.js";
+  newScript.type = "text/javascript";
+  firstScript.parentNode.insertBefore(newScript, firstScript);
+</script>-->
+
+<script>
+  const firstScript = document.getElementsByTagName("script")[0];
+  const newScript = document.createElement("script");
+  newScript.src = "https://js-cdn.music.apple.com/musickit/v3/musickit.js";
+  newScript.type = "text/javascript";
+  firstScript.parentNode.insertBefore(newScript, firstScript);
+  // Copyright 2024 Snap One, LLC. All rights reserved.
+
+  /* global MusicKit C4 */
+
+  async function lognalert(line) {
+    console.log("C4AM: " + line);
+    if (typeof useAlert === "boolean" && useAlert === true) {
+      setTimeout(() => {
+        alert(line);
+      }, 1);
+    }
+  }
+
+  lognalert("start");
+
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+
+  const navId = urlParams.get("navId");
+  const useAlert = urlParams.get("useAlert") === "true";
+
+  const state = urlParams.get("state");
+  const developerToken = urlParams.get("developerToken");
+  const build = urlParams.get("build");
+  const version = urlParams.get("version");
+
+  let shouldConfigureMusicKit = true;
+
+  lognalert("navId: " + navId);
+
+  const fragment = window.location.hash;
+  lognalert("fragment: " + fragment);
+  if (typeof fragment === "string") {
+    const matches = fragment.match(/^#?(.+)$/);
+    if (matches) {
+      lognalert("fragment contains matches");
+      try {
+        const payload = matches[1];
+        lognalert("payload: " + fragment);
+
+        const data = JSON.parse(atob(payload));
+        lognalert("payload data parse success");
+
+        const { musicUserToken } = data;
+
+        lognalert("fragment musicUserToken: " + musicUserToken);
+
+        if (typeof musicUserToken === "string") {
+          lognalert("sending musicUserToken from fragment");
+          shouldConfigureMusicKit = false;
+          sendMusicUserToken(musicUserToken);
+        }
+      } catch (ignoreErr) {
+        lognalert("fragmentError: " + ignoreErr);
+      }
+    }
+  }
+
+  document.addEventListener("musickitloaded", async () => {
+    lognalert("musickitloaded");
+
+    if (!shouldConfigureMusicKit) {
+      lognalert("Page already sent musicUserToken from fragment, abandon load");
+      return;
+    }
+
+    if (!developerToken) {
+      alert("Missing developer token, update driver!");
+      return;
+    }
+
+    try {
+      await MusicKit.configure({
+        developerToken,
+        app: {
+          build,
+          icon: "https://" + window.location.hostname + "/c4icon.png",
+          name: "Ryff",
+          version,
+        },
+      });
+    } catch (err) {
+      lognalert("MusicKit.configure error: " + err);
+    }
+
+    const music = MusicKit.getInstance();
+    if (music.isAuthorized) {
+      lognalert("Already authorized!");
+      try {
+        await music.unauthorize();
+      } catch (err) {
+        lognalert("Error unauthing!: " + err);
+      }
+
+      lognalert("No longer authorized!");
+    }
+  });
+
+  const connectButton = document.getElementById("connectButton");
+  connectButton.addEventListener("click", async () => {
+    lognalert("Starting Auth");
+
+    const errorPayload = {};
+
+    const music = MusicKit.getInstance();
+    try {
+      const musicUserToken = await music.authorize();
+      if (typeof musicUserToken === "string" && musicUserToken.length > 0) {
+        lognalert("Authorized music-user-token: " + musicUserToken);
+        sendMusicUserToken(musicUserToken);
+        return;
+      }
+
+      errorPayload.message = "AuthorizeNoToken";
+    } catch (err) {
+      errorPayload.message = err.toString();
+      lognalert("Error authing: " + err);
+    }
+
+    sendCommand("AuthorizationError", errorPayload);
+    closeWebView();
+  });
+
+  async function sendMusicUserToken(musicUserToken) {
+    if (typeof C4 === "object") {
+      const params = {
+        musicUserToken,
+        navId,
+      };
+      lognalert("Using C4 object to send token");
+      sendCommand("musicUserToken", params);
+      closeWebView();
+    } else {
+      lognalert("No C4 object, using callback URL");
+      const url =
+        "https://apps.control4driversdev.com/callback?code=" +
+        musicUserToken +
+        "&state=" +
+        state;
+      window.location.replace(url);
+    }
+  }
+
+  async function sendCommand(
+    command,
+    payload = {},
+    async = false,
+    sendToProtocol = true
+  ) {
+    if (typeof C4 === "object" && typeof C4.sendCommand === "function") {
+      if (typeof command !== "string") {
+        lognalert("Error sendCommand: invalid command type: " + typeof command);
+        return;
+      }
+
+      if (typeof payload === "object") {
+        payload = JSON.stringify(payload);
+      } else {
+        lognalert("Error sendCommand: invalid payload type: " + typeof payload);
+        return;
+      }
+
+      lognalert("Sending command: " + command + ", payload: " + payload);
+      C4.sendCommand(command, payload, async, sendToProtocol);
+    } else {
+      lognalert("Could not send command: " + command + ", payload: " + payload);
+    }
+  }
+
+  async function closeWebView() {
+    if (typeof C4 === "object" && typeof C4.closeWebView === "function") {
+      lognalert("Closing webview");
+      C4.closeWebView();
+    } else {
+      lognalert("Could not close webView");
+    }
+  }
+
+  lognalert("done");
+</script>
+
+<!--<script
+  type="text/javascript"
+  src="https://js-cdn.music.apple.com/musickit/v3/musickit.js"
+  async
+></script>-->
